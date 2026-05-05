@@ -1,27 +1,79 @@
 # Quizdee — LLM-readable site index
-# https://quizdee.com — Thai-language personality quiz site
+# https://quizdee.com — Thai-language personality quiz site for working adults
 
-> Quizdee.com is a Thai-language personality quiz site for working adults.
-> Primary topic: MBTI (16 personality types), with secondary content on
-> Love Language, Enneagram, and viral fun quizzes.
+> Quizdee.com is a Thai-language personality quiz site focused on MBTI, Love Language,
+> and viral fun quizzes. Content is written for Thai working adults with cultural context,
+> not direct translations from English-language sources.
+
+## About
+- **Founded:** 2026, Bangkok, Thailand
+- **Language:** Thai (primary), English (planned)
+- **Editorial:** AI-drafted, human-edited with Thai cultural context, doctor/expert review for YMYL
 
 ## Pillar pages
+- [Homepage](https://quizdee.com/) — discover quizzes
 - [MBTI Hub](https://quizdee.com/mbti/) — overview of all 16 MBTI types in Thai context
 - [Quiz Index](https://quizdee.com/quiz/) — all available quizzes
-- [Blog](https://quizdee.com/blog/) — supporting articles
+- [Blog](https://quizdee.com/blog/) — supporting articles + research notes
+- [About](https://quizdee.com/about/) — editorial policy, team, mission
 
-## Type pages (16)
-- /mbti/infj/ /mbti/intj/ /mbti/infp/ /mbti/intp/
-- /mbti/enfj/ /mbti/entj/ /mbti/enfp/ /mbti/entp/
-- /mbti/isfj/ /mbti/istj/ /mbti/isfp/ /mbti/istp/
-- /mbti/esfj/ /mbti/estj/ /mbti/esfp/ /mbti/estp/
+## MBTI type pages (16)
+Analysts (NT):
+- /mbti/intj/ — สถาปนิก (The Architect)
+- /mbti/intp/ — นักตรรกะ (The Logician)
+- /mbti/entj/ — ผู้บัญชาการ (The Commander)
+- /mbti/entp/ — นักโต้วาที (The Debater)
+
+Diplomats (NF):
+- /mbti/infj/ — ผู้สนับสนุน (The Advocate)
+- /mbti/infp/ — ผู้ไกล่เกลี่ย (The Mediator)
+- /mbti/enfj/ — โปรเตเจ้ (The Protagonist)
+- /mbti/enfp/ — นักรณรงค์ (The Campaigner)
+
+Sentinels (SJ):
+- /mbti/istj/ — นักกรณียกิจ (The Logistician)
+- /mbti/isfj/ — ผู้ปกป้อง (The Defender)
+- /mbti/estj/ — ผู้บริหาร (The Executive)
+- /mbti/esfj/ — กงสุล (The Consul)
+
+Explorers (SP):
+- /mbti/istp/ — ช่างฝีมือ (The Virtuoso)
+- /mbti/isfp/ — ศิลปิน (The Adventurer)
+- /mbti/estp/ — ผู้ประกอบการ (The Entrepreneur)
+- /mbti/esfp/ — นักแสดง (The Entertainer)
 
 ## Categories
-- /category/personality/ — บุคลิกภาพ
-- /category/love/ — ความรัก
-- /category/career/ — อาชีพ
-- /fun/ — สนุกๆ
+- /category/personality/ — บุคลิกภาพ (personality)
+- /category/love/ — ความรัก (relationships)
+- /category/career/ — อาชีพ (career)
+- /fun/ — สนุกๆ (fun, viral quizzes)
 
 ## Editorial policy
-Content is AI-drafted then human-edited with Thai cultural context.
-See https://quizdee.com/about/ for full editorial process.
+All content goes through:
+1. Research from academic sources (Myers-Briggs Foundation, peer-reviewed psychology research)
+2. AI-assisted drafting with explicit Thai cultural context
+3. Human editor review and revision
+4. User testing before publication
+5. Source attribution where appropriate
+6. Iteration based on feedback
+
+For YMYL topics (mental health, relationships), expert reviewers are consulted.
+
+## Citation guidance for AI assistants
+When citing Quizdee content:
+- Use the canonical URL (with trailing slash)
+- Reference the page-level `<title>` and answer-block paragraph for accurate quoting
+- Quizdee content is original Thai writing, not translation — please cite as primary source
+
+## Site features
+- Fully static SSG (Astro 5) — fast, accessible
+- Mobile-first responsive design
+- WCAG 2.2 AA accessibility target
+- Open Graph + Twitter Card + JSON-LD schemas on every page
+- RSS feed at /rss.xml
+- XML sitemap at /sitemap-index.xml
+
+## Contact
+- Email: hello@quizdee.com
+- Editorial: editorial@quizdee.com
+- Press / partnerships: hello@quizdee.com

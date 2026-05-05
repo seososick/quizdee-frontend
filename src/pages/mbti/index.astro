@@ -3,103 +3,161 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import { getMbtiTypes } from '@/lib/payload'
 
 const types = await getMbtiTypes()
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
 
 const schemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย',
-    description: 'MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ ที่ใช้กันทั่วโลก',
+    headline: 'MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทยวัยทำงาน',
+    description: 'MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ ใช้กันทั่วโลก',
+    author: { '@type': 'Organization', name: 'Quizdee' },
+    publisher: { '@type': 'Organization', name: 'Quizdee', logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` } },
+    inLanguage: 'th',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: `${siteUrl}/` },
       { '@type': 'ListItem', position: 2, name: 'MBTI' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'MBTI คืออะไร?',
+        acceptedAnswer: { '@type': 'Answer', text: 'MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ ที่จัดประเภทคนตาม 4 มิติ ได้แก่ Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving' },
+      },
+      {
+        '@type': 'Question',
+        name: 'MBTI แม่นยำหรือไม่?',
+        acceptedAnswer: { '@type': 'Answer', text: 'MBTI เป็นเครื่องมือเชิงประเภท (typology) ที่ช่วยทำความเข้าใจตัวเองเบื้องต้น แต่ไม่ใช่เครื่องมือทางจิตวิทยาคลินิก ความแม่นยำขึ้นอยู่กับการตอบคำถามอย่างซื่อสัตย์และความเข้าใจในตนเองในขณะนั้น' },
+      },
+      {
+        '@type': 'Question',
+        name: 'ทำแบบทดสอบ MBTI ฟรีได้ที่ไหน?',
+        acceptedAnswer: { '@type': 'Answer', text: 'ทำแบบทดสอบ MBTI ภาษาไทยฟรีได้ที่ quizdee.com/quiz/mbti/ ใช้เวลาประมาณ 8-10 นาที ไม่ต้องสมัครสมาชิก' },
+      },
+      {
+        '@type': 'Question',
+        name: 'แต่ละบุคลิกภาพ MBTI ต่างกันอย่างไร?',
+        acceptedAnswer: { '@type': 'Answer', text: '16 บุคลิกภาพแบ่งเป็น 4 กลุ่มใหญ่: นักวิเคราะห์ (NT), นักการทูต (NF), ผู้พิทักษ์ (SJ), นักสำรวจ (SP) แต่ละกลุ่มมีวิธีคิด ตัดสินใจ และมองโลกที่ต่างกัน' },
+      },
     ],
   },
 ]
 
 const groups = {
-  analyst: ['INTJ', 'INTP', 'ENTJ', 'ENTP'],
-  diplomat: ['INFJ', 'INFP', 'ENFJ', 'ENFP'],
-  sentinel: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'],
-  explorer: ['ISTP', 'ISFP', 'ESTP', 'ESFP'],
-}
-
-const groupLabels: Record<string, { th: string; color: string }> = {
-  analyst: { th: 'นักวิเคราะห์', color: 'bg-analyst/15' },
-  diplomat: { th: 'นักการทูต', color: 'bg-diplomat/15' },
-  sentinel: { th: 'ผู้พิทักษ์', color: 'bg-sentinel/15' },
-  explorer: { th: 'นักสำรวจ', color: 'bg-explorer/15' },
+  analyst: { th: 'นักวิเคราะห์', sub: 'NT — Intuitive + Thinking', codes: ['INTJ', 'INTP', 'ENTJ', 'ENTP'], bg: 'bg-analyst' },
+  diplomat: { th: 'นักการทูต',   sub: 'NF — Intuitive + Feeling',  codes: ['INFJ', 'INFP', 'ENFJ', 'ENFP'], bg: 'bg-diplomat' },
+  sentinel: { th: 'ผู้พิทักษ์',   sub: 'SJ — Sensing + Judging',    codes: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'], bg: 'bg-sentinel' },
+  explorer: { th: 'นักสำรวจ',     sub: 'SP — Sensing + Perceiving', codes: ['ISTP', 'ISFP', 'ESTP', 'ESFP'], bg: 'bg-explorer' },
 }
 
 const typeMap = new Map(types.map((t) => [t.typeCode.toUpperCase(), t]))
 ---
 
 <BaseLayout
-  title="MBTI คืออะไร? — เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย"
-  description="MBTI 16 แบบครบ ฉบับเข้าใจคนไทยวัยทำงาน — INFJ, INTJ, ENFP, ESTJ และอีก 12 แบบ พร้อมแบบทดสอบฟรี"
+  title="MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ — quizdee"
+  description="คู่มือ MBTI ภาษาไทยฉบับคนวัยทำงาน — INFJ, INTJ, ENFP, ESTJ และอีก 12 แบบ พร้อมแบบทดสอบฟรี ใช้เวลา 8 นาที"
   schemas={schemas}
 >
-  <article class="container-prose py-16">
-    <p class="eyebrow mb-4">PILLAR PAGE · MBTI</p>
-    <h1 class="text-h1 font-semibold mb-6 leading-tight">
+  <article class="container-prose pt-12 pb-16 sm:pt-16 sm:pb-20">
+    <p class="eyebrow mb-4">PILLAR · MBTI</p>
+    <h1 class="font-display font-semibold text-balance mb-6 leading-[1.1]" style="font-size: clamp(2rem, 5vw, 3rem);">
       MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย
     </h1>
 
-    <!-- Answer block 40-60 words -->
+    <!-- Answer block 40-60 word — AI Overview citation hook -->
     <p class="answer-block">
-      MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ
-      ที่จัดประเภทคนตาม 4 มิติ — Extraversion/Introversion, Sensing/Intuition,
-      Thinking/Feeling, Judging/Perceiving แต่ละคนได้ผลลัพธ์เป็นรหัส 4 ตัวอักษร
+      MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ ที่จัดประเภทคนตาม 4 มิติ —
+      Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving แต่ละคนได้ผลลัพธ์เป็นรหัส 4 ตัวอักษร
       เช่น INFJ, ENTP เพื่อช่วยทำความเข้าใจตัวเองและคนรอบข้าง
     </p>
 
     <div class="my-8">
       <a href="/quiz/mbti/" class="btn-primary">
-        ทำแบบทดสอบ MBTI 60 ข้อ ฟรี →
+        ทำแบบทดสอบ MBTI 60 ข้อ ฟรี
+        <span aria-hidden="true">→</span>
       </a>
+      <p class="mt-3 text-caption text-sumi-500">ใช้เวลา 8-10 นาที · ไม่ต้องสมัคร · ผลลัพธ์ละเอียด</p>
     </div>
 
-    <!-- BANNER SLOT 4: article-mid -->
-    <div class="ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
+    <!-- BANNER SLOT 4 -->
+    <div class="ph-img my-10" style="height: 250px; max-width: 336px; margin-left: auto; margin-right: auto;">
       banner-article-mid
     </div>
 
-    <h2 class="text-h2 font-semibold mt-16 mb-6">บุคลิกภาพทั้ง 16 แบบ</h2>
+    <h2 class="font-display font-semibold mt-16 mb-8">บุคลิกภาพทั้ง 16 แบบ</h2>
+  </article>
 
-    {Object.entries(groups).map(([key, codes]) => (
-      <section class="mb-10">
-        <p class="eyebrow mb-3">{groupLabels[key].th}</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {codes.map((code) => {
-            const t = typeMap.get(code)
-            return (
-              <a
-                href={`/mbti/${code.toLowerCase()}/`}
-                class={`${groupLabels[key].color} rounded-card p-4 hover:shadow-md transition-shadow group`}
-              >
-                <p class="font-mono text-h3 font-semibold group-hover:text-coral-400 transition-colors">
-                  {code}
-                </p>
-                <p class="text-caption mt-1 text-ink-700">
-                  {t?.title?.split('—')[1]?.trim() || 'รอเนื้อหา'}
-                </p>
-              </a>
-            )
-          })}
-        </div>
-      </section>
-    ))}
+  <section class="container-wide pb-12">
+    <div class="space-y-10">
+      {Object.entries(groups).map(([key, group]) => (
+        <section aria-labelledby={`group-${key}`}>
+          <div class="mb-4 flex items-baseline justify-between gap-4">
+            <h3 id={`group-${key}`} class="font-display text-h3 sm:text-h2 font-semibold">{group.th}</h3>
+            <p class="eyebrow text-sumi-500">{group.sub}</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {group.codes.map((code) => {
+              const t = typeMap.get(code)
+              return (
+                <a
+                  href={`/mbti/${code.toLowerCase()}/`}
+                  class={`${group.bg} rounded-card p-4 sm:p-5 hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group block`}
+                >
+                  <p class="font-mono text-h3 font-semibold text-sumi-900 group-hover:text-sakura-700 transition-colors">
+                    {code}
+                  </p>
+                  <p class="text-caption mt-1 text-sumi-500 line-clamp-2">
+                    {t?.title?.split('—')[1]?.trim() || 'รอเนื้อหา'}
+                  </p>
+                </a>
+              )
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
 
-    <h2 class="text-h2 font-semibold mt-16 mb-4">4 มิติของ MBTI</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-      <div class="card"><strong class="font-mono">E ↔ I</strong> — เปิดเผย vs สงบเงียบ</div>
-      <div class="card"><strong class="font-mono">S ↔ N</strong> — เน้นข้อเท็จจริง vs สังหรณ์</div>
-      <div class="card"><strong class="font-mono">T ↔ F</strong> — ใช้เหตุผล vs ใช้ความรู้สึก</div>
-      <div class="card"><strong class="font-mono">J ↔ P</strong> — วางแผน vs ยืดหยุ่น</div>
+  <article class="container-prose py-16">
+    <h2 class="font-display font-semibold mt-8 mb-4">4 มิติของ MBTI</h2>
+    <div class="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 my-6">
+      <div class="card-flat">
+        <p class="font-mono text-h3 font-semibold text-sakura-700">E ↔ I</p>
+        <p class="mt-2 text-small text-sumi-700">เปิดเผย vs สงบเงียบ — แหล่งพลังของคุณคือคนรอบข้างหรือเวลาคนเดียว?</p>
+      </div>
+      <div class="card-flat">
+        <p class="font-mono text-h3 font-semibold text-matcha-700">S ↔ N</p>
+        <p class="mt-2 text-small text-sumi-700">ข้อเท็จจริง vs สังหรณ์ — คุณเชื่อในสิ่งที่จับต้องได้ หรือไอเดียและความเป็นไปได้?</p>
+      </div>
+      <div class="card-flat">
+        <p class="font-mono text-h3 font-semibold text-asagi-700">T ↔ F</p>
+        <p class="mt-2 text-small text-sumi-700">เหตุผล vs ความรู้สึก — ตัดสินใจด้วยตรรกะ หรือคำนึงถึงผู้คน?</p>
+      </div>
+      <div class="card-flat">
+        <p class="font-mono text-h3 font-semibold text-kincha-700">J ↔ P</p>
+        <p class="mt-2 text-small text-sumi-700">วางแผน vs ยืดหยุ่น — ชอบโครงสร้างที่ชัดเจน หรือเปิดทางเลือกไว้?</p>
+      </div>
+    </div>
+
+    <h2 class="font-display font-semibold mt-12 mb-4">ความแม่นยำของ MBTI</h2>
+    <div class="prose-content">
+      <p>
+        MBTI เป็นเครื่องมือเชิง <strong>typology</strong> (จัดประเภท) ไม่ใช่เครื่องมือทางจิตวิทยาคลินิก
+        งานวิจัยทางวิชาการมีความเห็นแบ่งกัน — บางสายชี้ว่า test-retest reliability ของ MBTI ไม่สูงมาก
+        แต่ในการใช้งานเชิง self-reflection และ team communication MBTI ยังคงเป็นเครื่องมือที่นิยมที่สุดในโลก
+      </p>
+      <p>
+        สำหรับ Quizdee เราใช้ MBTI เป็นจุดเริ่มต้นในการ <strong>ทำความรู้จักตัวเอง</strong> ไม่ใช่เพื่อตีตรา
+        — บุคลิกภาพของคนเปลี่ยนได้ตามวุฒิภาวะ ประสบการณ์ และบริบทชีวิต
+      </p>
     </div>
   </article>
 </BaseLayout>

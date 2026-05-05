@@ -5,17 +5,21 @@ import { getQuizzes, getMbtiTypes, getBlogPosts } from '@/lib/payload'
 const quizzes = await getQuizzes()
 const mbtiTypes = await getMbtiTypes()
 const recentBlog = (await getBlogPosts()).slice(0, 4)
-const featuredQuiz = quizzes[0]
+const featuredQuiz = quizzes.find((q) => q.slug === 'mbti') || quizzes[0]
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
 
 const schemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Quizdee',
-    url: 'https://quizdee.com/',
+    alternateName: ['ควิซดี', 'quizdee.com'],
+    url: siteUrl + '/',
+    inLanguage: 'th',
+    description: 'แบบทดสอบบุคลิกภาพ MBTI / Love Language / Personality Quiz ฉบับเข้าใจคนไทยวัยทำงาน',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://quizdee.com/?q={search_term_string}',
+      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
   },
@@ -23,54 +27,62 @@ const schemas = [
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Quizdee',
-    url: 'https://quizdee.com/',
-    description: 'แบบทดสอบบุคลิกภาพ MBTI / Love Language / Fun Quiz ภาษาไทย',
+    url: siteUrl + '/',
+    logo: `${siteUrl}/logo.svg`,
+    foundingDate: '2026',
+    description: 'แบบทดสอบบุคลิกภาพภาษาไทย เนื้อหาสำหรับคนวัยทำงาน',
+    knowsLanguage: ['th', 'en'],
+    sameAs: [],
   },
 ]
 ---
 
 <BaseLayout
-  title="quizdee — แบบทดสอบบุคลิกภาพ ฉบับเข้าใจคนไทยวัยทำงาน"
-  description="ทำแบบทดสอบ MBTI / Love Language / Personality Quiz ภาษาไทย เนื้อหาสำหรับคนวัยทำงานจริงๆ ฟรี ไม่ต้องสมัคร"
+  title="quizdee — แบบทดสอบบุคลิกภาพ MBTI ฉบับคนไทยวัยทำงาน"
+  description="ทำแบบทดสอบ MBTI / Love Language / Personality ภาษาไทย เนื้อหาเข้าใจคนวัยทำงาน ฟรี ไม่ต้องสมัคร — ผลลัพธ์ละเอียด แชร์ได้ทันที"
   schemas={schemas}
 >
-  <!-- HERO -->
-  <section class="container-wide py-16 md:py-24">
-    <p class="eyebrow mb-4">EST. 2026 · BANGKOK</p>
-    <h1 class="text-display font-semibold leading-[1.05] tracking-tight max-w-4xl">
-      เข้าใจตัวเอง<br />
-      ผ่านแบบทดสอบที่<em class="font-display italic">คุณภาพ</em>
-    </h1>
-    <p class="mt-6 text-body text-ink-700 max-w-xl">
-      MBTI / Love Language / Personality — เขียนโดยคนเข้าใจคนไทยวัยทำงานจริงๆ
-      ไม่ใช่แค่แปลจากต่างประเทศ
-    </p>
-    {featuredQuiz && (
-      <div class="mt-10 flex flex-wrap items-center gap-4">
-        <a href={`/quiz/${featuredQuiz.slug}/`} class="btn-primary">
-          เริ่มทำ {featuredQuiz.title} →
-        </a>
-        <span class="text-small text-ink-500">
-          ใช้เวลา {featuredQuiz.estimatedMinutes} นาที · {featuredQuiz.questions.length} คำถาม
-        </span>
-      </div>
-    )}
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <section class="container-wide pt-12 pb-16 sm:pt-20 sm:pb-24 md:pt-24 md:pb-28">
+    <div class="max-w-3xl">
+      <p class="eyebrow mb-5">EST. 2026 · BANGKOK · 季節</p>
+      <h1 class="font-display font-semibold leading-[1.05] tracking-tight text-balance" style="font-size: clamp(2rem, 6vw, 4.5rem);">
+        เข้าใจตัวเอง<br />
+        ผ่านแบบทดสอบที่
+        <em class="italic font-light text-sakura-700">เขียนด้วยใจ</em>
+      </h1>
+      <p class="mt-6 max-w-xl text-body text-sumi-700 text-pretty">
+        MBTI · Love Language · Personality — เขียนโดยคนเข้าใจคนไทยวัยทำงานจริงๆ ไม่ใช่แค่แปลจากต่างประเทศ
+      </p>
+      {featuredQuiz && (
+        <div class="mt-9 flex flex-wrap items-center gap-3 sm:gap-5">
+          <a href={`/quiz/${featuredQuiz.slug}/`} class="btn-primary">
+            เริ่มทำ {featuredQuiz.title}
+            <span aria-hidden="true">→</span>
+          </a>
+          <span class="text-small text-sumi-500">
+            {featuredQuiz.estimatedMinutes} นาที · {featuredQuiz.questions?.length || 60} คำถาม · ฟรี
+          </span>
+        </div>
+      )}
+    </div>
   </section>
 
-  <!-- CATEGORIES -->
-  <section class="container-wide py-12">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <!-- ─── CATEGORIES ───────────────────────────────────────── -->
+  <section class="container-wide py-8 sm:py-12" aria-labelledby="cats-heading">
+    <h2 id="cats-heading" class="sr-only">หมวดหมู่แบบทดสอบ</h2>
+    <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
       {[
-        { href: '/mbti/', label: 'MBTI', sub: '16 บุคลิกภาพ', emoji: null, color: 'bg-analyst/10' },
-        { href: '/category/love/', label: 'ความรัก', sub: 'Love Language', emoji: null, color: 'bg-coral-50' },
-        { href: '/category/career/', label: 'อาชีพ', sub: 'งานที่ใช่', emoji: null, color: 'bg-sentinel/15' },
-        { href: '/fun/', label: 'สนุกๆ', sub: 'Quiz เบาๆ', emoji: null, color: 'bg-explorer/15' },
+        { href: '/mbti/',          label: 'MBTI',     sub: '16 บุคลิกภาพ',   bg: 'bg-analyst'  },
+        { href: '/category/love/', label: 'ความรัก',  sub: 'Love Language',  bg: 'bg-sakura-50' },
+        { href: '/category/career/', label: 'อาชีพ',  sub: 'งานที่ใช่',       bg: 'bg-sentinel' },
+        { href: '/fun/',           label: 'สนุกๆ',    sub: 'Quiz เบาๆ',       bg: 'bg-explorer' },
       ].map((cat) => (
         <a
           href={cat.href}
-          class={`${cat.color} card hover:shadow-md transition-shadow group`}
+          class={`${cat.bg} card hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group`}
         >
-          <p class="font-display text-h3 font-semibold group-hover:text-coral-400 transition-colors">
+          <p class="font-display text-h3 font-semibold text-sumi-900 group-hover:text-sakura-700 transition-colors">
             {cat.label}
           </p>
           <p class="eyebrow mt-2">{cat.sub}</p>
@@ -79,20 +91,20 @@ const schemas = [
     </div>
   </section>
 
-  <!-- FEATURED QUIZZES -->
+  <!-- ─── FEATURED QUIZZES ─────────────────────────────────── -->
   {quizzes.length > 0 && (
-    <section class="container-wide py-16">
-      <div class="flex items-end justify-between mb-8">
-        <h2 class="text-h2 font-semibold">แบบทดสอบยอดนิยม</h2>
-        <a href="/quiz/" class="text-small hover:text-coral-400">ดูทั้งหมด →</a>
+    <section class="container-wide py-16 sm:py-20" aria-labelledby="featured-heading">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 id="featured-heading" class="font-display font-semibold">แบบทดสอบยอดนิยม</h2>
+        <a href="/quiz/" class="text-small text-sumi-500 hover:text-sakura-700 transition-colors whitespace-nowrap">ดูทั้งหมด →</a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {quizzes.slice(0, 6).map((quiz) => (
-          <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-md transition-shadow">
+          <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group">
             <p class="eyebrow mb-2">{quiz.category}</p>
-            <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title}</h3>
-            <p class="text-small text-ink-700 mb-4">{quiz.description}</p>
-            <p class="text-caption text-ink-500">
+            <h3 class="font-display text-h3 font-semibold mb-2 group-hover:text-sakura-700 transition-colors">{quiz.title}</h3>
+            <p class="text-small text-sumi-700 line-clamp-2">{quiz.description}</p>
+            <p class="mt-4 text-caption text-sumi-500">
               {quiz.estimatedMinutes} นาที · {quiz.questions?.length || 0} คำถาม
             </p>
           </a>
@@ -101,43 +113,43 @@ const schemas = [
     </section>
   )}
 
-  <!-- EMPTY STATE: no quizzes yet -->
+  <!-- Empty state -->
   {quizzes.length === 0 && (
-    <section class="container-wide py-16">
-      <div class="card text-center py-16">
-        <p class="eyebrow mb-3">COMING SOON</p>
-        <h2 class="text-h2 font-semibold mb-3">แบบทดสอบกำลังจะมา</h2>
-        <p class="text-ink-700 max-w-md mx-auto">
-          เรากำลังเตรียมเนื้อหาคุณภาพ ติดตามได้เร็วๆ นี้
+    <section class="container-wide py-16 sm:py-20">
+      <div class="card-flat text-center py-16 max-w-2xl mx-auto">
+        <p class="eyebrow mb-3">準備中 · COMING SOON</p>
+        <h2 class="text-h2 font-semibold mb-3">แบบทดสอบกำลังเตรียม</h2>
+        <p class="text-sumi-700 max-w-md mx-auto">
+          เรากำลังเขียนเนื้อหาคุณภาพ ติดตามได้เร็วๆ นี้
         </p>
       </div>
     </section>
   )}
 
-  <!-- BLOG -->
+  <!-- ─── BLOG ─────────────────────────────────────────────── -->
   {recentBlog.length > 0 && (
-    <section class="container-wide py-16">
-      <div class="flex items-end justify-between mb-8">
-        <h2 class="text-h2 font-semibold">อ่านเพิ่มเติม</h2>
-        <a href="/blog/" class="text-small hover:text-coral-400">บทความทั้งหมด →</a>
+    <section class="container-wide py-16 sm:py-20" aria-labelledby="blog-heading">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 id="blog-heading" class="font-display font-semibold">อ่านเพิ่มเติม</h2>
+        <a href="/blog/" class="text-small text-sumi-500 hover:text-sakura-700 transition-colors whitespace-nowrap">บทความทั้งหมด →</a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
         {recentBlog.map((post) => (
           <a href={`/blog/${post.slug}/`} class="group">
             <p class="eyebrow mb-2">{post.category}</p>
-            <h3 class="font-display text-h3 font-semibold mb-2 group-hover:text-coral-400 transition-colors">
+            <h3 class="font-display text-h2 sm:text-h3 font-semibold mb-2 text-balance group-hover:text-sakura-700 transition-colors">
               {post.title}
             </h3>
-            <p class="text-small text-ink-700">{post.metaDescription}</p>
+            <p class="text-small text-sumi-700 text-pretty">{post.metaDescription}</p>
           </a>
         ))}
       </div>
     </section>
   )}
 
-  <!-- BANNER SLOT 1: home middle (reserve fixed height for CLS=0) -->
-  <section class="container-wide py-8">
-    <div class="ph-img" style="height: 250px; max-width: 728px; margin: 0 auto;">
+  <!-- ─── BANNER SLOT (CLS=0 reserved) ─── -->
+  <section class="container-wide py-8 sm:py-12">
+    <div class="ph-img mx-auto" style="height: 250px; max-width: 728px;" aria-label="Advertisement placeholder">
       banner-home-mid · 728×90 / 300×250
     </div>
   </section>

@@ -2,98 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ───────────────────────────────────────────────────────────────
+   Quizdee — Japanese Pastel Minimal (和風 Wafu)
+   Mobile-first, performance-first
+   Self-host fonts via Google Fonts CSS (woff2 with display:swap)
+   ─────────────────────────────────────────────────────────────── */
+
 @layer base {
-  /* Self-host critical fonts via Google Fonts CDN preload — production should self-host */
   :root {
-    --color-bg: 248 244 237;       /* cream-100 */
-    --color-bg-raised: 255 251 245; /* cream-50 */
-    --color-ink: 42 40 38;
-    --color-accent: 230 107 92;
-    --color-accent-pale: 248 220 215;
+    --color-bg: 251 249 244;        /* washi-50 */
+    --color-bg-raised: 255 254 250;
+    --color-ink: 31 26 20;          /* sumi-900 */
+    --color-accent: 216 138 130;    /* sakura-500 */
+    --color-accent-pale: 251 241 241; /* sakura-50 */
+    --color-divider: 221 213 194;   /* washi-300 */
   }
 
   html {
-    font-family: theme('fontFamily.body');
+    font-family: 'IBM Plex Sans Thai Looped', 'Inter', system-ui, sans-serif;
     color: rgb(var(--color-ink));
     background: rgb(var(--color-bg));
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Improve Thai font rendering */
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
 
   body {
-    @apply text-body;
+    font-size: 1rem;
+    line-height: 1.7;
     min-height: 100vh;
+    /* Subtle paper texture via radial gradients (CSS-only, no images) */
+    background-image:
+      radial-gradient(at 20% 30%, rgb(255 254 250 / 0.4) 0, transparent 50%),
+      radial-gradient(at 80% 70%, rgb(245 242 233 / 0.3) 0, transparent 50%);
   }
 
-  h1, h2, h3, h4 {
-    font-family: theme('fontFamily.display');
+  h1, h2, h3, h4, h5 {
+    font-family: 'Fraunces', 'IBM Plex Sans Thai Looped', Georgia, serif;
     font-weight: 600;
+    color: rgb(var(--color-ink));
+    text-wrap: balance;
+  }
+
+  h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.015em; }
+  h2 { font-size: 1.5rem; line-height: 1.25; letter-spacing: -0.01em; }
+  h3 { font-size: 1.25rem; line-height: 1.35; }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 3rem; line-height: 1.1; letter-spacing: -0.02em; }
+    h2 { font-size: 2rem; line-height: 1.2; }
+    h3 { font-size: 1.5rem; line-height: 1.3; }
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background: rgb(var(--color-accent) / 0.25);
     color: rgb(var(--color-ink));
   }
 
-  h1 { @apply text-h1; }
-  h2 { @apply text-h2; }
-  h3 { @apply text-h3; }
-
-  ::selection {
-    background: rgb(var(--color-accent) / 0.2);
-  }
-
-  /* Focus visible — accessibility */
   :focus-visible {
     outline: 2px solid rgb(var(--color-accent));
-    outline-offset: 2px;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Smooth scroll only when user prefers motion */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
   }
 }
 
 @layer components {
-  /* Container */
-  .container-prose {
-    @apply mx-auto max-w-3xl px-6 sm:px-8;
-  }
+  /* ─── Containers ──────────────────────────────────────── */
   .container-wide {
-    @apply mx-auto max-w-6xl px-6 sm:px-8;
+    @apply mx-auto w-full px-5 sm:px-8 max-w-6xl;
+  }
+  .container-prose {
+    @apply mx-auto w-full px-5 sm:px-8 max-w-reading;
   }
 
-  /* Button — primary action */
+  /* ─── Buttons ─────────────────────────────────────────── */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-btn px-5 py-3
-           font-display font-semibold text-base
-           transition-all duration-150 ease-out
-           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-100;
+    @apply inline-flex items-center justify-center gap-2 rounded-btn
+           px-5 py-3 text-base font-medium font-display
+           transition-all duration-200 ease-soft
+           min-h-[44px]                           /* mobile tap target */
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sakura-500 focus-visible:ring-offset-2 focus-visible:ring-offset-washi-50;
   }
   .btn-primary {
-    @apply btn bg-coral-400 text-cream-50
-           hover:bg-coral-600
+    @apply btn bg-sakura-500 text-washi-50
+           hover:bg-sakura-700
            active:translate-y-[1px] shadow-press
            active:shadow-none;
   }
   .btn-secondary {
-    @apply btn bg-cream-50 text-ink-900 border border-ink-300
-           hover:border-ink-500;
+    @apply btn bg-washi-50 text-sumi-900 border border-sumi-200
+           hover:border-sumi-400 hover:bg-washi-100;
   }
   .btn-ghost {
-    @apply btn text-ink-700 hover:text-ink-900 hover:bg-cream-200;
+    @apply btn text-sumi-700 hover:text-sumi-900 hover:bg-washi-100;
   }
 
-  /* Card */
+  /* ─── Cards ───────────────────────────────────────────── */
   .card {
-    @apply bg-cream-50 rounded-card shadow-card p-6;
+    @apply bg-white/60 backdrop-blur-[1px] rounded-card shadow-paper
+           p-5 sm:p-6 border border-washi-200;
+  }
+  .card-flat {
+    @apply bg-washi-50 rounded-card p-5 sm:p-6 border border-washi-200;
   }
 
-  /* Eyebrow — caption-style label */
+  /* ─── Eyebrow / labels ────────────────────────────────── */
   .eyebrow {
-    @apply text-caption uppercase font-mono tracking-[0.04em] text-ink-500;
+    @apply text-caption uppercase font-mono tracking-[0.06em] text-sumi-500;
   }
 
-  /* Answer block — for AI Overview citation */
+  /* ─── Answer block (AI Overview citation hook) ─────── */
   .answer-block {
-    @apply font-display text-h3 leading-snug text-ink-900
-           border-l-2 border-coral-400 pl-5 my-8;
+    @apply font-display text-h3 leading-snug text-sumi-900
+           border-l-2 border-sakura-500 pl-5 my-8 italic;
   }
 
-  /* Placeholder image (anti-AI-slop: NO unsplash/picsum) */
+  /* ─── Placeholder image (anti-AI-slop) ────────────── */
   .ph-img {
-    @apply bg-cream-200 flex items-center justify-center text-ink-300 font-mono text-small;
+    @apply bg-washi-100 flex items-center justify-center
+           text-sumi-300 font-mono text-caption rounded-paper;
   }
+
+  /* ─── Prose content for markdown render ──────────── */
+  .prose-content {
+    @apply text-sumi-700 text-body;
+  }
+  .prose-content h2 {
+    @apply mt-12 mb-4;
+  }
+  .prose-content h3 {
+    @apply mt-8 mb-3;
+  }
+  .prose-content p {
+    @apply my-4;
+  }
+  .prose-content ul, .prose-content ol {
+    @apply my-4 space-y-2 pl-6;
+  }
+  .prose-content ul { list-style: '・ '; }
+  .prose-content ol { list-style: decimal; }
+  .prose-content a {
+    @apply text-sakura-700 underline underline-offset-4 decoration-sakura-300
+           hover:decoration-sakura-500;
+  }
+  .prose-content strong {
+    @apply text-sumi-900 font-semibold;
+  }
+  .prose-content blockquote {
+    @apply border-l-2 border-sumi-200 pl-4 my-6 italic text-sumi-500;
+  }
+
+  /* ─── Mobile-first nav ──────────────────────────── */
+  .nav-link {
+    @apply text-small text-sumi-700 hover:text-sakura-700 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
+  /* MBTI category bg utilities */
+  .bg-analyst   { background-color: rgb(148 98 123 / 0.08); }     /* ume */
+  .bg-diplomat  { background-color: rgb(143 167 112 / 0.10); }    /* matcha */
+  .bg-sentinel  { background-color: rgb(181 144 77 / 0.10); }     /* kincha */
+  .bg-explorer  { background-color: rgb(99 143 137 / 0.10); }     /* asagi */
 }

@@ -1,8 +1,8 @@
 {
   "name": "quizdee-frontend",
   "type": "module",
-  "version": "0.1.0",
-  "description": "Quizdee.com — Astro frontend (consumes Payload CMS API)",
+  "version": "0.2.0",
+  "description": "Quizdee.com — Astro frontend (Japanese Pastel Minimal)",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
@@ -15,7 +15,8 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.5.1",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.15.5",
+    "astro": "^5.18.1",
+    "lightningcss": "^1.30.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
   }

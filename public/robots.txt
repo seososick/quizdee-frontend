@@ -1,5 +1,20 @@
+# Quizdee — robots.txt
 User-agent: *
 Allow: /
+
+# AI crawlers — explicitly welcome (we have llms.txt)
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Block API + admin
 Disallow: /api/
 
 Sitemap: https://quizdee.com/sitemap-index.xml
