@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro'
-import { getQuizzes, getQuizBySlug } from '../../../lib/payload'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getQuizzes, getQuizBySlug } from '@/lib/payload'
 
 export async function getStaticPaths() {
   const quizzes = await getQuizzes()
@@ -122,7 +122,7 @@ const quizData = JSON.stringify({
 </BaseLayout>
 
 <script>
-  import { runQuizEngine } from '../../../scripts/quiz-engine'
+  import { runQuizEngine } from '@/scripts/quiz-engine'
   const root = document.getElementById('quiz-engine')
   if (root) {
     const data = JSON.parse(root.dataset.quiz || '{}')

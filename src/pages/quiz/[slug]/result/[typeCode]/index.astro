@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro'
-import { getQuizzes, getQuizBySlug } from '../../../../lib/payload'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getQuizzes, getQuizBySlug } from '@/lib/payload'
 
 export async function getStaticPaths() {
   const quizzes = await getQuizzes()

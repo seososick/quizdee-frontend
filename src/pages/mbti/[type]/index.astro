@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro'
-import { getMbtiTypes, getResultByTypeCode } from '../../../lib/payload'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getMbtiTypes, getResultByTypeCode } from '@/lib/payload'
 
 export async function getStaticPaths() {
   const types = await getMbtiTypes()

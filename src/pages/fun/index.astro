@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import { getQuizzes } from '../../lib/payload'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getQuizzes } from '@/lib/payload'
 
 const allQuizzes = await getQuizzes()
 const funQuizzes = allQuizzes.filter((q) => q.category === 'fun')

@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { getQuizzes, getMbtiTypes, getBlogPosts } from '../lib/payload'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { getQuizzes, getMbtiTypes, getBlogPosts } from '@/lib/payload'
 
 const quizzes = await getQuizzes()
 const mbtiTypes = await getMbtiTypes()
