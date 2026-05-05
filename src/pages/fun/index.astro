@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getQuizzes } from '../../lib/payload'
+
+const allQuizzes = await getQuizzes()
+const funQuizzes = allQuizzes.filter((q) => q.category === 'fun')
+---
+
+<BaseLayout
+  title="Fun Quiz — แบบทดสอบเบาๆ สนุกๆ — quizdee"
+  description="แบบทดสอบสนุกๆ แบบ BuzzFeed ฉบับไทย — คุณเป็นเมนูข้าวอะไร? ตัวละครไหนเหมาะกับคุณ?"
+>
+  <section class="container-wide py-16">
+    <p class="eyebrow mb-4">FUN ZONE</p>
+    <h1 class="text-h1 font-semibold mb-4">แบบทดสอบเบาๆ สนุกๆ</h1>
+    <p class="text-body text-ink-700 max-w-xl mb-12">
+      ไม่ต้องคิดมาก ตอบตามใจ แล้วแชร์กับเพื่อน
+    </p>
+
+    {funQuizzes.length === 0 ? (
+      <div class="card text-center py-16">
+        <p class="eyebrow mb-3">COMING SOON</p>
+        <p class="text-ink-700">แบบทดสอบสนุกๆ กำลังมา</p>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {funQuizzes.map((quiz) => (
+          <a
+            href={`/quiz/${quiz.slug}/`}
+            class="card hover:shadow-md transition-shadow bg-explorer/10"
+          >
+            <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title}</h3>
+            <p class="text-small text-ink-700 mb-4">{quiz.description}</p>
+            <p class="text-caption text-ink-500">{quiz.estimatedMinutes} นาที</p>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

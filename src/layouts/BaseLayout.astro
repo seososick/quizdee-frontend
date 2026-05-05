@@ -1,0 +1,129 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description: string
+  ogImage?: string
+  noindex?: boolean
+  canonical?: string
+  schemas?: object[]
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-default.png',
+  noindex = false,
+  canonical,
+  schemas = [],
+} = Astro.props
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString()
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).toString()
+---
+
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="th_TH" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts (preload critical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!-- JSON-LD schemas -->
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+
+    <!-- llms.txt hint -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" />
+  </head>
+  <body>
+    <slot name="header">
+      <header class="border-b border-ink-300/30 bg-cream-50/80 backdrop-blur sticky top-0 z-40">
+        <div class="container-wide flex items-center justify-between py-4">
+          <a href="/" class="font-display text-h3 font-semibold tracking-tight">
+            quizdee
+          </a>
+          <nav class="hidden md:flex items-center gap-8 text-small">
+            <a href="/quiz/" class="hover:text-coral-400 transition-colors">แบบทดสอบ</a>
+            <a href="/mbti/" class="hover:text-coral-400 transition-colors">MBTI</a>
+            <a href="/blog/" class="hover:text-coral-400 transition-colors">บทความ</a>
+            <a href="/about/" class="hover:text-coral-400 transition-colors">เกี่ยวกับ</a>
+          </nav>
+        </div>
+      </header>
+    </slot>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-ink-300/30 bg-cream-50 mt-24">
+      <div class="container-wide py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-small">
+        <div>
+          <p class="font-display text-h3 font-semibold mb-2">quizdee</p>
+          <p class="text-ink-700">เข้าใจตัวเอง ผ่านแบบทดสอบบุคลิกภาพคุณภาพ</p>
+        </div>
+        <div>
+          <p class="eyebrow mb-3">แบบทดสอบ</p>
+          <ul class="space-y-2">
+            <li><a href="/mbti/" class="hover:text-coral-400">MBTI</a></li>
+            <li><a href="/category/love/" class="hover:text-coral-400">ความรัก</a></li>
+            <li><a href="/category/career/" class="hover:text-coral-400">อาชีพ</a></li>
+            <li><a href="/fun/" class="hover:text-coral-400">สนุกๆ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow mb-3">เกี่ยวกับ</p>
+          <ul class="space-y-2">
+            <li><a href="/about/" class="hover:text-coral-400">เกี่ยวกับเรา</a></li>
+            <li><a href="/contact/" class="hover:text-coral-400">ติดต่อ</a></li>
+            <li><a href="/privacy/" class="hover:text-coral-400">นโยบายความเป็นส่วนตัว</a></li>
+            <li><a href="/terms/" class="hover:text-coral-400">เงื่อนไขการใช้</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow mb-3">เชื่อมต่อ</p>
+          <p class="text-ink-700">© 2026 quizdee.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<style is:global>
+  html { scroll-behavior: smooth; }
+</style>

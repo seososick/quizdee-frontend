@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import { getQuizzes, getQuizBySlug } from '../../../lib/payload'
+
+export async function getStaticPaths() {
+  const quizzes = await getQuizzes()
+  return quizzes.map((quiz) => ({
+    params: { slug: quiz.slug },
+    props: { quiz },
+  }))
+}
+
+const { quiz } = Astro.props
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Quiz',
+    name: quiz.title,
+    description: quiz.description,
+    educationalLevel: 'beginner',
+    timeRequired: `PT${quiz.estimatedMinutes}M`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
+      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: 'https://quizdee.com/quiz/' },
+      { '@type': 'ListItem', position: 3, name: quiz.title },
+    ],
+  },
+]
+
+// Serialize quiz for client-side engine
+const quizData = JSON.stringify({
+  slug: quiz.slug,
+  title: quiz.title,
+  scoringMethod: quiz.scoringMethod,
+  questions: quiz.questions,
+  results: quiz.results,
+})
+---
+
+<BaseLayout
+  title={`${quiz.title} — quizdee`}
+  description={quiz.description}
+  schemas={schemas}
+>
+  <section class="container-prose py-16">
+    <p class="eyebrow mb-4">{quiz.category} · {quiz.estimatedMinutes} นาที</p>
+    <h1 class="text-h1 font-semibold mb-4">{quiz.title}</h1>
+    <p class="text-body text-ink-700 mb-8">{quiz.description}</p>
+
+    <!-- BANNER SLOT 2: quiz-top -->
+    <div class="ph-img my-6" style="height: 90px; max-width: 728px;">
+      banner-quiz-top
+    </div>
+
+    <!-- QUIZ ENGINE MOUNT -->
+    <div id="quiz-engine" class="mt-8" data-quiz={quizData}>
+      <noscript>
+        <div class="card border border-error/30 bg-error/5">
+          <p class="font-semibold mb-2">ต้องเปิด JavaScript</p>
+          <p class="text-small">แบบทดสอบต้องการ JavaScript เพื่อทำงาน กรุณาเปิดใน browser settings</p>
+        </div>
+      </noscript>
+
+      <!-- Loading state (initial render) -->
+      <div data-state="loading" class="card">
+        <p class="eyebrow mb-3">LOADING</p>
+        <div class="space-y-3">
+          <div class="h-4 bg-cream-200 rounded animate-pulse"></div>
+          <div class="h-4 bg-cream-200 rounded animate-pulse w-3/4"></div>
+          <div class="h-4 bg-cream-200 rounded animate-pulse w-1/2"></div>
+        </div>
+      </div>
+
+      <!-- Start button (replaces loading) -->
+      <div data-state="intro" class="hidden card text-center py-12">
+        <h2 class="text-h2 font-semibold mb-4">พร้อมเริ่มแล้วใช่ไหม?</h2>
+        <p class="text-ink-700 mb-6">
+          {quiz.questions?.length || 0} คำถาม · ใช้เวลาประมาณ {quiz.estimatedMinutes} นาที
+        </p>
+        <button data-action="start" class="btn-primary">เริ่มทำแบบทดสอบ</button>
+      </div>
+
+      <!-- Question state -->
+      <div data-state="question" class="hidden">
+        <div class="mb-4">
+          <div class="flex justify-between text-caption text-ink-500 mb-2">
+            <span data-progress-text>คำถามที่ 1 จาก 10</span>
+            <span data-progress-percent>10%</span>
+          </div>
+          <div class="h-1 bg-cream-200 rounded-full overflow-hidden">
+            <div data-progress-bar class="h-full bg-coral-400 transition-all duration-300" style="width: 10%;"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2 data-question-text class="font-display text-h2 font-semibold mb-6 leading-tight">
+            ...
+          </h2>
+          <div data-options class="space-y-3"></div>
+        </div>
+      </div>
+
+      <!-- Submitting state -->
+      <div data-state="submitting" class="hidden card text-center py-12">
+        <p class="eyebrow mb-3">CALCULATING</p>
+        <h2 class="text-h2 font-semibold">กำลังประมวลผลคำตอบ...</h2>
+      </div>
+
+      <!-- Error state -->
+      <div data-state="error" class="hidden card border border-error/30 bg-error/5">
+        <p class="eyebrow text-error mb-2">ERROR</p>
+        <h2 class="text-h2 font-semibold mb-3">เกิดข้อผิดพลาด</h2>
+        <p data-error-msg class="text-ink-700 mb-4"></p>
+        <button data-action="retry" class="btn-secondary">ลองใหม่</button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { runQuizEngine } from '../../../scripts/quiz-engine'
+  const root = document.getElementById('quiz-engine')
+  if (root) {
+    const data = JSON.parse(root.dataset.quiz || '{}')
+    runQuizEngine(root, data)
+  }
+</script>

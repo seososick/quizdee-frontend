@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getMbtiTypes, getResultByTypeCode } from '../../lib/payload'
+
+export async function getStaticPaths() {
+  const types = await getMbtiTypes()
+  return types.map((t) => ({
+    params: { type: t.typeCode.toLowerCase() },
+    props: { type: t },
+  }))
+}
+
+const { type } = Astro.props
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: type.title,
+    description: type.shortDescription,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
+      { '@type': 'ListItem', position: 2, name: 'MBTI', item: 'https://quizdee.com/mbti/' },
+      { '@type': 'ListItem', position: 3, name: type.typeCode },
+    ],
+  },
+]
+
+const thaisFamous = type.famousPeople?.filter((p) => p.isThai) || []
+const intlFamous = type.famousPeople?.filter((p) => !p.isThai) || []
+---
+
+<BaseLayout
+  title={`${type.title} — บุคลิกภาพ ${type.typeCode} ฉบับคนไทย`}
+  description={type.shortDescription}
+  schemas={schemas}
+>
+  <article class="container-prose py-16">
+    <p class="eyebrow mb-2">MBTI · TYPE PAGE</p>
+    <p class="font-mono text-h2 text-coral-600 mb-2">{type.typeCode}</p>
+    <h1 class="text-h1 font-semibold mb-6">{type.title}</h1>
+
+    <p class="answer-block">{type.shortDescription}</p>
+
+    <div class="my-6">
+      <a href="/quiz/mbti/" class="btn-primary">
+        ทำแบบทดสอบเช็คว่าใช่ {type.typeCode} จริงไหม →
+      </a>
+    </div>
+
+    <!-- Information Gain section: Thai context -->
+    <section class="my-12">
+      <h2 class="text-h2 font-semibold mb-4">{type.typeCode} ในบริบทคนไทยวัยทำงาน</h2>
+      <div class="card bg-cream-50 prose-content">
+        {type.thaiContext ? (
+          <p>{JSON.stringify(type.thaiContext).slice(0, 200)}...</p>
+        ) : (
+          <p class="text-ink-500 italic">รอเนื้อหา Thai-specific</p>
+        )}
+      </div>
+    </section>
+
+    <!-- BANNER SLOT 4: article-mid -->
+    <div class="ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
+      banner-article-mid
+    </div>
+
+    {(type.strengths || type.weaknesses) && (
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+        {type.strengths && type.strengths.length > 0 && (
+          <div class="card">
+            <h3 class="text-h3 font-semibold mb-3">จุดแข็ง</h3>
+            <ul class="space-y-2 text-small">
+              {type.strengths.map((s) => <li>· {s.item}</li>)}
+            </ul>
+          </div>
+        )}
+        {type.weaknesses && type.weaknesses.length > 0 && (
+          <div class="card">
+            <h3 class="text-h3 font-semibold mb-3">จุดอ่อน</h3>
+            <ul class="space-y-2 text-small">
+              {type.weaknesses.map((w) => <li>· {w.item}</li>)}
+            </ul>
+          </div>
+        )}
+      </section>
+    )}
+
+    {type.famousPeople && type.famousPeople.length > 0 && (
+      <section class="my-12">
+        <h2 class="text-h2 font-semibold mb-4">{type.typeCode} ที่มีชื่อเสียง</h2>
+        {thaisFamous.length > 0 && (
+          <div class="mb-6">
+            <p class="eyebrow mb-3">คนไทย</p>
+            <ul class="space-y-1">
+              {thaisFamous.map((p) => (
+                <li>· <strong>{p.name}</strong>{p.role && <span class="text-ink-500"> — {p.role}</span>}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {intlFamous.length > 0 && (
+          <div>
+            <p class="eyebrow mb-3">นานาชาติ</p>
+            <ul class="space-y-1">
+              {intlFamous.map((p) => (
+                <li>· <strong>{p.name}</strong>{p.role && <span class="text-ink-500"> — {p.role}</span>}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
+    )}
+
+    {type.matchTypes && type.matchTypes.length > 0 && (
+      <section class="my-12">
+        <h2 class="text-h2 font-semibold mb-4">เข้ากันได้ดีกับ</h2>
+        <div class="flex flex-wrap gap-2">
+          {type.matchTypes.map((m) => (
+            <a
+              href={`/mbti/${m.toLowerCase()}/`}
+              class="font-mono text-small px-3 py-2 rounded-btn bg-cream-50 border border-ink-300/30 hover:border-coral-400"
+            >
+              {m}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

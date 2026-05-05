@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getBlogPosts } from '../../lib/payload'
+
+const posts = await getBlogPosts()
+---
+
+<BaseLayout
+  title="บทความ — quizdee"
+  description="บทความเกี่ยวกับบุคลิกภาพ MBTI, Love Language, อาชีพ ฉบับเข้าใจคนไทยวัยทำงาน"
+>
+  <section class="container-wide py-16">
+    <p class="eyebrow mb-4">BLOG</p>
+    <h1 class="text-h1 font-semibold mb-12">บทความทั้งหมด</h1>
+
+    {posts.length === 0 ? (
+      <div class="card text-center py-16">
+        <p class="eyebrow mb-3">COMING SOON</p>
+        <p class="text-ink-700">บทความกำลังเตรียม ติดตามได้เร็วๆ นี้</p>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}/`} class="group">
+            <p class="eyebrow mb-2">{post.category}</p>
+            <h2 class="font-display text-h2 font-semibold mb-3 group-hover:text-coral-400 transition-colors">
+              {post.title}
+            </h2>
+            <p class="text-body text-ink-700">{post.metaDescription}</p>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

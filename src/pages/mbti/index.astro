@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getMbtiTypes } from '../../lib/payload'
+
+const types = await getMbtiTypes()
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย',
+    description: 'MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ ที่ใช้กันทั่วโลก',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
+      { '@type': 'ListItem', position: 2, name: 'MBTI' },
+    ],
+  },
+]
+
+const groups = {
+  analyst: ['INTJ', 'INTP', 'ENTJ', 'ENTP'],
+  diplomat: ['INFJ', 'INFP', 'ENFJ', 'ENFP'],
+  sentinel: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'],
+  explorer: ['ISTP', 'ISFP', 'ESTP', 'ESFP'],
+}
+
+const groupLabels: Record<string, { th: string; color: string }> = {
+  analyst: { th: 'นักวิเคราะห์', color: 'bg-analyst/15' },
+  diplomat: { th: 'นักการทูต', color: 'bg-diplomat/15' },
+  sentinel: { th: 'ผู้พิทักษ์', color: 'bg-sentinel/15' },
+  explorer: { th: 'นักสำรวจ', color: 'bg-explorer/15' },
+}
+
+const typeMap = new Map(types.map((t) => [t.typeCode.toUpperCase(), t]))
+---
+
+<BaseLayout
+  title="MBTI คืออะไร? — เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย"
+  description="MBTI 16 แบบครบ ฉบับเข้าใจคนไทยวัยทำงาน — INFJ, INTJ, ENFP, ESTJ และอีก 12 แบบ พร้อมแบบทดสอบฟรี"
+  schemas={schemas}
+>
+  <article class="container-prose py-16">
+    <p class="eyebrow mb-4">PILLAR PAGE · MBTI</p>
+    <h1 class="text-h1 font-semibold mb-6 leading-tight">
+      MBTI คืออะไร? เข้าใจบุคลิกภาพ 16 แบบ ฉบับคนไทย
+    </h1>
+
+    <!-- Answer block 40-60 words -->
+    <p class="answer-block">
+      MBTI (Myers-Briggs Type Indicator) คือเครื่องมือประเมินบุคลิกภาพ 16 แบบ
+      ที่จัดประเภทคนตาม 4 มิติ — Extraversion/Introversion, Sensing/Intuition,
+      Thinking/Feeling, Judging/Perceiving แต่ละคนได้ผลลัพธ์เป็นรหัส 4 ตัวอักษร
+      เช่น INFJ, ENTP เพื่อช่วยทำความเข้าใจตัวเองและคนรอบข้าง
+    </p>
+
+    <div class="my-8">
+      <a href="/quiz/mbti/" class="btn-primary">
+        ทำแบบทดสอบ MBTI 60 ข้อ ฟรี →
+      </a>
+    </div>
+
+    <!-- BANNER SLOT 4: article-mid -->
+    <div class="ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
+      banner-article-mid
+    </div>
+
+    <h2 class="text-h2 font-semibold mt-16 mb-6">บุคลิกภาพทั้ง 16 แบบ</h2>
+
+    {Object.entries(groups).map(([key, codes]) => (
+      <section class="mb-10">
+        <p class="eyebrow mb-3">{groupLabels[key].th}</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {codes.map((code) => {
+            const t = typeMap.get(code)
+            return (
+              <a
+                href={`/mbti/${code.toLowerCase()}/`}
+                class={`${groupLabels[key].color} rounded-card p-4 hover:shadow-md transition-shadow group`}
+              >
+                <p class="font-mono text-h3 font-semibold group-hover:text-coral-400 transition-colors">
+                  {code}
+                </p>
+                <p class="text-caption mt-1 text-ink-700">
+                  {t?.title?.split('—')[1]?.trim() || 'รอเนื้อหา'}
+                </p>
+              </a>
+            )
+          })}
+        </div>
+      </section>
+    ))}
+
+    <h2 class="text-h2 font-semibold mt-16 mb-4">4 มิติของ MBTI</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      <div class="card"><strong class="font-mono">E ↔ I</strong> — เปิดเผย vs สงบเงียบ</div>
+      <div class="card"><strong class="font-mono">S ↔ N</strong> — เน้นข้อเท็จจริง vs สังหรณ์</div>
+      <div class="card"><strong class="font-mono">T ↔ F</strong> — ใช้เหตุผล vs ใช้ความรู้สึก</div>
+      <div class="card"><strong class="font-mono">J ↔ P</strong> — วางแผน vs ยืดหยุ่น</div>
+    </div>
+  </article>
+</BaseLayout>

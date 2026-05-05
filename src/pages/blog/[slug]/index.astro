@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getBlogPosts, getBlogPostBySlug } from '../../lib/payload'
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts()
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDescription,
+    datePublished: post.publishedAt,
+    author: post.author?.name
+      ? { '@type': 'Person', name: post.author.name }
+      : { '@type': 'Organization', name: 'Quizdee' },
+  },
+  ...(post.faq && post.faq.length > 0
+    ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faq.map((q) => ({
+          '@type': 'Question',
+          name: q.question,
+          acceptedAnswer: { '@type': 'Answer', text: q.answer },
+        })),
+      }]
+    : []),
+]
+---
+
+<BaseLayout
+  title={`${post.title} — quizdee`}
+  description={post.metaDescription}
+  schemas={schemas}
+>
+  <article class="container-prose py-16">
+    <p class="eyebrow mb-4">{post.category}{post.publishedAt && ` · ${new Date(post.publishedAt).toLocaleDateString('th-TH')}`}</p>
+    <h1 class="text-h1 font-semibold mb-6 leading-tight">{post.title}</h1>
+
+    <p class="answer-block">{post.answerBlock}</p>
+
+    <!-- BANNER SLOT 4: article-mid -->
+    <div class="ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
+      banner-article-mid
+    </div>
+
+    <div class="prose-content my-8 text-body">
+      <!-- Lexical content rendering — placeholder for now -->
+      {post.content ? (
+        <div class="text-ink-700">
+          [Rich text content จะ render เมื่อ implement Lexical renderer]
+        </div>
+      ) : (
+        <p class="text-ink-500 italic">รอเนื้อหา</p>
+      )}
+    </div>
+
+    {post.faq && post.faq.length > 0 && (
+      <section class="my-12">
+        <h2 class="text-h2 font-semibold mb-6">คำถามที่พบบ่อย</h2>
+        <div class="space-y-3">
+          {post.faq.map((q) => (
+            <details class="card cursor-pointer group">
+              <summary class="font-display font-semibold text-h3 list-none flex justify-between items-start gap-4">
+                <span>{q.question}</span>
+                <span class="text-coral-400 group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p class="mt-4 text-ink-700">{q.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {(post.relatedQuiz?.length || post.relatedResults?.length) && (
+      <section class="card my-12">
+        <p class="eyebrow mb-3">RELATED</p>
+        <div class="flex flex-wrap gap-3">
+          {post.relatedQuiz?.map((q) => (
+            <a href={`/quiz/${q.slug}/`} class="btn-secondary text-small">→ ทำ {q.title}</a>
+          ))}
+          {post.relatedResults?.map((r) => (
+            <a href={`/mbti/${r.typeCode.toLowerCase()}/`} class="btn-secondary text-small">→ {r.title}</a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

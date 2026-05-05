@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Quizdee',
+    url: 'https://quizdee.com/',
+    description: 'Quizdee คือเว็บแบบทดสอบบุคลิกภาพภาษาไทย ที่เขียนโดยคนเข้าใจคนไทยวัยทำงานจริงๆ',
+    foundingDate: '2026',
+    logo: 'https://quizdee.com/logo.svg',
+  },
+]
+---
+
+<BaseLayout
+  title="เกี่ยวกับ Quizdee — ทีมและนโยบายของเรา"
+  description="Quizdee คือเว็บแบบทดสอบบุคลิกภาพภาษาไทย ที่ตั้งใจทำเนื้อหาคุณภาพสำหรับคนวัยทำงาน"
+  schemas={schemas}
+>
+  <article class="container-prose py-16">
+    <p class="eyebrow mb-4">ABOUT</p>
+    <h1 class="text-h1 font-semibold mb-8">เกี่ยวกับ Quizdee</h1>
+
+    <p class="text-body text-ink-700 mb-6">
+      Quizdee เริ่มต้นจากความคิดง่ายๆ — เราอยากให้คนไทยเข้าถึงแบบทดสอบบุคลิกภาพคุณภาพ
+      ที่เขียนโดยคนเข้าใจบริบทของคนไทยวัยทำงาน ไม่ใช่แค่แปลจากต่างประเทศแบบตรงตัว
+    </p>
+
+    <h2 class="text-h2 font-semibold mt-12 mb-4">ภารกิจของเรา</h2>
+    <p class="text-body text-ink-700 mb-6">
+      ทำให้การ "เข้าใจตัวเอง" เป็นเรื่องที่จับต้องได้และเชื่อถือได้ ผ่านแบบทดสอบ
+      ที่อ้างอิงงานวิจัยจริง บทความที่เขียนด้วยใจ และการนำเสนอที่ใส่ใจประสบการณ์ผู้ใช้
+    </p>
+
+    <h2 class="text-h2 font-semibold mt-12 mb-4">นโยบายเนื้อหา</h2>
+    <p class="text-body text-ink-700 mb-4">
+      ทุกแบบทดสอบและบทความบน Quizdee ผ่านกระบวนการต่อไปนี้:
+    </p>
+    <ul class="space-y-2 text-body text-ink-700 mb-6">
+      <li>· ค้นคว้าจากแหล่งวิชาการ — Myers-Briggs Foundation, งานวิจัยเชิงจิตวิทยา</li>
+      <li>· ใช้ AI ช่วยร่างเนื้อหา — แต่มีบรรณาธิการตรวจ ปรับ และเพิ่มมุมมองคนไทยเสมอ</li>
+      <li>· ทดสอบกับผู้ใช้จริง — ก่อน publish</li>
+      <li>· อ้างอิงแหล่งที่มา — เมื่อเหมาะสม</li>
+      <li>· ปรับปรุงตามฟีดแบ็ก — ทุกแบบทดสอบมีระยะ iterate</li>
+    </ul>
+
+    <h2 class="text-h2 font-semibold mt-12 mb-4">ติดต่อ</h2>
+    <p class="text-body text-ink-700">
+      มีคำถาม คำแนะนำ หรือสนใจร่วมงาน?
+      <a href="/contact/" class="text-coral-400 hover:text-coral-600 underline underline-offset-4">
+        ติดต่อเราได้ที่นี่
+      </a>
+    </p>
+  </article>
+</BaseLayout>

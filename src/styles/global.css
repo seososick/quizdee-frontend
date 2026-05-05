@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Self-host critical fonts via Google Fonts CDN preload — production should self-host */
+  :root {
+    --color-bg: 248 244 237;       /* cream-100 */
+    --color-bg-raised: 255 251 245; /* cream-50 */
+    --color-ink: 42 40 38;
+    --color-accent: 230 107 92;
+    --color-accent-pale: 248 220 215;
+  }
+
+  html {
+    font-family: theme('fontFamily.body');
+    color: rgb(var(--color-ink));
+    background: rgb(var(--color-bg));
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply text-body;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: theme('fontFamily.display');
+    font-weight: 600;
+    color: rgb(var(--color-ink));
+  }
+
+  h1 { @apply text-h1; }
+  h2 { @apply text-h2; }
+  h3 { @apply text-h3; }
+
+  ::selection {
+    background: rgb(var(--color-accent) / 0.2);
+  }
+
+  /* Focus visible — accessibility */
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-accent));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-prose {
+    @apply mx-auto max-w-3xl px-6 sm:px-8;
+  }
+  .container-wide {
+    @apply mx-auto max-w-6xl px-6 sm:px-8;
+  }
+
+  /* Button — primary action */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-btn px-5 py-3
+           font-display font-semibold text-base
+           transition-all duration-150 ease-out
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-100;
+  }
+  .btn-primary {
+    @apply btn bg-coral-400 text-cream-50
+           hover:bg-coral-600
+           active:translate-y-[1px] shadow-press
+           active:shadow-none;
+  }
+  .btn-secondary {
+    @apply btn bg-cream-50 text-ink-900 border border-ink-300
+           hover:border-ink-500;
+  }
+  .btn-ghost {
+    @apply btn text-ink-700 hover:text-ink-900 hover:bg-cream-200;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-cream-50 rounded-card shadow-card p-6;
+  }
+
+  /* Eyebrow — caption-style label */
+  .eyebrow {
+    @apply text-caption uppercase font-mono tracking-[0.04em] text-ink-500;
+  }
+
+  /* Answer block — for AI Overview citation */
+  .answer-block {
+    @apply font-display text-h3 leading-snug text-ink-900
+           border-l-2 border-coral-400 pl-5 my-8;
+  }
+
+  /* Placeholder image (anti-AI-slop: NO unsplash/picsum) */
+  .ph-img {
+    @apply bg-cream-200 flex items-center justify-center text-ink-300 font-mono text-small;
+  }
+}

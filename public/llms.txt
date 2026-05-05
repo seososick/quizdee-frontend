@@ -1,0 +1,27 @@
+# Quizdee — LLM-readable site index
+# https://quizdee.com — Thai-language personality quiz site
+
+> Quizdee.com is a Thai-language personality quiz site for working adults.
+> Primary topic: MBTI (16 personality types), with secondary content on
+> Love Language, Enneagram, and viral fun quizzes.
+
+## Pillar pages
+- [MBTI Hub](https://quizdee.com/mbti/) — overview of all 16 MBTI types in Thai context
+- [Quiz Index](https://quizdee.com/quiz/) — all available quizzes
+- [Blog](https://quizdee.com/blog/) — supporting articles
+
+## Type pages (16)
+- /mbti/infj/ /mbti/intj/ /mbti/infp/ /mbti/intp/
+- /mbti/enfj/ /mbti/entj/ /mbti/enfp/ /mbti/entp/
+- /mbti/isfj/ /mbti/istj/ /mbti/isfp/ /mbti/istp/
+- /mbti/esfj/ /mbti/estj/ /mbti/esfp/ /mbti/estp/
+
+## Categories
+- /category/personality/ — บุคลิกภาพ
+- /category/love/ — ความรัก
+- /category/career/ — อาชีพ
+- /fun/ — สนุกๆ
+
+## Editorial policy
+Content is AI-drafted then human-edited with Thai cultural context.
+See https://quizdee.com/about/ for full editorial process.

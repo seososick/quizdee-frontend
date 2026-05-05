@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getQuizzes, getBlogPosts } from '../../lib/payload'
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'personality' }, props: { label: 'Personality', th: 'บุคลิกภาพ' } },
+    { params: { slug: 'love' }, props: { label: 'Love', th: 'ความรัก' } },
+    { params: { slug: 'career' }, props: { label: 'Career', th: 'อาชีพ' } },
+    { params: { slug: 'fun' }, props: { label: 'Fun', th: 'สนุกๆ' } },
+  ]
+}
+
+const { slug } = Astro.params
+const { label, th } = Astro.props
+
+const allQuizzes = await getQuizzes()
+const allPosts = await getBlogPosts()
+
+const quizzes = allQuizzes.filter((q) => q.category === slug)
+const posts = allPosts.filter((p) => p.category === slug)
+---
+
+<BaseLayout
+  title={`${th} — แบบทดสอบและบทความ — quizdee`}
+  description={`รวมแบบทดสอบและบทความหมวด ${th} ทั้งหมดบน quizdee`}
+>
+  <section class="container-wide py-16">
+    <p class="eyebrow mb-4">CATEGORY · {label.toUpperCase()}</p>
+    <h1 class="text-h1 font-semibold mb-12">{th}</h1>
+
+    {quizzes.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-h2 font-semibold mb-6">แบบทดสอบ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {quizzes.map((quiz) => (
+            <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-md transition-shadow">
+              <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title}</h3>
+              <p class="text-small text-ink-700 mb-4">{quiz.description}</p>
+              <p class="text-caption text-ink-500">{quiz.estimatedMinutes} นาที</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {posts.length > 0 && (
+      <div>
+        <h2 class="text-h2 font-semibold mb-6">บทความ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {posts.map((post) => (
+            <a href={`/blog/${post.slug}/`} class="group">
+              <h3 class="font-display text-h3 font-semibold mb-2 group-hover:text-coral-400">
+                {post.title}
+              </h3>
+              <p class="text-small text-ink-700">{post.metaDescription}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {quizzes.length === 0 && posts.length === 0 && (
+      <div class="card text-center py-16">
+        <p class="eyebrow mb-3">EMPTY</p>
+        <p class="text-ink-700">ยังไม่มีเนื้อหาในหมวดนี้</p>
+      </div>
+    )}
+  </section>
+</BaseLayout>
