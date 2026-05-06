@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import Mascot from '@/components/Mascot.astro'
 import { getMbtiTypes } from '@/lib/payload'
 
 const types = await getMbtiTypes()
@@ -109,8 +110,9 @@ const typeMap = new Map(types.map((t) => [t.typeCode.toUpperCase(), t]))
               return (
                 <a
                   href={`/mbti/${code.toLowerCase()}/`}
-                  class={`${group.bg} rounded-card p-4 sm:p-5 hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group block`}
+                  class={`${group.bg} rounded-card p-4 sm:p-5 hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group block flex flex-col items-center text-center`}
                 >
+                  <Mascot mbti={code} size={96} alt={code} class="mb-2" />
                   <p class="font-mono text-h3 font-semibold text-sumi-900 group-hover:text-sakura-700 transition-colors">
                     {code}
                   </p>

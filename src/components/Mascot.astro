@@ -1,0 +1,45 @@
+---
+/**
+ * Mascot — Quizdee cat mascot component (responsive WebP w/ srcset).
+ *
+ * Usage:
+ *   <Mascot pose="wave" size={240} class="..." alt="quizdee cat saying hi" />
+ *   <Mascot mbti="INTJ" size={200} alt="INTJ architect cat" />
+ */
+
+interface Props {
+  pose?: 'base' | 'wave' | 'think' | 'celebrate' | 'confused' | 'sleep' | 'point' | 'og-default'
+  mbti?: string  // e.g. "INTJ"
+  size?: number
+  alt?: string
+  class?: string
+  loading?: 'lazy' | 'eager'
+}
+
+const { pose, mbti, size = 240, alt = '', class: className = '', loading = 'lazy' } = Astro.props as Props
+
+let basePath: string
+if (mbti) {
+  basePath = `/mascot/mbti/${mbti.toLowerCase()}`
+} else if (pose) {
+  basePath = `/mascot/${pose}`
+} else {
+  basePath = '/mascot/base'
+}
+
+// Pick best src by requested size
+const useSize = size <= 128 ? 128 : size <= 512 ? 512 : 1024
+const fileSize = useSize === 1024 ? '' : `-${useSize}`
+---
+
+<img
+  src={`${basePath}${fileSize}.webp`}
+  srcset={`${basePath}-128.webp 128w, ${basePath}-512.webp 512w, ${basePath}.webp 1024w`}
+  sizes={`${size}px`}
+  width={size}
+  height={size}
+  alt={alt}
+  loading={loading}
+  decoding="async"
+  class={`block ${className}`}
+/>

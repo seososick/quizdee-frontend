@@ -5,6 +5,7 @@
  */
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import StickerDecor from '@/components/StickerDecor.astro'
+import Mascot from '@/components/Mascot.astro'
 import { CATALOG } from '@/lib/catalog'
 import { loadMeta, loadArchetypes, archetypeName, archetypeUrlSlug, archetypeCode } from '@/lib/quiz-content'
 
@@ -34,6 +35,10 @@ const archName = archetypeName(archetype)
 const archEmoji = archetype.emoji || entry.emoji
 const archTagline = archetype.tagline_th || ''
 const archDesc = archetype.description_th || ''
+
+// MBTI quizzes get the MBTI-specific cat; others get a celebrate cat
+const MBTI_CODES = ['INTJ','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP']
+const isMbtiArchetype = MBTI_CODES.includes(code)
 
 // Compatible archetypes resolved with names + emojis
 const compatList = (archetype.compatible_with || []).slice(0, 3).map((c: string) => {
@@ -89,7 +94,13 @@ const otherArchetypes = allArchetypes.filter((a: any) => archetypeCode(a) !== co
           <div class="w-1.5 h-1.5 rounded-full bg-matcha-500"></div>
         </div>
 
-        <div class="text-7xl sm:text-8xl mb-4 leading-none">{archEmoji}</div>
+        <div class="relative inline-block mb-4">
+          {isMbtiArchetype ? (
+            <Mascot mbti={code} size={200} alt={`${archName} cat`} loading="eager" class="mx-auto" />
+          ) : (
+            <Mascot pose="celebrate" size={200} alt={`${archName} celebration`} loading="eager" class="mx-auto" />
+          )}
+        </div>
         <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-2">{code}</p>
         <h1 class="font-display text-h1 sm:text-display font-semibold text-sumi-900 mb-4 leading-tight text-balance">{archName}</h1>
         {archTagline && (

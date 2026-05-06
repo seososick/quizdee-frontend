@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import PlayCard from '@/components/PlayCard.astro'
 import StickerDecor from '@/components/StickerDecor.astro'
+import Mascot from '@/components/Mascot.astro'
 import { CATALOG, CATEGORIES } from '@/lib/catalog'
 import { getBlogPosts } from '@/lib/payload'
 
@@ -63,7 +64,8 @@ const schemas = [
   <section class="relative overflow-hidden bg-butter-50">
     <StickerDecor />
     <div class="container-wide relative z-10 pt-12 pb-14 sm:pt-16 sm:pb-20 md:pt-20 md:pb-28">
-      <div class="max-w-3xl">
+      <div class="grid md:grid-cols-[1fr_auto] gap-8 items-end">
+        <div class="max-w-3xl">
         <p class="inline-flex items-center gap-2 rounded-full bg-sumi-900 text-butter-300 px-3 py-1 font-mono text-caption uppercase tracking-widest mb-6">
           <span class="inline-block w-2 h-2 rounded-full bg-coral-500 animate-pulse"></span>
           EST. 2026 · BANGKOK · {allCount} QUIZZES
@@ -105,6 +107,12 @@ const schemas = [
           <span class="text-sumi-700">
             <strong class="font-semibold text-sumi-900">{allCount} quizzes พร้อมเล่น</strong> · ทำแล้วได้การ์ดสวยส่ง Story
           </span>
+        </div>
+        </div>
+
+        <!-- Mascot (right column on md+) -->
+        <div class="hidden md:flex items-end justify-end">
+          <Mascot pose="wave" size={280} alt="แมว Quizdee กำลังทักทาย" loading="eager" class="drop-shadow-[4px_4px_0_rgba(31,26,20,0.15)]" />
         </div>
       </div>
     </div>

@@ -1,0 +1,49 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Mascot from '@/components/Mascot.astro'
+import StickerDecor from '@/components/StickerDecor.astro'
+import { CATALOG } from '@/lib/catalog'
+
+const popular = CATALOG.slice(0, 4)
+---
+
+<BaseLayout
+  title="404 — ไม่เจอหน้านี้ค่ะ | quizdee"
+  description="ไม่เจอหน้าที่หาอยู่ ลองเลือก quiz อื่นแทนได้เลย"
+>
+  <section class="relative bg-butter-50 overflow-hidden min-h-[80vh] flex items-center">
+    <StickerDecor />
+    <div class="container-wide relative z-10 py-16 text-center">
+      <Mascot pose="confused" size={300} alt="แมว Quizdee งง" loading="eager" class="mx-auto mb-6" />
+
+      <p class="font-mono text-caption uppercase tracking-[0.25em] text-coral-700 mb-2">ERROR · 404</p>
+      <h1 class="font-display font-medium leading-tight text-sumi-900 mb-4 max-w-xl mx-auto" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+        แมวเรา <em class="italic font-light text-coral-700">หลงทาง</em> นิดหน่อย
+      </h1>
+      <p class="text-body text-sumi-700 max-w-md mx-auto mb-8">
+        หน้าที่กำลังหาอยู่อาจถูกย้ายหรือไม่มีอยู่ — ลองหา quiz ที่ชอบจากด้านล่างได้เลยค่ะ
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <a href="/" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3 rounded-full font-semibold border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-all min-h-[48px]">
+          ← กลับหน้าแรก
+        </a>
+        <a href="/quiz/" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold border-2 border-sumi-900 bg-washi-50 hover:bg-butter-100 transition-all min-h-[48px]">
+          ดู quiz ทั้งหมด
+        </a>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <p class="font-mono text-caption uppercase tracking-widest text-sumi-500 mb-4">หรือลอง quiz เหล่านี้</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {popular.map((q) => (
+            <a href={`/quiz/${q.slug}/`} class={`${q.bg} group block rounded-xl border-2 border-sumi-900 p-3 shadow-[3px_3px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[5px_5px_0_0_rgba(31,26,20,0.95)] transition-all`}>
+              <div class="text-2xl mb-1">{q.emoji}</div>
+              <p class="font-display text-small font-semibold text-sumi-900 leading-tight line-clamp-2">{q.title_th}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

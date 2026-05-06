@@ -5,6 +5,7 @@
  */
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import PlayCard from '@/components/PlayCard.astro'
+import Mascot from '@/components/Mascot.astro'
 import { CATALOG, CATEGORIES } from '@/lib/catalog'
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
@@ -122,8 +123,8 @@ CATALOG.forEach((q) => {
     </div>
 
     <!-- Empty state -->
-    <div id="empty-state" class="hidden text-center py-16">
-      <div class="text-5xl mb-3">🤷</div>
+    <div id="empty-state" class="hidden text-center py-12">
+      <Mascot pose="confused" size={180} alt="แมว Quizdee งง" class="mx-auto mb-3" />
       <p class="font-display text-h3 font-semibold text-sumi-900">หมวดนี้ยังไม่มี quiz</p>
       <button data-action="reset-filter" class="mt-4 inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-5 py-3 rounded-full font-semibold border-2 border-sumi-900 min-h-[44px]">ดูทั้งหมด</button>
     </div>

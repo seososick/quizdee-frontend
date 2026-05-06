@@ -6,6 +6,7 @@
  */
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import StickerDecor from '@/components/StickerDecor.astro'
+import Mascot from '@/components/Mascot.astro'
 import { CATALOG } from '@/lib/catalog'
 import { loadArchetypes, archetypeName, archetypeUrlSlug } from '@/lib/quiz-content'
 import { getMbtiTypes, getResultByTypeCode } from '@/lib/payload'
@@ -106,7 +107,7 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + ar
       </p>
       <p class="font-mono text-h2 font-bold text-sumi-900 mb-1">{code}</p>
       <h1 class="font-display font-medium leading-[1.1] tracking-tight text-balance text-sumi-900" style="font-size: clamp(2rem, 6vw, 4rem);">
-        <span class="text-4xl sm:text-5xl mr-2">{archEmoji}</span>
+        <Mascot mbti={code} size={96} alt={`${archName} cat mascot`} loading="eager" class="inline-block mr-3 align-middle" />
         {archName}
       </h1>
       {archTagline && (
@@ -210,7 +211,7 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + ar
           const isCurrent = c === code
           return (
             <a href={`/mbti/${c.toLowerCase()}/`} class={`group block rounded-xl border-2 ${isCurrent ? 'border-coral-700 bg-coral-50' : 'border-sumi-900 bg-washi-50'} p-3 text-center shadow-[2px_2px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0_0_rgba(31,26,20,0.95)] transition-all`}>
-              <div class="text-2xl mb-1">{a?.emoji || '🌙'}</div>
+              <Mascot mbti={c} size={64} alt={c} class="mx-auto mb-1" />
               <p class="font-mono text-caption font-bold text-sumi-900">{c}</p>
             </a>
           )
