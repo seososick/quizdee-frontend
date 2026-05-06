@@ -14,12 +14,13 @@ interface Props {
   author?: string
   tags?: string[]
   hreflang?: Array<{ lang: string; href: string }>
+  keywords?: string[]
 }
 
 const {
   title,
   description,
-  ogImage = '/og-default.png',
+  ogImage = '/og-default.svg',
   ogType = 'website',
   noindex = false,
   canonical,
@@ -29,6 +30,7 @@ const {
   author,
   tags = [],
   hreflang = [],
+  keywords = [],
 } = Astro.props
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
@@ -85,6 +87,7 @@ const baseSchemas = schemas.length === 0
     <!-- Title + description -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} /> }
 
     <!-- Robots -->
     {noindex ? (

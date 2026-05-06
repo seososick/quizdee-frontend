@@ -1,131 +1,210 @@
 ---
+/**
+ * Universal Quiz Page — /quiz/[slug]/
+ * Loads JSON content from /content/ at build time, renders for any of the 17 quizzes.
+ * Engine: v2 (a-e, multi-archetype weighted)
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { getQuizzes, getQuizBySlug } from '@/lib/payload'
+import StickerDecor from '@/components/StickerDecor.astro'
+import { CATALOG } from '@/lib/catalog'
+import fs from 'node:fs'
+import path from 'node:path'
 
 export async function getStaticPaths() {
-  const quizzes = await getQuizzes()
-  return quizzes.map((quiz) => ({
-    params: { slug: quiz.slug },
-    props: { quiz },
-  }))
+  return CATALOG.map(q => ({ params: { slug: q.slug }, props: { entry: q } }))
 }
 
-const { quiz } = Astro.props
+const { entry } = Astro.props as { entry: typeof CATALOG[number] }
+const contentDir = path.resolve(process.cwd(), '../content')
+
+// Load JSON files (build-time)
+function safeLoad(file: string) {
+  try {
+    const p = path.join(contentDir, file)
+    if (!fs.existsSync(p)) return null
+    return JSON.parse(fs.readFileSync(p, 'utf-8'))
+  } catch { return null }
+}
+
+const meta = safeLoad(entry.source_files.meta) || {}
+const questionsRaw = safeLoad(entry.source_files.questions) || []
+const archetypesRaw = safeLoad(entry.source_files.archetypes) || []
+
+// Normalize archetypes (some files: array; love-language: 'love-language-types' is array)
+const archetypes = Array.isArray(archetypesRaw) ? archetypesRaw : []
+const questions = Array.isArray(questionsRaw) ? questionsRaw : []
+
+// Build engine data payload — auto-assign a-e keys if missing, detect scoring mode
+const isMbtiAxis = ['mbti', 'cat-mbti', 'office-mbti', 'kdrama-mbti'].includes(entry.slug)
+const isBurnout = entry.slug === 'burnout-risk'
+
+const engineData = {
+  slug: entry.slug,
+  title_th: entry.title_th,
+  emoji: entry.emoji,
+  scoring: isBurnout ? 'tier-by-score' : (isMbtiAxis ? 'mbti-4axis' : 'highest-archetype'),
+  questions: questions.map((q: any, i: number) => ({
+    order: q.order ?? i + 1,
+    text: q.text,
+    options: (q.options || []).map((o: any, oi: number) => ({
+      key: o.key || ['a', 'b', 'c', 'd', 'e'][oi] || String.fromCharCode(97 + oi),
+      label: o.label,
+      weight: o.weight || o.weights || {},
+    })),
+  })),
+  archetypes: archetypes.map((a: any) => ({
+    code: a.code || a.mbti || a.name_en?.toUpperCase()?.replace(/\s+/g, '_') || 'UNKNOWN',
+    name_th: a.name_th || a.archetype_name_th || a.cat_name_th || a.office_role_th || a.kdrama_role_th || '',
+    emoji: a.emoji,
+    tagline_th: a.tagline_th,
+    score_range: a.score_range,
+  })),
+}
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const pageUrl = `${siteUrl}/quiz/${entry.slug}/`
 
 const schemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'Quiz',
-    name: quiz.title,
-    description: quiz.description,
+    name: entry.title_th,
+    description: meta.description_th || entry.subtitle_th,
     educationalLevel: 'beginner',
-    timeRequired: `PT${quiz.estimatedMinutes}M`,
+    timeRequired: `PT${entry.duration_min}M`,
+    inLanguage: 'th',
+    learningResourceType: 'Quiz',
+    interactivityType: 'active',
+    typicalAgeRange: '18-45',
+    url: pageUrl,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
-      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: 'https://quizdee.com/quiz/' },
-      { '@type': 'ListItem', position: 3, name: quiz.title },
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: siteUrl + '/quiz/' },
+      { '@type': 'ListItem', position: 3, name: entry.title_th, item: pageUrl },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: `${entry.title_th} ใช้เวลาเท่าไหร่?`, acceptedAnswer: { '@type': 'Answer', text: `ประมาณ ${entry.duration_min} นาที จำนวน ${entry.question_count} ข้อ` } },
+      { '@type': 'Question', name: 'ฟรีไหม ต้องสมัครสมาชิกหรือเปล่า?', acceptedAnswer: { '@type': 'Answer', text: 'ฟรี 100% ไม่ต้องสมัครสมาชิก ไม่ต้องใส่อีเมล' } },
+      { '@type': 'Question', name: 'ผลแม่นยำแค่ไหน?', acceptedAnswer: { '@type': 'Answer', text: meta.psychology_basis_th || 'ออกแบบโดยอ้างอิงทฤษฎีจิตวิทยา + เนื้อหาฉบับคนไทย ไม่ใช่การวินิจฉัยทางการแพทย์' } },
     ],
   },
 ]
 
-// Serialize quiz for client-side engine
-const quizData = JSON.stringify({
-  slug: quiz.slug,
-  title: quiz.title,
-  scoringMethod: quiz.scoringMethod,
-  questions: quiz.questions,
-  results: quiz.results,
-})
+const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&subtitle=${encodeURIComponent(entry.subtitle_th)}`
 ---
 
 <BaseLayout
-  title={`${quiz.title} — quizdee`}
-  description={quiz.description}
+  title={`${entry.title_th} — ${entry.subtitle_th} | quizdee`}
+  description={meta.description_th || entry.subtitle_th}
+  canonical={pageUrl}
+  ogImage={ogImage}
   schemas={schemas}
+  keywords={meta.keywords_th}
 >
-  <section class="container-prose py-16">
-    <p class="eyebrow mb-4">{quiz.category} · {quiz.estimatedMinutes} นาที</p>
-    <h1 class="text-h1 font-semibold mb-4">{quiz.title}</h1>
-    <p class="text-body text-ink-700 mb-8">{quiz.description}</p>
-
-    <!-- BANNER SLOT 2: quiz-top -->
-    <div class="ph-img my-6" style="height: 90px; max-width: 728px;">
-      banner-quiz-top
-    </div>
-
-    <!-- QUIZ ENGINE MOUNT -->
-    <div id="quiz-engine" class="mt-8" data-quiz={quizData}>
-      <noscript>
-        <div class="card border border-error/30 bg-error/5">
-          <p class="font-semibold mb-2">ต้องเปิด JavaScript</p>
-          <p class="text-small">แบบทดสอบต้องการ JavaScript เพื่อทำงาน กรุณาเปิดใน browser settings</p>
-        </div>
-      </noscript>
-
-      <!-- Loading state (initial render) -->
-      <div data-state="loading" class="card">
-        <p class="eyebrow mb-3">LOADING</p>
-        <div class="space-y-3">
-          <div class="h-4 bg-cream-200 rounded animate-pulse"></div>
-          <div class="h-4 bg-cream-200 rounded animate-pulse w-3/4"></div>
-          <div class="h-4 bg-cream-200 rounded animate-pulse w-1/2"></div>
-        </div>
+  <section class="relative bg-butter-50 overflow-hidden">
+    <StickerDecor />
+    <div class="container-wide relative z-10 py-10 sm:py-14">
+      <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-3">{entry.category_label_th}</p>
+      <h1 class="font-display font-medium leading-[1.15] tracking-tight text-balance text-sumi-900 max-w-3xl" style="font-size: clamp(1.75rem, 5vw, 3.5rem);">
+        <span class="text-4xl sm:text-5xl mr-2">{entry.emoji}</span>
+        {entry.title_th}
+      </h1>
+      <p class="mt-4 max-w-2xl text-body text-sumi-700">{entry.subtitle_th}</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3 text-small font-mono text-sumi-700">
+        <span class="inline-flex items-center gap-1 bg-sumi-900 text-butter-300 px-3 py-1 rounded-full">⏱ {entry.duration_min} นาที</span>
+        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">📝 {entry.question_count} คำถาม</span>
+        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">✅ ฟรี · ไม่ต้องสมัคร</span>
       </div>
+    </div>
+  </section>
 
-      <!-- Start button (replaces loading) -->
-      <div data-state="intro" class="hidden card text-center py-12">
-        <h2 class="text-h2 font-semibold mb-4">พร้อมเริ่มแล้วใช่ไหม?</h2>
-        <p class="text-ink-700 mb-6">
-          {quiz.questions?.length || 0} คำถาม · ใช้เวลาประมาณ {quiz.estimatedMinutes} นาที
-        </p>
-        <button data-action="start" class="btn-primary">เริ่มทำแบบทดสอบ</button>
+  <section class="container-wide py-8 sm:py-12">
+    <div id="quiz-engine" data-quiz={JSON.stringify(engineData)} class="max-w-2xl mx-auto">
+      <!-- Intro state -->
+      <div data-state="intro" class="bg-washi-50 border-2 border-sumi-900 rounded-3xl p-6 sm:p-10 text-center shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
+        <div class="text-6xl mb-4">{entry.emoji}</div>
+        <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-3">พร้อมเริ่มแล้วใช่ไหม?</h2>
+        <p class="text-body text-sumi-700 mb-6">ตอบทั้งหมด {entry.question_count} ข้อ — ใช้เวลา {entry.duration_min} นาที</p>
+        <button data-action="start" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-8 py-4 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 active:scale-[0.98] transition-all min-h-[52px]">
+          <span>เริ่มเล่น</span>
+          <span aria-hidden="true">→</span>
+        </button>
+        {meta.psychology_basis_th && (
+          <p class="mt-6 text-caption font-mono text-sumi-500">📖 {meta.psychology_basis_th}</p>
+        )}
+        {entry.slug === 'burnout-risk' && (
+          <p class="mt-3 text-caption text-sumi-500 italic">⚠️ ผลไม่ใช่การวินิจฉัยทางการแพทย์ ถ้ารู้สึกหนักมาก โทร 1323 (สายด่วนสุขภาพจิต)</p>
+        )}
       </div>
 
       <!-- Question state -->
       <div data-state="question" class="hidden">
-        <div class="mb-4">
-          <div class="flex justify-between text-caption text-ink-500 mb-2">
-            <span data-progress-text>คำถามที่ 1 จาก 10</span>
-            <span data-progress-percent>10%</span>
+        <!-- Progress -->
+        <div class="mb-6">
+          <div class="flex items-center justify-between text-small font-mono text-sumi-700 mb-2">
+            <span data-progress-text>1/{entry.question_count}</span>
+            <span data-progress-percent>0%</span>
           </div>
-          <div class="h-1 bg-cream-200 rounded-full overflow-hidden">
-            <div data-progress-bar class="h-full bg-coral-400 transition-all duration-300" style="width: 10%;"></div>
+          <div class="h-2 bg-washi-200 rounded-full overflow-hidden border border-sumi-300">
+            <div data-progress-bar class="h-full bg-coral-500 transition-all duration-300 ease-out" style="width: 0%"></div>
           </div>
+          <p data-encouragement class="mt-2 text-caption text-coral-700 font-mono h-4 text-center"></p>
         </div>
-        <div class="card">
-          <h2 data-question-text class="font-display text-h2 font-semibold mb-6 leading-tight">
-            ...
-          </h2>
-          <div data-options class="space-y-3"></div>
+
+        <!-- Question card -->
+        <div class="bg-washi-50 border-2 border-sumi-900 rounded-3xl p-6 sm:p-8 shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
+          <h2 data-question-text class="font-display text-h2 font-medium text-sumi-900 mb-6 leading-snug"></h2>
+          <div data-options class="flex flex-col gap-3"></div>
         </div>
       </div>
 
       <!-- Submitting state -->
-      <div data-state="submitting" class="hidden card text-center py-12">
-        <p class="eyebrow mb-3">CALCULATING</p>
-        <h2 class="text-h2 font-semibold">กำลังประมวลผลคำตอบ...</h2>
+      <div data-state="submitting" class="hidden bg-washi-50 border-2 border-sumi-900 rounded-3xl p-10 text-center">
+        <div class="text-5xl mb-4 animate-bounce">✨</div>
+        <p class="font-display text-h3 font-semibold text-sumi-900">กำลังประมวลผล...</p>
       </div>
 
       <!-- Error state -->
-      <div data-state="error" class="hidden card border border-error/30 bg-error/5">
-        <p class="eyebrow text-error mb-2">ERROR</p>
-        <h2 class="text-h2 font-semibold mb-3">เกิดข้อผิดพลาด</h2>
-        <p data-error-msg class="text-ink-700 mb-4"></p>
-        <button data-action="retry" class="btn-secondary">ลองใหม่</button>
+      <div data-state="error" class="hidden bg-coral-50 border-2 border-coral-700 rounded-3xl p-8 text-center">
+        <p class="font-display text-h3 font-semibold text-coral-700 mb-3">เกิดข้อผิดพลาด</p>
+        <p data-error-msg class="text-body text-sumi-700 mb-4"></p>
+        <button data-action="retry" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3 rounded-full font-semibold border-2 border-sumi-900 min-h-[44px]">
+          ลองใหม่
+        </button>
       </div>
     </div>
+
+    <!-- Disclaimer / SEO content -->
+    {meta.psychology_basis_th && (
+      <details class="max-w-2xl mx-auto mt-10 text-small text-sumi-700">
+        <summary class="cursor-pointer font-semibold text-sumi-900 mb-2">📚 เกี่ยวกับแบบทดสอบนี้</summary>
+        <div class="prose-content mt-3 space-y-2">
+          <p><strong>อ้างอิง:</strong> {meta.psychology_basis_th}</p>
+          {meta.trend_reference_th && <p><strong>เทรนด์:</strong> {meta.trend_reference_th}</p>}
+          <p class="italic text-sumi-500">หมายเหตุ: แบบทดสอบนี้เพื่อความสนุกและการรู้จักตัวเอง ไม่ใช่เครื่องมือวินิจฉัยทางการแพทย์</p>
+        </div>
+      </details>
+    )}
   </section>
 </BaseLayout>
 
 <script>
-  import { runQuizEngine } from '../../../scripts/quiz-engine'
+  import { runEngineV2 } from '../../../scripts/quiz-engine-v2'
   const root = document.getElementById('quiz-engine')
   if (root) {
-    const data = JSON.parse(root.dataset.quiz || '{}')
-    runQuizEngine(root, data)
+    try {
+      const data = JSON.parse(root.dataset.quiz || '{}')
+      runEngineV2(root as HTMLElement, data)
+    } catch (e) {
+      console.error('Failed to init quiz engine', e)
+    }
   }
 </script>

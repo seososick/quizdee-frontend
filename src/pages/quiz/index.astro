@@ -1,37 +1,122 @@
 ---
+/**
+ * /quiz/ — All quizzes catalog page
+ * Filter by category, sort by featured first
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { getQuizzes } from '@/lib/payload'
+import PlayCard from '@/components/PlayCard.astro'
+import { CATALOG, CATEGORIES } from '@/lib/catalog'
 
-const quizzes = await getQuizzes()
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'แบบทดสอบทั้งหมด — quizdee',
+    description: 'รวมแบบทดสอบ MBTI, จิตวิทยา, ความรัก, งาน, เทรนด์ 2025 ทั้งหมด 17 ชุด ภาษาไทย',
+    url: `${siteUrl}/quiz/`,
+    inLanguage: 'th',
+    hasPart: CATALOG.map((q) => ({
+      '@type': 'Quiz',
+      name: q.title_th,
+      url: `${siteUrl}/quiz/${q.slug}/`,
+      timeRequired: `PT${q.duration_min}M`,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบทั้งหมด', item: `${siteUrl}/quiz/` },
+    ],
+  },
+]
 ---
 
 <BaseLayout
-  title="แบบทดสอบทั้งหมด — quizdee"
-  description="แบบทดสอบบุคลิกภาพ MBTI, Love Language, อาชีพ และอื่นๆ ฟรีไม่ต้องสมัคร"
+  title="แบบทดสอบทั้งหมด 17 ชุด — MBTI, จิตวิทยา, เทรนด์ 2025 | quizdee"
+  description="รวมแบบทดสอบบุคลิกภาพ จิตวิทยา ความรัก งาน เทรนด์ 17 ชุด ภาษาไทย — Big Five OCEAN, Enneagram, Attachment Style, MBTI ออฟฟิศไทย, Burnout, K-pop bias และอีกมาก ฟรี ไม่ต้องสมัคร"
+  schemas={schemas}
+  keywords={['แบบทดสอบ', 'MBTI', 'Big Five', 'Enneagram', 'attachment style', 'burnout', 'แบบทดสอบบุคลิกภาพ', 'แบบทดสอบจิตวิทยา', 'แบบทดสอบความรัก']}
 >
-  <section class="container-wide py-16">
-    <p class="eyebrow mb-4">QUIZ INDEX</p>
-    <h1 class="text-h1 font-semibold mb-12">แบบทดสอบทั้งหมด</h1>
+  <section class="container-wide py-10 sm:py-14">
+    <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-3">QUIZ CATALOG · {CATALOG.length} ชุด</p>
+    <h1 class="font-display font-medium leading-tight text-balance text-sumi-900" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+      แบบทดสอบทั้งหมด <em class="italic font-light text-coral-700">{CATALOG.length} ชุด</em>
+    </h1>
+    <p class="mt-4 max-w-2xl text-body text-sumi-700">
+      เลือก quiz ที่อยากเล่น — มีทั้งจิตวิทยาจริง (Big Five, Enneagram, Attachment Style) และ trend สนุก (AI Friend, Doom Scroll, K-pop Bias) ภาษาไทย ฉบับเข้าใจคนวัยทำงาน
+    </p>
 
-    {quizzes.length === 0 ? (
-      <div class="card text-center py-16">
-        <p class="eyebrow mb-3">EMPTY</p>
-        <h2 class="text-h2 font-semibold mb-3">ยังไม่มีแบบทดสอบ</h2>
-        <p class="text-ink-700">เรากำลังเตรียมเนื้อหา ติดตามได้เร็วๆ นี้</p>
-      </div>
-    ) : (
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {quizzes.map((quiz) => (
-          <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-md transition-shadow">
-            <p class="eyebrow mb-2">{quiz.category}</p>
-            <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title}</h3>
-            <p class="text-small text-ink-700 mb-4 line-clamp-3">{quiz.description}</p>
-            <p class="text-caption text-ink-500">
-              {quiz.estimatedMinutes} นาที · {quiz.questions?.length || 0} คำถาม
-            </p>
-          </a>
-        ))}
-      </div>
-    )}
+    <!-- Category filter pills -->
+    <nav class="mt-8 flex flex-wrap gap-2 sm:gap-3" aria-label="Quiz categories">
+      <a href="#all" class="cat-pill cat-pill-active">ทั้งหมด</a>
+      {CATEGORIES.map((c) => (
+        <a href={`#cat-${c.code.toLowerCase()}`} class="cat-pill">
+          {c.emoji} {c.label_th}
+        </a>
+      ))}
+    </nav>
   </section>
+
+  <!-- All quizzes grid -->
+  <section id="all" class="container-wide pb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {CATALOG.map((q) => (
+        <PlayCard
+          href={`/quiz/${q.slug}/`}
+          title={q.title_th}
+          subtitle={q.subtitle_th}
+          emoji={q.emoji}
+          category={q.category_label_th}
+          bg={q.bg}
+          duration={`${q.duration_min} นาที`}
+          questions={q.question_count}
+          badge={q.badge}
+          rotate={q.rotate ?? 0}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Per-category sections -->
+  {CATEGORIES.map((c) => {
+    const list = CATALOG.filter((q) => q.category === c.code)
+    if (list.length === 0) return null
+    return (
+      <section id={`cat-${c.code.toLowerCase()}`} class="container-wide py-10 border-t border-washi-300">
+        <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-2">
+          {c.emoji} {c.label_th}
+        </h2>
+        <p class="text-small text-sumi-700 mb-6">{c.description_th}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {list.map((q) => (
+            <PlayCard
+              href={`/quiz/${q.slug}/`}
+              title={q.title_th}
+              subtitle={q.subtitle_th}
+              emoji={q.emoji}
+              category={q.category_label_th}
+              bg={q.bg}
+              duration={`${q.duration_min} นาที`}
+              questions={q.question_count}
+              badge={q.badge}
+              rotate={q.rotate ?? 0}
+            />
+          ))}
+        </div>
+      </section>
+    )
+  })}
 </BaseLayout>
+
+<style>
+  .cat-pill {
+    @apply inline-flex items-center gap-1 px-4 py-2 rounded-full border-2 border-sumi-900 bg-washi-50 text-small font-semibold text-sumi-900 hover:bg-butter-100 transition-colors min-h-[40px];
+  }
+  .cat-pill-active {
+    @apply bg-sumi-900 text-butter-300 hover:bg-sumi-700;
+  }
+</style>

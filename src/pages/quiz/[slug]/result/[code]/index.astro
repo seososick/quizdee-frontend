@@ -1,0 +1,218 @@
+---
+/**
+ * Universal Result Page — /quiz/[slug]/result/[code]/
+ * Renders the result archetype with screenshot-friendly card + share CTAs.
+ * Generated for every (quiz × archetype) combination at build time.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import StickerDecor from '@/components/StickerDecor.astro'
+import { CATALOG } from '@/lib/catalog'
+import fs from 'node:fs'
+import path from 'node:path'
+
+const contentDir = path.resolve(process.cwd(), '../content')
+function safeLoad(file: string) {
+  try { return JSON.parse(fs.readFileSync(path.join(contentDir, file), 'utf-8')) } catch { return null }
+}
+
+export async function getStaticPaths() {
+  const paths: Array<{ params: { slug: string; code: string }; props: any }> = []
+  const dir = path.resolve(process.cwd(), '../content')
+  for (const entry of CATALOG) {
+    try {
+      const archetypesRaw = JSON.parse(fs.readFileSync(path.join(dir, entry.source_files.archetypes), 'utf-8'))
+      const archetypes = Array.isArray(archetypesRaw) ? archetypesRaw : []
+      for (const a of archetypes) {
+        const code = (a.code || a.mbti || a.name_en?.toUpperCase()?.replace(/\s+/g, '_') || 'UNKNOWN').toLowerCase().replace(/_/g, '-')
+        paths.push({ params: { slug: entry.slug, code }, props: { entry, archetype: a } })
+      }
+    } catch (e) { /* skip */ }
+  }
+  return paths
+}
+
+const { entry, archetype } = Astro.props as any
+const meta = safeLoad(entry.source_files.meta) || {}
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const resultCode = (archetype.code || archetype.mbti || '').toLowerCase().replace(/_/g, '-')
+const pageUrl = `${siteUrl}/quiz/${entry.slug}/result/${resultCode}/`
+
+const archName = archetype.name_th || archetype.archetype_name_th || archetype.cat_name_th || archetype.office_role_th || archetype.kdrama_role_th || ''
+const archEmoji = archetype.emoji || entry.emoji
+const archTagline = archetype.tagline_th || ''
+const archDesc = archetype.description_th || ''
+
+// Compatible archetypes with names
+const allArch = (() => {
+  const raw = safeLoad(entry.source_files.archetypes) || []
+  return Array.isArray(raw) ? raw : []
+})()
+const compatList = (archetype.compatible_with || []).slice(0, 2).map((c: string) => {
+  const found = allArch.find((a: any) => (a.code || a.mbti) === c)
+  return found ? { code: c, name: found.name_th || found.archetype_name_th, emoji: found.emoji } : { code: c, name: c, emoji: '' }
+})
+
+const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + archName)}&subtitle=${encodeURIComponent(entry.title_th)}`
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: siteUrl + '/quiz/' },
+      { '@type': 'ListItem', position: 3, name: entry.title_th, item: `${siteUrl}/quiz/${entry.slug}/` },
+      { '@type': 'ListItem', position: 4, name: archName, item: pageUrl },
+    ],
+  },
+]
+
+const shareText = `ฉันคือ ${archEmoji} ${archName} ${archTagline ? '— ' + archTagline : ''}`
+---
+
+<BaseLayout
+  title={`${archEmoji} ${archName} | ${entry.title_th} — quizdee`}
+  description={archTagline || archDesc.slice(0, 150)}
+  canonical={pageUrl}
+  ogImage={ogImage}
+  schemas={schemas}
+>
+  <section class="relative bg-butter-50 overflow-hidden">
+    <StickerDecor />
+    <div class="container-wide relative z-10 py-10 sm:py-14">
+      <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-2">
+        <a href={`/quiz/${entry.slug}/`} class="hover:underline">{entry.title_th}</a> · ผลของคุณ
+      </p>
+
+      <!-- ─── Hero result card (screenshot-friendly 1:1) ─── -->
+      <div id="result-card" class="max-w-md mx-auto bg-washi-50 border-2 border-sumi-900 rounded-3xl p-8 sm:p-10 text-center shadow-[8px_8px_0_0_rgba(31,26,20,0.95)] relative overflow-hidden">
+        <div class="absolute top-3 right-3 text-caption font-mono text-sumi-400">quizdee.com</div>
+        <div class="text-7xl sm:text-8xl mb-4 leading-none">{archEmoji}</div>
+        <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-2">
+          {archetype.code || archetype.mbti}
+        </p>
+        <h1 class="font-display text-h1 sm:text-display font-semibold text-sumi-900 mb-4 leading-tight text-balance">
+          {archName}
+        </h1>
+        {archTagline && (
+          <p class="text-body text-sumi-700 italic mb-4 text-pretty">"{archTagline}"</p>
+        )}
+        <p class="text-caption font-mono text-sumi-500">{entry.title_th}</p>
+      </div>
+
+      <!-- Share row -->
+      <div class="max-w-md mx-auto mt-6 flex flex-wrap items-center justify-center gap-3">
+        <button id="share-btn" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-5 py-3 rounded-full font-semibold text-small border-2 border-sumi-900 hover:shadow-[4px_4px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-all min-h-[44px]">
+          📤 แชร์
+        </button>
+        <a href={`/quiz/${entry.slug}/`} class="inline-flex items-center gap-2 bg-washi-50 text-sumi-900 px-5 py-3 rounded-full font-semibold text-small border-2 border-sumi-900 hover:bg-butter-100 transition-all min-h-[44px]">
+          🔄 ทำใหม่
+        </a>
+        <a href="/" class="inline-flex items-center gap-2 bg-washi-50 text-sumi-900 px-5 py-3 rounded-full font-semibold text-small border-2 border-sumi-900 hover:bg-coral-50 transition-all min-h-[44px]">
+          ✨ ลอง quiz อื่น
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Detail content ─── -->
+  <section class="container-wide py-10 sm:py-16">
+    <div class="max-w-2xl mx-auto space-y-8">
+      {archDesc && (
+        <div>
+          <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-3">เกี่ยวกับคุณ</h2>
+          <p class="text-body text-sumi-700 leading-relaxed text-pretty whitespace-pre-line">{archDesc}</p>
+        </div>
+      )}
+
+      {(archetype.strengths_th || archetype.green_flags_th) && (
+        <div class="bg-matcha-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">✅ จุดแข็ง / สิ่งดี</h3>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {(archetype.strengths_th || archetype.green_flags_th || []).map((s: string) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {(archetype.needs_th || archetype.watchouts_th || archetype.red_flags_th || archetype.watchout_th) && (
+        <div class="bg-coral-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">⚠️ สิ่งที่ควรรู้</h3>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {(archetype.needs_th || archetype.watchouts_th || archetype.red_flags_th || (archetype.watchout_th ? [archetype.watchout_th] : []) || []).map((s: string) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {compatList.length > 0 && (
+        <div class="bg-infj-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">💞 เข้ากับใคร</h3>
+          <div class="flex flex-wrap gap-3">
+            {compatList.map((c: any) => (
+              <div class="bg-washi-50 border border-sumi-300 rounded-xl px-4 py-2 inline-flex items-center gap-2">
+                <span class="text-2xl">{c.emoji}</span>
+                <span class="font-semibold text-sumi-900">{c.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {archetype.career_match_th && (
+        <div>
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-2">💼 อาชีพที่เหมาะ</h3>
+          <p class="text-body text-sumi-700">{Array.isArray(archetype.career_match_th) ? archetype.career_match_th.join(' · ') : archetype.career_match_th}</p>
+        </div>
+      )}
+
+      {archetype.action_advice_th && (
+        <div class="bg-butter-100 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">📝 คำแนะนำ</h3>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {(archetype.action_advice_th || []).map((s: string) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
+            ))}
+          </ul>
+          {archetype.disclaimer_th && (
+            <p class="mt-4 pt-4 border-t border-sumi-300 text-caption text-sumi-500 italic">{archetype.disclaimer_th}</p>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- More quizzes -->
+  <section class="container-wide py-10 bg-washi-100">
+    <h2 class="font-display text-h2 font-semibold text-sumi-900 text-center mb-8">ลอง quiz อื่นต่อ?</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+      {CATALOG.filter(q => q.slug !== entry.slug).slice(0, 5).map((q) => (
+        <a href={`/quiz/${q.slug}/`} class={`${q.bg} group block rounded-xl border-2 border-sumi-900 p-4 shadow-[3px_3px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[5px_5px_0_0_rgba(31,26,20,0.95)] transition-all`}>
+          <div class="text-3xl mb-2">{q.emoji}</div>
+          <p class="font-display text-small font-semibold text-sumi-900 leading-tight">{q.title_th}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ shareText, pageUrl, archName }}>
+  const btn = document.getElementById('share-btn')
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      const text = `${shareText}\n\nลองทำดูที่ ${pageUrl}`
+      if (navigator.share) {
+        try { await navigator.share({ title: archName, text, url: pageUrl }) } catch {}
+      } else {
+        try {
+          await navigator.clipboard.writeText(text)
+          btn.textContent = '✅ คัดลอกแล้ว!'
+          setTimeout(() => { btn.innerHTML = '📤 แชร์' }, 2000)
+        } catch { window.prompt('คัดลอกลิงก์:', pageUrl) }
+      }
+    })
+  }
+</script>
