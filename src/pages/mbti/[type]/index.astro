@@ -14,7 +14,8 @@ import { getMbtiTypes, getResultByTypeCode } from '@/lib/payload'
 const MBTI_CODES = ['INTJ','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP']
 
 export async function getStaticPaths() {
-  return MBTI_CODES.map((code) => ({ params: { type: code.toLowerCase() } }))
+  const codes = ['INTJ','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP']
+  return codes.map((code) => ({ params: { type: code.toLowerCase() } }))
 }
 
 const { type: typeParam } = Astro.params
