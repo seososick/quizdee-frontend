@@ -1,0 +1,62 @@
+[
+  {
+    "code": "CORPORATE_CLIMBER",
+    "name_th": "สายไต่ตึก — ไต่ ladder งานประจำไป VP",
+    "emoji": "🏢",
+    "income_pattern_th": "เงินเดือนหลัก + โบนัสประจำปี + stock option",
+    "weekend_th": "พักผ่อน จิบกาแฟวันจันทร์ อ่าน HBR/Bloomberg เตรียมประชุม",
+    "5yr_goal_th": "ขึ้น Director / VP บริษัทใหญ่ หรือไป MBA top school",
+    "tagline_th": "ยิ่ง senior ยิ่งรวย ยิ่งสนุก",
+    "description_th": "คุณเชื่อในระบบ ladder ของบริษัทใหญ่ — ทำงานหนัก สร้าง track record รับ promotion เป็น step ๆ ชอบ structure ชอบ mentor เก่ง ๆ และเชื่อว่าการได้ตำแหน่งใหญ่ในองค์กรคือทางที่มั่นคงและมีความหมายที่สุด เงินเดือน 6-7 หลักไม่ใช่ความฝัน แต่เป็น roadmap",
+    "watchout_th": "ระวัง burnout และยึดติดกับ title มากไป — บางทีบริษัทเปลี่ยน policy หรือ layoff ก็พังได้ ลองมี side income หรือ network นอกบริษัทไว้บ้าง",
+    "compatible_with": ["SIDE_HUSTLER", "ANTI_HUSTLE"]
+  },
+  {
+    "code": "SIDE_HUSTLER",
+    "name_th": "สายควบ — งานประจำ + กิจการเสริมเสาร์อาทิตย์",
+    "emoji": "💸",
+    "income_pattern_th": "เงินเดือนประจำ + รายได้เสริมจากขายของ/freelance 20-50% ของเงินเดือน",
+    "weekend_th": "แพ็คของส่งลูกค้า อัพ stock IG รับงาน freelance ตอบ DM",
+    "5yr_goal_th": "ให้ side hustle โตจนเงินเท่าหรือเกินเงินเดือน แล้วค่อยตัดสินใจ",
+    "tagline_th": "ทำไมต้องเลือก ในเมื่อทำได้ทั้งคู่",
+    "description_th": "คุณคือสายไม่ยอมหยุดที่ทางเดียว — กลางวันเป็นพนักงาน กลางคืน/เสาร์อาทิตย์เป็นเจ้าของกิจการเล็ก ๆ ไม่ว่าจะขายเสื้อใน IG รับงาน design freelance หรือสอนพิเศษ คุณรักความรู้สึกว่าเงินไม่ได้มาจากที่เดียว และมีอิสระทางการเงินมากกว่าเพื่อนรุ่นเดียวกัน",
+    "watchout_th": "ระวังเหนื่อยจนพังทั้งสองงาน — ต้องจัดเวลาดี ๆ และอย่าลืมพักร้อน เพราะวันหยุดคุณก็ยังทำงานอยู่",
+    "compatible_with": ["CORPORATE_CLIMBER", "CREATOR"]
+  },
+  {
+    "code": "DIGITAL_NOMAD",
+    "name_th": "สายเร่ร่อน — laptop กระเป๋าใบเดียว ทำงานจากไหนก็ได้",
+    "emoji": "🌴",
+    "income_pattern_th": "remote job / freelance USD-based / consulting รับเป็น project",
+    "weekend_th": "ขับมอไซค์เที่ยวเกาะ ดำน้ำ co-working cafe เจอเพื่อนต่างชาติ",
+    "5yr_goal_th": "อยู่ได้ 5-6 ประเทศต่อปี รายได้ USD เก็บเงินเร็วกว่าทำงานไทย",
+    "tagline_th": "office คือที่ไหนก็ตามที่มี wifi",
+    "description_th": "คุณกล้าหลุดจาก script ปกติ — ลาออกงานประจำ (หรือไม่เคยมี) ไปอยู่เชียงใหม่ บาหลี ลิสบอน รับงาน remote เป็น dollar/euro รักความอิสระ การเดินทาง และ community นักเดินทางเหมือนกัน คุณรู้ว่าชีวิตดี ๆ ไม่ต้องผูกกับ office ตึก 30 ชั้น",
+    "watchout_th": "ระวังเหงา visa วุ่น และไม่มีสวัสดิการ — ต้องวางแผนประกันสุขภาพและเงินเก็บฉุกเฉินเอง",
+    "compatible_with": ["CREATOR", "ANTI_HUSTLE"]
+  },
+  {
+    "code": "CREATOR",
+    "name_th": "สายสร้าง — content เป็นอาชีพ ไม่ใช่งานอดิเรก",
+    "emoji": "🎬",
+    "income_pattern_th": "ad revenue + brand deal + สินค้าตัวเอง + course/membership",
+    "weekend_th": "ถ่าย batch content ตัดคลิป reply comment คิด script week หน้า",
+    "5yr_goal_th": "สร้าง personal brand จน audience 100k+ มีธุรกิจของตัวเอง",
+    "tagline_th": "ฉันไม่ทำงานให้บริษัท ฉันสร้างบริษัทของฉันเอง",
+    "description_th": "คุณคือนักเล่าเรื่องตัวจริง — YouTube TikTok IG Podcast เป็น playground ของคุณ ไม่ใช่แค่งานอดิเรกแต่คืออาชีพหลัก คุณเข้าใจ algorithm เข้าใจ audience และเชื่อว่ายุคนี้ใครมี attention คนนั้นมีอำนาจ รายได้อาจไม่สม่ำเสมอแต่ ceiling สูงมาก",
+    "watchout_th": "ระวังเหนื่อยจน burnout เพราะต้อง on ตลอด — และ algorithm เปลี่ยนได้ทุกเมื่อ ต้อง diversify platform และมี product ของตัวเอง",
+    "compatible_with": ["SIDE_HUSTLER", "DIGITAL_NOMAD"]
+  },
+  {
+    "code": "ANTI_HUSTLE",
+    "name_th": "สายชิลล์ — งานคืองาน ชีวิตคือชีวิต",
+    "emoji": "🌿",
+    "income_pattern_th": "เงินเดือนพอใช้ ไม่ดิ้นรนหา extra เน้นสวัสดิการดี",
+    "weekend_th": "ดูซีรี่ส์ ทำอาหาร ปลูกต้นไม้ เจอครอบครัว ไม่เปิด LINE งาน",
+    "5yr_goal_th": "ใช้ชีวิตให้มีความสุข มีเวลาให้ตัวเองและคนรัก ไม่ต้องรวยมาก",
+    "tagline_th": "เงินซื้อเวลาคืนไม่ได้ — quiet quitting คือ self-care",
+    "description_th": "คุณผ่านยุค hustle culture มาแล้วและรู้ว่ามันไม่ใช่ทาง — งานคือเครื่องมือ ไม่ใช่ตัวตน 5 โมงเย็นปิดคอม วันเสาร์ไม่ตอบ chat คุณให้ความสำคัญกับสุขภาพจิต ครอบครัว และงานอดิเรก คุณเชื่อว่าชีวิตดีไม่ต้องวัดด้วยเงินเดือนหรือ title",
+    "watchout_th": "ระวังเงินเก็บไม่พอตอนแก่ — work-life balance ดี แต่ก็ต้องวางแผนเกษียณ มี passive income บ้าง",
+    "compatible_with": ["CORPORATE_CLIMBER", "DIGITAL_NOMAD"]
+  }
+]

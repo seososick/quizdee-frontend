@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "ตื่นเช้ามา ตา 50% ยังไม่แปรงฟัน คุณเปิดแอพไหนก่อน?",
+    "options": [
+      {"key": "a", "label": "YouTube — เปิด podcast cut ฟังตอนแต่งตัว", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "TikTok — ดูรีวิวคาเฟ่ใหม่ย่านบ้าน", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "Threads — ตามดราม่าค้างเมื่อคืน", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "Instagram Reels — affirmation ปลุกไฟ", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "TikTok — fan cam ไอดอลก่อนเป็นอย่างอื่น", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "FYP คุณตอนนี้ขึ้นอะไรบ่อยสุด? (เช็กจริงสิ)",
+    "options": [
+      {"key": "a", "label": "podcast cuts / motivational speakers", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "ASMR กิน / เชฟทำอาหาร / รีวิวร้าน", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "timeline สรุปดราม่า / ข่าวดารา", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "หมา/แมว / hot girl walk / matcha", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "fan cam / dance practice / idol edits", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "Screen Time สัปดาห์นี้ขึ้นเท่าไร?",
+    "options": [
+      {"key": "a", "label": "3-4 ชม./วัน — แต่ educational นะ", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "4-5 ชม./วัน — ก่อนนอนหิวเลยไถ", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "5-6 ชม./วัน — Threads + X ตลอด", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "3-4 ชม./วัน — micro-doses ทั้งวัน", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "5-6 ชม./วัน — ลูป 10 วิเดิม 50 รอบ", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "คลิปสุดท้ายที่คุณ screenshot ส่งให้เพื่อนคืออะไร?",
+    "options": [
+      {"key": "a", "label": "quote 'success is...' พร้อมข้อความ 'อ่านเลย deep'", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "เมนูคาเฟ่ใหม่ + 'เสาร์นี้ไป'", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "timeline ดราม่า + 'รู้ยังเรื่องนี้'", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "affirmation + '🌷 ส่งให้เธอ'", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "fan cam ครัช + 'ตายแล้วจ้า'", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "โฟลเดอร์ Saved ใน TikTok ของคุณตั้งชื่อว่าอะไร?",
+    "options": [
+      {"key": "a", "label": "'wisdom' / 'mindset'", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "'ที่กิน' / 'คาเฟ่' / 'รีวิว'", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "'tea' / 'ดราม่า' (private)", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "'self-care' / 'glow up' / 'aesthetic'", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "'ผัว' / 'baby' / ชื่อไอดอล (private)", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "คุณ repost Reel ลง Story บ่อยที่สุดเป็นแนวไหน?",
+    "options": [
+      {"key": "a", "label": "quote ลึกซึ้ง / podcast clip", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "ร้านที่เพิ่งไป / mukbang", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "ไม่ค่อย repost — ส่งทางแชทมากกว่า (ปลอดภัย)", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "affirmation + 🌷✨ เสมอ", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "fan cam ไอดอล + 💜🥹", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "ตี 1 แล้วยังไถ TikTok อยู่ — เหตุผลคือ?",
+    "options": [
+      {"key": "a", "label": "เจอ podcast เกี่ยวกับ Stoicism ฟังต่ออีกตอน", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "หิวมาก ดูคลิปมาม่าเกาหลีกระตุ้นต่อม", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "ดราม่าใหม่เพิ่งโผล่ ต้องตามให้ทัน", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "ดูคลิปหมาขี้เซา healing ก่อนนอน", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "fan cam ใหม่ของครัช ลูป 30 รอบยังไม่พอ", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "เพื่อนถามว่าทำไมรู้เยอะจัง คุณจะตอบว่า?",
+    "options": [
+      {"key": "a", "label": "'ฟัง podcast เยอะ' (จริงๆ ฟังแค่ cut 30 วิ)", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "'ตามรีวิวเก่ง' (Save 800 คลิป ไป 5 ร้าน)", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "'อยู่ในวงการ' (จริงๆ stalk Threads)", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "'อ่านจิตวิทยา' (ดู Reel นักจิตวิทยา 1 นาที)", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "'แค่แฟนคลับธรรมดา' (รู้ทุก era ของไอดอล)", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "ติด hashtag ไหนบ่อยที่สุดเวลาดู?",
+    "options": [
+      {"key": "a", "label": "#mindset #selfgrowth #stoicism", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "#รีวิวร้าน #คาเฟ่ #หม่าล่า", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "#ดราม่า #ข่าวดารา #spillthetea", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "#selfcare #healing #hotgirlwalk", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "#fancam #kpop #ชื่อไอดอล", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "เวลาเพื่อนชวนไปไหน คุณตัดสินใจจาก?",
+    "options": [
+      {"key": "a", "label": "มันได้สาระมั้ย / มี learning experience รึเปล่า", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "ใกล้ร้านที่ Save ไว้ใน TikTok มั้ย", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "มีเรื่องไปเล่าให้แก๊งฟังต่อมั้ย", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "ที่นั่นถ่ายลง Story aesthetic มั้ย", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "ตรงกับตารางคอน/ติ่งของฉันมั้ย", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "คุณเปิด TikTok ใน 'โหมด' ไหนบ่อยสุด?",
+    "options": [
+      {"key": "a", "label": "นั่งโต๊ะตั้งใจดู เหมือนเรียน MasterClass", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "นอนเตียงท้องร้อง ตา 0% หิว 100%", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "นั่ง toilet 30 นาที ตามดราม่าจนขาชา", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "นอนตะแคงคลุมผ้า เปิดเสียง ASMR เบาๆ", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "ชาร์จไฟ ใส่หูฟัง ลูปคลิปเดิมจนหลับคามือ", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "ถ้า TikTok / Reels ปิดบริการ 1 สัปดาห์ คุณจะ?",
+    "options": [
+      {"key": "a", "label": "ดี! กลับไปอ่านหนังสือจริงๆ ที่ค้างไว้", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "ไปกินตามร้านที่ Save ไว้ทุกเย็น", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "เปิด Threads / X เต็มจอ — ดราม่าไม่หยุด", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "ลอง journaling จริง / ไป hot girl walk", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "panic — ดู YouTube fan cam แทน 6 ชม./วัน", "weight": {"THIRSTY": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "Bio Instagram คุณเขียนว่าอะไร?",
+    "options": [
+      {"key": "a", "label": "quote ภาษาอังกฤษ deep + 📚🧠", "weight": {"PHILOSOPHER": 2}},
+      {"key": "b", "label": "ชื่อ + emoji อาหาร 🍜🍱☕", "weight": {"FOODIE": 2}},
+      {"key": "c", "label": "ไม่มี bio — บัญชีเป็น lurker เงียบๆ", "weight": {"GOSSIP": 2}},
+      {"key": "d", "label": "'soft girl era 🌷' / 'healing in progress ✨'", "weight": {"HEALER": 2}},
+      {"key": "e", "label": "ชื่อไอดอล + วันเกิด + 💜", "weight": {"THIRSTY": 2}}
+    ]
+  }
+]

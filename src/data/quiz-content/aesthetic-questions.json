@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "พาเลตสีในตู้เสื้อผ้าของคุณคือ?",
+    "options": [
+      {"key": "a", "label": "ขาว ครีม เบจ น้ำตาลอ่อน", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "พิงก์พาสเทล ลายลูกไม้ โบวฟรุ้งฟริ้ง", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "บราวน์ เขียวขี้ม้า เบอร์กันดี", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "ชมพูชอตกิ้ง ฟ้าไซเบอร์ เงินโครม", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "นาวี เบจ ขาว muted ไม่มีโลโก้", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "ลิปสติกแท่งโปรดของคุณ?",
+    "options": [
+      {"key": "a", "label": "lip oil ใส ๆ Dior addict / Rhode peptide", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "tinted balm สีชมพูหวาน Laneige berry", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "matte สีไวน์เข้ม MAC Diva", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "lip gloss วิ้ง ๆ สีบับเบิ้ลกัม", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "nude rosewood Chanel / Hermès", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "OOTD วันธรรมดาไปทำงาน คุณใส่อะไร?",
+    "options": [
+      {"key": "a", "label": "linen set สีเอิร์ธ + slick bun + ต่างหูทอง", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "เสื้อลูกไม้ + กระโปรง midi + ballet flats + โบว", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "tweed blazer + เสื้อขาว + กระโปรงพลีท + loafers", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "low rise + baby tee + butterfly clip + กระเป๋าใบจิ๋ว", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "polo + กางเกงลินิน + loafers + ไข่มุกเส้นเดียว", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "Weekend brunch คุณนัดเพื่อนไปร้านแบบไหน?",
+    "options": [
+      {"key": "a", "label": "คาเฟ่ minimal สีขาวมี matcha latte ดี ๆ", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "ร้านสีชมพูมีเค้กสตรอว์เบอร์รีและชาดอกไม้", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "คาเฟ่ในตึกเก่ามีหนังสือ มีเปียโน", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "ร้านสีนีออน เสิร์ฟ matcha สีชมพู เซลฟี่กระจก", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "โรงแรม 5 ดาวเสิร์ฟ afternoon tea ผ้าปูขาว", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "Spotify mood ของคุณคือเพลย์ลิสต์แบบไหน?",
+    "options": [
+      {"key": "a", "label": "Solange, Tinashe, ambient lo-fi neutral vibes", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "Lana del Rey, Mitski, Mazzy Star ฟังร้องไห้", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "Chopin, Hozier, Florence + the Machine", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "Charli XCX Brat, Britney 2001, Y2K hyperpop", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "Frank Sinatra, jazz classics, Norah Jones", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "ถ้าต้องตั้งชื่อน้ำหอมตามตัวคุณ ชื่อไหนใช่?",
+    "options": [
+      {"key": "a", "label": "Glow After Shower", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "Strawberry Ribbon Letter", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "Library at Midnight", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "Pink Sugar Crash 2003", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "Hampton Linen No.5", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "Gym style ของคุณ?",
+    "options": [
+      {"key": "a", "label": "set Alo Yoga สีเบจ + scrunchie + Pilates reformer", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "leg warmers + bodysuit สีชมพู + คลาสบัลเล่ต์", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "ไม่ค่อยไป gym — เดินป่าใส่ knit sweater พอ", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "shorts เอวต่ำ + sport bra rhinestone + Zumba", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "เสื้อโปโล + กระโปรงเทนนิส + คลาสเทนนิสที่ club", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "Ringtone หรือเสียงแจ้งเตือนของคุณ?",
+    "options": [
+      {"key": "a", "label": "default iPhone — clean, no nonsense", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "เสียงกล่องดนตรีหรือ Lana del Rey ตัดมา", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "เปียโน classical Debussy Clair de Lune", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "Nokia 2003 หรือเพลง Britney intro", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "ปิดเสียง — มือถือใส่กระเป๋า ไม่หยิบบ่อย", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "IG bio ของคุณน่าจะเขียนว่าอะไร?",
+    "options": [
+      {"key": "a", "label": "matcha. pilates. peace. 🤍", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "girl, interrupted 🎀🍓", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "\"we read to know we are not alone\" 📖", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "✨cyber baby ✨ y2k forever 🦋", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "ว่าง — ไม่มี bio ไม่มี link", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "ทรงเล็บที่คุณทำประจำ?",
+    "options": [
+      {"key": "a", "label": "almond shape สีนู้ดเงา ๆ glazed donut", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "สีชมพูใสพร้อมโบวจิ๋วหรือ heart", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "สั้น ทาสีไวน์เข้มหรือเปล่า ๆ", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "ยาว rhinestone ลายดาว butterfly", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "French manicure คลาสสิก ไม่เคยเปลี่ยน", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "หนังหรือซีรีส์ที่คุณดูซ้ำได้ไม่เบื่อ?",
+    "options": [
+      {"key": "a", "label": "And Just Like That, Emily in Paris (เน้น scenes อาหาร)", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "Marie Antoinette, Priscilla, Lady Bird", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "Dead Poets Society, Kill Your Darlings, Atonement", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "Mean Girls, Legally Blonde, Bratz the movie", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "Succession, The Crown, Saltburn", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "กระเป๋าที่คุณเลือกหยิบไปเดทแรก?",
+    "options": [
+      {"key": "a", "label": "The Row Margaux หรือ tote หนังสีครีมไม่มีโลโก้", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "Mini bag ผูกโบว Sandy Liang vibe", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "satchel หนังเก่า ๆ เหมือนของคุณยาย", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "baguette Fendi rhinestone หรือกระเป๋าใส", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "Hermès Kelly สีเบจ — ไม่ตั้งใจอวด แต่ใครเห็นก็รู้", "weight": {"OLD_MONEY": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "ทริปในฝันของคุณคือ?",
+    "options": [
+      {"key": "a", "label": "Tulum / Mykonos ขาวสะอาดถ่ายรูปใส่ linen", "weight": {"CLEAN_GIRL": 2}},
+      {"key": "b", "label": "ปารีส กินครัวซองต์ ใส่กระโปรงเดินสะพาน", "weight": {"COQUETTE": 2}},
+      {"key": "c", "label": "Oxford / Edinburgh ตามรอยห้องสมุดเก่า", "weight": {"DARK_ACADEMIA": 2}},
+      {"key": "d", "label": "Tokyo Harajuku ช้อปวินเทจ Y2K คาราโอเกะ", "weight": {"Y2K_REVIVAL": 2}},
+      {"key": "e", "label": "Hamptons / St. Tropez เรือใบ + คันทรีคลับ", "weight": {"OLD_MONEY": 2}}
+    ]
+  }
+]

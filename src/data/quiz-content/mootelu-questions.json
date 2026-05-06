@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "เงินเดือนออก! งบก้อนแรกคุณจะใช้ไปกับอะไร?",
+    "options": [
+      {"key": "a", "label": "ทำบุญ ถวายสังฆทาน ไหว้พระต้นเดือน", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "นัดหมอดูไพ่ ดูไพ่รายเดือน", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ซื้อของตกแต่งบ้าน/โต๊ะทำงานตามฮวงจุ้ย", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "เช็คดวงรายเดือน + อัปเดต birth chart", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "DCA หุ้น/กองทุน — พึ่งตัวเองดีกว่า", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "ถูกหวยรางวัลใหญ่! สิ่งแรกที่คุณคิดทำคือ?",
+    "options": [
+      {"key": "a", "label": "ไปแก้บนหลวงปู่ที่บนไว้ + ทำบุญใหญ่", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เปิดไพ่ขอบคุณจักรวาล + post ใน IG story", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ย้ายแม่นางกวักมาตำแหน่งใหม่ตามทิศ", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "เช็ค transit ดาวว่าทำไมโชคดีช่วงนี้", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "เอาเงินไปลงทุนทันที — โอกาสมาแล้ว", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "ตกหลุมรักใครสักคน วิธีเช็คว่าเข้ากันได้ไหม?",
+    "options": [
+      {"key": "a", "label": "ดูชื่อ-ดูราศี + ปรึกษาพระอาจารย์ที่นับถือ", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เปิดไพ่ความรัก 3 ใบ — past, present, future", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ดูปีนักษัตรว่าถูกโฉลกกันไหม", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ขอ sun moon rising มา synastry chart", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ก็คุยกันให้รู้ใจสิ จะเช็คอะไรนักหนา", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "งานไม่เดินเลย รู้สึกตันมาก คุณจะ...?",
+    "options": [
+      {"key": "a", "label": "ไปสะเดาะเคราะห์/ทำบุญแก้กรรม", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เปิดไพ่ถามทางออก + ดูพลังงานช่วงนี้", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "จัดโต๊ะทำงานใหม่ทั้งหมด เปลี่ยนทิศ", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "เช็คว่า Mercury retrograde อีกป่ะ?", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "อัปสกิล/หางานใหม่ — ปัญหามีไว้แก้", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "กำลังจะย้ายบ้านใหม่ สิ่งแรกที่ทำคือ?",
+    "options": [
+      {"key": "a", "label": "นิมนต์พระมาเจิมบ้าน + ทำบุญขึ้นบ้านใหม่", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "จุดเซจ/ปาโลซานโตล้างพลังงานบ้านเก่า", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ดูทิศห้องนอน-ห้องน้ำ-ครัวให้ครบก่อน", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ดูฤกษ์ย้ายตามดวงดาว/จันทรคติ", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ดูทำเล ราคา ขนาด — practical ที่สุด", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "ซื้อรถใหม่! เลือกยังไง?",
+    "options": [
+      {"key": "a", "label": "ต้องเจิมรถ ผูกผ้าเจ็ดสี + พระห้อยกระจก", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เปิดไพ่ถามว่ารุ่นไหนพลังงานเข้ากับเรา", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "สีต้องถูกโฉลก + เลขทะเบียนต้องมงคล", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ดูฤกษ์ออกรถตามวันเดือนปีเกิด", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "เปรียบเทียบสเปก/ราคา/ค่าบำรุง", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "จะตัดผมใหม่ คุณ...?",
+    "options": [
+      {"key": "a", "label": "เช็ควันดี-วันร้ายในปฏิทินก่อน", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "ตัดตามอารมณ์ — ลบพลังงานเก่าออก", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ดูทิศนั่งในร้าน + วันมงคลเสริมโชค", "weight": {"FENG_SHUI": 1, "BUDDHIST": 1}},
+      {"key": "d", "label": "ตัดตอน new moon — เริ่มต้นใหม่", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ตัดตอนผมยาวเกิน — แค่นั้น", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "ของในกระเป๋า/ที่ห้อยรถ ที่ขาดไม่ได้คือ?",
+    "options": [
+      {"key": "a", "label": "พระเลี่ยม/สร้อยพระ + ผ้ายันต์", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "หินคริสตัล/ไพ่พกติดตัว", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ปี่เซียะเล็ก/เหรียญจีน 5 จักรพรรดิ", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "สร้อยราศีตัวเอง / หินตามดาว", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "Power bank กับบัตรเครดิต — practical", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "เพื่อนชวนไปดูหมอ คุณตอบยังไง?",
+    "options": [
+      {"key": "a", "label": "ไปสิ! ขอเป็นหลวงพ่อสายเก่งสายดูดวง", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เอา! แต่ขอแม่หมอเปิดไพ่นะ", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ขอเป็นอาจารย์ฮวงจุ้ยดูบ้านได้ด้วย", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ไปได้ แต่ต้องเป็นโหราศาสตร์มีหลักการ", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ไปดูเพื่อนเล่นๆ — ฉันแค่นั่งฟัง", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "วันที่ feel down มากๆ คุณ heal ตัวเองยังไง?",
+    "options": [
+      {"key": "a", "label": "เข้าวัดนั่งสมาธิ ฟังธรรมะ", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "สับไพ่ที่บ้าน + จุดเซจล้างพลังงาน", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "จัดบ้านใหม่ — บ้านสะอาดใจสว่าง", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "อ่านดวงประจำสัปดาห์หาคำตอบ", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ออกกำลังกาย/ดูซีรีส์/กินของอร่อย", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "เพื่อนมาขอคำปรึกษาเรื่องชีวิต คุณตอบยังไง?",
+    "options": [
+      {"key": "a", "label": "ลองไปทำบุญดูนะ บางทีกรรมเก่ามาตัด", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เดี๋ยวเปิดไพ่ให้ฟรี ดูพลังงานช่วงนี้", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "เธอลองย้ายเตียง/จัดโต๊ะทำงานใหม่ดู", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ขอวันเดือนปีเกิดมา เดี๋ยวเช็คให้", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "มาวางแผนกัน list ปัญหาก่อน", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "ปีใหม่มาแล้ว สิ่งแรกที่ต้องทำคือ?",
+    "options": [
+      {"key": "a", "label": "ไหว้พระ 9 วัด ขอพรปีใหม่", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "เปิดไพ่ year ahead spread 12 เดือน", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ดูทิศมงคลปีนี้ + ย้ายของในบ้าน", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "อ่านดวงปีของ 12 ราศี/ลัคนา", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "ตั้ง resolution + plan การเงิน", "weight": {"SKEPTIC": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "ถ้ามีเพื่อนพูดว่า 'มูเตลูเชื่อไม่ได้หรอก' คุณจะ...?",
+    "options": [
+      {"key": "a", "label": "เถียง! บารมีพระมีจริง ฉันเจอกับตัว", "weight": {"BUDDHIST": 2}},
+      {"key": "b", "label": "ไม่ต้องเถียง — มันคือ energy ที่บางคนรับไม่ได้", "weight": {"TAROT": 2}},
+      {"key": "c", "label": "ลองให้เขาจัดบ้านตามฮวงจุ้ยดูสิ จะเชื่อเอง", "weight": {"FENG_SHUI": 2}},
+      {"key": "d", "label": "ขอ birth chart มา จะพิสูจน์ให้ดู", "weight": {"ASTROLOGY": 2}},
+      {"key": "e", "label": "เห็นด้วย 100% — ดูเล่นๆ ก็พอ", "weight": {"SKEPTIC": 2}}
+    ]
+  }
+]

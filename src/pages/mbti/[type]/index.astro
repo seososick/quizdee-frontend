@@ -1,135 +1,220 @@
 ---
+/**
+ * /mbti/[type]/ — MBTI Type Detail Page (hybrid playful redesign)
+ * Pulls archetype from local quiz-content (16-archetypes.json) instead of Payload CMS,
+ * so it works fully static and matches the brand system.
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import StickerDecor from '@/components/StickerDecor.astro'
+import { CATALOG } from '@/lib/catalog'
+import { loadArchetypes, archetypeName, archetypeUrlSlug } from '@/lib/quiz-content'
 import { getMbtiTypes, getResultByTypeCode } from '@/lib/payload'
 
+// 16 MBTI codes
+const MBTI_CODES = ['INTJ','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP']
+
 export async function getStaticPaths() {
-  const types = await getMbtiTypes()
-  return types.map((t) => ({
-    params: { type: t.typeCode.toLowerCase() },
-    props: { type: t },
-  }))
+  return MBTI_CODES.map((code) => ({ params: { type: code.toLowerCase() } }))
 }
 
-const { type } = Astro.props
+const { type: typeParam } = Astro.params
+const code = (typeParam || '').toUpperCase()
+
+// Pull archetype data from local content
+const archetypes = loadArchetypes('16-archetypes.json')
+const archetype = archetypes.find((a: any) => a.mbti === code) || {}
+const archName = archetype.archetype_name_th || code
+const archEmoji = archetype.emoji || '🌙'
+const archTagline = archetype.tagline_th || ''
+const strengths: string[] = archetype.strengths_th || []
+const needs: string[] = archetype.needs_th || []
+const bestMatch: string = archetype.best_match || ''
+const worstMatch: string = archetype.worst_match || ''
+
+// Try to enrich with Payload CMS data (optional, falls back gracefully)
+let cms: any = null
+try { cms = await getResultByTypeCode(code) } catch {}
+const thaiFamous = (cms?.famousPeople || []).filter((p: any) => p.isThai)
+const intlFamous = (cms?.famousPeople || []).filter((p: any) => !p.isThai)
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const pageUrl = `${siteUrl}/mbti/${code.toLowerCase()}/`
+
+// Find matching color tokens for this MBTI
+const colorMap: Record<string, { bg: string; accent: string }> = {
+  INTJ: { bg: 'bg-intj-50', accent: 'bg-intj-500' },
+  INTP: { bg: 'bg-intp-50', accent: 'bg-intp-500' },
+  ENTJ: { bg: 'bg-entj-50', accent: 'bg-entj-500' },
+  ENTP: { bg: 'bg-entp-50', accent: 'bg-entp-500' },
+  INFJ: { bg: 'bg-infj-50', accent: 'bg-infj-500' },
+  INFP: { bg: 'bg-infp-50', accent: 'bg-infp-500' },
+  ENFJ: { bg: 'bg-enfj-50', accent: 'bg-enfj-500' },
+  ENFP: { bg: 'bg-enfp-50', accent: 'bg-enfp-500' },
+  ISTJ: { bg: 'bg-istj-50', accent: 'bg-istj-500' },
+  ISFJ: { bg: 'bg-isfj-50', accent: 'bg-isfj-500' },
+  ESTJ: { bg: 'bg-estj-50', accent: 'bg-estj-500' },
+  ESFJ: { bg: 'bg-esfj-50', accent: 'bg-esfj-500' },
+  ISTP: { bg: 'bg-istp-50', accent: 'bg-istp-500' },
+  ISFP: { bg: 'bg-isfp-50', accent: 'bg-isfp-500' },
+  ESTP: { bg: 'bg-estp-50', accent: 'bg-estp-500' },
+  ESFP: { bg: 'bg-esfp-50', accent: 'bg-esfp-500' },
+}
+const colors = colorMap[code] || { bg: 'bg-butter-50', accent: 'bg-coral-500' }
+
+// Best/worst match parsing (e.g. "ENFP 89%" → "ENFP")
+const bestMatchCode = bestMatch.split(/[\s\(]/)[0]?.toUpperCase()
+const worstMatchCode = worstMatch.split(/[\s—\(]/)[0]?.toUpperCase()
 
 const schemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: type.title,
-    description: type.shortDescription,
+    headline: `${code} — ${archName}`,
+    description: archTagline,
+    inLanguage: 'th',
+    url: pageUrl,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://quizdee.com/' },
-      { '@type': 'ListItem', position: 2, name: 'MBTI', item: 'https://quizdee.com/mbti/' },
-      { '@type': 'ListItem', position: 3, name: type.typeCode },
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'MBTI', item: siteUrl + '/mbti/' },
+      { '@type': 'ListItem', position: 3, name: code, item: pageUrl },
     ],
   },
 ]
 
-const thaisFamous = type.famousPeople?.filter((p) => p.isThai) || []
-const intlFamous = type.famousPeople?.filter((p) => !p.isThai) || []
+const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + archName)}&subtitle=${encodeURIComponent(code + ' · MBTI ฉบับคนไทย')}`
 ---
 
 <BaseLayout
-  title={`${type.title} — บุคลิกภาพ ${type.typeCode} ฉบับคนไทย`}
-  description={type.shortDescription}
+  title={`${archEmoji} ${archName} (${code}) — MBTI ฉบับคนไทย | quizdee`}
+  description={archTagline || `บุคลิกภาพ ${code} ฉบับคนไทยวัยทำงาน — จุดแข็ง จุดที่ควรรู้ คู่เข้ากัน อาชีพที่เหมาะ`}
+  canonical={pageUrl}
+  ogImage={ogImage}
   schemas={schemas}
+  keywords={[code, `MBTI ${code}`, archName, 'บุคลิกภาพ', 'MBTI ภาษาไทย', `${code} คือ`]}
 >
-  <article class="container-prose py-16">
-    <p class="eyebrow mb-2">MBTI · TYPE PAGE</p>
-    <p class="font-mono text-h2 text-coral-600 mb-2">{type.typeCode}</p>
-    <h1 class="text-h1 font-semibold mb-6">{type.title}</h1>
+  <!-- Hero -->
+  <section class={`relative overflow-hidden ${colors.bg}`}>
+    <StickerDecor />
+    <div class="container-wide relative z-10 py-10 sm:py-14">
+      <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-2">
+        <a href="/mbti/" class="hover:underline">MBTI</a> · TYPE PAGE
+      </p>
+      <p class="font-mono text-h2 font-bold text-sumi-900 mb-1">{code}</p>
+      <h1 class="font-display font-medium leading-[1.1] tracking-tight text-balance text-sumi-900" style="font-size: clamp(2rem, 6vw, 4rem);">
+        <span class="text-4xl sm:text-5xl mr-2">{archEmoji}</span>
+        {archName}
+      </h1>
+      {archTagline && (
+        <p class="mt-4 max-w-xl text-body text-sumi-700 italic">"{archTagline}"</p>
+      )}
 
-    <p class="answer-block">{type.shortDescription}</p>
-
-    <div class="my-6">
-      <a href="/quiz/mbti/" class="btn-primary">
-        ทำแบบทดสอบเช็คว่าใช่ {type.typeCode} จริงไหม →
-      </a>
-    </div>
-
-    <!-- Information Gain section: Thai context -->
-    <section class="my-12">
-      <h2 class="text-h2 font-semibold mb-4">{type.typeCode} ในบริบทคนไทยวัยทำงาน</h2>
-      <div class="card bg-cream-50 prose-content">
-        {type.thaiContext ? (
-          <p>{JSON.stringify(type.thaiContext).slice(0, 200)}...</p>
-        ) : (
-          <p class="text-ink-500 italic">รอเนื้อหา Thai-specific</p>
-        )}
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="/quiz/mbti/" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3.5 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-all min-h-[48px]">
+          ทำแบบทดสอบเช็คว่าใช่ {code} จริงไหม →
+        </a>
       </div>
-    </section>
-
-    <!-- BANNER SLOT 4: article-mid -->
-    <div class="hidden ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
-      banner-article-mid
     </div>
+  </section>
 
-    {(type.strengths || type.weaknesses) && (
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-        {type.strengths && type.strengths.length > 0 && (
-          <div class="card">
-            <h3 class="text-h3 font-semibold mb-3">จุดแข็ง</h3>
-            <ul class="space-y-2 text-small">
-              {type.strengths.map((s) => <li>· {s.item}</li>)}
-            </ul>
-          </div>
-        )}
-        {type.weaknesses && type.weaknesses.length > 0 && (
-          <div class="card">
-            <h3 class="text-h3 font-semibold mb-3">จุดอ่อน</h3>
-            <ul class="space-y-2 text-small">
-              {type.weaknesses.map((w) => <li>· {w.item}</li>)}
-            </ul>
-          </div>
-        )}
-      </section>
-    )}
-
-    {type.famousPeople && type.famousPeople.length > 0 && (
-      <section class="my-12">
-        <h2 class="text-h2 font-semibold mb-4">{type.typeCode} ที่มีชื่อเสียง</h2>
-        {thaisFamous.length > 0 && (
-          <div class="mb-6">
-            <p class="eyebrow mb-3">คนไทย</p>
-            <ul class="space-y-1">
-              {thaisFamous.map((p) => (
-                <li>· <strong>{p.name}</strong>{p.role && <span class="text-ink-500"> — {p.role}</span>}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {intlFamous.length > 0 && (
-          <div>
-            <p class="eyebrow mb-3">นานาชาติ</p>
-            <ul class="space-y-1">
-              {intlFamous.map((p) => (
-                <li>· <strong>{p.name}</strong>{p.role && <span class="text-ink-500"> — {p.role}</span>}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </section>
-    )}
-
-    {type.matchTypes && type.matchTypes.length > 0 && (
-      <section class="my-12">
-        <h2 class="text-h2 font-semibold mb-4">เข้ากันได้ดีกับ</h2>
-        <div class="flex flex-wrap gap-2">
-          {type.matchTypes.map((m) => (
-            <a
-              href={`/mbti/${m.toLowerCase()}/`}
-              class="font-mono text-small px-3 py-2 rounded-btn bg-cream-50 border border-ink-300/30 hover:border-coral-400"
-            >
-              {m}
-            </a>
-          ))}
+  <!-- Detail content -->
+  <section class="container-wide py-10 sm:py-14">
+    <div class="max-w-2xl mx-auto space-y-8">
+      {strengths.length > 0 && (
+        <div class="bg-matcha-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">✅ จุดแข็ง</h2>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {strengths.map((s) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
+            ))}
+          </ul>
         </div>
-      </section>
-    )}
-  </article>
+      )}
+
+      {needs.length > 0 && (
+        <div class="bg-coral-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">⚠️ สิ่งที่คนรอบข้างควรรู้</h2>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {needs.map((n) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{n}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {(bestMatchCode || worstMatchCode) && (
+        <div class="bg-infj-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">💞 ความเข้ากัน</h2>
+          {bestMatchCode && MBTI_CODES.includes(bestMatchCode) && (
+            <div class="mb-4">
+              <p class="text-small font-mono uppercase tracking-wider text-matcha-500 mb-2">เข้ากันมาก</p>
+              <a href={`/mbti/${bestMatchCode.toLowerCase()}/`} class="inline-flex items-center gap-2 bg-washi-50 border-2 border-sumi-900 hover:bg-matcha-50 rounded-xl px-4 py-3 transition-colors">
+                <span class="font-mono font-bold text-sumi-900">{bestMatchCode}</span>
+                <span class="text-sumi-500">·</span>
+                <span class="text-sumi-700">{bestMatch.replace(bestMatchCode, '').trim()}</span>
+              </a>
+            </div>
+          )}
+          {worstMatchCode && MBTI_CODES.includes(worstMatchCode) && (
+            <div>
+              <p class="text-small font-mono uppercase tracking-wider text-coral-700 mb-2">ระวังตีกัน</p>
+              <a href={`/mbti/${worstMatchCode.toLowerCase()}/`} class="inline-flex items-center gap-2 bg-washi-50 border-2 border-sumi-900 hover:bg-coral-50 rounded-xl px-4 py-3 transition-colors">
+                <span class="font-mono font-bold text-sumi-900">{worstMatchCode}</span>
+                <span class="text-sumi-500">·</span>
+                <span class="text-sumi-700">{worstMatch.replace(worstMatchCode, '').replace('—', '').trim()}</span>
+              </a>
+            </div>
+          )}
+        </div>
+      )}
+
+      {(thaiFamous.length > 0 || intlFamous.length > 0) && (
+        <div class="bg-butter-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">⭐ {code} ที่มีชื่อเสียง</h2>
+          {thaiFamous.length > 0 && (
+            <div class="mb-4">
+              <p class="text-small font-mono uppercase tracking-wider text-coral-700 mb-2">คนไทย</p>
+              <ul class="space-y-1 text-body text-sumi-800">
+                {thaiFamous.map((p: any) => (
+                  <li>· <strong>{p.name}</strong>{p.role && <span class="text-sumi-500"> — {p.role}</span>}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {intlFamous.length > 0 && (
+            <div>
+              <p class="text-small font-mono uppercase tracking-wider text-asagi-500 mb-2">นานาชาติ</p>
+              <ul class="space-y-1 text-body text-sumi-800">
+                {intlFamous.map((p: any) => (
+                  <li>· <strong>{p.name}</strong>{p.role && <span class="text-sumi-500"> — {p.role}</span>}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- More MBTI types navigator -->
+  <section class="bg-washi-100 py-10">
+    <div class="container-wide">
+      <h2 class="font-display text-h2 font-semibold text-sumi-900 text-center mb-6">สำรวจ MBTI ทั้ง 16 แบบ</h2>
+      <div class="grid grid-cols-4 sm:grid-cols-8 gap-2 max-w-4xl mx-auto">
+        {MBTI_CODES.map((c) => {
+          const a = archetypes.find((x: any) => x.mbti === c)
+          const isCurrent = c === code
+          return (
+            <a href={`/mbti/${c.toLowerCase()}/`} class={`group block rounded-xl border-2 ${isCurrent ? 'border-coral-700 bg-coral-50' : 'border-sumi-900 bg-washi-50'} p-3 text-center shadow-[2px_2px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0_0_rgba(31,26,20,0.95)] transition-all`}>
+              <div class="text-2xl mb-1">{a?.emoji || '🌙'}</div>
+              <p class="font-mono text-caption font-bold text-sumi-900">{c}</p>
+            </a>
+          )
+        })}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

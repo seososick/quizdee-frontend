@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "โบนัสปลายปี 1 แสนเข้าบัญชี คุณเอาไปทำอะไรก่อน?",
+    "options": [
+      {"key": "a", "label": "ซื้อ cashmere coat ตัวเดียว ใช้ยาว 10 ปี", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "ช้อป Shopee 11.11 สิบชิ้น รวม dupes ครบเซ็ต", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "ดาวน์ Goyard Saint Louis แล้วผ่อน 0% 10 เดือน", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "จองตั๋วบินญี่ปุ่น + omakase 8,000 / มื้อ", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ส่งเข้า SCB Easy ตรง ลงกองทุน SET50 + S&P 500", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "ซื้อรองเท้าใหม่ คุณเลือกคู่ไหน?",
+    "options": [
+      {"key": "a", "label": "New Balance 990v6 สีเทาจึมๆ 8,500 บาท", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "รองเท้าผ้าใบ Shopee 290 บาทส่งฟรี ลายคล้าย Adidas", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Saint Laurent Court Classic 25,000 ผ่อน 0%", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "รองเท้าวิ่ง Hoka สำหรับเทรลเชียงดาว", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "Converse คู่เก่ายังใส่ได้ ทำไมต้องซื้อใหม่", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "นัดเดทมื้อแรก คุณพาไปไหน?",
+    "options": [
+      {"key": "a", "label": "ร้าน omakase เล็กๆ ที่ไม่มี IG ทำเครื่องหมาย — for the food", "weight": {"QUIET_LUXURY": 1, "EXPERIENCE_RICH": 1}},
+      {"key": "b", "label": "After You / MK Gold — เซฟ ครบ จบ", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Sühring หรือ Le Du — Michelin star ถ่ายลง IG", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "Street food เยาวราช + bar ลับๆ ใน soi", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ร้านอาหารตามสั่ง 80 บาท แล้ว split bill", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "IG Story ของคุณส่วนใหญ่คืออะไร?",
+    "options": [
+      {"key": "a", "label": "รูป interior บ้าน หนังสือ กาแฟ ไม่มีหน้าตัวเอง", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "Haul ของถูก รีวิว dupes 'อันนี้เหมือน Dior 100%'", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Unboxing กระเป๋าใหม่ + รูปกับโลโก้ชัดๆ", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "อาหาร วิว ทริป concert ticket stub", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "แทบไม่ได้โพสต์อะไรเลย account เกือบร้าง", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "Weekend ของคุณเป็นยังไง?",
+    "options": [
+      {"key": "a", "label": "อ่านหนังสือที่บ้าน ชงกาแฟ drip จิบเงียบๆ", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "เดิน Chatuchak + Platinum หาของถูก", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "ไป Siam Paragon / EmSphere ดูของหรู window shopping", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "ขับรถไปหัวหิน / บินไปเชียงใหม่ short trip", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "อยู่บ้าน อ่าน annual report + ดู Set50 chart", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "เห็นกระเป๋าราคา 80,000 ที่อยากได้มาก คุณทำยังไง?",
+    "options": [
+      {"key": "a", "label": "เลือก The Row Margaux 65,000 แทน — minimal กว่า ไม่มีโลโก้", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "หา dupe ลายเดียวกันใน Shopee 800 บาท", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "ผ่อน 0% 12 เดือน เดือนละ 6,667 ไหวอยู่", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "เอาเงิน 80,000 ไปเที่ยวยุโรป 2 อาทิตย์ดีกว่า", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "เอา 80,000 ลง index fund 20 ปี = 320,000", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "ตัดผมแต่ละครั้งคุณไปร้านไหน?",
+    "options": [
+      {"key": "a", "label": "ร้านส่วนตัวที่นัดเฉพาะ ช่างทำมา 5 ปีรู้ใจ 2,500", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "ร้านในซอยใกล้บ้าน 150 บาท หรือคูปอง Shopee", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Chalachol / Toni&Guy 4,000 + ทรีตเมนต์ครบ", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "ลองร้านใหม่ในกรุงโซลตอนไปเที่ยว", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ปล่อยยาวๆ ตัดที่บ้าน หรือ 3 เดือนตัดที 200 บาท", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "วางแผน travel ปีนี้ คุณทำยังไง?",
+    "options": [
+      {"key": "a", "label": "Ryokan เกียวโต 1 อาทิตย์ ไม่ลง IG เน้น quality time", "weight": {"QUIET_LUXURY": 1, "EXPERIENCE_RICH": 1}},
+      {"key": "b", "label": "AirAsia promo 999 + Airbnb ราคาประหยัด เที่ยวครบ", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Maldives Conrad water villa ผ่อน honeymoon (ยังไม่ได้แต่ง)", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "Backpack ยุโรป 1 เดือน hostel + Eurail pass", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ไม่เที่ยว เก็บเงิน — ปีหน้าเที่ยวก็ได้", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "Skincare routine คุณเป็นแบบไหน?",
+    "options": [
+      {"key": "a", "label": "Augustinus Bader + La Mer 2 ขวด — น้อยชิ้นแต่แพง", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "K-beauty 10 steps จาก Watsons + Cathy Doll", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "La Mer Crème de la Mer ครีมจริงตัวเดียว ผ่อนได้ไหม", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "Skincare ติดกระเป๋าเดินทาง ใช้ตอนบินลด jet lag", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "Cetaphil + Nivea ขวดละ 200 ใช้ครบทั้งครอบครัว", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "ออกกำลังกาย คุณทำที่ไหน?",
+    "options": [
+      {"key": "a", "label": "Pilates studio บูทีค สมาชิกรายปี 60,000", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "YouTube Chloe Ting + ฟิตเนสคอนโด ฟรี", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "Virgin Active / Fitness First plus + เสื้อ Lululemon", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "วิ่ง trail / ปีนเขา / ดำน้ำที่เกาะ", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "วิ่งสวนสาธารณะ ฟรี + dumbbell มือสอง", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "เพื่อนชวนกินมื้อพิเศษหัว 5,000 / คน คุณ?",
+    "options": [
+      {"key": "a", "label": "ไป — แต่จะเลือกร้านที่อาหารดีจริงๆ ไม่ใช่ดังเพราะ IG", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "ขอเปลี่ยนร้านเป็น MK / shabu buffet 599 ดีกว่า", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "ไปสิ! ผ่อนบัตรได้ — IG ต้องลง", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "ไป — แต่ถ้าเป็นร้านใหม่ที่ไม่เคยลอง", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ปฏิเสธอย่างสุภาพ ติดธุระ (จริงๆ คืองก)", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "ซื้อ AirPods ใหม่ คุณเลือก?",
+    "options": [
+      {"key": "a", "label": "AirPods Pro 2 — ซื้อตัวเดียวใช้ยาว ไม่ต้องเปลี่ยนรุ่น", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "หูฟัง bluetooth Shopee 199 บาท ใช้ได้", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "AirPods Max 19,990 — สีแดงสวย ผ่อน iStudio", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "Sony WH-1000XM5 ดีกว่า — เอาไว้ใส่บนเครื่อง", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ใช้ของแถมมือถือ หรือ AirPods Gen 2 มือสอง", "weight": {"SAVER": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "ถ้าได้เงิน 10 ล้านพรุ่งนี้ คุณทำอะไรเป็นอย่างแรก?",
+    "options": [
+      {"key": "a", "label": "ซื้อบ้านเล็กๆ minimal สไตล์ Kinfolk ในเชียงใหม่", "weight": {"QUIET_LUXURY": 2}},
+      {"key": "b", "label": "ช้อปครบทุกอย่างที่ wishlist ใน Shopee + Lazada", "weight": {"LOUD_BUDGET": 2}},
+      {"key": "c", "label": "ซื้อ Birkin + Rolex Daytona + รถ BMW", "weight": {"ASPIRATIONAL": 2}},
+      {"key": "d", "label": "World tour 1 ปี — 30 ประเทศ business class", "weight": {"EXPERIENCE_RICH": 2}},
+      {"key": "e", "label": "ลง index fund 8 ล้าน + condo ปล่อยเช่า 2 ล้าน FIRE เลย", "weight": {"SAVER": 2}}
+    ]
+  }
+]

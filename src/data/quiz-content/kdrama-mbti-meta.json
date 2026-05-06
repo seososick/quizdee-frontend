@@ -1,0 +1,46 @@
+{
+  "quiz_id": "kdrama-mbti",
+  "version": "1.0.0",
+  "title_th": "MBTI × ซีรีส์เกาหลี: คุณคือนางเอกแบบไหนในจักรวาล K-Drama?",
+  "subtitle_th": "ถ้าวันหนึ่งคุณหลุดเข้าไปในซีรีส์เกาหลี... คุณจะเป็นตัวละครแบบไหน? ทำแบบทดสอบ 12 ข้อรู้ทันที 🎬",
+  "description_th": "รวม 16 อาร์คีไทป์นางเอก/พระเอกซีรีส์เกาหลีฮิต 2023-2025 ตั้งแต่ Queen of Tears, Lovely Runner, Crash Landing on You, Vincenzo, Goblin, Hospital Playlist และอีกเพียบ มาดูว่า MBTI ของคุณตรงกับใคร แล้วได้ซีรีส์แนะนำให้ดูต่อ 3 เรื่อง!",
+  "target_audience_th": "ผู้หญิงไทย 25-40 ปี ที่ติดซีรีส์เกาหลี",
+  "language": "th",
+  "country": "TH",
+  "category": "personality / entertainment",
+  "tags": ["MBTI", "K-Drama", "ซีรีส์เกาหลี", "Quiz", "Personality", "Queen of Tears", "Lovely Runner"],
+  "question_count": 12,
+  "result_count": 16,
+  "estimated_time_seconds": 90,
+  "scoring": {
+    "method": "mbti_axis",
+    "axes": ["EI", "SN", "TF", "JP"],
+    "questions_per_axis": 3
+  },
+  "cta": {
+    "primary_th": "แชร์ผลลัพธ์ให้เพื่อนซีรีส์ดู →",
+    "secondary_th": "ลองทำแบบทดสอบอื่นต่อ"
+  },
+  "share_hook_th": "ฉัน [MBTI] = [บทบาทซีรีส์] 🎬✨ แล้วเธอล่ะ? เป็นนางเอกแบบไหนในจักรวาล K-Drama? ลองทำดู 90 วิรู้เลย 👇",
+  "share_hook_variations_th": [
+    "เพิ่งรู้ว่าตัวเองเป็น [MBTI] ในซีรีส์เกาหลี คือ... ตรงเกินไปแล้วววว 😭 มาทำกันเร็ว!",
+    "ทำแบบทดสอบเสร็จร้องไห้เลย ตรงเป๊ะมาก 🥹 เพื่อนๆ ทำแล้วบอกผลด้วยน้า!",
+    "ถ้าคุณติด Queen of Tears / Lovely Runner / Crash Landing on You ต้องลอง! 12 ข้อรู้ว่าคุณคือนางเอกแบบไหน 💕",
+    "MBTI ของฉัน + ซีรีส์เกาหลี = [บทบาท] เธอล่ะเป็นใคร? คอมเม้นบอกหน่อย!"
+  ],
+  "social_meta": {
+    "og_title_th": "คุณคือนางเอกซีรีส์เกาหลีแบบไหน? | MBTI × K-Drama Quiz",
+    "og_description_th": "12 คำถาม 90 วินาที รู้ว่าคุณตรงกับตัวละครจาก Queen of Tears, Lovely Runner, Vincenzo, Goblin คนไหน 🎬",
+    "og_image_alt_th": "MBTI ซีรีส์เกาหลี Quiz - quizdee"
+  },
+  "result_template": {
+    "headline_th": "คุณคือ {mbti} — {kdrama_role_th} {emoji}",
+    "show_fields": ["kdrama_role_th", "tagline_th", "signature_scene_th", "reference_chars_th", "recommended_drama_th", "genre_th"],
+    "recommended_drama_label_th": "🎬 ซีรีส์แนะนำให้คุณดูต่อ:",
+    "reference_chars_label_th": "✨ ตัวละครที่คล้ายคุณ:",
+    "signature_scene_label_th": "🎞️ ฉาก signature ของคุณ:"
+  },
+  "credits_th": "Inspired by hit K-dramas 2023-2025: Queen of Tears, Lovely Runner, Twenty-Five Twenty-One, Crash Landing on You, Vincenzo, Itaewon Class, My Demon, Goblin, Reply 1988, Hospital Playlist, Welcome to Samdal-ri, Marry My Husband, Doctor Slump",
+  "created_at": "2026-05-06",
+  "updated_at": "2026-05-06"
+}

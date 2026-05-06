@@ -1,7 +1,7 @@
 ---
 /**
- * /quiz/ — All quizzes catalog page
- * Filter by category, sort by featured first
+ * /quiz/ — Filter-first catalog (single grid, JS-powered category filter)
+ * Mobile-friendly: pills + count, no duplicate sections.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import PlayCard from '@/components/PlayCard.astro'
@@ -33,90 +33,145 @@ const schemas = [
     ],
   },
 ]
+
+// Build category counts
+const categoryCounts = new Map<string, number>()
+CATALOG.forEach((q) => {
+  categoryCounts.set(q.category, (categoryCounts.get(q.category) || 0) + 1)
+})
 ---
 
 <BaseLayout
-  title="แบบทดสอบทั้งหมด 17 ชุด — MBTI, จิตวิทยา, เทรนด์ 2025 | quizdee"
-  description="รวมแบบทดสอบบุคลิกภาพ จิตวิทยา ความรัก งาน เทรนด์ 17 ชุด ภาษาไทย — Big Five OCEAN, Enneagram, Attachment Style, MBTI ออฟฟิศไทย, Burnout, K-pop bias และอีกมาก ฟรี ไม่ต้องสมัคร"
+  title={`แบบทดสอบทั้งหมด ${CATALOG.length} ชุด — MBTI, จิตวิทยา, เทรนด์ 2025 | quizdee`}
+  description={`รวม ${CATALOG.length} แบบทดสอบบุคลิกภาพ จิตวิทยา ความรัก งาน เทรนด์ ภาษาไทย — Big Five OCEAN, Enneagram, Attachment Style, MBTI ออฟฟิศไทย, Burnout, K-pop bias และอีกมาก ฟรี ไม่ต้องสมัคร`}
   schemas={schemas}
   keywords={['แบบทดสอบ', 'MBTI', 'Big Five', 'Enneagram', 'attachment style', 'burnout', 'แบบทดสอบบุคลิกภาพ', 'แบบทดสอบจิตวิทยา', 'แบบทดสอบความรัก']}
 >
+  <!-- Hero -->
   <section class="container-wide py-10 sm:py-14">
     <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-3">QUIZ CATALOG · {CATALOG.length} ชุด</p>
     <h1 class="font-display font-medium leading-tight text-balance text-sumi-900" style="font-size: clamp(2rem, 5vw, 3.5rem);">
-      แบบทดสอบทั้งหมด <em class="italic font-light text-coral-700">{CATALOG.length} ชุด</em>
+      เลือก quiz ที่ <em class="italic font-light text-coral-700">อยากเล่น</em>
     </h1>
     <p class="mt-4 max-w-2xl text-body text-sumi-700">
-      เลือก quiz ที่อยากเล่น — มีทั้งจิตวิทยาจริง (Big Five, Enneagram, Attachment Style) และ trend สนุก (AI Friend, Doom Scroll, K-pop Bias) ภาษาไทย ฉบับเข้าใจคนวัยทำงาน
+      มีทั้งจิตวิทยาจริง (Big Five, Enneagram, Attachment Style) และ trend สนุก (AI Friend, Cat MBTI, K-pop Bias) ภาษาไทย ฉบับเข้าใจคนวัยทำงาน
     </p>
 
-    <!-- Category filter pills -->
-    <nav class="mt-8 flex flex-wrap gap-2 sm:gap-3" aria-label="Quiz categories">
-      <a href="#all" class="cat-pill cat-pill-active">ทั้งหมด</a>
-      {CATEGORIES.map((c) => (
-        <a href={`#cat-${c.code.toLowerCase()}`} class="cat-pill">
-          {c.emoji} {c.label_th}
-        </a>
-      ))}
+    <!-- Sticky filter pills (mobile-friendly horizontal scroll) -->
+    <nav id="cat-filter" class="mt-8 -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide" aria-label="Quiz categories">
+      <div class="flex gap-2 sm:gap-3 min-w-max sm:flex-wrap">
+        <button data-cat="ALL" class="cat-pill cat-pill-active">ทั้งหมด <span class="opacity-70">{CATALOG.length}</span></button>
+        {CATEGORIES.map((c) => (
+          <button data-cat={c.code} class="cat-pill">
+            {c.emoji} {c.label_th} <span class="opacity-70">{categoryCounts.get(c.code) || 0}</span>
+          </button>
+        ))}
+      </div>
     </nav>
+
+    <!-- Active filter status + count -->
+    <p class="mt-5 text-small font-mono text-sumi-500">
+      <span data-active-label>แสดงทั้งหมด</span> · <span data-active-count>{CATALOG.length}</span> ชุด
+    </p>
   </section>
 
-  <!-- All quizzes grid -->
-  <section id="all" class="container-wide pb-12">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+  <!-- Single filtered grid -->
+  <section class="container-wide pb-16">
+    <div id="quiz-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
       {CATALOG.map((q) => (
-        <PlayCard
-          href={`/quiz/${q.slug}/`}
-          title={q.title_th}
-          subtitle={q.subtitle_th}
-          emoji={q.emoji}
-          category={q.category_label_th}
-          bg={q.bg}
-          duration={`${q.duration_min} นาที`}
-          questions={q.question_count}
-          badge={q.badge}
-          rotate={q.rotate ?? 0}
-        />
+        <div class="quiz-item" data-cat={q.category}>
+          <PlayCard
+            href={`/quiz/${q.slug}/`}
+            title={q.title_th}
+            subtitle={q.subtitle_th}
+            emoji={q.emoji}
+            category={q.category_label_th}
+            bg={q.bg}
+            duration={`${q.duration_min} นาที`}
+            questions={q.question_count}
+            badge={q.badge}
+            rotate={q.rotate ?? 0}
+          />
+        </div>
       ))}
     </div>
-  </section>
 
-  <!-- Per-category sections -->
-  {CATEGORIES.map((c) => {
-    const list = CATALOG.filter((q) => q.category === c.code)
-    if (list.length === 0) return null
-    return (
-      <section id={`cat-${c.code.toLowerCase()}`} class="container-wide py-10 border-t border-washi-300">
-        <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-2">
-          {c.emoji} {c.label_th}
-        </h2>
-        <p class="text-small text-sumi-700 mb-6">{c.description_th}</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {list.map((q) => (
-            <PlayCard
-              href={`/quiz/${q.slug}/`}
-              title={q.title_th}
-              subtitle={q.subtitle_th}
-              emoji={q.emoji}
-              category={q.category_label_th}
-              bg={q.bg}
-              duration={`${q.duration_min} นาที`}
-              questions={q.question_count}
-              badge={q.badge}
-              rotate={q.rotate ?? 0}
-            />
-          ))}
-        </div>
-      </section>
-    )
-  })}
+    <!-- Empty state -->
+    <div id="empty-state" class="hidden text-center py-16">
+      <div class="text-5xl mb-3">🤷</div>
+      <p class="font-display text-h3 font-semibold text-sumi-900">หมวดนี้ยังไม่มี quiz</p>
+      <button data-action="reset-filter" class="mt-4 inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-5 py-3 rounded-full font-semibold border-2 border-sumi-900 min-h-[44px]">ดูทั้งหมด</button>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
   .cat-pill {
-    @apply inline-flex items-center gap-1 px-4 py-2 rounded-full border-2 border-sumi-900 bg-washi-50 text-small font-semibold text-sumi-900 hover:bg-butter-100 transition-colors min-h-[40px];
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-sumi-900 bg-washi-50 text-small font-semibold text-sumi-900 hover:bg-butter-100 active:scale-[0.97] transition-all min-h-[44px] whitespace-nowrap cursor-pointer;
   }
   .cat-pill-active {
     @apply bg-sumi-900 text-butter-300 hover:bg-sumi-700;
   }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
+
+<script>
+  const pills = document.querySelectorAll<HTMLButtonElement>('[data-cat]')
+  const items = document.querySelectorAll<HTMLElement>('.quiz-item')
+  const labelEl = document.querySelector('[data-active-label]')
+  const countEl = document.querySelector('[data-active-count]')
+  const emptyEl = document.getElementById('empty-state')
+  const gridEl = document.getElementById('quiz-grid')
+
+  const categoryLabels: Record<string, string> = {
+    ALL: 'แสดงทั้งหมด',
+    PERSONALITY: 'บุคลิกภาพ',
+    PSYCHOLOGY: 'จิตวิทยาจริง',
+    LOVE: 'ความรัก',
+    WORK: 'งาน',
+    WELLBEING: 'สุขภาพจิต',
+    POP_CULTURE: 'ป๊อปคัลเจอร์',
+    TREND: 'เทรนด์ 2025',
+    LIFESTYLE: 'ไลฟ์สไตล์',
+    CULTURE: 'วัฒนธรรมไทย',
+  }
+
+  function applyFilter(cat: string) {
+    let visibleCount = 0
+    items.forEach((item) => {
+      const itemCat = item.dataset.cat
+      const show = cat === 'ALL' || itemCat === cat
+      item.classList.toggle('hidden', !show)
+      if (show) visibleCount++
+    })
+
+    pills.forEach((p) => {
+      p.classList.toggle('cat-pill-active', p.dataset.cat === cat)
+    })
+
+    if (labelEl) labelEl.textContent = cat === 'ALL' ? 'แสดงทั้งหมด' : `หมวด: ${categoryLabels[cat] || cat}`
+    if (countEl) countEl.textContent = String(visibleCount)
+    if (emptyEl) emptyEl.classList.toggle('hidden', visibleCount > 0)
+    if (gridEl) gridEl.classList.toggle('hidden', visibleCount === 0)
+
+    // Update URL hash without scroll
+    const url = new URL(window.location.href)
+    if (cat === 'ALL') url.searchParams.delete('cat')
+    else url.searchParams.set('cat', cat.toLowerCase())
+    history.replaceState(null, '', url.toString())
+  }
+
+  pills.forEach((p) => {
+    p.addEventListener('click', (e) => {
+      e.preventDefault()
+      applyFilter(p.dataset.cat || 'ALL')
+    })
+  })
+
+  document.querySelector('[data-action="reset-filter"]')?.addEventListener('click', () => applyFilter('ALL'))
+
+  // Init from URL
+  const initCat = new URLSearchParams(window.location.search).get('cat')?.toUpperCase()
+  if (initCat && initCat !== 'ALL' && categoryLabels[initCat]) applyFilter(initCat)
+</script>

@@ -1,0 +1,170 @@
+[
+  {
+    "code": "CREATIVE_SAGE",
+    "name_th": "นักสร้างสรรค์ผู้มีระบบ",
+    "emoji": "🎨",
+    "primary_facets": {"O": "high", "C": "high", "N": "low"},
+    "tagline_th": "ฝันไกลไปไกล แต่ปิดจบตรงเวลา",
+    "description_th": "คุณคือสายครีเอทีฟที่ไม่ได้ลอยอยู่บนเมฆ — ไอเดียบรรเจิดแต่มี timeline ชัด ทำงานกับคุณคือฝันของหัวหน้าทุกคน เพราะคุณ deliver ได้จริงโดยไม่ต้องตามจี้ ในยุค AI กำลังจะแย่งงาน คุณคือคนที่ปลอดภัยที่สุด เพราะ taste + execution ของมนุษย์ยังเลียนแบบยาก",
+    "strengths_th": [
+      "ออกแบบโซลูชันที่ทั้งสร้างสรรค์และทำได้จริง",
+      "บริหารโปรเจกต์ระยะยาวโดยไม่หลุดโฟกัส",
+      "เปิดรับเทคโนโลยีใหม่แต่ไม่หลงตามกระแส"
+    ],
+    "watchouts_th": [
+      "Perfectionism จัด — งานเสร็จแล้วยังไม่ปล่อย ถูถูแก้จนเลย deadline",
+      "หงุดหงิดง่ายกับเพื่อนร่วมงานที่ไม่มีระบบ",
+      "ใช้พลังงานเกินจนลืมพักผ่อน burnout เงียบ ๆ"
+    ],
+    "famous_thai_th": "ต่อ ธนญชัย ศรศรีวิชัย (ผู้กำกับโฆษณาระดับโลก)",
+    "career_match_th": ["product designer", "creative director", "UX researcher", "brand strategist", "architect"],
+    "compatible_with": ["BALANCED_HARMONIZER", "AMBITIOUS_LEADER", "DEEP_THINKER"]
+  },
+  {
+    "code": "AMBITIOUS_LEADER",
+    "name_th": "ผู้นำสายขับเคลื่อน",
+    "emoji": "🚀",
+    "primary_facets": {"C": "high", "E": "high", "N": "low"},
+    "tagline_th": "ตื่นมาก็มี KPI ในหัวแล้ว",
+    "description_th": "คุณคือคนที่เพื่อนเรียกหาเวลาต้องการ \"คนเอาอยู่\" — มีพลัง มีแผน กล้าตัดสินใจ และไม่กลัวการพูดในที่ประชุม ในยุค side hustle ระบาด คุณไม่ใช่แค่ทำสองงาน แต่ทำสามงานพร้อมกันโดยไม่หลุด ทุกคนรอบตัวอยากตามคุณไปสักที่ — เพียงแต่บางทีคุณเดินเร็วเกินจนทีมตามไม่ทัน",
+    "strengths_th": [
+      "ตัดสินใจเร็วและกล้ารับผิดชอบผลลัพธ์",
+      "สร้างทีมและพา deliver ผลงานจริง",
+      "ขายไอเดีย / pitch งานได้น่าเชื่อถือ"
+    ],
+    "watchouts_th": [
+      "ใจร้อน — มองคนอื่นช้าแล้วหงุดหงิด",
+      "ทำงานหนักจนละเลยสุขภาพและความสัมพันธ์",
+      "บางครั้งฟังน้อยกว่าพูด ทำให้ทีมรู้สึกไม่ถูกรับฟัง"
+    ],
+    "famous_thai_th": "ท็อป จิรายุส อุปกิจ (CEO Bitkub)",
+    "career_match_th": ["startup founder", "sales director", "project manager", "consultant", "investment banker"],
+    "compatible_with": ["CREATIVE_SAGE", "GUARDIAN_REALIST", "SOCIAL_CONNECTOR"]
+  },
+  {
+    "code": "BALANCED_HARMONIZER",
+    "name_th": "ผู้ประสานสายสมดุล",
+    "emoji": "⚖️",
+    "primary_facets": {"A": "high", "C": "high", "N": "low"},
+    "tagline_th": "ที่ไหนมีคุณ ที่นั่นไม่มีดราม่า",
+    "description_th": "คุณคือกาวประสานในทุกทีม — ฟังเก่ง ใจเย็น เห็นมุมคนอื่นได้โดยไม่ตัดสิน ในยุค Threads ที่ทุกคนพร้อมขยี้ดราม่า คุณคือคนที่ทำให้ห้องประชุมยังคุยกันรู้เรื่อง ไม่ใช่คนเสียงดังที่สุด แต่เป็นคนที่ทุกคนหันไปฟังตอนสำคัญ",
+    "strengths_th": [
+      "ทำให้ทีมที่เห็นต่างคุยกันรู้เรื่อง",
+      "มี emotional intelligence สูง อ่านบรรยากาศแม่น",
+      "ทำงานยาวกับคนยากได้โดยไม่เผาตัวเอง"
+    ],
+    "watchouts_th": [
+      "ปฏิเสธคนไม่ค่อยเป็น รับงานเกินตัวบ่อย",
+      "หลีกเลี่ยง conflict จนปัญหาบางอย่างถูกซุกไว้ใต้พรม",
+      "ความต้องการของตัวเองมักมาเป็นอันดับสุดท้าย"
+    ],
+    "famous_thai_th": "เป๊ก ผลิตโชค (ศิลปินที่อยู่กับวงการมา 20 ปีโดยไม่มีดราม่า)",
+    "career_match_th": ["HR business partner", "team lead", "diplomat", "mediator", "customer success manager"],
+    "compatible_with": ["CREATIVE_SAGE", "AMBITIOUS_LEADER", "GUARDIAN_REALIST"]
+  },
+  {
+    "code": "SOCIAL_CONNECTOR",
+    "name_th": "นักเชื่อมคนสายพลังงาน",
+    "emoji": "🎉",
+    "primary_facets": {"E": "high", "A": "high", "O": "high"},
+    "tagline_th": "รู้จักทุกคนในตึก รวมถึงพี่ รปภ.",
+    "description_th": "คุณคือสายปาร์ตี้ที่มีของจริง — ไม่ใช่แค่เฮฮา แต่จำชื่อทุกคนได้ เชื่อมคนนั้นกับคนนี้ได้แม่นจนกลายเป็นโหนดสำคัญในทุก network ในยุค dating apps fatigue คุณยังหาคู่ได้จาก IRL เพราะคุณไม่กลัวการคุยกับคนแปลกหน้า",
+    "strengths_th": [
+      "Network กว้างและคุณภาพดี เปิดประตูให้ตัวเองและทีมเสมอ",
+      "Energy สูงมาก สร้างบรรยากาศบวกให้ห้อง",
+      "Sales / pitch / present เก่งโดยธรรมชาติ"
+    ],
+    "watchouts_th": [
+      "อยู่คนเดียวไม่ค่อยได้ ต้องมีคนรอบตัวตลอด",
+      "เริ่มหลายอย่างแต่ปิดจบยาก ขาดวินัยลึก",
+      "พลังงานเหวี่ยงแรง — สูงสุดต่ำสุดในวันเดียว"
+    ],
+    "famous_thai_th": "วู้ดดี้ มิลินทจินดา",
+    "career_match_th": ["business development", "PR / communications", "event producer", "community manager", "talent agent"],
+    "compatible_with": ["AMBITIOUS_LEADER", "FREE_SPIRIT", "BALANCED_HARMONIZER"]
+  },
+  {
+    "code": "GUARDIAN_REALIST",
+    "name_th": "ผู้พิทักษ์สายของจริง",
+    "emoji": "🛡️",
+    "primary_facets": {"C": "high", "A": "high", "O": "low"},
+    "tagline_th": "งานเสร็จเสมอ คำพูดน่าเชื่อถือเสมอ",
+    "description_th": "คุณคือเสาหลักของออฟฟิศ — ไม่หวือหวา ไม่เรียกร้องสปอตไลต์ แต่ทุกคนรู้ว่าถ้างานอยู่ในมือคุณคือจบ ในยุคที่หลายคนกระโดดเปลี่ยนงานทุก 6 เดือนตาม TikTok career advice คุณคือคนที่อยู่นานพอจะเก็บเกี่ยว compounding ได้จริง",
+    "strengths_th": [
+      "ความน่าเชื่อถือระดับเทพ — พูดแล้วทำได้",
+      "ละเอียด รอบคอบ ตรวจงานเจอจุดที่คนอื่นมองข้าม",
+      "เป็นที่พึ่งของทีมเวลามีวิกฤต"
+    ],
+    "watchouts_th": [
+      "ต้านการเปลี่ยนแปลง — ของใหม่ทำให้ไม่สบายใจ",
+      "อาจถูกมองว่าหัวเก่าหรือไม่ยืดหยุ่น",
+      "เก็บความเครียดไว้ในใจ ไม่ค่อยขอความช่วยเหลือ"
+    ],
+    "famous_thai_th": "พี่หนึ่ง จักรพงษ์ จักราจุฑาธิบดิ์ (CEO JKN ที่บริหารด้วยวินัยเหล็ก)",
+    "career_match_th": ["operations manager", "auditor", "compliance officer", "civil servant", "supply chain manager"],
+    "compatible_with": ["BALANCED_HARMONIZER", "AMBITIOUS_LEADER", "DEEP_THINKER"]
+  },
+  {
+    "code": "FREE_SPIRIT",
+    "name_th": "วิญญาณเสรีสายลื่นไหล",
+    "emoji": "🦋",
+    "primary_facets": {"O": "high", "E": "high", "C": "low"},
+    "tagline_th": "ชีวิตคือ playlist สลับเพลงตามอารมณ์",
+    "description_th": "คุณคือคนที่ลาออกไปเที่ยวสองเดือนได้โดยไม่คิดมาก เปิดรับทุกประสบการณ์ใหม่ และเชื่อว่า work-life balance ไม่ใช่ทางเลือกแต่เป็นพื้นฐาน ในยุคที่ Threads เต็มไปด้วยโพสต์ \"ลาออกไป Pai\" คุณคือคนที่ทำมาก่อนตั้งแต่ยังไม่เป็นเทรนด์",
+    "strengths_th": [
+      "ปรับตัวกับสิ่งใหม่ได้เร็วมาก",
+      "สร้างไอเดียนอกกรอบที่คนอื่นคิดไม่ถึง",
+      "สนุกกับชีวิต ใช้ทุกวันให้คุ้ม"
+    ],
+    "watchouts_th": [
+      "ขาดวินัยทางการเงิน — เงินมาเงินไป",
+      "เริ่มเยอะ จบน้อย อาจดูเหลาะแหละในสายตาคนอื่น",
+      "ความสัมพันธ์ระยะยาวต้องฝืนใจรักษา"
+    ],
+    "famous_thai_th": "ตูน บอดี้สแลม (ก่อนช่วงก้าวคนละก้าว — สายอินดี้แท้)",
+    "career_match_th": ["freelance creator", "travel content creator", "musician", "entrepreneur", "creative copywriter"],
+    "compatible_with": ["SOCIAL_CONNECTOR", "CREATIVE_SAGE", "SENSITIVE_DREAMER"]
+  },
+  {
+    "code": "DEEP_THINKER",
+    "name_th": "นักคิดสายลึก",
+    "emoji": "🔭",
+    "primary_facets": {"O": "high", "E": "low", "C": "high"},
+    "tagline_th": "พูดน้อย แต่ทุกประโยคมีน้ำหนัก",
+    "description_th": "คุณคือคนที่ในห้องประชุมเงียบ 90% แต่พอพูดทุกคนหยุดฟัง — เพราะคุณคิดมาแล้ว 7 ชั้น ในยุค AI replace job คุณคือคนที่ใช้ AI เป็นเครื่องมือคูณสมอง ไม่ใช่ตัวแทนสมอง งานวิจัย / ยุทธศาสตร์ / การวิเคราะห์เชิงลึกคือสนามของคุณ",
+    "strengths_th": [
+      "วิเคราะห์ปัญหาซับซ้อนได้ลึกกว่าค่าเฉลี่ย",
+      "ทำงานเดี่ยวระยะยาวได้โดยไม่ต้องการแรงจูงใจจากภายนอก",
+      "เชี่ยวชาญในสายที่เลือก ระดับ 1% บน"
+    ],
+    "watchouts_th": [
+      "Network แคบ พลาดโอกาสที่มาจากคนรู้จัก",
+      "Overthinking — บางครั้งคิดจนไม่ลงมือ",
+      "สื่อสารกับคนทั่วไปยาก ใช้ภาษาเฉพาะกลุ่ม"
+    ],
+    "famous_thai_th": "สฤณี อาชวานันทกุล (นักเขียน / นักคิดด้านการเงิน)",
+    "career_match_th": ["data scientist", "researcher", "policy analyst", "writer", "philosophy professor"],
+    "compatible_with": ["CREATIVE_SAGE", "GUARDIAN_REALIST", "SENSITIVE_DREAMER"]
+  },
+  {
+    "code": "SENSITIVE_DREAMER",
+    "name_th": "ผู้ฝันใจไว",
+    "emoji": "🌙",
+    "primary_facets": {"O": "high", "A": "high", "N": "high"},
+    "tagline_th": "รู้สึกลึกกว่าค่าเฉลี่ย — ทั้งเรื่องดีและร้าย",
+    "description_th": "คุณคือคนที่ดูหนังจบแล้วร้องไห้ค้างไป 3 วัน — ไม่ใช่เพราะอ่อนแอ แต่เพราะ empathy คุณกว้างกว่าคนทั่วไป ในยุค burnout / quiet quitting / mental health crisis คุณรู้สึกหนักกว่าใคร แต่ก็เป็นคนที่ทำงานสายช่วยเหลือคน / ศิลปะ / เขียน ได้แตะใจคนได้ลึกที่สุด",
+    "strengths_th": [
+      "Empathy สูง อ่านความรู้สึกคนอื่นแม่น",
+      "สร้างงานศิลป์ / งานเขียนที่กระทบใจคนได้",
+      "ใส่ใจรายละเอียดที่คนอื่นมองข้าม"
+    ],
+    "watchouts_th": [
+      "Anxiety เยอะ คิดมากกับคำพูดเล็ก ๆ ของคนอื่น",
+      "Energy หมดเร็วในที่ที่มีคนเยอะ ต้องการเวลา recharge นาน",
+      "เปรียบเทียบตัวเองกับคนใน social media จนหดหู่"
+    ],
+    "famous_thai_th": "บี้ สุกฤษฎิ์ (ศิลปินที่เปิดใจเรื่อง mental health)",
+    "career_match_th": ["therapist", "social worker", "novelist", "illustrator", "content writer"],
+    "compatible_with": ["DEEP_THINKER", "BALANCED_HARMONIZER", "FREE_SPIRIT"]
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "disclaimer_th": "แบบทดสอบนี้อิงจิตวิทยา (Lazarus & Folkman 1985, Carver COPE Inventory 1989) เพื่อความเข้าใจตัวเองและความสนุกเท่านั้น ไม่ใช่การวินิจฉัยทางการแพทย์ หากเครียดเรื้อรัง วิตกกังวล หรือมีความคิดทำร้ายตัวเอง โปรดปรึกษาผู้เชี่ยวชาญ หรือโทรสายด่วนสุขภาพจิต 1323 (ฟรี 24 ชม.)",
+  "questions": [
+    {
+      "order": 1,
+      "scenario_th": "งานด่วน",
+      "text": "หัวหน้าบอกว่าประชุมพรุ่งนี้เช้า ผลงานต้องส่งตอนเลิกงานวันนี้ คุณรีแอ็กชั่นแรกคือ?",
+      "options": [
+        {"key": "a", "label": "เปิด Notion เรียงลำดับงานทันที แตก task เป็นชั่วโมงต่อชั่วโมง", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "สูดหายใจลึกๆ หลายรอบ รีเซต mood ก่อนค่อยเริ่ม", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนสนิทมาบ่นระบายว่าหัวหน้าโหด", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "เปิด TikTok เลื่อนดู 30 นาทีก่อน เดี๋ยวค่อยทำ", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "เขียนระบายในไดอารี + วางแผนงานไปด้วย", "weight": {"FEELING_PROCESSOR": 1, "PROBLEM_SOLVER": 1}}
+      ]
+    },
+    {
+      "order": 2,
+      "scenario_th": "ทะเลาะแฟน",
+      "text": "ทะเลาะกับแฟนหนัก เขาออกจากบ้านไปไม่บอก คุณทำยังไง?",
+      "options": [
+        {"key": "a", "label": "นั่งคิดว่าเริ่มผิดที่ตรงไหน วางแผนคุยใหม่ตอนเขากลับ", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "ร้องไห้ให้เต็มที่ ฟังเพลงเศร้า ปล่อยอารมณ์ออก", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนสนิทเล่าทุกอย่าง ขอความเห็น", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "เปิด Netflix ดูซีรีส์ ทำเป็นไม่มีอะไรเกิดขึ้น", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "บ่น IG close friends + แอบเช็กว่าเขาออนไลน์มั้ย", "weight": {"SOCIAL_SEEKER": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 3,
+      "scenario_th": "บิลบัตรเครดิต",
+      "text": "เปิดบิลบัตรเครดิตเดือนนี้ ตัวเลขเกินคาด 2 เท่า คุณ?",
+      "options": [
+        {"key": "a", "label": "เปิด Excel ทำ budget plan รายเดือน หา side income", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "นั่งเฉยๆ ยอมรับว่าตัวเองพลาด รู้สึกผิดให้สุดก่อน", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาแม่/พี่/เพื่อน ขอคำแนะนำการเงิน", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "ปิดบิล วางมือถือ ไม่อยากคิด ค่อยจ่ายต้นเดือน", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "ช้อปต่อให้คุ้ม คิดว่าเดี๋ยวก็มีเงินมา", "weight": {"AVOIDER": 2}}
+      ]
+    },
+    {
+      "order": 4,
+      "scenario_th": "ป่วยหนัก",
+      "text": "หมอบอกว่าต้องผ่าตัดเร็วๆ นี้ คุณรับมือยังไง?",
+      "options": [
+        {"key": "a", "label": "หาข้อมูลโรค หาหมอ second opinion เปรียบเทียบ รพ.", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "นั่งสมาธิ ทำ journaling ยอมรับว่ากลัว", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรบอกครอบครัว เพื่อน ให้มาเป็นกำลังใจ", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "บอกตัวเองว่ายังไม่เจ็บ เดี๋ยวค่อยคิด เปิดเกมเล่น", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "เขียนเล่าใน blog ส่วนตัว + research โรคไปด้วย", "weight": {"FEELING_PROCESSOR": 1, "PROBLEM_SOLVER": 1}}
+      ]
+    },
+    {
+      "order": 5,
+      "scenario_th": "ลาออก",
+      "text": "งานที่ทำอยู่กดดันสุดๆ คิดอยากลาออกแต่ไม่มีงานใหม่ คุณ?",
+      "options": [
+        {"key": "a", "label": "เปิด LinkedIn อัปเดต CV ส่งสมัครงาน 20 ที่ภายในสัปดาห์", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "ใช้เวลาทบทวนว่าตัวเองอยากทำอะไรจริงๆ ก่อนตัดสินใจ", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "ปรึกษาคนรู้จัก ถามรุ่นพี่ขอคำแนะนำ", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "ทนไปก่อน อย่าคิดมาก เดี๋ยวมันก็ผ่าน", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "วางแผนการเงิน + คุยกับเพื่อนที่เคยลาออก", "weight": {"PROBLEM_SOLVER": 1, "SOCIAL_SEEKER": 1}}
+      ]
+    },
+    {
+      "order": 6,
+      "scenario_th": "รถติดฝน",
+      "text": "ฝนตกหนัก รถติด 3 ชั่วโมง สายประชุมแน่ๆ คุณ?",
+      "options": [
+        {"key": "a", "label": "โทรเลื่อนประชุมทันที หาทางลัด เปลี่ยนเป็น Zoom จากรถ", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "เปิดเพลง ทำใจให้สงบ ยอมรับว่าควบคุมไม่ได้", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนคุยฆ่าเวลา บ่นเรื่องฝน", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "เปิด TikTok ลืมเรื่องประชุมไปก่อน", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "หงุดหงิดบีบแตรใส่รถข้างๆ", "weight": {"AVOIDER": 1, "FEELING_PROCESSOR": 1}}
+      ]
+    },
+    {
+      "order": 7,
+      "scenario_th": "Exam pressure",
+      "text": "พรุ่งนี้สอบ/พรีเซนต์ใหญ่ คืนนี้คุณ?",
+      "options": [
+        {"key": "a", "label": "ทำ summary sheet, mock test, ซ้อมพรีเซนต์ 3 รอบ", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "นั่งสมาธิ + visualize ตัวเองทำได้ดี", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนติว/ซ้อมพรีเซนต์ด้วยกัน", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "ดู YouTube ยาวๆ บอกตัวเองว่าเดี๋ยวก็ผ่าน", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "อ่านไป + เปิดซีรีส์เป็น background ลด stress", "weight": {"PROBLEM_SOLVER": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 8,
+      "scenario_th": "Unwind หลังเลิกงาน",
+      "text": "วันที่งานหนักมาก กลับถึงบ้านคุณทำอะไรเป็นอันดับแรก?",
+      "options": [
+        {"key": "a", "label": "เขียน to-do สำหรับพรุ่งนี้ก่อน จะได้นอนหลับ", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "อาบน้ำอุ่นยาวๆ จุดเทียน ปล่อยให้ระบบประสาทคลาย", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "Video call เพื่อน/แฟน คุยจนรู้สึกดีขึ้น", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "กินจุบจิบ + ดู Netflix จนหลับคาทีวี", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "ดื่มไวน์แก้วเดียว + ฟังพอดแคสต์", "weight": {"FEELING_PROCESSOR": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 9,
+      "scenario_th": "เพื่อนทรยศ",
+      "text": "รู้ว่าเพื่อนสนิทนินทาคุณลับหลัง คุณ?",
+      "options": [
+        {"key": "a", "label": "นัดเจอเพื่อนคนนั้น เคลียร์ตรงๆ ขอคำอธิบาย", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "เจ็บก่อน ใช้เวลาประมวลความรู้สึก ค่อยตัดสินใจ", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนกลุ่มเดียวกันถามว่าเกิดอะไรขึ้นจริงๆ", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "Block, mute, ทำเป็นไม่รู้ ไม่อยากดราม่า", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "โพสต์ subtweet เป็นนัยให้เขาเห็น", "weight": {"FEELING_PROCESSOR": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 10,
+      "scenario_th": "ครอบครัวกดดัน",
+      "text": "พ่อแม่บ่นเรื่องคุณยังโสด/ยังไม่แต่ง/ยังไม่มีลูก คุณ?",
+      "options": [
+        {"key": "a", "label": "ตั้ง boundary ชัดเจน อธิบายเหตุผลและแผนชีวิต", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "Validate ความรู้สึกพ่อแม่ก่อน + ของตัวเองด้วย", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "โทรหาเพื่อนหรือพี่น้องระบายว่ากดดันแค่ไหน", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "พยักหน้า เออๆๆ แล้วเดินขึ้นห้อง ปิดประตู", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "หัวเราะแก้เก้อ + เปลี่ยนเรื่องคุย", "weight": {"FEELING_PROCESSOR": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 11,
+      "scenario_th": "งานท่วม",
+      "text": "Project ที่รับมาทับซ้อน 4 อันใน 1 สัปดาห์ คุณ?",
+      "options": [
+        {"key": "a", "label": "Prioritize ตาม Eisenhower matrix delegate ให้คนอื่น", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "หยุดสักครู่ หายใจ ยอมรับว่าโอเคที่จะรู้สึก overwhelmed", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "ขอความช่วยเหลือทีม / ปรึกษาเจ้านายตรงๆ", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "ทำอันที่สนุกที่สุดก่อน อันยากดองไว้", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "ทำทุกอันพร้อมกัน ไม่หลับไม่นอน 3 วัน", "weight": {"PROBLEM_SOLVER": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 12,
+      "scenario_th": "Self-talk",
+      "text": "เวลาเครียด เสียงในหัวคุณส่วนใหญ่บอกอะไร?",
+      "options": [
+        {"key": "a", "label": "'มีอะไรทำได้บ้าง? Step 1, 2, 3 คือ...'", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "'รู้สึกแบบนี้ก็โอเคนะ มันเป็นอารมณ์ของมนุษย์'", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "'ใครจะรับฟังเราตอนนี้ได้บ้าง?'", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "'ไม่อยากคิดเรื่องนี้ ไปดูอย่างอื่นก่อน'", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "'เราล้มเหลว ทำไมเราถึงโง่จัง'", "weight": {"FEELING_PROCESSOR": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 13,
+      "scenario_th": "Mental health day",
+      "text": "ถ้ามีวันหยุดฉุกเฉิน 1 วันให้รักษาใจ คุณจะใช้ยังไง?",
+      "options": [
+        {"key": "a", "label": "วางแผน life audit จัด priority ใหม่ทั้งชีวิต", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "Solo retreat — สมาธิ, journal, ธรรมชาติ", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "นัดเพื่อนกินข้าว เม้ามอย เติมพลังจาก connection", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "นอนทั้งวัน เปิด Netflix marathon ไม่ทำอะไรเลย", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "Spa + shopping + เลี้ยงตัวเองด้วยของอร่อย", "weight": {"FEELING_PROCESSOR": 1, "AVOIDER": 1}}
+      ]
+    },
+    {
+      "order": 14,
+      "scenario_th": "เพื่อนเครียด",
+      "text": "เพื่อนสนิทมาเล่าว่าเครียดมาก คุณ default mode ตอบยังไง?",
+      "options": [
+        {"key": "a", "label": "ช่วย analyze หาทางแก้เป็น step ทันที", "weight": {"PROBLEM_SOLVER": 2}},
+        {"key": "b", "label": "ฟังเงียบๆ validate ความรู้สึก ไม่รีบให้ advice", "weight": {"FEELING_PROCESSOR": 2}},
+        {"key": "c", "label": "ชวนเจอ บอกว่า 'ฉันอยู่ตรงนี้' พาไปเจอเพื่อนคนอื่น", "weight": {"SOCIAL_SEEKER": 2}},
+        {"key": "d", "label": "ชวนไปกินบุฟเฟ่ต์/เที่ยวให้ลืมเรื่อง", "weight": {"AVOIDER": 2}},
+        {"key": "e", "label": "ฟัง + ถามว่า 'อยากให้ฟัง หรืออยากให้ช่วยแก้?'", "weight": {"FEELING_PROCESSOR": 1, "PROBLEM_SOLVER": 1}}
+      ]
+    }
+  ]
+}

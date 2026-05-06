@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "ต้องเขียนอีเมลยาวถึงลูกค้าใหญ่ คุณจะ...",
+    "options": [
+      {"key": "a", "label": "รันผ่าน prompt ที่เซฟไว้ ได้ draft 80% รอบเดียว", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "ขอ ChatGPT ช่วย outline + ตัวเลือกคำให้สุภาพ", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "ลองให้ AI ร่าง แต่ verify ทุกบรรทัดก่อนส่ง", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ขี้เกียจ ขอให้ช่วยสรุปสั้นๆ พอ", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "เขียนเองสบายใจกว่า ไม่ไว้ใจ AI กับลูกค้าใหญ่", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "หลังประชุม 2 ชั่วโมงเมื่อกี้ คุณจัดการกับ note ยังไง?",
+    "options": [
+      {"key": "a", "label": "Otter.ai บันทึก → Claude สรุป → push เข้า Notion อัตโนมัติ", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "Copy transcript ไปใส่ ChatGPT ขอสรุป + action items", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "ใช้ AI สรุป แต่ฟังเทปอีกรอบเช็คว่าตกประเด็นมั้ย", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "จดเอง 3 บูลเล็ต พอแล้ว ไม่อยากยุ่ง", "weight": {"CASUAL": 1, "RESISTANT": 1}},
+      {"key": "e", "label": "เขียนสรุปเองเป็น Word — เป็นหน้าที่ของคน ไม่ใช่ AI", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "หัวหน้าให้คิดไอเดีย campaign ใหม่ภายใน 3 วัน คุณเริ่มยังไง?",
+    "options": [
+      {"key": "a", "label": "Chain prompt: research → 50 ideas → filter → mood board ด้วย Midjourney", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "ถาม ChatGPT ขอ 10 ไอเดียเป็น starting point แล้วต่อยอดเอง", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "Brainstorm เองก่อน แล้วใช้ AI เช็คว่าซ้ำกับ campaign ที่เคยมีมั้ย", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ขอ AI ช่วยคิดสนุกๆ ดูก่อน เผื่อมีอะไรปิ๊ง", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "ปิดประตูห้อง คิดเองคนเดียว — creative ของคนชนะเสมอ", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "ต้องเขียนโค้ดหรือแก้ bug — สถานการณ์ของคุณคือ?",
+    "options": [
+      {"key": "a", "label": "อยู่ใน Cursor/Claude Code ทั้งวัน — pair กับ AI 24/7", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "เปิด ChatGPT ถามตอน stuck ช่วย debug ได้ดี", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "ใช้ AI suggest แต่อ่านโค้ดทุกบรรทัดก่อน accept", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ไม่ได้เขียนโค้ดเป็นอาชีพ — แต่ลอง vibe code Lovable เล่น", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "เขียนโค้ดเองตามคู่มือ — AI โค้ดมั่วเยอะ", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "อยากได้รูป profile ใหม่ คุณทำยังไง?",
+    "options": [
+      {"key": "a", "label": "Midjourney v7 + reference image + prompt 80 คำ ปรับ 5 รอบ", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "ใช้ ChatGPT image gen พิมพ์สั้นๆ ก็โอเค", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "ไม่ใช้ AI gen — กลัวเรื่อง copyright + ดูปลอม", "weight": {"SKEPTIC": 1, "RESISTANT": 1}},
+      {"key": "d", "label": "ขอ AI วาดเป็นอนิเมะ/Ghibli/ซามูไร สนุกสุด!", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "ถ่ายเองที่สตูดิโอจริงดีกว่า ของจริงไม่มีของแทน", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "พรุ่งนี้ทำอะไรกินดี?",
+    "options": [
+      {"key": "a", "label": "มี GPT ส่วนตัวชื่อ 'Chef Bot' ป้อน ingredient ใน fridge → ได้ menu + recipe", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "ถาม ChatGPT 'ทำอะไรกินดีจากของในตู้เย็น' เลือกเอง", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "หาสูตรจากเว็บ Wongnai/Cookpad — เชื่อ recipe คนเขียนมากกว่า", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ขอ AI คิดเมนูแปลกๆ สนุกๆ มาลองทำ", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "ทำที่ทำได้อยู่แล้ว ไม่ต้องถามใคร", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "ได้ยินข่าว 'บริษัท X ปลด 30% เพราะใช้ AI แทน' — รู้สึกยังไง?",
+    "options": [
+      {"key": "a", "label": "เห็นมาตั้งแต่ปีก่อน — ใครไม่เรียน AI ตอนนี้คือ at risk", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "เครียดนิดหน่อย แต่ก็พยายามใช้ AI ให้คล่องขึ้นทุกวัน", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "ข่าวจริงมั้ย? ขอเช็ค source ก่อน ส่วนใหญ่ AI ถูกใช้เป็นข้ออ้าง", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "อ่านผ่านๆ — ไม่เกี่ยวกับสายงานเรา", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "นี่แหละที่กลัวมาตลอด — AI กำลังทำลายงานคน", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "เห็น deepfake ดาราบนฟีด คุณตอบสนองยังไง?",
+    "options": [
+      {"key": "a", "label": "ดูออกตั้งแต่ thumbnail — รู้ tool ที่ใช้ gen ด้วย", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "เช็ค comment ก่อน ส่วนใหญ่มีคนแฉอยู่แล้ว", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "Reverse image search + เทียบกับคลิปต้นฉบับ", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "อ้าว ของปลอมเหรอ? เพิ่งรู้... 😅", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "นี่แหละเหตุผลที่ไม่ไว้ใจ AI — โลกกำลังพัง", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "เพื่อนถามว่า 'อยากใช้ AI เป็น เริ่มตรงไหนดี?' คุณตอบ...",
+    "options": [
+      {"key": "a", "label": "ส่ง Notion ที่รวม prompt library + tutorial ของตัวเองให้", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "บอกให้ลองใช้ ChatGPT สรุปอีเมล/ประชุมก่อน เริ่มง่ายๆ", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "เตือนเรื่อง hallucination + อย่าใส่ข้อมูลบริษัท", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ลอง gen รูปสนุกๆ ก่อน เดี๋ยวจะติดใจเอง", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "ไม่ต้องรีบใช้ก็ได้ ทักษะคนยังสำคัญ", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "เปิด ChatGPT ครั้งล่าสุดเมื่อไหร่?",
+    "options": [
+      {"key": "a", "label": "ตอนนี้ tab เปิดอยู่ + Claude + Cursor พร้อมกัน", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "เมื่อเช้า ใช้ทุกวันอยู่แล้ว", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "เมื่อวาน — ถามแล้วก็ไปเช็คต่อ", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "อาทิตย์ที่แล้วมั้ง... ขอรูปแมวมา 1 ใบ", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "จำไม่ได้แล้ว นานมาก", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "ค่าใช้จ่าย AI subscription ต่อเดือนของคุณ?",
+    "options": [
+      {"key": "a", "label": "$60+ — ChatGPT Plus + Claude Pro + Midjourney + Cursor", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "$20 — ChatGPT Plus หรือ Claude Pro อย่างใดอย่างหนึ่ง", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "$20 — แต่จ่ายเพื่อ Perplexity Pro ที่ cite source", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "$0 — ใช้ free tier ก็พอ", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "$0 — ไม่จ่ายแน่นอน", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "ถ้าเจ้านายบอก 'ห้ามใช้ AI ทำงาน' — คุณ?",
+    "options": [
+      {"key": "a", "label": "ลาออก — บริษัทไม่เข้าใจอนาคต", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "เครียด งานช้าลงมาก แต่ก็พยายามปรับ", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "เข้าใจ — มี risk เรื่อง data leak จริง", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "โอเคได้ ใช้แต่เรื่องส่วนตัวพอ", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "เห็นด้วย 100% — บริษัทอื่นควรทำตาม", "weight": {"RESISTANT": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "อีก 5 ปี โลกการทำงานจะเป็นยังไง?",
+    "options": [
+      {"key": "a", "label": "Agent ทำงานแทน 70% — คนที่ orchestrate AI ได้คือ winner", "weight": {"POWER_USER": 2}},
+      {"key": "b", "label": "ทุกคนใช้ AI เป็น tool ปกติเหมือน Excel ตอนนี้", "weight": {"DAILY_HELPER": 2}},
+      {"key": "c", "label": "Bubble แตก — AI hype เกินจริง สุดท้ายเหลือแค่ use case แคบๆ", "weight": {"SKEPTIC": 2}},
+      {"key": "d", "label": "ไม่รู้ — ขอ AI ช่วยเดาให้ดู 555", "weight": {"CASUAL": 2}},
+      {"key": "e", "label": "หวังว่าคนจะกลับมาเห็นค่าของงานคน — AI fatigue กำลังมา", "weight": {"RESISTANT": 2}}
+    ]
+  }
+]

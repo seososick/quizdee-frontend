@@ -1,0 +1,203 @@
+{
+  "scoring": {
+    "formula": "burnout_score = sum(EE_weights) + sum(DP_weights) - sum(PA_weights)",
+    "note_th": "คะแนน burnout = ผลรวมของ EE + DP ลบด้วย PA (Personal Accomplishment เป็น reverse-scored ตาม MBI-GS) จากนั้นนำคะแนนไปเทียบกับ score_range ใน burnout-archetypes.json",
+    "min_possible": 0,
+    "max_possible": 100,
+    "dimensions": {
+      "EE": "Emotional Exhaustion — ความเหนื่อยล้าทางอารมณ์",
+      "DP": "Depersonalization / Cynicism — ความเหินห่าง เย้ยหยันงาน",
+      "PA": "Personal Accomplishment — ความรู้สึกว่ายังเก่งและสร้างคุณค่า (reverse-scored)"
+    }
+  },
+  "frequency_scale_note_th": "ตัวเลือก a-e เป็น frequency scale ตาม MBI ต้นฉบับ: never / a few times a year / monthly / weekly / daily",
+  "questions": [
+    {
+      "order": 1,
+      "dimension": "EE",
+      "text": "ตื่นเช้ามาแล้วรู้สึกหมดพลังตั้งแต่ยังไม่ได้เริ่มงาน",
+      "mbi_reference": "I feel emotionally drained from my work",
+      "options": [
+        {"key": "a", "label": "ไม่เคยเลย", "weight": {"EE": 0, "PA": 2}},
+        {"key": "b", "label": "นานๆ ครั้ง (ปีละไม่กี่หน)", "weight": {"EE": 1, "PA": 1}},
+        {"key": "c", "label": "เดือนละครั้งสองครั้ง", "weight": {"EE": 2}},
+        {"key": "d", "label": "บ่อยมาก (หลายครั้งต่อสัปดาห์)", "weight": {"EE": 4, "DP": 1}},
+        {"key": "e", "label": "ทุกวันจนคิดว่าเป็นเรื่องปกติไปแล้ว", "weight": {"EE": 6, "DP": 2, "PA": -2}}
+      ]
+    },
+    {
+      "order": 2,
+      "dimension": "EE",
+      "text": "หลังเลิกงาน รู้สึกเหนื่อยจนไม่มีแรงทำกิจกรรมส่วนตัวเลย (ดูซีรีส์ ออกกำลัง เจอเพื่อน)",
+      "mbi_reference": "I feel used up at the end of the workday",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — เลิกงานคือสนุก", "weight": {"EE": 0, "PA": 2}},
+        {"key": "b", "label": "นานๆ ครั้ง", "weight": {"EE": 1}},
+        {"key": "c", "label": "ราวๆ ครึ่งหนึ่งของวันทำงาน", "weight": {"EE": 3}},
+        {"key": "d", "label": "เกือบทุกวัน นั่งไถมือถือบนโซฟาแล้วหลับ", "weight": {"EE": 5, "DP": 1}},
+        {"key": "e", "label": "ทุกวัน — แค่หายใจกลับบ้านก็พอละ", "weight": {"EE": 6, "DP": 2, "PA": -1}}
+      ]
+    },
+    {
+      "order": 3,
+      "dimension": "EE",
+      "text": "นอนเต็มอิ่มแล้ว แต่ตื่นมายังรู้สึกเหนื่อย เหมือนนอนไม่พอ",
+      "mbi_reference": "I feel tired when I get up in the morning and have to face another day on the job",
+      "options": [
+        {"key": "a", "label": "ไม่เคย ตื่นมาสดชื่นเสมอ", "weight": {"EE": 0, "PA": 2}},
+        {"key": "b", "label": "นานๆ ครั้ง", "weight": {"EE": 1, "PA": 1}},
+        {"key": "c", "label": "หลายครั้งในเดือน", "weight": {"EE": 2}},
+        {"key": "d", "label": "เกือบทุกวัน — กาแฟไม่ช่วยแล้ว", "weight": {"EE": 4, "DP": 1}},
+        {"key": "e", "label": "ทุกวัน นอนกี่ชั่วโมงก็ไม่หาย", "weight": {"EE": 6, "DP": 2, "PA": -2}}
+      ]
+    },
+    {
+      "order": 4,
+      "dimension": "EE",
+      "text": "วันเสาร์-อาทิตย์ใช้ไปกับการ ‘ฟื้นพลัง’ จนไม่มีเวลาทำสิ่งที่อยากทำจริงๆ",
+      "mbi_reference": "Working all day is really a strain for me",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — weekend คือเวลาของฉัน", "weight": {"EE": 0, "PA": 2}},
+        {"key": "b", "label": "บางสัปดาห์ที่งานเข้าหนัก", "weight": {"EE": 1}},
+        {"key": "c", "label": "ครึ่งๆ — เสาร์นอน อาทิตย์ค่อยใช้ชีวิต", "weight": {"EE": 3}},
+        {"key": "d", "label": "เกือบทุก weekend นอนยาวจนเย็นวันอาทิตย์", "weight": {"EE": 5, "DP": 1}},
+        {"key": "e", "label": "ทุก weekend — Sunday Scaries มาตั้งแต่บ่ายอาทิตย์", "weight": {"EE": 6, "DP": 2, "PA": -2}}
+      ]
+    },
+    {
+      "order": 5,
+      "dimension": "EE",
+      "text": "เห็น notification LINE งาน หรืออีเมลจากหัวหน้า แล้วรู้สึกแน่นหน้าอก/ใจหวิว",
+      "mbi_reference": "I feel emotionally drained from my work (somatic variant)",
+      "options": [
+        {"key": "a", "label": "ไม่เคยเลย เปิดดูปกติ", "weight": {"EE": 0, "PA": 1}},
+        {"key": "b", "label": "นานๆ ทีตอนงานเร่ง", "weight": {"EE": 1}},
+        {"key": "c", "label": "บางครั้งโดยเฉพาะนอกเวลางาน", "weight": {"EE": 2, "DP": 1}},
+        {"key": "d", "label": "บ่อย — ปิด notification LINE งานหลัง 6 โมงไม่ได้", "weight": {"EE": 4, "DP": 2}},
+        {"key": "e", "label": "ทุกครั้ง — กลัวเสียง notification ไปเลย", "weight": {"EE": 6, "DP": 3, "PA": -2}}
+      ]
+    },
+    {
+      "order": 6,
+      "dimension": "DP",
+      "text": "เข้าประชุมแล้วเหม่อ ไม่อยากออกความเห็น แค่อยากให้จบไวๆ",
+      "mbi_reference": "I have become less enthusiastic about my work",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — ฉันมีไอเดียอยากแชร์เสมอ", "weight": {"DP": 0, "PA": 2}},
+        {"key": "b", "label": "เฉพาะประชุมไร้สาระจริงๆ", "weight": {"DP": 1}},
+        {"key": "c", "label": "ครึ่งหนึ่งของประชุมที่เข้า", "weight": {"DP": 2}},
+        {"key": "d", "label": "เกือบทุกประชุม ปิดกล้องแล้วเล่นมือถือ", "weight": {"DP": 4, "EE": 1}},
+        {"key": "e", "label": "ทุกประชุม — มีตัวอยู่ใจหนีตลอด", "weight": {"DP": 6, "EE": 2, "PA": -2}}
+      ]
+    },
+    {
+      "order": 7,
+      "dimension": "DP",
+      "text": "เริ่มมองลูกค้า/ผู้ใช้บริการ/เพื่อนร่วมงาน เป็น ‘เคส’ หรือ ‘ภาระ’ มากกว่า ‘คน’",
+      "mbi_reference": "I have become more cynical about whether my work contributes anything",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — ฉันแคร์คนที่ทำงานด้วยเสมอ", "weight": {"DP": 0, "PA": 2}},
+        {"key": "b", "label": "นานๆ ครั้งกับคนที่ยากจริงๆ", "weight": {"DP": 1}},
+        {"key": "c", "label": "บางครั้ง โดยเฉพาะเวลาเหนื่อย", "weight": {"DP": 3, "EE": 1}},
+        {"key": "d", "label": "บ่อย — ตอบไปอย่างนั้นเอง ไม่ได้สนใจจริงๆ", "weight": {"DP": 5, "PA": -1}},
+        {"key": "e", "label": "ตลอดเวลา — รู้สึกชาไปแล้วกับการเจอคน", "weight": {"DP": 7, "EE": 2, "PA": -3}}
+      ]
+    },
+    {
+      "order": 8,
+      "dimension": "DP",
+      "text": "ทำงานในโหมด ‘autopilot’ — เสร็จแล้วจำไม่ได้ว่าทำอะไรไป ไม่ได้ใส่ใจเหมือนเมื่อก่อน",
+      "mbi_reference": "I just want to do my job and not be bothered",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — ทำงานทุกชิ้นด้วยใจ", "weight": {"DP": 0, "PA": 3}},
+        {"key": "b", "label": "เฉพาะงาน routine บางชิ้น", "weight": {"DP": 1}},
+        {"key": "c", "label": "ราวๆ ครึ่งของงานที่ทำ", "weight": {"DP": 3}},
+        {"key": "d", "label": "ส่วนใหญ่ — ทำให้เสร็จ ไม่ได้ทำให้ดี", "weight": {"DP": 5, "PA": -2}},
+        {"key": "e", "label": "ทุกงาน — แค่ส่งให้ผ่านๆ ไป", "weight": {"DP": 7, "EE": 1, "PA": -3}}
+      ]
+    },
+    {
+      "order": 9,
+      "dimension": "DP",
+      "text": "พูดประชดเรื่องงาน/บริษัท/หัวหน้า กับเพื่อนสนิทบ่อยขึ้น (แบบเย้ยหยัน ไม่ใช่ขำๆ)",
+      "mbi_reference": "I have become more cynical about my work",
+      "options": [
+        {"key": "a", "label": "ไม่เคย ฉันยังเชื่อในงานที่ทำ", "weight": {"DP": 0, "PA": 2}},
+        {"key": "b", "label": "นานๆ ครั้งแบบขำๆ", "weight": {"DP": 1}},
+        {"key": "c", "label": "เดือนละหลายครั้ง", "weight": {"DP": 3}},
+        {"key": "d", "label": "เกือบทุกครั้งที่เจอเพื่อน", "weight": {"DP": 5, "PA": -1}},
+        {"key": "e", "label": "ทุกวัน — กลายเป็นเรื่องหลักที่คุยกับเพื่อน", "weight": {"DP": 6, "EE": 1, "PA": -2}}
+      ]
+    },
+    {
+      "order": 10,
+      "dimension": "DP",
+      "text": "หลัง 6 โมงเย็น/วันหยุด มี LINE/อีเมลงานเข้ามา แล้วรู้สึก ‘ไม่อยากแม้แต่จะเปิดอ่าน’",
+      "mbi_reference": "I doubt the significance of my work",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — เปิดอ่านปกติ ไม่กระทบ", "weight": {"DP": 0, "PA": 1}},
+        {"key": "b", "label": "บางครั้งเฉพาะวันที่งานหนัก", "weight": {"DP": 1}},
+        {"key": "c", "label": "ราวๆ ครึ่งของครั้งที่มีเข้ามา", "weight": {"DP": 2, "EE": 1}},
+        {"key": "d", "label": "เกือบทุกครั้ง — แต่ก็ฝืนเปิดอยู่ดี", "weight": {"DP": 4, "EE": 2}},
+        {"key": "e", "label": "ทุกครั้ง — เห็นชื่อหัวหน้าแล้วใจตก", "weight": {"DP": 6, "EE": 3, "PA": -2}}
+      ]
+    },
+    {
+      "order": 11,
+      "dimension": "PA",
+      "reverse_scored": true,
+      "text": "ในช่วง 1 เดือนที่ผ่านมา รู้สึกภูมิใจกับงานที่ตัวเองทำ",
+      "mbi_reference": "I feel I am making an effective contribution (reverse-scored)",
+      "options": [
+        {"key": "a", "label": "ไม่เคยเลย — ไม่รู้ว่าทำไปทำไม", "weight": {"PA": -3, "DP": 2, "EE": 1}},
+        {"key": "b", "label": "นานๆ ครั้งเฉพาะงานชิ้นใหญ่", "weight": {"PA": -1, "DP": 1}},
+        {"key": "c", "label": "บ้างไม่บ้าง", "weight": {"PA": 1}},
+        {"key": "d", "label": "บ่อย — เห็นผลงานแล้วชื่นใจ", "weight": {"PA": 3}},
+        {"key": "e", "label": "เกือบทุกชิ้นที่ทำ — ฉันรักงานของฉัน", "weight": {"PA": 5}}
+      ]
+    },
+    {
+      "order": 12,
+      "dimension": "PA",
+      "reverse_scored": true,
+      "text": "เวลาเจอปัญหาในงาน รู้สึกว่าตัวเองแก้ได้ดี และเรียนรู้สิ่งใหม่ๆ ได้",
+      "mbi_reference": "I can effectively solve the problems that arise in my work (reverse-scored)",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — รู้สึกว่าตัวเองโง่ลงทุกวัน", "weight": {"PA": -3, "EE": 2, "DP": 1}},
+        {"key": "b", "label": "นานๆ ครั้ง", "weight": {"PA": -1, "EE": 1}},
+        {"key": "c", "label": "ครึ่งๆ — บางเรื่องได้ บางเรื่องไม่ได้", "weight": {"PA": 1}},
+        {"key": "d", "label": "บ่อย — ฉันเก่งเรื่องนี้พอตัว", "weight": {"PA": 3}},
+        {"key": "e", "label": "ตลอดเวลา — ปัญหาไหนก็เอาอยู่", "weight": {"PA": 5}}
+      ]
+    },
+    {
+      "order": 13,
+      "dimension": "PA",
+      "reverse_scored": true,
+      "text": "รู้สึกว่างานที่ทำสร้าง ‘คุณค่า’ หรือ ‘ผลกระทบที่ดี’ ต่อใครสักคน (ลูกค้า, ทีม, สังคม)",
+      "mbi_reference": "I feel I am positively influencing other people's lives through my work (reverse-scored)",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — งานนี้ไม่มีความหมาย", "weight": {"PA": -4, "DP": 3, "EE": 1}},
+        {"key": "b", "label": "นานๆ ครั้ง", "weight": {"PA": -2, "DP": 1}},
+        {"key": "c", "label": "บางช่วง", "weight": {"PA": 1}},
+        {"key": "d", "label": "บ่อย — ฉันเห็นผลกระทบที่ทำ", "weight": {"PA": 3}},
+        {"key": "e", "label": "ทุกวัน — นี่คือเหตุผลที่ฉันทำงานนี้", "weight": {"PA": 5}}
+      ]
+    },
+    {
+      "order": 14,
+      "dimension": "PA",
+      "reverse_scored": true,
+      "text": "เวลาเจอเพื่อนร่วมงาน/หัวหน้า รู้สึกเป็น ‘ส่วนหนึ่งของทีม’ และมีพลังขึ้น",
+      "mbi_reference": "I feel exhilarated when I accomplish something with my coworkers (reverse-scored)",
+      "options": [
+        {"key": "a", "label": "ไม่เคย — รู้สึกโดดเดี่ยวที่ออฟฟิศ", "weight": {"PA": -3, "DP": 2, "EE": 1}},
+        {"key": "b", "label": "นานๆ ครั้ง เฉพาะคนสนิท", "weight": {"PA": -1, "DP": 1}},
+        {"key": "c", "label": "บ้างไม่บ้าง", "weight": {"PA": 1}},
+        {"key": "d", "label": "บ่อย — ทีมนี้คือพลังของฉัน", "weight": {"PA": 3}},
+        {"key": "e", "label": "ตลอดเวลา — เพื่อนร่วมงานคือเหตุผลที่ยังอยู่", "weight": {"PA": 5}}
+      ]
+    }
+  ],
+  "global_disclaimer_th": "⚠️ แบบทดสอบนี้อ้างอิงโครงสร้างจาก Maslach Burnout Inventory — General Survey (MBI-GS) เพื่อให้คุณรู้จักตัวเองมากขึ้น แต่ ‘ไม่ใช่การวินิจฉัยทางการแพทย์’ หากผลออกมาในระดับ RED หรือ CRITICAL หรือมีอาการนอนไม่หลับ/ซึมเศร้า/คิดทำร้ายตัวเอง กรุณาปรึกษาจิตแพทย์หรือนักจิตวิทยา หรือโทรสายด่วนสุขภาพจิต 1323 (ฟรี 24 ชั่วโมง)"
+}

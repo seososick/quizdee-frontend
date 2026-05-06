@@ -1,0 +1,101 @@
+[
+  {
+    "code": "PROBLEM_SOLVER",
+    "name_th": "นักแก้ปัญหา — มีปัญหาต้องแก้",
+    "emoji": "🛠️",
+    "approach_th": "problem-focused coping",
+    "description_th": "เจอปัญหาปุ๊บ คุณ shift เข้าโหมด action plan ทันที — เปิด Notion ขึ้น list, แตก task, หา solution เป็นขั้นตอน คุณเชื่อว่าความเครียดเกิดจากปัญหา ดังนั้นแก้ปัญหา = แก้ความเครียด",
+    "strength_th": "มีประสิทธิภาพสูงเมื่อเจอสถานการณ์ที่ควบคุมได้ คนรอบข้างพึ่งพาได้ ตัดสินใจเร็ว ไม่จมกับ drama",
+    "watchout_th": "บางทีปัญหาแก้ไม่ได้ (เช่น คนตาย โรคเรื้อรัง อกหัก) ต้องยอมรับและประมวลอารมณ์ก่อน ไม่ใช่ทุกอย่างจะ optimize ได้ และการ over-control อาจทำให้ burnout",
+    "healthy_practice_th": [
+      "แยกแยะว่าอะไรควบคุมได้/ไม่ได้ (Stoic dichotomy of control)",
+      "ตั้ง deadline ให้ตัวเองพักด้วย ไม่ใช่แค่ deadline งาน",
+      "ฝึก emotional literacy — รู้จักชื่ออารมณ์ตัวเอง",
+      "อนุญาตให้ตัวเอง 'รู้สึก' ก่อนที่จะ 'แก้'"
+    ],
+    "unhealthy_pattern_th": [
+      "หมกมุ่นจน burnout — ทำงานต่อ 16 ชม. โดยไม่พัก",
+      "พยายาม fix คนอื่นที่ไม่อยากให้ช่วย",
+      "ใช้การทำงานเป็นที่หนีอารมณ์ (productivity as avoidance)",
+      "โกรธเมื่อปัญหาไม่ resolve ตามแผน"
+    ],
+    "compatible_with": ["FEELING_PROCESSOR", "SOCIAL_SEEKER"],
+    "avoid_pattern": ["AVOIDER"],
+    "cope_items_th": ["I make a plan of action", "I take direct action", "I think about steps to take"]
+  },
+  {
+    "code": "FEELING_PROCESSOR",
+    "name_th": "นักประมวลอารมณ์ — รู้สึกก่อนค่อยคิด",
+    "emoji": "💭",
+    "approach_th": "emotion-focused coping",
+    "description_th": "ก่อนจะทำอะไร คุณต้องเคลียร์ใจตัวเองก่อน — เขียนไดอารี ฟังเพลงเศร้าให้สุด นั่งสมาธิ ทำสมุด journal เพราะคุณเชื่อว่าอารมณ์ที่ไม่ถูกประมวล = ระเบิดเวลา",
+    "strength_th": "self-aware สูง รู้จักตัวเองดี เข้าใจคนอื่นเก่ง ฟื้นจาก trauma ได้เพราะกล้าเผชิญหน้ากับความรู้สึก ไม่กดทับ",
+    "watchout_th": "บางทีหมกมุ่นกับอารมณ์มากเกินไปจนไม่ลงมือทำ (rumination) — รู้สึกซ้ำๆ แต่ไม่ขยับไปไหน บางสถานการณ์ต้อง action ก่อน feel ทีหลัง",
+    "healthy_practice_th": [
+      "Journaling, สมาธิ, mindfulness app",
+      "ตั้ง time limit ให้กับการประมวล (เช่น cry for 20 min then move on)",
+      "Cognitive reframing — มองมุมใหม่ของปัญหา",
+      "ออกกำลังกายเพื่อปลดปล่อยอารมณ์ทางกาย"
+    ],
+    "unhealthy_pattern_th": [
+      "Rumination — คิดวนซ้ำเรื่องเดิม 3 วันติด",
+      "Romanticize ความเศร้า (sad girl aesthetic)",
+      "ใช้อารมณ์เป็นข้ออ้างไม่ทำงาน",
+      "Emotional dumping ใส่คนอื่นโดยไม่ขออนุญาต"
+    ],
+    "compatible_with": ["PROBLEM_SOLVER", "SOCIAL_SEEKER"],
+    "avoid_pattern": ["AVOIDER"],
+    "cope_items_th": ["I focus on and vent emotions", "I accept that this happened", "I look for the silver lining", "I try to see it in a different light"]
+  },
+  {
+    "code": "SOCIAL_SEEKER",
+    "name_th": "นักหาเพื่อน — เครียดต้องมีคนฟัง",
+    "emoji": "🤝",
+    "approach_th": "social-support coping",
+    "description_th": "ปุ่มแรกที่คุณกดเวลาเครียดคือ 'โทรหาเพื่อน' หรือเปิด group chat บ่นระบาย คุณเชื่อว่าปัญหาที่แชร์ = ปัญหาที่เบาลงครึ่งหนึ่ง connection คือ medicine",
+    "strength_th": "มี support network แข็งแรง ไม่โดดเดี่ยว recovery เร็ว เพราะมีคนช่วย reflect ได้ทั้ง emotional และ practical advice",
+    "watchout_th": "บางทีพึ่งคนอื่นมากเกินไปจน outsource emotional regulation — ไม่มีเพื่อนรับสาย = พังทันที และอาจ over-share จนเพื่อนเหนื่อย (compassion fatigue)",
+    "healthy_practice_th": [
+      "มี support circle หลายคน ไม่พึ่งคนเดียว",
+      "ขออนุญาตก่อนระบาย ('ขอ vent หน่อยได้มั้ย?')",
+      "Reciprocate — รับฟังเพื่อนกลับด้วย",
+      "ฝึก self-soothing เมื่อไม่มีใครรับสาย",
+      "รู้จัก therapist / counselor เป็น support เพิ่ม"
+    ],
+    "unhealthy_pattern_th": [
+      "Trauma dumping ใส่คนแปลกหน้า",
+      "เปลี่ยนเพื่อนเป็น free therapist",
+      "ตามหา validation จนพึ่งคนอื่นทั้งหมด",
+      "Co-rumination — บ่นซ้ำกับคนเดิมโดยไม่แก้"
+    ],
+    "compatible_with": ["PROBLEM_SOLVER", "FEELING_PROCESSOR"],
+    "avoid_pattern": ["AVOIDER"],
+    "cope_items_th": ["I get emotional support from friends", "I get advice from someone", "I talk to someone about how I feel"]
+  },
+  {
+    "code": "AVOIDER",
+    "name_th": "นักหลบหนี — ทำเป็นไม่เห็น",
+    "emoji": "🙈",
+    "approach_th": "avoidance / suppression coping",
+    "description_th": "เครียดทีคุณเปิด TikTok 4 ชม. ดู Netflix ทั้งคืน หรือเล่นเกมจน 4 โมงเช้า คุณบอกตัวเองว่า 'ค่อยคิดทีหลัง' บางทีก็ work — แต่บางที 'ทีหลัง' ก็ไม่เคยมา",
+    "strength_th": "Short-term relief จริง — ใช้เป็น tactical break ได้ดี เหมาะกับสถานการณ์ที่ทำอะไรไม่ได้แล้ว (เช่น รอผลตรวจ) ช่วยให้ระบบประสาท reset",
+    "watchout_th": "ปัญหาไม่หาย แค่ดอง — และดอกเบี้ยทบต้น บิลที่ไม่เปิดยังต้องจ่าย ความสัมพันธ์ที่ไม่คุยยังพัง พฤติกรรมหลบหนีเรื้อรัง = anxiety, depression, addiction risk",
+    "healthy_practice_th": [
+      "ตั้ง 'avoidance budget' — ดู Netflix 1 ชม. แล้วกลับมาเผชิญ",
+      "ใช้ scheduled worry — กำหนดเวลากังวล 15 นาที/วัน",
+      "Body scan — เช็กว่า 'หลบ' หรือ 'พัก' ต่างกัน",
+      "ลองวิธี 5 นาที — เริ่มแค่ 5 นาทีก็พอ",
+      "หา accountability buddy ช่วยกัน face ปัญหา"
+    ],
+    "unhealthy_pattern_th": [
+      "Doom-scroll TikTok 6 ชม. แทนที่จะ reply email",
+      "ใช้แอลกอฮอล์/สารเสพติดเป็นทางหนี (substance use coping)",
+      "Ghost คนสำคัญเมื่อมีปัญหา",
+      "Procrastinate จนกลายเป็นวิกฤต",
+      "Binge-eat / shopping เพื่อกลบอารมณ์"
+    ],
+    "compatible_with": [],
+    "avoid_pattern": ["AVOIDER"],
+    "cope_items_th": ["I distract myself", "I refuse to believe it has happened", "I use alcohol/drugs to feel better", "I give up trying to deal with it"]
+  }
+]

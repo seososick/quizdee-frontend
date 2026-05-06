@@ -1,0 +1,178 @@
+[
+  {
+    "mbti": "INTJ",
+    "office_role_th": "พี่นักวางกลยุทธ์เงียบ",
+    "emoji": "🎯",
+    "tagline_th": "พูดน้อยต่อยหนัก สไลด์เดียวเปลี่ยนทิศทั้งบริษัท",
+    "in_meeting_th": "นั่งเงียบ 45 นาที พอเปิดปากคนทั้งห้องเงียบตาม เพราะชี้จุดที่ทุกคนมองข้าม",
+    "in_line_chat_th": "ตอบสั้นมาก 'รับทราบครับ' แต่หลังบ้านทำ deck 30 หน้ารออยู่แล้ว",
+    "strength_at_work_th": "วางแผนระยะยาวเก่ง มองเห็น OKR ปีหน้าตั้งแต่ Q1",
+    "weakness_at_work_th": "หงุดหงิดกับมีตติ้งที่ไม่มี agenda และเพื่อนที่ถามคำถามซ้ำ",
+    "thai_company_archetype": "Senior Strategy Consultant, Head of Product, Corporate Planning"
+  },
+  {
+    "mbti": "INTP",
+    "office_role_th": "เด็กเนิร์ดที่รู้ลึกที่สุดในทีม",
+    "emoji": "🧠",
+    "tagline_th": "ทำไม? ทำไม? ทำไม? ตั้งคำถามจน PM ปวดหัว",
+    "in_meeting_th": "ขอ 'แค่สงสัยนิดเดียว' แล้วลากประชุมไปอีก 20 นาที",
+    "in_line_chat_th": "ส่งลิงก์ paper/บทความยาว ๆ ตอนตี 1 พร้อมคำว่า 'น่าสนใจมาก'",
+    "strength_at_work_th": "วิเคราะห์ปัญหาซับซ้อนเก่ง หา edge case ที่คนอื่นไม่เห็น",
+    "weakness_at_work_th": "เริ่มงานหลายอย่างพร้อมกัน แต่ปิด deadline ไม่ค่อยทัน",
+    "thai_company_archetype": "Data Scientist, R&D Engineer, Tech Lead สาย back-end"
+  },
+  {
+    "mbti": "ENTJ",
+    "office_role_th": "พี่ผู้นำสายขับเคลื่อน",
+    "emoji": "🚀",
+    "tagline_th": "เข้ามีตติ้งมาเพื่อปิดดีล ไม่ใช่นั่งเล่าวันหยุด",
+    "in_meeting_th": "ตัดบทคนพูดวน 'โอเค สรุปคือใครทำอะไรภายในเมื่อไหร่' พร้อมพิมพ์ minutes ลงแชต",
+    "in_line_chat_th": "ส่ง to-do list มี bullet 1-2-3 ชัดเจน พร้อมเดดไลน์เป็นวันที่",
+    "strength_at_work_th": "ตัดสินใจเร็ว push ทีมให้ส่งงาน ไม่กลัวเสนอไอเดียกับ C-level",
+    "weakness_at_work_th": "บางทีรีบจนลืมฟังคนอื่น ทำให้น้องในทีมรู้สึกถูก steamroll",
+    "thai_company_archetype": "Country Manager, COO, Founder สตาร์ทอัพ"
+  },
+  {
+    "mbti": "ENTP",
+    "office_role_th": "เครื่องไอเดียประจำห้องประชุม",
+    "emoji": "💡",
+    "tagline_th": "มีไอเดียวันละ 50 อัน ใช้จริงสัก 2 ก็คุ้ม",
+    "in_meeting_th": "เสนอ 'ลองทำแบบนี้ไหมพี่' จนพี่บอกว่า 'เอาที่ทำเดิมให้เสร็จก่อนนะ'",
+    "in_line_chat_th": "ตั้งกลุ่มใหม่อยู่เรื่อย 'กลุ่มลับ ๆ ปั่นโปรเจกต์ X' แล้วลืมไปเอง",
+    "strength_at_work_th": "brainstorm เก่งมาก โต้ debate ได้ทุกหัวข้อ pitch ลูกค้าได้น่าฟัง",
+    "weakness_at_work_th": "เบื่อง่าย งาน routine ทำได้ 2 อาทิตย์เริ่มหายาก motivation",
+    "thai_company_archetype": "Creative Director, Growth Hacker, BD สตาร์ทอัพ"
+  },
+  {
+    "mbti": "INFJ",
+    "office_role_th": "ที่ปรึกษาเงียบ ๆ ที่ใครก็มาระบาย",
+    "emoji": "🌙",
+    "tagline_th": "ฟังน้องร้องไห้เรื่องหัวหน้าได้เป็นชั่วโมง แล้วเอามาเครียดต่อเอง",
+    "in_meeting_th": "ไม่ค่อยพูด แต่จับโทนห้องได้แม่น พอพูดทีคนฟังเพราะ 'มีน้ำหนัก'",
+    "in_line_chat_th": "ทักหลังไมค์ 'พี่โอเคมั้ย เห็นเงียบ ๆ' ทั้งที่ตัวเองก็เพิ่งโดน feedback หนัก",
+    "strength_at_work_th": "เข้าใจ user/ลูกค้าลึก เขียน copy/วาง UX ที่โดนใจคน",
+    "weakness_at_work_th": "เก็บอารมณ์เยอะเกินไป burnout เงียบ ๆ ก่อนใครรู้",
+    "thai_company_archetype": "UX Researcher, HRBP, Brand Strategist"
+  },
+  {
+    "mbti": "INFP",
+    "office_role_th": "สายครีเอทีฟอ่อนไหว",
+    "emoji": "🌷",
+    "tagline_th": "งานต้องมีความหมาย ไม่งั้นทำไม่ลงจริง ๆ",
+    "in_meeting_th": "นั่งจดเลกเชอร์เป็นมายด์แมป พูดน้อยแต่พอเสนอจะมีมุมที่คนอื่นนึกไม่ถึง",
+    "in_line_chat_th": "ส่งสติกเกอร์เยอะ ใช้ '5555' ลงท้ายเพื่อให้ดูไม่ซีเรียส ทั้งที่ในใจซีเรียสมาก",
+    "strength_at_work_th": "เขียน/ดีไซน์มีคาแรกเตอร์ เข้าใจ emotion ของ audience",
+    "weakness_at_work_th": "รับ feedback ตรง ๆ แล้วเก็บมาคิดทั้งคืน เลื่อนงานเพราะรอ 'อารมณ์มา'",
+    "thai_company_archetype": "Copywriter, Content Creator, Graphic Designer"
+  },
+  {
+    "mbti": "ENFJ",
+    "office_role_th": "พี่ใหญ่ใจดีของทีม",
+    "emoji": "🤗",
+    "tagline_th": "จำวันเกิดทุกคนในทีมได้ จัดเซอร์ไพรส์เก่งกว่า HR",
+    "in_meeting_th": "คอยเปิดโอกาสให้คนเงียบได้พูด 'น้องเอมีไอเดียมั้ยคะ?' จนน้องอยากกราบ",
+    "in_line_chat_th": "เป็นคนเริ่ม 'อรุณสวัสดิ์ค่าาา' ทุกเช้าจนกลายเป็นวัฒนธรรมทีม",
+    "strength_at_work_th": "นำทีมแบบ inclusive รักษาคนเก่ง ๆ ไว้ได้ ลูกค้ารัก",
+    "weakness_at_work_th": "แบกอารมณ์ทีมจนลืมงานตัวเอง ปฏิเสธไม่เป็นจนล้นมือ",
+    "thai_company_archetype": "Team Lead, People Manager, Account Director"
+  },
+  {
+    "mbti": "ENFP",
+    "office_role_th": "ขวัญใจออฟฟิศสายปาร์ตี้",
+    "emoji": "🎉",
+    "tagline_th": "ปาร์ตี้ปีใหม่ขาดไม่ได้ ขาดแล้วงานไม่สนุก",
+    "in_meeting_th": "ทำให้บรรยากาศไม่เครียด แทรกมุก แต่พอถึงคิวพรีเซนต์ก็เอาอยู่",
+    "in_line_chat_th": "ส่ง meme ในกลุ่มงานบ่อยจน HR ต้องเตือนแอบ ๆ แต่ทุกคนชอบ",
+    "strength_at_work_th": "energy สูง ขายไอเดียเก่ง สร้าง connection ข้ามแผนกได้ไว",
+    "weakness_at_work_th": "โฟกัสยาว ๆ ลำบาก งาน detail-heavy ต้องมีคนช่วยเช็ก",
+    "thai_company_archetype": "PR, Event Marketing, Sales/BD, Influencer Manager"
+  },
+  {
+    "mbti": "ISTJ",
+    "office_role_th": "พี่บัญชีเป๊ะที่ทุกคนต้องเกรงใจ",
+    "emoji": "📋",
+    "tagline_th": "ส่งใบเบิกผิดช่องเดียว โดนตีกลับทันที (ด้วยรอยยิ้ม)",
+    "in_meeting_th": "เปิดไฟล์ minutes อาทิตย์ที่แล้วมาเช็กว่าใครทำอะไรไม่เสร็จบ้าง",
+    "in_line_chat_th": "ตอบเป็นทางการ 'รับทราบค่ะ ดำเนินการภายในวันศุกร์' พิมพ์ครบรูปประโยค",
+    "strength_at_work_th": "ละเอียด เชื่อถือได้ 100% ส่งงานตรงเวลาเสมอ ไม่มีพลาด",
+    "weakness_at_work_th": "ไม่ชอบการเปลี่ยนแปลงกลางทาง ระบบใหม่ ๆ ต้องใช้เวลาปรับตัวนาน",
+    "thai_company_archetype": "Accountant, Compliance, Operations Manager, QA"
+  },
+  {
+    "mbti": "ISFJ",
+    "office_role_th": "พี่หลังบ้านที่ใครขาดไปทีมพัง",
+    "emoji": "🍱",
+    "tagline_th": "ซื้อขนมมาฝากทีมทุกอาทิตย์ จำได้ว่าใครแพ้อะไร",
+    "in_meeting_th": "จดละเอียดยิบ ส่ง summary ให้ทีมในวันเดียวกัน พร้อม action item",
+    "in_line_chat_th": "เห็นน้องในทีมโพสต์เศร้า ทักไปถาม 'ไหวมั้ยคะ พี่อยู่นะ' แม้ไม่สนิท",
+    "strength_at_work_th": "ดูแลคนเก่ง รักษามาตรฐานงาน เป็นกาวใจของทีม",
+    "weakness_at_work_th": "ไม่ค่อยกล้าขอ promote ทั้งที่ทำเยอะกว่าใคร โดนเอาเปรียบบ่อย",
+    "thai_company_archetype": "HR Operations, Admin, Customer Success, Office Manager"
+  },
+  {
+    "mbti": "ESTJ",
+    "office_role_th": "หัวหน้าสาย discipline",
+    "emoji": "📊",
+    "tagline_th": "เข้างาน 8:59 ออก 18:01 KPI ต้องครบทุกตัว",
+    "in_meeting_th": "ถามตรง ๆ 'ตัวเลขเดือนนี้เท่าไหร่ ถ้าไม่ถึง plan B คืออะไร' ไม่อ้อมค้อม",
+    "in_line_chat_th": "ส่ง template รายงานให้ทีมกรอก พร้อมเดดไลน์เป๊ะถึงนาที",
+    "strength_at_work_th": "บริหารทีมให้ส่งงานครบ คุม budget/timeline เก่ง",
+    "weakness_at_work_th": "ติดกรอบ SOP จนบางทีพลาดโอกาส innovate",
+    "thai_company_archetype": "Operations Director, Branch Manager, Sales Manager"
+  },
+  {
+    "mbti": "ESFJ",
+    "office_role_th": "เม่ามอมแหล่งข่าวออฟฟิศ",
+    "emoji": "☕",
+    "tagline_th": "รู้ก่อน HR ว่าใครจะลาออก ใครจะถูกย้ายแผนก",
+    "in_meeting_th": "ช่วย smooth บรรยากาศตอนสองฝ่ายเริ่มเสียง pitchy 'งั้นเรามาฟังพี่บีก่อนนะคะ'",
+    "in_line_chat_th": "ตั้งกลุ่ม 'ปาร์ตี้วันเกิดพี่...' ทุกเดือน เก็บเงินเป๊ะ จัดของเก่ง",
+    "strength_at_work_th": "สร้าง culture ทีม ดูแลลูกค้าเก่ง คนชอบทำงานด้วย",
+    "weakness_at_work_th": "แคร์เสียงคนรอบข้างเยอะ ตัดสินใจยากเวลาต้องเลือกข้าง",
+    "thai_company_archetype": "HR, Account Manager, CS Lead, Internal Comms"
+  },
+  {
+    "mbti": "ISTP",
+    "office_role_th": "ช่างซ่อมทุกอย่างของออฟฟิศ",
+    "emoji": "🔧",
+    "tagline_th": "พรินเตอร์เสีย ไวไฟหลุด คอม Mac ค้าง — เรียกคนนี้",
+    "in_meeting_th": "เงียบ 90% พอพูดคือ 'มันแก้ตรงนี้พี่' แล้วก็จบเรื่องในนาทีเดียว",
+    "in_line_chat_th": "ตอบสั้น 'โอเค' 'ทำให้' 'เสร็จแล้ว' ไม่อู้ไม่บ่น",
+    "strength_at_work_th": "แก้ปัญหาเฉพาะหน้าเก่ง ทำงานคนเดียวได้สบาย ไม่ดราม่า",
+    "weakness_at_work_th": "ไม่ค่อยอยากเข้ามีตติ้งยาว ๆ ไม่ชอบเขียน report เป็นเล่ม",
+    "thai_company_archetype": "DevOps, IT Support, Engineer, Mechanic Lead"
+  },
+  {
+    "mbti": "ISFP",
+    "office_role_th": "น้องอาร์ตติสต์เงียบ ๆ แต่ผลงานปัง",
+    "emoji": "🎨",
+    "tagline_th": "ไม่ค่อยพูด แต่งาน design ออกมาทีคนทั้งบริษัทยกมือไหว้",
+    "in_meeting_th": "ฟังเงียบ ๆ จดในไอแพด พอถึงตา present ก็เปิด Figma ที่สวยจนทุกคนเงียบ",
+    "in_line_chat_th": "อ่านแต่ไม่ตอบ จนคนต้อง tag ตรง ๆ ถึงจะโผล่มาด้วย 'รับทราบค่ะ ✨'",
+    "strength_at_work_th": "sense ด้าน aesthetic ดี อ่อนไหวกับ detail เล็ก ๆ ที่สำคัญ",
+    "weakness_at_work_th": "หลีก conflict ไม่ชอบเถียงในมีตติ้ง บางทีถูก override ไอเดียโดยไม่ค้าน",
+    "thai_company_archetype": "Designer, Stylist, Photographer, Product Designer"
+  },
+  {
+    "mbti": "ESTP",
+    "office_role_th": "เซลส์มือทอง คุยลูกค้าได้ทุกแบบ",
+    "emoji": "🔥",
+    "tagline_th": "ปิดดีลในวงเหล้า ทำยอดทะลุเป้าตั้งแต่กลางเดือน",
+    "in_meeting_th": "พูดเร็ว ตัดสินใจเร็ว 'เอาดิครับ ลองเลย ไม่เวิร์คค่อยปรับ'",
+    "in_line_chat_th": "โทรเลยดีกว่า พิมพ์ยาว ๆ ไม่ใช่สไตล์ มีตติ้งตอนกินข้าวเที่ยงก็ได้",
+    "strength_at_work_th": "กล้าเสี่ยง ลุยงานหน้างานเก่ง รับมือลูกค้ายาก ๆ ได้",
+    "weakness_at_work_th": "เอกสาร/รายงานหลังบ้านมักล่าช้า ไม่ค่อยชอบ planning ละเอียด",
+    "thai_company_archetype": "Sales, BD, Trader, Event Producer"
+  },
+  {
+    "mbti": "ESFP",
+    "office_role_th": "ดาวเด่นวงปาร์ตี้บริษัท",
+    "emoji": "🎤",
+    "tagline_th": "MC งานปีใหม่ตัวจริง ร้องเพลงปิดงานทุกปี",
+    "in_meeting_th": "เสนอไอเดียสนุก ๆ ทำให้คนตื่น เป็นคนเริ่ม energy ในห้อง",
+    "in_line_chat_th": "ส่งรูปอาหาร รูปแมว รูปปาร์ตี้เสาร์อาทิตย์ จนกลายเป็น vlog ของกลุ่ม",
+    "strength_at_work_th": "พลังสูงมาก สร้าง engagement กับลูกค้า/ทีมได้เร็ว",
+    "weakness_at_work_th": "งาน detail ยาว ๆ ทำให้เบื่อ ขาดสมาธิเวลาต้องนั่งเงียบ ๆ",
+    "thai_company_archetype": "Event MC, Sales หน้าร้าน, Influencer, Trainer, KOL Manager"
+  }
+]

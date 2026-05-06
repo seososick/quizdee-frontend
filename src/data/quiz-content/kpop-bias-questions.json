@@ -1,0 +1,145 @@
+[
+  {
+    "order": 1,
+    "text": "งานเลี้ยงปีใหม่บริษัท คุณรับบทไหน?",
+    "options": [
+      {"key": "a", "label": "MC รับจบงาน + ประสาน vibe ทุกโต๊ะ", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "ของปิดงาน ร้องเพลงชิลล์ปิดท้าย 🎙️", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ต้องเต้นโชว์ ขอฝึกจัดท่าเต้น 1 อาทิตย์!", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "ถ่ายรูปลง IG บริษัท + ootd ปังที่สุด", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "นั่งกับเพื่อนตัวลิง อยู่ไหนก็ฮา", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "วงคุณกำลังจะคัมแบ็ค คอนเซ็ปต์เพลงใหม่ คุณอยากให้เป็นแบบไหน?",
+    "options": [
+      {"key": "a", "label": "เพลง message ลึก เนื้อหามีอะไร เขียนเองส่วนหนึ่ง", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "บัลลาด/R&B โชว์เสียง ปล่อยไฮโน้ต", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "เพลงเร็วมี dance break โหด ๆ", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "MV สวย cinematic เหมือนหนัง", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "เพลงน่ารักสดใส มี dance challenge ฮิตใน TikTok", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "ใน fan meeting แฟนเข้ามาทักคุณ คุณตอบกลับยังไง?",
+    "options": [
+      {"key": "a", "label": "ขอบคุณอย่างเป็นทางการ ถามชื่อ ทำให้รู้สึกเห็นค่า", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "ร้องท่อนโปรดให้ฟังสั้น ๆ 🎵", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ทำท่าเต้นซิกเนเจอร์ให้ดู", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "ยิ้มหวาน ส่งหัวใจ ถ่ายเซลฟี่ด้วยกัน", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "เล่นมุกแกล้งแฟน ทำหน้าน่ารัก 🥺", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "Live IG วันว่าง คุณเปิดมาแล้วทำอะไร?",
+    "options": [
+      {"key": "a", "label": "นั่งคุยจริงจัง update ชีวิต ตอบคำถามแฟน", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "ร้องเพลงสด cover เพลงที่ชอบ", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "โชว์ฝึกท่าเต้นใหม่ + sweat 💦", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "นั่งสวย ๆ ในห้องสวย ๆ ลิปสติกแมตช์ชุด", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "เล่นกับน้องหมา/แมว ทำมุกฮาตลอด live", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "ค่ายเสนอ presenter ให้ คุณอยากได้แบรนด์อะไร?",
+    "options": [
+      {"key": "a", "label": "หนังสือ / แอปเรียน / กาแฟแบรนด์มินิมอล", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "เครื่องเสียง headphone / ไมค์ / streaming app", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "รองเท้าผ้าใบ / sportswear / energy drink", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "Skincare / น้ำหอม / luxury fashion 💅", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ขนม / เกม / แบรนด์น่ารักสดใส", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "ตอนซ้อมหนัก member คนหนึ่งเริ่มร้องไห้ คุณทำยังไง?",
+    "options": [
+      {"key": "a", "label": "เรียกทุกคนมานั่ง ฟังปัญหา หาทางออกร่วมกัน", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "นั่งข้างเงียบ ๆ ฟังให้จบ แล้วร้องเพลงปลอบ", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "บอก 'พักก่อนนะ เดี๋ยวกลับมาซ้อมต่อ' จริงจัง", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "เอาทิชชู่/ของหวานมาให้ ดูแลให้รู้สึกพิเศษ", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "กอด + ทำมุกให้ขำ จนลืมเรื่องเศร้า 🤗", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "Style ที่คุณใส่บ่อยที่สุด?",
+    "options": [
+      {"key": "a", "label": "Smart casual — เสื้อเชิ้ต กางเกงดำ เรียบแต่ดูดี", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "Cozy — ฮูดดี้ oversize สบาย ๆ มู้ดอบอุ่น", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "Streetwear — cargo, sneaker, cap แมตช์เต็มลุค", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "Minimal chic — เสื้อขาว กางเกงดี ๆ พร้อม accessory ลงตัว", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "สดใส — สีพาสเทล กระโปรง/หมวกน่ารัก", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "ทำงานกลุ่มในที่ทำงาน/มหาลัย คุณรับบทไหน?",
+    "options": [
+      {"key": "a", "label": "PM — แบ่งงาน นัดประชุม จัด timeline", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "Content writer — ใส่ใจ tone และ detail", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "Executor — ลงมือทำเร็ว ส่งงานก่อน deadline", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "Designer / presenter — ทำให้งานสวย ขายได้", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "Vibe maker — ทำให้กลุ่มไม่เครียด เสนอไอเดียบ้า ๆ", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "วงเข้ารายการวาไรตี้ เกมแรกคือ 'ร้อง 3 วินาทีรู้เพลง' คุณ?",
+    "options": [
+      {"key": "a", "label": "นั่งวิเคราะห์ คอย hint เพื่อน", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "ปุ๊บรู้ปั๊บ ร้องตามได้แม้แต่ harmony", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ลุกขึ้นเต้น intro แทนการร้อง", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "ทำหน้านิ่ง ๆ สวย ๆ ให้กล้อง 📸", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ตอบมั่ว แต่ฮาจน MC ขำตาม", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "KPI ส่วนตัวที่คุณภูมิใจที่สุด?",
+    "options": [
+      {"key": "a", "label": "ทำให้ทีมส่งงานทันและไม่มีใครพัง", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "งานที่ทำมีรายละเอียด emotion ครบ คนชม", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ทำเสร็จก่อนใคร พลังเต็มไม่หมด", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "งานออกมาสวย เป็นหน้าเป็นตาให้ทีม", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ทำให้ออฟฟิศขำ บรรยากาศดี ทุกคนรัก", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "ของในกระเป๋าที่ขาดไม่ได้?",
+    "options": [
+      {"key": "a", "label": "Notebook + ปากกา + planner", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "Earphone + playlist เพลงเก็บอารมณ์", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ขวดน้ำ + ผ้าเช็ดตัว + ถุงเท้าสำรอง", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "กระจก + ลิปสติก + น้ำหอมพกพา", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ขนม + sticker + ตุ๊กตาน้อยห้อยกระเป๋า", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "วงทะเลาะกัน ปัญหาคอนเซ็ปต์อัลบั้มไม่ลงตัว คุณ?",
+    "options": [
+      {"key": "a", "label": "เรียกประชุม ฟังทุกคน สรุป solution กลาง ๆ", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "พูดน้อย แต่บอกว่า 'ทุกฝ่ายมีจุดดี' พยายาม mediate", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "บอก 'พอเถอะ ลงมือทำก่อน เดี๋ยวเห็นภาพ'", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "เสนอไอเดีย aesthetic ที่ทำให้ทุกคน 'อ๋อ ใช่!'", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ทำมุก break ความเครียด แล้วค่อยกลับมาคุย", "weight": {"MAKNAE": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "คอนเสิร์ตจบ คุณพูดอะไรกับแฟนคลับเป็นคนสุดท้าย?",
+    "options": [
+      {"key": "a", "label": "'ขอบคุณที่อยู่ด้วยกันมาตลอด เราจะเดินต่อไปด้วยกัน' 🥹", "weight": {"LEADER": 2}},
+      {"key": "b", "label": "ร้องท่อนสุดท้ายของเพลงโปรด ปล่อยน้ำตา", "weight": {"MAIN_VOCAL": 2}},
+      {"key": "c", "label": "ทำท่าเต้นซิกเนเจอร์ปิดเวที ส่งพลังเต็มที่ 🔥", "weight": {"MAIN_DANCER": 2}},
+      {"key": "d", "label": "โบกมือสวย ๆ ส่งหัวใจ พร้อมยิ้มในตำนาน", "weight": {"VISUAL": 2}},
+      {"key": "e", "label": "ตะโกน 'รักนะคะ/ครับ!' ทำหน้าน่ารักจนแฟนกรี๊ด 💕", "weight": {"MAKNAE": 2}}
+    ]
+  }
+]

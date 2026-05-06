@@ -1,0 +1,162 @@
+[
+  {
+    "mbti": "INTJ",
+    "kdrama_role_th": "CEO เย็นชา รวยสุด เจ้าของอาณาจักร เก็บความรักไว้ในสายตา",
+    "reference_chars_th": ["Baek Hyun-woo (Queen of Tears)", "Vincenzo Cassano (Vincenzo)", "Goo Jun-pyo (Boys Over Flowers)"],
+    "genre_th": "romance / business drama / makjang",
+    "emoji": "👔",
+    "tagline_th": "หน้าเย็นใจร้อน วางแผน 10 ขั้นเพื่อปกป้องคนเดียวที่รัก",
+    "signature_scene_th": "ฉากเดินช้าๆ ในออฟฟิศกระจกสูง พลิกเกมคู่แข่งด้วยประโยคเดียว แล้วหันมามองนางเอกตาอ่อนโยน",
+    "recommended_drama_th": ["Queen of Tears", "Vincenzo", "What's Wrong with Secretary Kim"]
+  },
+  {
+    "mbti": "INTP",
+    "kdrama_role_th": "อัจฉริยะหมอ/นักวิทยาศาสตร์ เหม่อลอย แต่ฉลาดล้ำ",
+    "reference_chars_th": ["Yeo Jeong-woo (Doctor Slump)", "Ahn Jeong-won (Hospital Playlist)", "Nam Ha-neul (Doctor Slump)"],
+    "genre_th": "medical / slice of life / romance",
+    "emoji": "🧠",
+    "tagline_th": "ดูเหมือนไม่สนใจใคร แต่จำทุกดีเทลเล็กๆ ของเธอได้หมด",
+    "signature_scene_th": "ฉากนั่งคิดในห้อง lab ดึกๆ แล้วปิ๊งไอเดียวิ่งไปบอกนางเอกตอนตี 3",
+    "recommended_drama_th": ["Doctor Slump", "Hospital Playlist", "It's Okay to Not Be Okay"]
+  },
+  {
+    "mbti": "ENTJ",
+    "kdrama_role_th": "ทายาทแชโบล CEO หญิงเหล็ก สั่งการเด็ดขาด",
+    "reference_chars_th": ["Hong Hae-in (Queen of Tears)", "Cha Young (Vincenzo)", "Ko Mun-yeong (It's Okay to Not Be Okay)"],
+    "genre_th": "business drama / romance",
+    "emoji": "👑",
+    "tagline_th": "เกิดมาเพื่อชนะ แต่ยอมแพ้ให้ใจตัวเองครั้งเดียวเพราะคนคนนี้",
+    "signature_scene_th": "ฉากเดินเข้าประชุมบอร์ดใส่สูทดำ ทุบโต๊ะบอกผู้ถือหุ้นว่า 'ฉันยังเป็นเจ้าของที่นี่'",
+    "recommended_drama_th": ["Queen of Tears", "Vincenzo", "Marry My Husband"]
+  },
+  {
+    "mbti": "ENTP",
+    "kdrama_role_th": "ทนายเจ้าเล่ห์ ปากจัด หล่อเฮง คิดนอกกรอบ",
+    "reference_chars_th": ["Vincenzo Cassano (Vincenzo)", "Woo Young-woo's colleague Jun-ho (Extraordinary Attorney Woo)", "Park Sae-ro-yi rival Jang Geun-won (Itaewon Class)"],
+    "genre_th": "legal / dark comedy / romance",
+    "emoji": "🎭",
+    "tagline_th": "พูดเก่งจนคู่แข่งหุบปาก แอบจิ้นกับนางเอกตั้งแต่ EP1",
+    "signature_scene_th": "ฉากในศาลพลิกคดีด้วยหลักฐานชิ้นสุดท้าย แล้วยิ้มเจ้าเล่ห์มองนางเอก",
+    "recommended_drama_th": ["Vincenzo", "Extraordinary Attorney Woo", "Business Proposal"]
+  },
+  {
+    "mbti": "INFJ",
+    "kdrama_role_th": "ก็อบลินอมตะ/ภูตลึกลับ มองทะลุใจคน เก็บความรักไว้พันปี",
+    "reference_chars_th": ["Kim Shin / Goblin (Goblin)", "Jung Gu-won (My Demon)", "Ri Jeong-hyeok (Crash Landing on You)"],
+    "genre_th": "fantasy romance / melodrama",
+    "emoji": "🗡️",
+    "tagline_th": "รักเงียบๆ ลึกๆ พร้อมเสียสละทุกอย่างให้คนคนเดียว",
+    "signature_scene_th": "ฉากยืนกลางทุ่งบักวีตดอกขาว ลมพัดผ้าคลุม หันมามองนางเอกแบบรู้ใจ",
+    "recommended_drama_th": ["Goblin", "My Demon", "Crash Landing on You"]
+  },
+  {
+    "mbti": "INFP",
+    "kdrama_role_th": "นักเขียน/ศิลปินอ่อนไหว ฝันเยอะ หัวใจบาง",
+    "reference_chars_th": ["Im Sol (Lovely Runner)", "Cho Yong-pil (Welcome to Samdal-ri)", "Kang Mo-yeon's friend Choi Ja-ae (Descendants of the Sun)"],
+    "genre_th": "time-slip romance / healing drama",
+    "emoji": "🌸",
+    "tagline_th": "ย้อนเวลากี่รอบก็ขอเลือกรักคนเดิม",
+    "signature_scene_th": "ฉากนั่งเขียนไดอารี่ใต้แสงไฟอุ่น น้ำตาไหลตอนนึกถึงเขา",
+    "recommended_drama_th": ["Lovely Runner", "Welcome to Samdal-ri", "Twenty-Five Twenty-One"]
+  },
+  {
+    "mbti": "ENFJ",
+    "kdrama_role_th": "หมอ/อาจารย์/ผู้นำชุมชน อบอุ่น ดูแลทุกคนรอบตัว",
+    "reference_chars_th": ["Lee Ik-jun (Hospital Playlist)", "Park Sae-ro-yi (Itaewon Class)", "Yoo Si-jin (Descendants of the Sun)"],
+    "genre_th": "medical / inspirational drama",
+    "emoji": "🩺",
+    "tagline_th": "ยิ้มเดียวก็ heal คนทั้งโรงพยาบาล",
+    "signature_scene_th": "ฉากนั่งเล่นกีตาร์ร้องเพลงให้เพื่อนๆ ฟังในห้องพักหมอ ปิดท้ายด้วย 'อย่ายอมแพ้นะ'",
+    "recommended_drama_th": ["Hospital Playlist", "Itaewon Class", "Descendants of the Sun"]
+  },
+  {
+    "mbti": "ENFP",
+    "kdrama_role_th": "นางเอกสดใส ขี้เล่น ตกหลุมรักง่าย แต่จริงใจสุดๆ",
+    "reference_chars_th": ["Na Hee-do (Twenty-Five Twenty-One)", "Shin Ha-ri (Business Proposal)", "Cho Sam-dal (Welcome to Samdal-ri)"],
+    "genre_th": "romcom / coming-of-age",
+    "emoji": "🌈",
+    "tagline_th": "พลังบวกเกินร้อย ทำให้พระเอกเย็นชาละลายในคืนเดียว",
+    "signature_scene_th": "ฉากวิ่งฝ่าฝนไปสารภาพรัก ตะโกนชื่อเขากลางถนน",
+    "recommended_drama_th": ["Twenty-Five Twenty-One", "Business Proposal", "Welcome to Samdal-ri"]
+  },
+  {
+    "mbti": "ISTJ",
+    "kdrama_role_th": "ทหาร/ตำรวจ/อัยการ ระเบียบจัด รักษาคำพูดทุกคำ",
+    "reference_chars_th": ["Captain Ri Jeong-hyeok (Crash Landing on You)", "Yoo Si-jin (Descendants of the Sun)", "Kim Sa-bu (Dr. Romantic)"],
+    "genre_th": "military romance / professional drama",
+    "emoji": "🎖️",
+    "tagline_th": "พูดน้อย ทำเยอะ ปกป้องนางเอกด้วยชีวิต",
+    "signature_scene_th": "ฉากยืนเฝ้านางเอกทั้งคืนที่ชายแดน หิมะตกใส่ผมแต่ไม่ขยับ",
+    "recommended_drama_th": ["Crash Landing on You", "Descendants of the Sun", "Dr. Romantic"]
+  },
+  {
+    "mbti": "ISFJ",
+    "kdrama_role_th": "เพื่อนข้างบ้านใจดี/พี่สาวสุดอบอุ่น เป็น safe space ของทุกคน",
+    "reference_chars_th": ["Sung Deok-sun (Reply 1988)", "Yoon Hye-jin friend Pyo Mi-seon (Hometown Cha-Cha-Cha)", "Kang Ji-won (Marry My Husband)"],
+    "genre_th": "family / nostalgic / healing",
+    "emoji": "🍱",
+    "tagline_th": "คนที่ทุกคนวิ่งหาเวลาเศร้า แต่ไม่มีใครถามว่าเธอโอเคไหม",
+    "signature_scene_th": "ฉากทำข้าวกล่องให้เพื่อนบ้าน นั่งกินข้าวพร้อมหน้ากันในซอย Ssangmun-dong",
+    "recommended_drama_th": ["Reply 1988", "Marry My Husband", "Hometown Cha-Cha-Cha"]
+  },
+  {
+    "mbti": "ESTJ",
+    "kdrama_role_th": "อัยการ/ผู้กำกับ/หัวหน้าทีม เป๊ะ จัดการทุกอย่างให้อยู่ในแถว",
+    "reference_chars_th": ["Hong Cha-young (Vincenzo)", "Cha Eun-jae (Dr. Romantic 2)", "Kim Ji-won's mom characters in many dramas"],
+    "genre_th": "legal / workplace drama",
+    "emoji": "⚖️",
+    "tagline_th": "ตารางชีวิตเป๊ะถึงนาที แต่พระเอกมาทำพังหมด",
+    "signature_scene_th": "ฉากตบโต๊ะในศาล สั่งให้ทุกคนเงียบ ก่อนพลิกคดีด้วยเอกสารหนา 200 หน้า",
+    "recommended_drama_th": ["Vincenzo", "Marry My Husband", "Extraordinary Attorney Woo"]
+  },
+  {
+    "mbti": "ESFJ",
+    "kdrama_role_th": "แม่บ้านสุดเก่ง/นางพยาบาล ดูแลทุกคนเหมือนครอบครัว",
+    "reference_chars_th": ["Lee Il-hwa - Deok-sun's mom (Reply 1988)", "Chae Song-hwa (Hospital Playlist)", "Yoon Hye-jin (Hometown Cha-Cha-Cha)"],
+    "genre_th": "family drama / slice of life",
+    "emoji": "🏡",
+    "tagline_th": "จำวันเกิดทุกคนได้ จัดปาร์ตี้เซอร์ไพรส์เก่งสุดในแก๊ง",
+    "signature_scene_th": "ฉากตื่นเช้ามาทำซุปกิมจิให้ทั้งหอ บอกทุกคนว่า 'กินก่อนไปทำงานนะ'",
+    "recommended_drama_th": ["Reply 1988", "Hospital Playlist", "Hometown Cha-Cha-Cha"]
+  },
+  {
+    "mbti": "ISTP",
+    "kdrama_role_th": "บอดี้การ์ด/มาเฟียลึกลับ พูดน้อย ต่อยเก่ง เซ็กซี่เงียบๆ",
+    "reference_chars_th": ["Jang Tae-sang (Gyeongseong Creature)", "Hwang In-yeop characters (True Beauty)", "Choi Young-do (The Heirs)"],
+    "genre_th": "action / noir romance",
+    "emoji": "🏍️",
+    "tagline_th": "ไม่พูดอะไร แต่ขับมอเตอร์ไซค์มารับทุกครั้งที่เธอร้องไห้",
+    "signature_scene_th": "ฉากซ่อมเครื่องยนต์ในโรงรถ น้ำมันเปื้อนแขน หันมามองนางเอกแบบไม่พูดอะไร",
+    "recommended_drama_th": ["Gyeongseong Creature", "My Name", "Bloodhounds"]
+  },
+  {
+    "mbti": "ISFP",
+    "kdrama_role_th": "ศิลปิน/นักดนตรีอินดี้ อ่อนโยน เก็บความรู้สึกไว้ในเพลง",
+    "reference_chars_th": ["Choi Ung (Our Beloved Summer)", "Ryu Sun-jae (Lovely Runner)", "Kim Bok-joo's love interest Joon-hyung (Weightlifting Fairy Kim Bok-joo)"],
+    "genre_th": "youth romance / coming-of-age",
+    "emoji": "🎸",
+    "tagline_th": "ทุกเพลงที่เขียน คือเรื่องของเธอคนเดียว",
+    "signature_scene_th": "ฉากร้องเพลงบนเวทีเล็กๆ มองหานางเอกในกลุ่มคนดู ร้องไห้ระหว่างร้อง",
+    "recommended_drama_th": ["Lovely Runner", "Our Beloved Summer", "Twenty-Five Twenty-One"]
+  },
+  {
+    "mbti": "ESTP",
+    "kdrama_role_th": "นักกีฬา/นักแข่ง ลุยเก่ง บ้าระห่ำ แต่หล่อเอามากๆ",
+    "reference_chars_th": ["Baek Yi-jin (Twenty-Five Twenty-One) early eps", "Park Sae-ro-yi rival vibes (Itaewon Class)", "Ji Chang-wook characters (The K2)"],
+    "genre_th": "sport / action romance",
+    "emoji": "🏆",
+    "tagline_th": "ชอบความท้าทาย รักแล้วรักเลยไม่กั๊ก",
+    "signature_scene_th": "ฉากชนะแข่งฟันดาบ/วิ่ง แล้ววิ่งไปกอดนางเอกบนสนาม กล้องถ่าย slow-mo",
+    "recommended_drama_th": ["Twenty-Five Twenty-One", "Itaewon Class", "Run On"]
+  },
+  {
+    "mbti": "ESFP",
+    "kdrama_role_th": "ไอดอล/นักแสดงดัง ปาร์ตี้แอนิมอล ฮาแต่จริงใจ",
+    "reference_chars_th": ["Sung Bo-ra (Reply 1988)", "Cha Eun-woo characters (True Beauty)", "Han Ji-pyeong's love interest Seo Dal-mi (Start-Up)"],
+    "genre_th": "romcom / showbiz drama",
+    "emoji": "✨",
+    "tagline_th": "เป็นแสงในห้อง ใครเศร้าก็หายเศร้าเพราะเธอ",
+    "signature_scene_th": "ฉากเต้นบนเวทีคอนเสิร์ต แฟนๆ ส่องไฟ แล้วชี้นิ้วลงมาหานางเอกในแถวหน้า",
+    "recommended_drama_th": ["Reply 1988", "True Beauty", "Start-Up"]
+  }
+]

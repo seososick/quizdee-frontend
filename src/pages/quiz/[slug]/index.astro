@@ -1,52 +1,23 @@
 ---
 /**
  * Universal Quiz Page — /quiz/[slug]/
- * Loads JSON content from /content/ at build time, renders for any of the 17 quizzes.
- * Engine: v2 (a-e, multi-archetype weighted)
+ * P1 polish: kill ready-check, result preview, personalized CTA, saved-progress banner.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import StickerDecor from '@/components/StickerDecor.astro'
 import { CATALOG } from '@/lib/catalog'
-import fs from 'node:fs'
-import path from 'node:path'
+import { loadMeta, loadArchetypes, loadQuestions, archetypeName, archetypeUrlSlug } from '@/lib/quiz-content'
 
 export async function getStaticPaths() {
   return CATALOG.map(q => ({ params: { slug: q.slug }, props: { entry: q } }))
 }
 
 const { entry } = Astro.props as { entry: typeof CATALOG[number] }
-// Try multiple paths: ../content (Hermes dev), ./content (server inside public_html), ./quiz-content
-function resolveContentDir(): string {
-  const candidates = [
-    path.resolve(process.cwd(), '../content'),
-    path.resolve(process.cwd(), './content'),
-    path.resolve(process.cwd(), './quiz-content'),
-  ]
-  for (const c of candidates) {
-    try { if (fs.existsSync(c) && fs.existsSync(path.join(c, 'mbti-16-meta.json'))) return c } catch {}
-  }
-  return candidates[0]
-}
-const contentDir = resolveContentDir()
 
-// Load JSON files (build-time)
-function safeLoad(file: string) {
-  try {
-    const p = path.join(contentDir, file)
-    if (!fs.existsSync(p)) return null
-    return JSON.parse(fs.readFileSync(p, 'utf-8'))
-  } catch { return null }
-}
+const meta = loadMeta(entry.source_files.meta)
+const questions = loadQuestions(entry.source_files.questions)
+const archetypes = loadArchetypes(entry.source_files.archetypes)
 
-const meta = safeLoad(entry.source_files.meta) || {}
-const questionsRaw = safeLoad(entry.source_files.questions) || []
-const archetypesRaw = safeLoad(entry.source_files.archetypes) || []
-
-// Normalize archetypes (some files: array; love-language: 'love-language-types' is array)
-const archetypes = Array.isArray(archetypesRaw) ? archetypesRaw : []
-const questions = Array.isArray(questionsRaw) ? questionsRaw : []
-
-// Build engine data payload — auto-assign a-e keys if missing, detect scoring mode
 const isMbtiAxis = ['mbti', 'cat-mbti', 'office-mbti', 'kdrama-mbti'].includes(entry.slug)
 const isBurnout = entry.slug === 'burnout-risk'
 
@@ -65,34 +36,52 @@ const engineData = {
     })),
   })),
   archetypes: archetypes.map((a: any) => ({
-    code: a.code || a.mbti || a.name_en?.toUpperCase()?.replace(/\s+/g, '_') || 'UNKNOWN',
-    name_th: a.name_th || a.archetype_name_th || a.cat_name_th || a.office_role_th || a.kdrama_role_th || '',
+    code: a.code || a.mbti || (a.name_en?.toUpperCase()?.replace(/\s+/g, '_')) || 'UNKNOWN',
+    name_th: archetypeName(a),
     emoji: a.emoji,
     tagline_th: a.tagline_th,
     score_range: a.score_range,
   })),
 }
 
+// Personalized CTA microcopy per quiz
+const ctaMap: Record<string, string> = {
+  'mbti': 'ค้นหา MBTI ของฉัน',
+  'big-five': 'ค้นหา OCEAN ของฉัน',
+  'enneagram': 'ค้นหา Enneagram ของฉัน',
+  'cat-mbti': 'ฉันคือแมวแบบไหน?',
+  'love-language': 'ค้นหารัก 5 รักของฉัน',
+  'attachment-style': 'ดู attachment ของฉัน',
+  'office-mbti': 'ดูตัวตนในออฟฟิศ',
+  'burnout-risk': 'เช็คว่าหมดไฟยัง',
+  'career-identity': 'ค้นหาตัวตนสายงาน',
+  'coping-style': 'รู้จักวิธีรับมือของฉัน',
+  'kdrama-mbti': 'ฉันคือตัวละครซีรีส์ใคร?',
+  'kpop-bias-role': 'ค้นหาตำแหน่งในวงของฉัน',
+  'ai-friend': 'ดู AI persona ของฉัน',
+  'doomscroll-persona': 'ดู Doom Scroll persona',
+  'spending-style': 'ฉันสายไหน Quiet/Loud?',
+  'aesthetic-style': 'ฉันคือ Aesthetic ไหน?',
+  'mootelu-style': 'ฉันสายมูแบบไหน?',
+}
+const ctaText = ctaMap[entry.slug] || 'เริ่มเล่น'
+
+// Result preview emojis (first 6 archetypes)
+const previewArch = engineData.archetypes.slice(0, 6)
+
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
 const pageUrl = `${siteUrl}/quiz/${entry.slug}/`
 
 const schemas = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'Quiz',
-    name: entry.title_th,
-    description: meta.description_th || entry.subtitle_th,
-    educationalLevel: 'beginner',
-    timeRequired: `PT${entry.duration_min}M`,
-    inLanguage: 'th',
-    learningResourceType: 'Quiz',
-    interactivityType: 'active',
-    typicalAgeRange: '18-45',
-    url: pageUrl,
+    '@context': 'https://schema.org', '@type': 'Quiz',
+    name: entry.title_th, description: meta.description_th || entry.subtitle_th,
+    educationalLevel: 'beginner', timeRequired: `PT${entry.duration_min}M`,
+    inLanguage: 'th', learningResourceType: 'Quiz',
+    interactivityType: 'active', typicalAgeRange: '18-45', url: pageUrl,
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
       { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: siteUrl + '/quiz/' },
@@ -100,8 +89,7 @@ const schemas = [
     ],
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: `${entry.title_th} ใช้เวลาเท่าไหร่?`, acceptedAnswer: { '@type': 'Answer', text: `ประมาณ ${entry.duration_min} นาที จำนวน ${entry.question_count} ข้อ` } },
       { '@type': 'Question', name: 'ฟรีไหม ต้องสมัครสมาชิกหรือเปล่า?', acceptedAnswer: { '@type': 'Answer', text: 'ฟรี 100% ไม่ต้องสมัครสมาชิก ไม่ต้องใส่อีเมล' } },
@@ -121,87 +109,112 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
   schemas={schemas}
   keywords={meta.keywords_th}
 >
+  <!-- ─── Compact hero (no double-hero, integrated CTA) ─── -->
   <section class="relative bg-butter-50 overflow-hidden">
     <StickerDecor />
-    <div class="container-wide relative z-10 py-10 sm:py-14">
-      <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-3">{entry.category_label_th}</p>
-      <h1 class="font-display font-medium leading-[1.15] tracking-tight text-balance text-sumi-900 max-w-3xl" style="font-size: clamp(1.75rem, 5vw, 3.5rem);">
-        <span class="text-4xl sm:text-5xl mr-2">{entry.emoji}</span>
+    <div class="container-wide relative z-10 py-8 sm:py-12">
+      <p class="font-mono text-caption uppercase tracking-widest text-coral-700 mb-2">
+        <a href="/quiz/" class="hover:underline">แบบทดสอบ</a> · {entry.category_label_th}
+      </p>
+      <h1 class="font-display font-medium leading-[1.15] tracking-tight text-balance text-sumi-900 max-w-3xl" style="font-size: clamp(1.625rem, 4.5vw, 3rem);">
+        <span class="text-3xl sm:text-4xl mr-2">{entry.emoji}</span>
         {entry.title_th}
       </h1>
-      <p class="mt-4 max-w-2xl text-body text-sumi-700">{entry.subtitle_th}</p>
-      <div class="mt-4 flex flex-wrap items-center gap-3 text-small font-mono text-sumi-700">
+      <p class="mt-3 max-w-2xl text-body text-sumi-700">{entry.subtitle_th}</p>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2 text-small font-mono text-sumi-700">
         <span class="inline-flex items-center gap-1 bg-sumi-900 text-butter-300 px-3 py-1 rounded-full">⏱ {entry.duration_min} นาที</span>
-        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">📝 {entry.question_count} คำถาม</span>
-        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">✅ ฟรี · ไม่ต้องสมัคร</span>
+        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">📝 {entry.question_count} ข้อ</span>
+        <span class="inline-flex items-center gap-1 bg-washi-50 border border-sumi-300 px-3 py-1 rounded-full">✅ ฟรี</span>
+        {meta.psychology_basis_th && (
+          <span class="inline-flex items-center gap-1 bg-coral-50 border border-coral-300 px-3 py-1 rounded-full" title={meta.psychology_basis_th}>📚 อิงทฤษฎีจริง</span>
+        )}
       </div>
+
+      <!-- Saved progress recovery (JS toggles) -->
+      <div id="resume-banner" class="hidden mt-5 max-w-md bg-butter-100 border-2 border-sumi-900 rounded-2xl p-4 shadow-[3px_3px_0_0_rgba(31,26,20,0.95)]">
+        <p class="text-small text-sumi-900 font-semibold">🔥 คุณทำไปแล้ว <span data-resume-progress>0</span>/{entry.question_count} ข้อ</p>
+        <div class="mt-2 flex gap-2">
+          <button data-action="resume" class="bg-sumi-900 text-butter-300 px-4 py-2 rounded-full text-small font-bold border-2 border-sumi-900 min-h-[40px]">ทำต่อ →</button>
+          <button data-action="restart" class="bg-washi-50 text-sumi-900 px-4 py-2 rounded-full text-small font-semibold border-2 border-sumi-900 min-h-[40px]">เริ่มใหม่</button>
+        </div>
+      </div>
+
+      <!-- PRIMARY CTA — direct to quiz, no ready-check gate -->
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <button id="primary-start" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-7 py-4 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 active:scale-[0.98] transition-all min-h-[52px]">
+          <span>{ctaText}</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <!-- Result preview row -->
+      {previewArch.length > 0 && (
+        <div class="mt-7 max-w-xl">
+          <p class="text-caption font-mono text-sumi-500 uppercase tracking-wider mb-2">ทำเสร็จ คุณจะได้ 1 ใน {engineData.archetypes.length} แบบ:</p>
+          <div class="flex flex-wrap gap-2">
+            {engineData.archetypes.map((a) => (
+              <span class="inline-flex items-center gap-1.5 bg-washi-50 border border-sumi-300 rounded-full px-3 py-1.5 text-small text-sumi-700">
+                <span class="text-base">{a.emoji || '✨'}</span>
+                <span class="font-semibold text-sumi-900">{a.name_th.split(' ')[0].split('—')[0].trim()}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
+  <!-- ─── Quiz Engine (initially hidden, slides in after start) ─── -->
   <section class="container-wide py-8 sm:py-12">
     <div id="quiz-engine" data-quiz={JSON.stringify(engineData)} class="max-w-2xl mx-auto">
-      <!-- Intro state -->
-      <div data-state="intro" class="bg-washi-50 border-2 border-sumi-900 rounded-3xl p-6 sm:p-10 text-center shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
-        <div class="text-6xl mb-4">{entry.emoji}</div>
-        <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-3">พร้อมเริ่มแล้วใช่ไหม?</h2>
-        <p class="text-body text-sumi-700 mb-6">ตอบทั้งหมด {entry.question_count} ข้อ — ใช้เวลา {entry.duration_min} นาที</p>
-        <button data-action="start" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-8 py-4 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 active:scale-[0.98] transition-all min-h-[52px]">
-          <span>เริ่มเล่น</span>
-          <span aria-hidden="true">→</span>
-        </button>
-        {meta.psychology_basis_th && (
-          <p class="mt-6 text-caption font-mono text-sumi-500">📖 {meta.psychology_basis_th}</p>
-        )}
-        {entry.slug === 'burnout-risk' && (
-          <p class="mt-3 text-caption text-sumi-500 italic">⚠️ ผลไม่ใช่การวินิจฉัยทางการแพทย์ ถ้ารู้สึกหนักมาก โทร 1323 (สายด่วนสุขภาพจิต)</p>
-        )}
-      </div>
-
       <!-- Question state -->
       <div data-state="question" class="hidden">
-        <!-- Progress -->
-        <div class="mb-6">
+        <div class="mb-5">
           <div class="flex items-center justify-between text-small font-mono text-sumi-700 mb-2">
             <span data-progress-text>1/{entry.question_count}</span>
             <span data-progress-percent>0%</span>
           </div>
-          <div class="h-2 bg-washi-200 rounded-full overflow-hidden border border-sumi-300">
-            <div data-progress-bar class="h-full bg-coral-500 transition-all duration-300 ease-out" style="width: 0%"></div>
+          <div class="h-2.5 bg-washi-200 rounded-full overflow-hidden border border-sumi-300">
+            <div data-progress-bar class="h-full bg-coral-500 transition-all duration-300 ease-out rounded-full" style="width: 0%"></div>
           </div>
           <p data-encouragement class="mt-2 text-caption text-coral-700 font-mono h-4 text-center"></p>
         </div>
 
-        <!-- Question card -->
         <div class="bg-washi-50 border-2 border-sumi-900 rounded-3xl p-6 sm:p-8 shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
           <h2 data-question-text class="font-display text-h2 font-medium text-sumi-900 mb-6 leading-snug"></h2>
           <div data-options class="flex flex-col gap-3"></div>
         </div>
+
+        <div class="mt-3 flex items-center justify-between">
+          <button data-action="back" class="text-caption font-mono text-sumi-500 hover:text-sumi-900 underline underline-offset-2 disabled:opacity-30" disabled>← ก่อนหน้า</button>
+          <button data-action="abandon" class="text-caption font-mono text-sumi-500 hover:text-coral-700">ออก</button>
+        </div>
       </div>
 
-      <!-- Submitting state -->
-      <div data-state="submitting" class="hidden bg-washi-50 border-2 border-sumi-900 rounded-3xl p-10 text-center">
+      <div data-state="submitting" class="hidden bg-washi-50 border-2 border-sumi-900 rounded-3xl p-10 text-center shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
         <div class="text-5xl mb-4 animate-bounce">✨</div>
         <p class="font-display text-h3 font-semibold text-sumi-900">กำลังประมวลผล...</p>
+        <p class="text-small text-sumi-500 mt-2">วิเคราะห์คำตอบของคุณ</p>
       </div>
 
-      <!-- Error state -->
       <div data-state="error" class="hidden bg-coral-50 border-2 border-coral-700 rounded-3xl p-8 text-center">
         <p class="font-display text-h3 font-semibold text-coral-700 mb-3">เกิดข้อผิดพลาด</p>
         <p data-error-msg class="text-body text-sumi-700 mb-4"></p>
-        <button data-action="retry" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3 rounded-full font-semibold border-2 border-sumi-900 min-h-[44px]">
-          ลองใหม่
-        </button>
+        <button data-action="retry" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3 rounded-full font-semibold border-2 border-sumi-900 min-h-[44px]">ลองใหม่</button>
       </div>
     </div>
 
-    <!-- Disclaimer / SEO content -->
     {meta.psychology_basis_th && (
-      <details class="max-w-2xl mx-auto mt-10 text-small text-sumi-700">
+      <details class="max-w-2xl mx-auto mt-12 text-small text-sumi-700">
         <summary class="cursor-pointer font-semibold text-sumi-900 mb-2">📚 เกี่ยวกับแบบทดสอบนี้</summary>
         <div class="prose-content mt-3 space-y-2">
           <p><strong>อ้างอิง:</strong> {meta.psychology_basis_th}</p>
           {meta.trend_reference_th && <p><strong>เทรนด์:</strong> {meta.trend_reference_th}</p>}
           <p class="italic text-sumi-500">หมายเหตุ: แบบทดสอบนี้เพื่อความสนุกและการรู้จักตัวเอง ไม่ใช่เครื่องมือวินิจฉัยทางการแพทย์</p>
+          {entry.slug === 'burnout-risk' && (
+            <p class="text-coral-700 font-semibold">⚠️ ถ้ารู้สึกหนักมาก โทร 1323 (สายด่วนสุขภาพจิต) หรือ Samaritans 02-713-6793</p>
+          )}
         </div>
       </details>
     )}
@@ -211,10 +224,55 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
 <script>
   import { runEngineV2 } from '../../../scripts/quiz-engine-v2'
   const root = document.getElementById('quiz-engine')
-  if (root) {
+  const startBtn = document.getElementById('primary-start')
+  const resumeBanner = document.getElementById('resume-banner')
+
+  if (root && startBtn) {
     try {
       const data = JSON.parse(root.dataset.quiz || '{}')
-      runEngineV2(root as HTMLElement, data)
+      const STORAGE = `quizdee:v2:${data.slug}:answers`
+
+      // Show resume banner if progress exists
+      try {
+        const saved = localStorage.getItem(STORAGE)
+        if (saved && resumeBanner) {
+          const parsed = JSON.parse(saved)
+          const count = Object.keys(parsed).length
+          if (count > 0 && count < data.questions.length) {
+            const span = resumeBanner.querySelector('[data-resume-progress]') as HTMLElement | null
+            if (span) span.textContent = String(count)
+            resumeBanner.classList.remove('hidden')
+          }
+        }
+      } catch {}
+
+      const start = (resume = false) => {
+        if (!resume) {
+          try { localStorage.removeItem(STORAGE) } catch {}
+        }
+        startBtn.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        // hide preview area + show question state by initializing engine
+        runEngineV2(root as HTMLElement, data)
+        // Manually trigger first question (engine starts in 'intro' but we skip intro)
+        const introEl = root.querySelector('[data-state="intro"]')
+        if (introEl) introEl.classList.add('hidden')
+        // Click hidden start handler if engine has one
+        const engineStart = root.querySelector('[data-action="start"]') as HTMLButtonElement | null
+        if (engineStart) engineStart.click()
+        else {
+          // Engine doesn't expose start in our flat layout — directly show question state
+          root.querySelectorAll('[data-state]').forEach((el) => {
+            el.classList.toggle('hidden', el.getAttribute('data-state') !== 'question')
+          })
+        }
+      }
+
+      startBtn.addEventListener('click', () => start(false))
+
+      const resumeBtn = resumeBanner?.querySelector('[data-action="resume"]') as HTMLButtonElement | null
+      const restartBtn = resumeBanner?.querySelector('[data-action="restart"]') as HTMLButtonElement | null
+      if (resumeBtn) resumeBtn.addEventListener('click', () => { resumeBanner?.classList.add('hidden'); start(true) })
+      if (restartBtn) restartBtn.addEventListener('click', () => { resumeBanner?.classList.add('hidden'); start(false) })
     } catch (e) {
       console.error('Failed to init quiz engine', e)
     }

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "CLEAN_GIRL",
+    "name_th": "Clean Girl — ผิวซาติน ผมรวบขมวด ต่างหูทอง",
+    "emoji": "🥛",
+    "signature_items_th": ["slick back bun", "ต่างหูทอง hoops", "linen set สีครีม", "matcha latte", "Pilates reformer", "lip oil"],
+    "vibe_th": "ตื่น 6 โมง dry brush + gua sha + matcha ก่อนเปิด IG",
+    "icons_th": ["Hailey Bieber", "Sofia Richie", "Matilda Djerf"],
+    "tagline_th": "สะอาด ไม่ล้น ไม่พยายาม (แต่จริง ๆ พยายามมาก)",
+    "description_th": "คุณคือสายมินิมอลที่เชื่อในพลังของผิวฉ่ำ ๆ ผมเรียบกริบ และเครื่องประดับทองชิ้นเดียวจบ ตู้เสื้อผ้าเป็น capsule wardrobe สีเอิร์ธโทน เน้น quality over quantity ชอบคาเฟ่ที่มี matcha ดี ๆ และคลาส Pilates ตอนเช้า ความสวยของคุณคือความ effortless ที่ผ่านการคิดมาอย่างดี",
+    "watchout_th": "ระวังจะกลายเป็น clone กันทั้งฟีด — เพิ่ม personality ลงไปนิดนึงก่อนหายไปกับ algorithm",
+    "compatible_with": ["OLD_MONEY"]
+  },
+  {
+    "code": "COQUETTE",
+    "name_th": "Coquette — โบว ลูกไม้ บัลเล่ต์ และความหวานยุค Sofia Coppola",
+    "emoji": "🎀",
+    "signature_items_th": ["โบวซาตินผูกผม", "ballet flats", "เสื้อลูกไม้สีพาสเทล", "น้ำหอมกลิ่นวานิลลา", "หนังสือ Lana del Rey lyrics", "เล็บสีชมพูใส"],
+    "vibe_th": "ฟัง Lana del Rey กินสตรอว์เบอร์รี เขียนไดอารี่ในคาเฟ่สีชมพู",
+    "icons_th": ["Lana del Rey", "Sofia Coppola", "Sabrina Carpenter"],
+    "tagline_th": "หวาน เปราะบาง แต่รู้ตัวว่ากำลังทำอะไรอยู่",
+    "description_th": "คุณคือสาวที่เกิดมาในชุดผ้าลูกไม้และโบวซาติน หลงใหลในความโรแมนติกแบบ girlhood ดูหนัง Marie Antoinette ซ้ำ ๆ และคิดว่าทุกอย่างควรมีโบวติดได้ ห้องนอนเต็มไปด้วยตุ๊กตาหมี เทียนหอม และดอกไม้แห้ง คุณเชื่อในพลังของ feminine energy และไม่อายที่จะ embrace ความหวาน",
+    "watchout_th": "ความ hyper-feminine ไม่ใช่ความอ่อนแอ — อย่าให้ใครเอาไปใช้ลด value ของคุณ",
+    "compatible_with": ["DARK_ACADEMIA", "Y2K_REVIVAL"]
+  },
+  {
+    "code": "DARK_ACADEMIA",
+    "name_th": "Dark Academia — ทวีด หนังสือเก่า และฤดูใบไม้ร่วงนิรันดร์",
+    "emoji": "📚",
+    "signature_items_th": ["เสื้อ tweed blazer", "loafers หนัง", "หนังสือ Donna Tartt", "กระเป๋าหนังสีน้ำตาล", "ปากกาหมึกซึม", "ผ้าพันคอแคชเมียร์"],
+    "vibe_th": "นั่งห้องสมุดเก่า อ่าน The Secret History จิบกาแฟดำ ฟัง Chopin",
+    "icons_th": ["Timothée Chalamet", "ตัวละครจาก Dead Poets Society", "Donna Tartt"],
+    "tagline_th": "ความรู้คือ aesthetic, ความ brooding คือ personality",
+    "description_th": "คุณคือคนที่หลงใหลในวรรณกรรมคลาสสิก ปรัชญา และฤดูใบไม้ร่วงที่ไม่มีจริงในไทย ตู้เสื้อผ้าเต็มไปด้วยโทนน้ำตาล เขียวเข้ม และเบอร์กันดี ชอบคาเฟ่เก่า ๆ ที่มีหนังสือเยอะ ๆ และเทียนสีเหลืองนวล คุณ romanticize การเรียนรู้ และมองว่าการคิดลึกคือ luxury",
+    "watchout_th": "อย่าหมกมุ่นกับ aesthetic จนลืมไปว่าชีวิตจริงต้องมีแสงแดดด้วย",
+    "compatible_with": ["COQUETTE", "OLD_MONEY"]
+  },
+  {
+    "code": "Y2K_REVIVAL",
+    "name_th": "Y2K Revival — Low rise, butterfly clip, ชมพูชนโครม",
+    "emoji": "🦋",
+    "signature_items_th": ["low rise jeans", "baby tee crop", "butterfly hair clip", "rhinestone everything", "Von Dutch cap", "juicy tracksuit"],
+    "vibe_th": "เปิด iPod nano ฟัง Britney แก้มมีกลิตเตอร์เดินห้าง",
+    "icons_th": ["Bella Hadid", "Paris Hilton 2003", "Dua Lipa", "Charli XCX"],
+    "tagline_th": "Cyber baby girl reporting for chaos",
+    "description_th": "คุณคือสายปาร์ตี้ที่เกิดผิดยุค หลงใหลใน early 2000s ทุกอย่าง — ตั้งแต่ Motorola Razr ไปจนถึง velour tracksuit คุณกล้าใส่สีชนกัน ใส่ rhinestone ทั้งตัว และไม่กลัวที่จะดู extra ความสนุกของคุณคือ chaos ที่ตั้งใจ และคุณเชื่อว่า maximalism = serotonin",
+    "watchout_th": "low rise มาแล้วมาอีก แต่ self-esteem อย่าให้มันต่ำตามกางเกง",
+    "compatible_with": ["COQUETTE"]
+  },
+  {
+    "code": "OLD_MONEY",
+    "name_th": "Old Money — โปโล ไข่มุก และความรวยที่ไม่ต้องประกาศ",
+    "emoji": "🐎",
+    "signature_items_th": ["polo Ralph Lauren", "ไข่มุกแท้", "loafers Tod's", "linen pants", "เรือใบ / equestrian club", "no visible logo"],
+    "vibe_th": "ไป Hua Hin ขี่ม้า จิบชายามบ่าย ใส่กางเกงลินินไม่รีดยับ",
+    "icons_th": ["Carolyn Bessette-Kennedy", "Sofia Richie งานแต่ง", "ตัวละคร Succession"],
+    "tagline_th": "ถ้าต้องบอกว่ารวย แสดงว่าไม่รวย",
+    "description_th": "คุณคือสายที่เชื่อใน quiet luxury — ผ้าดี ตัดเนี้ยบ ไม่มีโลโก้ใหญ่ ๆ ตู้เสื้อผ้าเป็นสีเบจ นาวี ขาว และน้ำตาล ชอบกีฬาที่มีคำว่า club ต่อท้าย เช่น tennis club, equestrian club, yacht club คุณ value heritage, craftsmanship และความ understated มากกว่ากระแส",
+    "watchout_th": "old money ของจริงไม่ต้องพยายาม — ถ้ายังต้องค้นว่า 'ใส่อะไรแล้วดู old money' ก็ใช้ใจรักก็พอ",
+    "compatible_with": ["CLEAN_GIRL", "DARK_ACADEMIA"]
+  }
+]

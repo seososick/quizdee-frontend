@@ -1,0 +1,67 @@
+[
+  {
+    "code": "LEADER",
+    "name_th": "สายลีเดอร์ — ไอดอลของวงสายไอคิว",
+    "emoji": "👑",
+    "vibe_th": "รอบรู้ รับผิดชอบ member ทุกคน เป็นกาวใจของวง",
+    "signature_role_th": "MC งาน, ตอบสัมภาษณ์ยาก ๆ, เขียนเพลง, คุยกับค่าย",
+    "kpop_examples_th": ["RM (BTS)", "Suga / Yoongi (BTS)", "Bang Chan (Stray Kids)", "Jihyo (TWICE)"],
+    "tpop_examples_th": ["PunPun (BUS)", "ซีมอน (Atlas)", "ไอซ์ (4EVE)"],
+    "tagline_th": "ถ้าวงต้องไปทางไหน ขอตัดสินด้วยตัวเอง!",
+    "description_th": "คุณคือคนที่เพื่อนร่วมวงพึ่งพาได้ตลอด ไม่ว่าจะเรื่องตารางซ้อม คอนเซ็ปต์อัลบั้ม หรือ drama ในกลุ่ม คุณคิดเป็นระบบ พูดในที่สาธารณะได้ดี และมักเป็นคนแบกความเครียดของวงไว้คนเดียวเงียบ ๆ ในชีวิตจริง คุณคือเพื่อนที่ทุกคนถามว่า 'เอายังไงดี?' และมักตอบได้แบบมีเหตุผล",
+    "compatible_with": ["MAIN_VOCAL", "VISUAL"],
+    "watchout_th": "ระวังแบกทุกอย่างคนเดียวจน burn out — ลีเดอร์ก็มีวันเหนื่อยนะ ขอความช่วยเหลือบ้างก็ได้"
+  },
+  {
+    "code": "MAIN_VOCAL",
+    "name_th": "สายเมนโวคอล — เสียงทองของวง",
+    "emoji": "🎙️",
+    "vibe_th": "ลึกซึ้ง อ่อนไหว ปล่อยอารมณ์ผ่านเสียงร้อง",
+    "signature_role_th": "ท่อนไฮโน้ต, OST ละคร, cover เพลงใน Live, ปิดเวทีคอน",
+    "kpop_examples_th": ["V / Taehyung (BTS)", "Jungkook (BTS)", "Solar (MAMAMOO)", "Wendy (Red Velvet)", "Rosé (BLACKPINK)"],
+    "tpop_examples_th": ["พีพี กฤษฏ์ (BUS)", "เจน (4EVE)", "เซวิน (BSS feat.)"],
+    "tagline_th": "ถ้าเศร้า ฟังเพลงฉัน เดี๋ยวร้องไห้ด้วยกัน 🥲",
+    "description_th": "คุณคือคนที่ฟังเพลงเศร้าแล้วอินมาก ๆ และมักจะเก็บอารมณ์ละเอียดยิบ คนรอบตัวบอกว่าคุณ 'sensitive แต่ลึก' คุณรู้สึกกับสิ่งเล็ก ๆ ได้มากกว่าคนอื่น และถ่ายทอดความรู้สึกออกมาได้ดี ไม่ว่าจะร้องเพลง เขียนแคปชั่น หรือคุยกับเพื่อน เสียงคุณมีพลัง คนรอบตัวฟังแล้วสงบ",
+    "compatible_with": ["LEADER", "MAKNAE"],
+    "watchout_th": "บางทีอินกับอารมณ์ตัวเองหนักไป — ลองออกไปเจอแสงแดดบ้าง mood จะดีขึ้น"
+  },
+  {
+    "code": "MAIN_DANCER",
+    "name_th": "สายเมนแดนเซอร์ — สเตจคิลเลอร์",
+    "emoji": "🔥",
+    "vibe_th": "พลังเต็มเปี่ยม สมาธิแน่น ฝึกหนักไม่บ่น",
+    "signature_role_th": "Dance break, center ตอนคอรัส, dance practice video, dance challenge",
+    "kpop_examples_th": ["Lisa (BLACKPINK)", "Jimin (BTS)", "Hoshi (SEVENTEEN)", "Felix (Stray Kids)", "Momo (TWICE)"],
+    "tpop_examples_th": ["พีค (BUS)", "หมิว (4EVE)", "พล (Atlas)"],
+    "tagline_th": "ถ้าเพลงขึ้น ร่างกายจะรู้เอง 💃",
+    "description_th": "คุณคือคนที่เห็นท่าเต้นแล้วจำได้ภายใน 1 รอบ มี body awareness ดีและรักการเคลื่อนไหว ไม่ว่าจะเต้น เล่นกีฬา หรือทำงานที่ใช้พลัง คุณเป็นคนที่ 'ลงมือทำ' ก่อนคิดเยอะ และพอเข้าโหมดทำงานแล้วโฟกัสสุด ๆ คนรอบตัวชอบดูคุณเวลาทำสิ่งที่รัก เพราะตาคุณเป็นประกาย",
+    "compatible_with": ["VISUAL", "MAKNAE"],
+    "watchout_th": "อย่าลืมพักร่างกาย ฝึกหนักไปเดี๋ยวบาดเจ็บ — recovery สำคัญพอ ๆ กับการซ้อม"
+  },
+  {
+    "code": "VISUAL",
+    "name_th": "สายวิชวล — หน้าตาของวง",
+    "emoji": "✨",
+    "vibe_th": "สง่า สวย/หล่อ มีออร่า เป็นหน้าตาแบรนด์",
+    "signature_role_th": "Presenter, ขึ้นปก magazine, fan service, MV center shot",
+    "kpop_examples_th": ["Jin (BTS)", "Cha Eunwoo (ASTRO)", "Jisoo (BLACKPINK)", "Karina (aespa)", "Tzuyu (TWICE)"],
+    "tpop_examples_th": ["พีท (BUS)", "ก้อย (4EVE)", "เน็กซ์ (Atlas)"],
+    "tagline_th": "เกิดมาเป็นหน้าตาของวง — ฉันก็แค่ทำหน้าที่ 💅",
+    "description_th": "คุณคือคนที่เดินเข้าห้องแล้วคนหันมอง มี aesthetic sense สูง รู้ว่าอะไรเข้ากับตัวเอง ดูแลภาพลักษณ์ดี แต่จริง ๆ แล้วลึก ๆ คุณ chill กว่าที่คนคิดเยอะ ในงาน คุณเก่งเรื่อง branding, presenting และทำให้คนอื่นสบายใจ คนรอบตัวมักประหลาดใจว่าคุณ 'เฟรนด์ลี่กว่าหน้าตา'",
+    "compatible_with": ["LEADER", "MAIN_DANCER"],
+    "watchout_th": "อย่าให้คนรอบตัวเห็นแค่หน้าตา — โชว์ความน่ารักและทาเลนต์อื่นบ้าง"
+  },
+  {
+    "code": "MAKNAE",
+    "name_th": "สายมักเน่ — น้องเล็กยิลลิ่งของวง",
+    "emoji": "🐰",
+    "vibe_th": "ขี้เล่น เอ็นดู ทำให้บรรยากาศวงไม่ตึง",
+    "signature_role_th": "ทำมุกใน Live IG, แกล้งพี่ ๆ, fan service น่ารัก, vlog ฮา ๆ",
+    "kpop_examples_th": ["Jungkook (BTS)", "Sunoo (ENHYPEN)", "I.N (Stray Kids)", "Tzuyu (TWICE)", "Hyein (NewJeans)"],
+    "tpop_examples_th": ["มาร์ค (BUS)", "ป่าน (4EVE)", "เอเลี่ยน (Atlas)"],
+    "tagline_th": "พี่ ๆ ดูน้องสิ น่ารักไหม? 🥺",
+    "description_th": "คุณคือคนที่ทำให้กลุ่มเพื่อนสนุกอยู่เสมอ มีพลังงานเด็กและความ 'ฮา' โดยธรรมชาติ ทำมุก reel ได้ดี เพื่อนรักเอ็นดูแต่ก็แอบรู้ว่าคุณ 'maknae on top' — ดูเด็ก แต่บางทีก็มีไหวพริบเหนือพี่ ๆ คุณเก่งเรื่องสร้างบรรยากาศ ทำให้คนสบายใจ และเป็นที่รักของทุกคนในทีม",
+    "compatible_with": ["MAIN_VOCAL", "MAIN_DANCER"],
+    "watchout_th": "บางครั้งคนมองว่าเด็กเกินไป — โชว์ความเป็นผู้ใหญ่บ้างเวลาจำเป็น พี่ ๆ จะภูมิใจ"
+  }
+]

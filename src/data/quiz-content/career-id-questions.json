@@ -1,0 +1,156 @@
+[
+  {
+    "order": 1,
+    "text": "หลังเลิกงาน 6 โมงเย็น คุณทำอะไรเป็นปกติ?",
+    "options": [
+      {"key": "a", "label": "เคลียร์ email ที่เหลือ มีติ้ง 1-on-1 กับหัวหน้า", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "รับ freelance / แพ็คของลูกค้า IG shop", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "นั่ง co-working ต่อ คุยกับ client ฝั่ง US", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "อัด Reels / ตัดคลิปลง YouTube", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ปิดคอม ไปยิม กินข้าวกับแฟน ไม่แตะงาน", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 2,
+    "text": "เสาร์อาทิตย์ของคุณหน้าตาเป็นยังไง?",
+    "options": [
+      {"key": "a", "label": "พักผ่อน อ่านหนังสือ business เตรียมประชุมจันทร์", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "live ขายของ ตอบ DM ลูกค้า", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "บินไปเชียงใหม่/ภูเก็ต ทำงานจาก café", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ถ่าย batch content 10 คลิปรวด", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ดู Netflix ทำอาหาร ปลูกต้นไม้", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 3,
+    "text": "รายได้ในฝันต่อเดือนของคุณมาแบบไหน?",
+    "options": [
+      {"key": "a", "label": "เงินเดือน 6 หลัก + โบนัสปลายปี + stock", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "เงินเดือนปกติ + รายได้เสริมอีก 30-50k", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "USD 3-5k/เดือน อยู่ที่ค่าครองชีพถูก ๆ", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ad revenue + brand deal ไม่จำกัด เพดานสูง", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "พอใช้ มีเก็บนิดหน่อย ขอแค่ไม่เครียด", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 4,
+    "text": "5 ปีข้างหน้า คุณเห็นตัวเองอยู่ที่ไหน?",
+    "options": [
+      {"key": "a", "label": "นั่งห้อง director ตึกใจกลาง CBD", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "ยังทำงานประจำ แต่มีร้าน/แบรนด์ของตัวเอง", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "อยู่บาหลี/ลิสบอน หมุนเวียนไป 5-6 ประเทศ", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "channel 100k+ มี product/course ของตัวเอง", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "บ้านชานเมือง ครอบครัวอบอุ่น งาน 9-5 สบาย ๆ", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 5,
+    "text": "ถ้าหัวหน้าให้ทำ project พิเศษนอกเวลา คุณ?",
+    "options": [
+      {"key": "a", "label": "รับเลย เป็นโอกาสโชว์ของก่อน promotion", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "รับ ถ้าได้ค่า OT/เพิ่มเงิน ถ้าไม่ก็ขอผ่าน", "weight": {"SIDE_HUSTLER": 1, "ANTI_HUSTLE": 1}},
+      {"key": "c", "label": "ถามได้มั้ยว่าทำ remote จาก café ก็ได้?", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ขอเอาไปทำ content เบื้องหลังด้วยได้มั้ย", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ปฏิเสธอย่างสุภาพ — เลิกงาน 6 โมงคือเลิก", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 6,
+    "text": "งานในฝันของคุณคือ?",
+    "options": [
+      {"key": "a", "label": "C-level ของบริษัทมหาชน", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "เจ้าของแบรนด์เล็ก ๆ ที่ทำเองทุกอย่าง", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "remote consultant ที่ตื่นมาเห็นทะเลทุกเช้า", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "full-time creator ที่ audience รัก", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "งานราชการ/รัฐวิสาหกิจ ที่เลิก 4 โมง", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 7,
+    "text": "ถ้าได้เงินก้อน 1 ล้านบาท คุณจะ?",
+    "options": [
+      {"key": "a", "label": "ลง MBA / course สาย leadership", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "ลงทุนเปิด online shop / stock สินค้า", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "ลาออก ไปอยู่ต่างประเทศ 1 ปี", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ซื้อกล้อง อุปกรณ์ ตั้ง studio", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ใส่กองทุน/หุ้นปันผล ใช้ดอกเบี้ย", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 8,
+    "text": "social media ของคุณส่วนใหญ่โพสต์เรื่องอะไร?",
+    "options": [
+      {"key": "a", "label": "LinkedIn — ความสำเร็จงาน promotion certificate", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "IG — โปรโมตของขาย review สินค้า", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "ภาพทะเล ภูเขา café ต่างเมือง", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "Reels/TikTok ทุกวัน มี hook ทุก 3 วิ", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "แทบไม่โพสต์ private account ดูคนอื่นเฉย ๆ", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 9,
+    "text": "เกษียณตอนอายุเท่าไหร่ดี?",
+    "options": [
+      {"key": "a", "label": "60+ — ทำจนถึง C-level ค่อยเลิก", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "50 ถ้า side hustle เลี้ยงตัวได้", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "ไม่เกษียณ — แต่ทำงานเบา ๆ ที่ไหนก็ได้", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ไม่เกษียณ creator ทำได้ตลอด", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "45 ถ้าได้ — FIRE ให้เร็วที่สุด", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 10,
+    "text": "เพื่อนถามว่า 'ทำงานอะไร?' คุณตอบยังไง?",
+    "options": [
+      {"key": "a", "label": "บอก title + ชื่อบริษัท เต็มยศ", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "ทำงานประจำ + ขายของออนไลน์ด้วย", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "freelance / remote / consultant", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "content creator / influencer", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ก็... ทำงานบริษัทแหละ ไม่มีอะไร", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 11,
+    "text": "ถ้าได้ขึ้นเงินเดือน 30% แลกกับทำ OT เพิ่มทุกวัน?",
+    "options": [
+      {"key": "a", "label": "เอาเลย เงินสำคัญและช่วย career growth", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "ไม่เอา เวลานั้นเอาไปทำ side hustle ดีกว่า", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "ไม่เอา — ขอ remote มากกว่าขอเงินเพิ่ม", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "ไม่เอา เวลานั้นเอาไปทำ content ได้มากกว่า", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ไม่เอาเด็ดขาด — เวลาส่วนตัวซื้อไม่ได้", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 12,
+    "text": "คนที่คุณ admire มากที่สุดคือ?",
+    "options": [
+      {"key": "a", "label": "CEO บริษัทใหญ่ / ผู้บริหารมืออาชีพ", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "เจ้าของ SME ที่เริ่มจาก 0", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "คนที่ลาออกไปเที่ยวรอบโลกแล้วยังมีเงินใช้", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "YouTuber/TikToker ที่สร้างอาณาจักรของตัวเอง", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "คนที่ใช้ชีวิตเรียบง่ายแต่มีความสุขจริง ๆ", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 13,
+    "text": "ความเสี่ยงที่คุณรับได้คือ?",
+    "options": [
+      {"key": "a", "label": "ต่ำ — ขอความมั่นคง บริษัทใหญ่ สวัสดิการแน่น", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "กลาง — มีงานประจำ back up ก่อนค่อย risk", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "สูง — ลาออกไปต่างประเทศได้ ถ้ามีเงินเก็บ 6 เดือน", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "สูงมาก — all-in กับ content ก็เคยทำมาแล้ว", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "ต่ำ — ขอเสถียร ไม่ดิ้นรน", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  },
+  {
+    "order": 14,
+    "text": "ประโยคไหนตรงกับคุณที่สุด?",
+    "options": [
+      {"key": "a", "label": "'ถ้าจะเล่น เล่นให้ใหญ่ ไต่ให้ถึงยอด'", "weight": {"CORPORATE_CLIMBER": 2}},
+      {"key": "b", "label": "'มีเงินเข้าหลายทาง = อิสระจริง'", "weight": {"SIDE_HUSTLER": 2}},
+      {"key": "c", "label": "'ทำไมต้องอยู่ที่เดียว ในเมื่อโลกใหญ่ขนาดนี้'", "weight": {"DIGITAL_NOMAD": 2}},
+      {"key": "d", "label": "'audience ของฉันคือบริษัทของฉัน'", "weight": {"CREATOR": 2}},
+      {"key": "e", "label": "'งานคือเครื่องมือ ไม่ใช่ทั้งชีวิต'", "weight": {"ANTI_HUSTLE": 2}}
+    ]
+  }
+]
