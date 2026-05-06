@@ -1,0 +1,67 @@
+---
+/**
+ * PlayCard — ooopenlab-style quiz card with bold black border + PLAY button
+ * Used on homepage masonry & /quiz catalog
+ */
+interface Props {
+  href: string
+  title: string
+  subtitle?: string
+  emoji?: string
+  category?: string
+  bg?: string  // bg color class e.g. "bg-butter-100"
+  duration?: string  // e.g. "3 นาที"
+  questions?: number
+  badge?: string  // e.g. "ใหม่!", "ฮิต"
+  rotate?: number  // -2 | -1 | 0 | 1 | 2 — slight tilt for playful feel
+}
+const {
+  href, title, subtitle, emoji, category,
+  bg = 'bg-washi-50', duration, questions, badge,
+  rotate = 0,
+} = Astro.props
+
+const tiltClass = ['-rotate-2', '-rotate-1', 'rotate-0', 'rotate-1', 'rotate-2'][rotate + 2]
+---
+
+<a
+  href={href}
+  class:list={[
+    'play-card group relative block rounded-2xl border-2 border-sumi-900',
+    'shadow-[4px_4px_0_0_rgba(31,26,20,0.95)] hover:shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]',
+    'transition-all duration-200 hover:-translate-y-0.5 hover:-translate-x-0.5',
+    'overflow-hidden',
+    bg,
+    tiltClass,
+    'hover:rotate-0',
+  ]}
+>
+  {badge && (
+    <span class="absolute -top-2 -right-2 z-10 rounded-full bg-coral-500 border-2 border-sumi-900 px-3 py-1 text-caption font-bold text-white shadow-[2px_2px_0_0_rgba(31,26,20,0.95)]">
+      {badge}
+    </span>
+  )}
+
+  <div class="p-5 sm:p-6 min-h-[180px] flex flex-col">
+    {category && (
+      <p class="font-mono text-caption uppercase tracking-widest text-sumi-700 mb-3">{category}</p>
+    )}
+    {emoji && <div class="text-5xl mb-3 leading-none select-none" aria-hidden="true">{emoji}</div>}
+    <h3 class="font-display text-h3 font-semibold text-sumi-900 leading-tight mb-1">{title}</h3>
+    {subtitle && <p class="text-small text-sumi-700 leading-snug mb-3">{subtitle}</p>}
+
+    <div class="mt-auto flex items-center justify-between gap-2 pt-3">
+      {(duration || questions) && (
+        <span class="text-caption font-mono text-sumi-500">
+          {duration}{duration && questions ? ' · ' : ''}{questions ? `${questions} ข้อ` : ''}
+        </span>
+      )}
+    </div>
+  </div>
+
+  <!-- Bottom PLAY bar (ooopenlab signature) -->
+  <div class="bg-sumi-900 text-butter-300 px-5 py-2.5 flex items-center justify-between text-small font-mono font-bold tracking-wider">
+    <span>PLAY</span>
+    <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+  </div>
+</a>

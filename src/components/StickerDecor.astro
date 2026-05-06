@@ -1,0 +1,62 @@
+---
+/**
+ * StickerDecor — SVG doodle/sticker decorations scattered as background
+ * Pure CSS positioning, no images, no JS
+ */
+---
+
+<div class="sticker-decor pointer-events-none absolute inset-0 overflow-hidden -z-10" aria-hidden="true">
+  <!-- Top-right star burst -->
+  <svg class="absolute top-12 right-4 w-16 h-16 text-coral-300 animate-spin-slow opacity-60" viewBox="0 0 64 64" fill="currentColor">
+    <path d="M32 4 L36 24 L56 28 L40 36 L44 56 L32 44 L20 56 L24 36 L8 28 L28 24 Z"/>
+  </svg>
+
+  <!-- Top-left squiggle -->
+  <svg class="absolute top-32 left-2 w-20 h-8 text-butter-500 opacity-70" viewBox="0 0 80 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+    <path d="M2 16 Q12 4, 22 16 T42 16 T62 16 T78 16"/>
+  </svg>
+
+  <!-- Mid-right dots -->
+  <svg class="absolute top-1/2 right-6 w-10 h-10 text-asagi-500 opacity-50" viewBox="0 0 40 40" fill="currentColor">
+    <circle cx="8" cy="8" r="3"/>
+    <circle cx="20" cy="8" r="3"/>
+    <circle cx="32" cy="8" r="3"/>
+    <circle cx="8" cy="20" r="3"/>
+    <circle cx="20" cy="20" r="3"/>
+    <circle cx="32" cy="20" r="3"/>
+    <circle cx="8" cy="32" r="3"/>
+    <circle cx="20" cy="32" r="3"/>
+    <circle cx="32" cy="32" r="3"/>
+  </svg>
+
+  <!-- Bottom-left tiny petal -->
+  <svg class="absolute bottom-24 left-6 w-12 h-12 text-sakura-300 opacity-70" viewBox="0 0 48 48" fill="currentColor">
+    <path d="M24 6 C18 14, 18 22, 24 24 C30 22, 30 14, 24 6 Z M24 24 C16 20, 8 22, 6 28 C12 32, 20 30, 24 24 Z M24 24 C24 32, 28 40, 36 40 C38 32, 32 26, 24 24 Z"/>
+  </svg>
+
+  <!-- Bottom-right zigzag -->
+  <svg class="absolute bottom-12 right-3 w-16 h-6 text-matcha-500 opacity-70" viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12 L10 4 L18 20 L26 4 L34 20 L42 4 L50 20 L58 4 L62 12"/>
+  </svg>
+
+  <!-- Top mid small smile -->
+  <svg class="absolute top-44 right-1/3 w-8 h-8 text-sumi-900 opacity-30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="16" cy="16" r="13"/>
+    <circle cx="11" cy="13" r="1.5" fill="currentColor"/>
+    <circle cx="21" cy="13" r="1.5" fill="currentColor"/>
+    <path d="M10 19 Q16 24, 22 19"/>
+  </svg>
+</div>
+
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 24s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-spin-slow { animation: none; }
+  }
+</style>

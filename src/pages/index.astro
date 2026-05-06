@@ -1,12 +1,22 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import PlayCard from '@/components/PlayCard.astro'
+import StickerDecor from '@/components/StickerDecor.astro'
 import { getQuizzes, getMbtiTypes, getBlogPosts } from '@/lib/payload'
 
 const quizzes = await getQuizzes()
-const mbtiTypes = await getMbtiTypes()
-const recentBlog = (await getBlogPosts()).slice(0, 4)
+const recentBlog = (await getBlogPosts()).slice(0, 3)
 const featuredQuiz = quizzes.find((q) => q.slug === 'mbti') || quizzes[0]
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+
+// ─── Catalog: 5 viral spinoff quizzes (mock if not seeded yet) ───
+const catalog = [
+  { slug: 'mbti',         title: 'MBTI 16 บุคลิก',          subtitle: 'ฉบับสั้น 16 ข้อ — รู้ผลใน 4 นาที', emoji: '🌙', category: 'PERSONALITY',  bg: 'bg-butter-100', duration: '4 นาที', questions: 16, badge: 'ฮิตสุด', rotate: -1 },
+  { slug: 'cat-mbti',     title: 'คุณเป็นแมว MBTI สายไหน?', subtitle: 'แม่วเจ้าแผน หรือ แมวซีอีโอ?',         emoji: '🐈‍⬛', category: 'CAT × MBTI', bg: 'bg-coral-100',  duration: '3 นาที', questions: 12, badge: 'ใหม่!', rotate: 1 },
+  { slug: 'office-mbti',  title: 'MBTI ในออฟฟิศไทย',         subtitle: 'tag เพื่อนร่วมงาน แล้วเทียบกัน!',     emoji: '💼', category: 'OFFICE',     bg: 'bg-matcha-100', duration: '3 นาที', questions: 12, rotate: 0 },
+  { slug: 'kdrama-mbti',  title: 'MBTI × ซีรีส์เกาหลี',      subtitle: 'ถ้าคุณเป็นตัวละคร… จะเป็นใคร?',      emoji: '👑', category: 'K-DRAMA',    bg: 'bg-infj-50',    duration: '3 นาที', questions: 12, rotate: -1 },
+  { slug: 'love-language', title: 'Love Language 5 รัก',     subtitle: 'ส่งให้แฟนดู! รู้วิธีรักของกันและกัน', emoji: '💌', category: 'LOVE',       bg: 'bg-esfj-50',    duration: '4 นาที', questions: 15, rotate: 1 },
+] as const
 
 const schemas = [
   {
@@ -32,125 +42,149 @@ const schemas = [
     foundingDate: '2026',
     description: 'แบบทดสอบบุคลิกภาพภาษาไทย เนื้อหาสำหรับคนวัยทำงาน',
     knowsLanguage: ['th', 'en'],
-    sameAs: [],
   },
 ]
 ---
 
 <BaseLayout
-  title="quizdee — แบบทดสอบบุคลิกภาพ MBTI ฉบับคนไทยวัยทำงาน"
-  description="ทำแบบทดสอบ MBTI / Love Language / Personality ภาษาไทย เนื้อหาเข้าใจคนวัยทำงาน ฟรี ไม่ต้องสมัคร — ผลลัพธ์ละเอียด แชร์ได้ทันที"
+  title="quizdee — แบบทดสอบบุคลิกภาพ MBTI ฉบับคนไทย เล่นสนุก แชร์เพื่อน"
+  description="แบบทดสอบ MBTI ฉบับสั้นสนุก ภาษาไทย — แมว MBTI, ออฟฟิศไทย, ซีรีส์เกาหลี, Love Language. รู้ผลใน 4 นาที แชร์เพื่อนได้ทันที ฟรี ไม่ต้องสมัคร"
   schemas={schemas}
 >
-  <!-- ─── HERO ─────────────────────────────────────────────── -->
-  <section class="container-wide pt-10 pb-10 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20">
-    <div class="max-w-3xl">
-      <p class="eyebrow mb-5">EST. 2026 · BANGKOK · 季節</p>
-      <h1 class="font-display font-medium leading-[1.12] tracking-tight text-balance text-sumi-800" style="font-size: clamp(1.875rem, 5.2vw, 4rem);">
-        เข้าใจตัวเอง<br />
-        ผ่านแบบทดสอบที่
-        <em class="italic font-light text-sakura-700">เขียนด้วยใจ</em>
-      </h1>
-      <p class="mt-5 max-w-xl text-body text-sumi-700 text-pretty">
-        MBTI · Love Language · Personality — เขียนโดยคนเข้าใจคนไทยวัยทำงานจริงๆ ไม่ใช่แค่แปลจากต่างประเทศ
-      </p>
-      {featuredQuiz && (
-        <div class="mt-7 flex flex-wrap items-center gap-3 sm:gap-5">
-          <a href={`/quiz/${featuredQuiz.slug}/`} class="btn-primary">
-            เริ่มทำ {featuredQuiz.title}
-            <span aria-hidden="true">→</span>
-          </a>
-          <span class="text-small text-sumi-500">
-            {featuredQuiz.estimatedMinutes} นาที · {featuredQuiz.questions?.length || 60} คำถาม · ฟรี
+  <!-- ═══ HERO ═════════════════════════════════════════════════ -->
+  <section class="relative overflow-hidden bg-butter-50">
+    <StickerDecor />
+
+    <div class="container-wide relative z-10 pt-12 pb-14 sm:pt-16 sm:pb-20 md:pt-20 md:pb-28">
+      <div class="max-w-3xl">
+        <p class="inline-flex items-center gap-2 rounded-full bg-sumi-900 text-butter-300 px-3 py-1 font-mono text-caption uppercase tracking-widest mb-6">
+          <span class="inline-block w-2 h-2 rounded-full bg-coral-500 animate-pulse"></span>
+          EST. 2026 · BANGKOK · 季節
+        </p>
+
+        <h1 class="font-display font-medium leading-[1.05] tracking-tight text-balance text-sumi-900" style="font-size: clamp(2.25rem, 7vw, 4.5rem);">
+          เล่น quiz ที่
+          <span class="relative inline-block">
+            <span class="relative z-10">รู้จักคุณ</span>
+            <svg class="absolute -bottom-1 left-0 w-full h-3 text-coral-500" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M2 8 Q50 2, 100 6 T198 6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <br />
+          มากกว่า MBTI ทั่วไป <em class="italic font-light text-coral-700">ฉบับคนไทย</em>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-body text-sumi-700 text-pretty">
+          แมว MBTI, ออฟฟิศไทย, ซีรีส์เกาหลี — quiz สั้นๆ สนุกๆ <strong class="font-semibold text-sumi-900">แชร์ให้เพื่อนทำแล้วเทียบกัน</strong> ภาษาไทยจริง ไม่ใช่แปลจากต่างประเทศ
+        </p>
+
+        {featuredQuiz && (
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={`/quiz/${featuredQuiz.slug}/`}
+              class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-6 py-3.5 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-all min-h-[48px]"
+            >
+              <span>เริ่มเล่น</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <span class="font-mono text-small text-sumi-700">
+              4 นาที · 16 คำถาม · ฟรี
+            </span>
+          </div>
+        )}
+
+        <!-- Social proof bar -->
+        <div class="mt-10 flex flex-wrap items-center gap-4 text-small text-sumi-700">
+          <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full bg-coral-300 border-2 border-butter-50"></div>
+            <div class="w-8 h-8 rounded-full bg-matcha-300 border-2 border-butter-50"></div>
+            <div class="w-8 h-8 rounded-full bg-asagi-300 border-2 border-butter-50"></div>
+            <div class="w-8 h-8 rounded-full bg-ume-300 border-2 border-butter-50"></div>
+          </div>
+          <span class="text-sumi-700">
+            <strong class="font-semibold text-sumi-900">เริ่มต้นกับ 5 quizzes</strong> · ทำแล้วได้การ์ดสวยๆ ส่ง Story ได้เลย
           </span>
         </div>
-      )}
+      </div>
     </div>
   </section>
 
-  <!-- ─── CATEGORIES ───────────────────────────────────────── -->
-  <section class="container-wide py-6 sm:py-10" aria-labelledby="cats-heading">
-    <h2 id="cats-heading" class="sr-only">หมวดหมู่แบบทดสอบ</h2>
-    <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
-      {[
-        { href: '/mbti/',          label: 'MBTI',     sub: '16 บุคลิกภาพ',   bg: 'bg-analyst'  },
-        { href: '/category/love/', label: 'ความรัก',  sub: 'Love Language',  bg: 'bg-sakura-50' },
-        { href: '/category/career/', label: 'อาชีพ',  sub: 'งานที่ใช่',       bg: 'bg-sentinel' },
-        { href: '/fun/',           label: 'สนุกๆ',    sub: 'Quiz เบาๆ',       bg: 'bg-explorer' },
-      ].map((cat) => (
-        <a
-          href={cat.href}
-          class={`${cat.bg} card hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group`}
-        >
-          <p class="font-display text-h3 font-semibold text-sumi-900 group-hover:text-sakura-700 transition-colors">
-            {cat.label}
-          </p>
-          <p class="eyebrow mt-2">{cat.sub}</p>
-        </a>
+  <!-- ═══ QUIZ CATALOG (masonry) ═════════════════════════════ -->
+  <section class="container-wide py-12 sm:py-16" aria-labelledby="catalog-heading">
+    <div class="mb-8 flex items-end justify-between gap-4">
+      <div>
+        <p class="font-mono text-caption uppercase tracking-widest text-sumi-500 mb-2">
+          QUIZ CATALOG · 5 ชุด
+        </p>
+        <h2 id="catalog-heading" class="font-display text-h1 font-semibold text-sumi-900">
+          เลือก quiz ที่อยากเล่น
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {catalog.map((q) => (
+        <PlayCard
+          href={`/quiz/${q.slug}/`}
+          title={q.title}
+          subtitle={q.subtitle}
+          emoji={q.emoji}
+          category={q.category}
+          bg={q.bg}
+          duration={q.duration}
+          questions={q.questions}
+          badge={q.badge}
+          rotate={q.rotate}
+        />
       ))}
     </div>
   </section>
 
-  <!-- ─── FEATURED QUIZZES ─────────────────────────────────── -->
-  {quizzes.length > 0 && (
-    <section class="container-wide py-16 sm:py-20" aria-labelledby="featured-heading">
-      <div class="mb-8 flex items-end justify-between gap-4">
-        <h2 id="featured-heading" class="font-display font-semibold">แบบทดสอบยอดนิยม</h2>
-        <a href="/quiz/" class="text-small text-sumi-500 hover:text-sakura-700 transition-colors whitespace-nowrap">ดูทั้งหมด →</a>
-      </div>
-      <div class="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {quizzes.slice(0, 6).map((quiz) => (
-          <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-card hover:-translate-y-px transition-all duration-300 ease-soft group">
-            <p class="eyebrow mb-2">{quiz.category}</p>
-            <h3 class="font-display text-h3 font-semibold mb-2 group-hover:text-sakura-700 transition-colors">{quiz.title}</h3>
-            <p class="text-small text-sumi-700 line-clamp-2">{quiz.description}</p>
-            <p class="mt-4 text-caption text-sumi-500">
-              {quiz.estimatedMinutes} นาที · {quiz.questions?.length || 0} คำถาม
-            </p>
-          </a>
+  <!-- ═══ HOW IT WORKS ═══════════════════════════════════════ -->
+  <section class="bg-washi-100 py-12 sm:py-20">
+    <div class="container-wide">
+      <h2 class="font-display text-h1 font-semibold text-sumi-900 text-center mb-10">
+        เล่นง่ายๆ ใน 3 ขั้น
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {[
+          { num: '01', emoji: '🎯', title: 'เลือก quiz', desc: 'จาก 5 ชุด — แมว, ออฟฟิศ, ซีรีส์เกาหลี และอีก 2' },
+          { num: '02', emoji: '✨', title: 'ตอบ 12-16 ข้อ', desc: 'คำถามสั้นๆ สนุกๆ ใช้เวลา 3-4 นาที' },
+          { num: '03', emoji: '📤', title: 'ได้การ์ดสวย', desc: 'แชร์ Story / ส่งเพื่อนทำแล้วเทียบกัน' },
+        ].map((step) => (
+          <div class="bg-washi-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+            <p class="font-mono text-caption text-sumi-500 mb-3">{step.num}</p>
+            <div class="text-4xl mb-3">{step.emoji}</div>
+            <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-2">{step.title}</h3>
+            <p class="text-small text-sumi-700">{step.desc}</p>
+          </div>
         ))}
       </div>
-    </section>
-  )}
-
-  <!-- Empty state -->
-  {quizzes.length === 0 && (
-    <section class="container-wide py-16 sm:py-20">
-      <div class="card-flat text-center py-16 max-w-2xl mx-auto">
-        <p class="eyebrow mb-3">準備中 · COMING SOON</p>
-        <h2 class="text-h2 font-semibold mb-3">แบบทดสอบกำลังเตรียม</h2>
-        <p class="text-sumi-700 max-w-md mx-auto">
-          เรากำลังเขียนเนื้อหาคุณภาพ ติดตามได้เร็วๆ นี้
-        </p>
-      </div>
-    </section>
-  )}
-
-  <!-- ─── BLOG ─────────────────────────────────────────────── -->
-  {recentBlog.length > 0 && (
-    <section class="container-wide py-16 sm:py-20" aria-labelledby="blog-heading">
-      <div class="mb-8 flex items-end justify-between gap-4">
-        <h2 id="blog-heading" class="font-display font-semibold">อ่านเพิ่มเติม</h2>
-        <a href="/blog/" class="text-small text-sumi-500 hover:text-sakura-700 transition-colors whitespace-nowrap">บทความทั้งหมด →</a>
-      </div>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {recentBlog.map((post) => (
-          <a href={`/blog/${post.slug}/`} class="group">
-            <p class="eyebrow mb-2">{post.category}</p>
-            <h3 class="font-display text-h2 sm:text-h3 font-semibold mb-2 text-balance group-hover:text-sakura-700 transition-colors">
-              {post.title}
-            </h3>
-            <p class="text-small text-sumi-700 text-pretty">{post.metaDescription}</p>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
-
-  <!-- ─── BANNER SLOT (CLS=0 reserved) ─── -->
-  <section class="container-wide py-8 sm:py-12">
-    <div class="ph-img mx-auto" style="height: 250px; max-width: 728px;" aria-label="Advertisement placeholder">
-      banner-home-mid · 728×90 / 300×250
     </div>
   </section>
+
+  <!-- ═══ BLOG ════════════════════════════════════════════════ -->
+  {recentBlog.length > 0 && (
+    <section class="container-wide py-12 sm:py-20" aria-labelledby="blog-heading">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 id="blog-heading" class="font-display text-h1 font-semibold text-sumi-900">
+          อ่านเพิ่มเติม
+        </h2>
+        <a href="/blog/" class="font-mono text-small font-bold text-coral-700 hover:text-coral-500 underline underline-offset-4 decoration-2 whitespace-nowrap">
+          ทั้งหมด →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {recentBlog.map((post) => (
+          <a href={`/blog/${post.slug}/`} class="group block">
+            <p class="font-mono text-caption uppercase tracking-widest text-sumi-500 mb-2">{post.category}</p>
+            <h3 class="font-display text-h3 font-semibold mb-2 text-balance group-hover:text-coral-700 transition-colors">
+              {post.title}
+            </h3>
+            <p class="text-small text-sumi-700 text-pretty line-clamp-3">{post.metaDescription}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 </BaseLayout>

@@ -52,6 +52,41 @@ export default {
           500: '#B5904D',
           700: '#7E6128',
         },
+        // ─── Playful hybrid layer (Yellow primary + Coral secondary) ───
+        butter: {
+          // 🌼 butter yellow — primary playful CTA, ooopenlab-vibe
+          50:  '#FEF8E2',
+          100: '#FCEFC2',
+          300: '#F9DD83',
+          500: '#F4C95D',  // primary CTA on cards
+          600: '#E5B431',
+          700: '#B88B1F',
+        },
+        coral: {
+          // 🌸 soft coral — secondary accent, friendly highlight
+          50:  '#FFF1ED',
+          100: '#FFDFD3',
+          300: '#FFB59E',
+          500: '#FF8A6B',  // hot accent (.dot in logo, hover)
+          700: '#C45A3E',
+        },
+        // ─── 16 MBTI per-type pastel accents (one color per personality) ───
+        intj: { 50: '#EEF1F8', 500: '#5B6CA6' },  // deep blue
+        intp: { 50: '#F0F1F5', 500: '#7B7E96' },  // muted slate
+        entj: { 50: '#FCEEEA', 500: '#C95F47' },  // commander red
+        entp: { 50: '#FAF1DC', 500: '#C99A3D' },  // debater amber
+        infj: { 50: '#F2EEF8', 500: '#7E6BA8' },  // mystic purple
+        infp: { 50: '#FBEFF5', 500: '#C277A1' },  // dreamer rose
+        enfj: { 50: '#FCF1E9', 500: '#D08856' },  // warm coach
+        enfp: { 50: '#FFF6DC', 500: '#E4B637' },  // sunshine
+        istj: { 50: '#EEF2F0', 500: '#5E7A70' },  // forest
+        isfj: { 50: '#FBF1EE', 500: '#C28475' },  // soft brick
+        estj: { 50: '#F4ECE8', 500: '#9C6E5A' },  // earth
+        esfj: { 50: '#FFEEF1', 500: '#E37B92' },  // host pink
+        istp: { 50: '#EEF1F4', 500: '#6B7E92' },  // cool steel
+        isfp: { 50: '#F2F1EC', 500: '#998E70' },  // moss
+        estp: { 50: '#FFEFE6', 500: '#FF8A4B' },  // adrenaline
+        esfp: { 50: '#FFEDF6', 500: '#F072AC' },  // disco
         asagi: {
           // 浅葱 — soft blue-green (water)
           50:  '#EEF4F3',
