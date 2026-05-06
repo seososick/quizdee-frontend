@@ -10,7 +10,18 @@ import { CATALOG } from '@/lib/catalog'
 import fs from 'node:fs'
 import path from 'node:path'
 
-const contentDir = path.resolve(process.cwd(), '../content')
+function resolveContentDir(): string {
+  const candidates = [
+    path.resolve(process.cwd(), '../content'),
+    path.resolve(process.cwd(), './content'),
+    path.resolve(process.cwd(), './quiz-content'),
+  ]
+  for (const c of candidates) {
+    try { if (fs.existsSync(c) && fs.existsSync(path.join(c, 'mbti-16-meta.json'))) return c } catch {}
+  }
+  return candidates[0]
+}
+const contentDir = resolveContentDir()
 function safeLoad(file: string) {
   try { return JSON.parse(fs.readFileSync(path.join(contentDir, file), 'utf-8')) } catch { return null }
 }
