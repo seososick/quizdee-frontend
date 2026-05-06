@@ -43,19 +43,19 @@ const schemas = [
   schemas={schemas}
 >
   <!-- ─── HERO ─────────────────────────────────────────────── -->
-  <section class="container-wide pt-12 pb-16 sm:pt-20 sm:pb-24 md:pt-24 md:pb-28">
+  <section class="container-wide pt-10 pb-10 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20">
     <div class="max-w-3xl">
       <p class="eyebrow mb-5">EST. 2026 · BANGKOK · 季節</p>
-      <h1 class="font-display font-semibold leading-[1.05] tracking-tight text-balance" style="font-size: clamp(2rem, 6vw, 4.5rem);">
+      <h1 class="font-display font-medium leading-[1.12] tracking-tight text-balance text-sumi-800" style="font-size: clamp(1.875rem, 5.2vw, 4rem);">
         เข้าใจตัวเอง<br />
         ผ่านแบบทดสอบที่
         <em class="italic font-light text-sakura-700">เขียนด้วยใจ</em>
       </h1>
-      <p class="mt-6 max-w-xl text-body text-sumi-700 text-pretty">
+      <p class="mt-5 max-w-xl text-body text-sumi-700 text-pretty">
         MBTI · Love Language · Personality — เขียนโดยคนเข้าใจคนไทยวัยทำงานจริงๆ ไม่ใช่แค่แปลจากต่างประเทศ
       </p>
       {featuredQuiz && (
-        <div class="mt-9 flex flex-wrap items-center gap-3 sm:gap-5">
+        <div class="mt-7 flex flex-wrap items-center gap-3 sm:gap-5">
           <a href={`/quiz/${featuredQuiz.slug}/`} class="btn-primary">
             เริ่มทำ {featuredQuiz.title}
             <span aria-hidden="true">→</span>
@@ -69,7 +69,7 @@ const schemas = [
   </section>
 
   <!-- ─── CATEGORIES ───────────────────────────────────────── -->
-  <section class="container-wide py-8 sm:py-12" aria-labelledby="cats-heading">
+  <section class="container-wide py-6 sm:py-10" aria-labelledby="cats-heading">
     <h2 id="cats-heading" class="sr-only">หมวดหมู่แบบทดสอบ</h2>
     <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
       {[

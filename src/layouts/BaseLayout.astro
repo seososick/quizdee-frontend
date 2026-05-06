@@ -152,7 +152,7 @@ const baseSchemas = schemas.length === 0
     <slot name="header">
       <header class="sticky top-0 z-40 border-b border-washi-300 bg-washi-50/85 backdrop-blur-md">
         <div class="container-wide flex items-center justify-between gap-4 py-3 sm:py-4">
-          <a href="/" class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-sumi-900">
+          <a href="/" class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-sumi-900 inline-flex items-center min-h-[44px] -my-2 px-1">
             quizdee<span class="text-sakura-500">.</span>
           </a>
           <nav class="flex items-center gap-4 sm:gap-7" aria-label="Main">
@@ -181,20 +181,20 @@ const baseSchemas = schemas.length === 0
         </div>
         <div>
           <p class="eyebrow mb-3">แบบทดสอบ</p>
-          <ul class="space-y-2 text-sumi-700">
-            <li><a href="/mbti/" class="hover:text-sakura-700 transition-colors">MBTI 16 แบบ</a></li>
-            <li><a href="/category/love/" class="hover:text-sakura-700 transition-colors">ความรัก</a></li>
-            <li><a href="/category/career/" class="hover:text-sakura-700 transition-colors">อาชีพ</a></li>
-            <li><a href="/fun/" class="hover:text-sakura-700 transition-colors">สนุกๆ</a></li>
+          <ul class="text-sumi-700">
+            <li><a href="/mbti/" class="footer-link">MBTI 16 แบบ</a></li>
+            <li><a href="/category/love/" class="footer-link">ความรัก</a></li>
+            <li><a href="/category/career/" class="footer-link">อาชีพ</a></li>
+            <li><a href="/fun/" class="footer-link">สนุกๆ</a></li>
           </ul>
         </div>
         <div>
           <p class="eyebrow mb-3">เกี่ยวกับ</p>
-          <ul class="space-y-2 text-sumi-700">
-            <li><a href="/about/" class="hover:text-sakura-700 transition-colors">เรื่องของเรา</a></li>
-            <li><a href="/contact/" class="hover:text-sakura-700 transition-colors">ติดต่อ</a></li>
-            <li><a href="/privacy/" class="hover:text-sakura-700 transition-colors">ความเป็นส่วนตัว</a></li>
-            <li><a href="/terms/" class="hover:text-sakura-700 transition-colors">เงื่อนไข</a></li>
+          <ul class="text-sumi-700">
+            <li><a href="/about/" class="footer-link">เรื่องของเรา</a></li>
+            <li><a href="/contact/" class="footer-link">ติดต่อ</a></li>
+            <li><a href="/privacy/" class="footer-link">ความเป็นส่วนตัว</a></li>
+            <li><a href="/terms/" class="footer-link">เงื่อนไข</a></li>
           </ul>
         </div>
         <div class="col-span-2 md:col-span-1">
