@@ -75,8 +75,16 @@ CATALOG.forEach((q) => {
     </p>
   </section>
 
-  <!-- Single filtered grid -->
-  <section class="container-wide pb-16">
+  <!-- View mode toggle -->
+  <div class="container-wide pb-3">
+    <div class="inline-flex items-center gap-1 p-1 bg-washi-100 border-2 border-sumi-900 rounded-full">
+      <button data-view="grid" class="view-toggle view-toggle-active px-4 py-1.5 rounded-full text-small font-mono font-semibold uppercase tracking-wider min-h-[36px]" aria-label="Grid view">⊞ การ์ด</button>
+      <button data-view="list" class="view-toggle px-4 py-1.5 rounded-full text-small font-mono font-semibold uppercase tracking-wider min-h-[36px]" aria-label="Editorial list view">≡ สารบัญ</button>
+    </div>
+  </div>
+
+  <!-- Single filtered grid (card view) -->
+  <section id="quiz-grid-section" class="container-wide pb-16">
     <div id="quiz-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
       {CATALOG.map((q) => (
         <div class="quiz-item" data-cat={q.category}>
@@ -96,6 +104,23 @@ CATALOG.forEach((q) => {
       ))}
     </div>
 
+    <!-- Editorial list view (hidden by default) -->
+    <div id="quiz-list" class="hidden max-w-3xl mx-auto bg-washi-50 border-2 border-sumi-900 rounded-2xl p-6 sm:p-8 shadow-[6px_6px_0_0_rgba(31,26,20,0.95)]">
+      <p class="font-mono text-caption uppercase tracking-[0.2em] text-coral-700 mb-4 pb-3 border-b-4 border-sumi-900">— ในฉบับนี้ · TABLE OF CONTENTS —</p>
+      <ol class="space-y-0">
+        {CATALOG.map((q, i) => (
+          <li class="quiz-list-item editorial-toc-item" data-cat={q.category}>
+            <a href={`/quiz/${q.slug}/`} class="flex-1 group">
+              <span class="editorial-toc-num">{String(i + 1).padStart(2, '0')}.</span>
+              <span class="text-h3 font-display font-medium text-sumi-900 group-hover:text-coral-700 transition-colors">{q.emoji} {q.title_th}</span>
+              <span class="block ml-9 text-small text-sumi-500 mt-0.5">{q.subtitle_th}</span>
+            </a>
+            <span class="font-mono text-caption text-sumi-500 whitespace-nowrap">{q.duration_min} นาที</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+
     <!-- Empty state -->
     <div id="empty-state" class="hidden text-center py-16">
       <div class="text-5xl mb-3">🤷</div>
@@ -112,6 +137,12 @@ CATALOG.forEach((q) => {
   .cat-pill-active {
     @apply bg-sumi-900 text-butter-300 hover:bg-sumi-700;
   }
+  .view-toggle {
+    @apply text-sumi-700 hover:text-sumi-900 cursor-pointer transition-colors;
+  }
+  .view-toggle-active {
+    @apply bg-sumi-900 text-butter-300;
+  }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
@@ -119,10 +150,13 @@ CATALOG.forEach((q) => {
 <script>
   const pills = document.querySelectorAll<HTMLButtonElement>('[data-cat]')
   const items = document.querySelectorAll<HTMLElement>('.quiz-item')
+  const listItems = document.querySelectorAll<HTMLElement>('.quiz-list-item')
   const labelEl = document.querySelector('[data-active-label]')
   const countEl = document.querySelector('[data-active-count]')
   const emptyEl = document.getElementById('empty-state')
   const gridEl = document.getElementById('quiz-grid')
+  const listEl = document.getElementById('quiz-list')
+  const viewToggles = document.querySelectorAll<HTMLButtonElement>('[data-view]')
 
   const categoryLabels: Record<string, string> = {
     ALL: 'แสดงทั้งหมด',
@@ -145,6 +179,10 @@ CATALOG.forEach((q) => {
       item.classList.toggle('hidden', !show)
       if (show) visibleCount++
     })
+    listItems.forEach((item) => {
+      const show = cat === 'ALL' || item.dataset.cat === cat
+      item.classList.toggle('hidden', !show)
+    })
 
     pills.forEach((p) => {
       p.classList.toggle('cat-pill-active', p.dataset.cat === cat)
@@ -153,14 +191,34 @@ CATALOG.forEach((q) => {
     if (labelEl) labelEl.textContent = cat === 'ALL' ? 'แสดงทั้งหมด' : `หมวด: ${categoryLabels[cat] || cat}`
     if (countEl) countEl.textContent = String(visibleCount)
     if (emptyEl) emptyEl.classList.toggle('hidden', visibleCount > 0)
-    if (gridEl) gridEl.classList.toggle('hidden', visibleCount === 0)
+    // Hide whichever view is active when empty
+    const isList = listEl && !listEl.classList.contains('hidden')
+    if (gridEl && !isList) gridEl.classList.toggle('hidden', visibleCount === 0)
 
-    // Update URL hash without scroll
     const url = new URL(window.location.href)
     if (cat === 'ALL') url.searchParams.delete('cat')
     else url.searchParams.set('cat', cat.toLowerCase())
     history.replaceState(null, '', url.toString())
   }
+
+  function applyView(view: string) {
+    if (!gridEl || !listEl) return
+    if (view === 'list') {
+      gridEl.classList.add('hidden')
+      listEl.classList.remove('hidden')
+    } else {
+      gridEl.classList.remove('hidden')
+      listEl.classList.add('hidden')
+    }
+    viewToggles.forEach((b) => b.classList.toggle('view-toggle-active', b.dataset.view === view))
+    try { localStorage.setItem('quizdee:view', view) } catch {}
+  }
+
+  viewToggles.forEach((b) => b.addEventListener('click', () => applyView(b.dataset.view || 'grid')))
+  try {
+    const saved = localStorage.getItem('quizdee:view')
+    if (saved === 'list') applyView('list')
+  } catch {}
 
   pills.forEach((p) => {
     p.addEventListener('click', (e) => {

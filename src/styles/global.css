@@ -136,6 +136,41 @@
   .prose-content {
     @apply text-sumi-700 text-body;
   }
+
+  /* ─── A.5 Editorial: Drop cap (first letter big) ─── */
+  .drop-cap > p:first-of-type::first-letter,
+  .has-dropcap::first-letter {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 0.85;
+    float: left;
+    padding: 0.35rem 0.7rem 0 0;
+    color: rgb(196 90 62); /* coral-700 */
+  }
+
+  /* ─── A.5 Editorial: numbered TOC list ─── */
+  .editorial-toc-item {
+    @apply flex items-baseline justify-between gap-3 border-b border-dotted border-sumi-300 pb-2 mb-2;
+  }
+  .editorial-toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-caption text-coral-700 font-bold tracking-wider mr-2;
+  }
+
+  /* ─── A.5 Subtle CTA pulse (gentle, no neon) ─── */
+  @keyframes subtle-pulse {
+    0%, 100% { box-shadow: 4px 4px 0 0 rgb(255 138 107); }
+    50% { box-shadow: 6px 6px 0 0 rgb(255 138 107); }
+  }
+  .cta-pulse {
+    animation: subtle-pulse 2.4s ease-in-out infinite;
+  }
+  .cta-pulse:hover { animation: none; }
+
+  /* ─── A.5 Sticker fade in quiz active mode ─── */
+  .quiz-active .sticker-decor { opacity: 0.45; }
+
   .prose-content h2 {
     @apply mt-12 mb-4;
   }

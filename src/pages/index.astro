@@ -132,26 +132,50 @@ const schemas = [
     </div>
   </section>
 
-  <!-- ═══ CATEGORIES OVERVIEW ═══ -->
-  <section class="bg-washi-100 py-12 sm:py-16">
+  <!-- ═══ "ในฉบับนี้" Editorial Sidebar (A.5 — borrowed from B) ═══ -->
+  <section class="bg-washi-50 border-y-4 border-sumi-900 py-12 sm:py-16">
     <div class="container-wide">
-      <h2 class="font-display text-h1 font-semibold text-sumi-900 mb-8">หมวดหมู่</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {CATEGORIES.map((c) => {
-          const count = CATALOG.filter((q) => q.category === c.code).length
-          return (
-            <a href={`/quiz/#cat-${c.code.toLowerCase()}`} class="bg-washi-50 border-2 border-sumi-900 rounded-2xl p-5 shadow-[3px_3px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[5px_5px_0_0_rgba(31,26,20,0.95)] transition-all">
-              <div class="text-3xl mb-2">{c.emoji}</div>
-              <p class="font-display text-h3 font-semibold text-sumi-900">{c.label_th}</p>
-              <p class="text-small text-sumi-700 mt-1">{count} quiz</p>
-            </a>
-          )
-        })}
-      </div>
-      <div class="mt-8 text-center">
-        <a href="/quiz/" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-body border-2 border-sumi-900 bg-washi-50 hover:bg-butter-100 transition-all min-h-[44px]">
-          ดูทั้งหมด {allCount} quiz →
-        </a>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Lede col -->
+        <div class="lg:col-span-2 lg:pr-8 lg:border-r-2 lg:border-sumi-900">
+          <p class="font-mono text-caption uppercase tracking-[0.25em] text-coral-700 mb-3">— ทำไมถึงทำเว็บนี้ —</p>
+          <h2 class="font-display font-medium leading-[1.1] tracking-tight text-balance text-sumi-900 mb-5" style="font-size: clamp(1.875rem, 4.5vw, 3rem);">
+            เลิกถามว่า <em class="italic font-light text-coral-700">"คุณเป็น MBTI อะไร"</em><br>
+            แล้วลองรู้จักตัวเองให้ลึกกว่านั้น
+          </h2>
+          <div class="prose-content drop-cap max-w-2xl">
+            <p>เราไม่ได้ทำเว็บแบบทดสอบเพราะอยากให้คุณรู้ว่าเป็น INFJ. เราทำเพราะเชื่อว่าคนเรามีหลายมิติ — ที่บ้าน, ที่ทำงาน, ตอนเครียด, ตอนรัก — มันต่างกันคนละเรื่องเลย.</p>
+            <p class="mt-4">17 แบบทดสอบของเราอ้างอิงจิตวิทยาจริง (Big Five OCEAN, Enneagram, Attachment Style) ผสมเทรนด์ปัจจุบัน (Doom Scroll, AI Friend, K-pop bias) — สั้น 3-4 นาที, ฟรี, ไม่ต้องล็อกอิน, แชร์แล้วทำกับเพื่อนได้.</p>
+          </div>
+        </div>
+
+        <!-- TOC sidebar -->
+        <aside>
+          <p class="font-mono text-caption uppercase tracking-[0.2em] text-coral-700 mb-3 pb-2 border-b-4 border-sumi-900">— ในฉบับนี้ · IN THIS ISSUE —</p>
+          <ol class="space-y-0">
+            {CATALOG.slice(0, 8).map((q, i) => (
+              <li class="editorial-toc-item">
+                <a href={`/quiz/${q.slug}/`} class="flex-1 group">
+                  <span class="editorial-toc-num">{String(i + 1).padStart(2, '0')}.</span>
+                  <span class="font-display text-body font-medium text-sumi-900 group-hover:text-coral-700 transition-colors">{q.title_th}</span>
+                </a>
+                <span class="font-mono text-caption text-sumi-500 whitespace-nowrap">{q.duration_min} นาที</span>
+              </li>
+            ))}
+            <li class="pt-2">
+              <a href="/quiz/" class="font-mono text-caption uppercase tracking-wider text-coral-700 hover:underline">+ อีก {allCount - 8} ฉบับ →</a>
+            </li>
+          </ol>
+
+          <!-- Badge collection (A.5 — borrowed from C) -->
+          <div class="mt-8 pt-6 border-t-2 border-sumi-300">
+            <p class="font-mono text-caption uppercase tracking-[0.2em] text-coral-700 mb-3">— เหรียญสะสม · YOUR BADGES —</p>
+            <div id="badge-collection" class="flex flex-wrap gap-1.5">
+              <p data-empty class="text-small text-sumi-500 italic">ยังไม่มี ลองทำ quiz ก่อน 🌱</p>
+            </div>
+            <p class="mt-3 text-caption font-mono text-sumi-500"><span data-badge-count>0</span>/{allCount} เหรียญ</p>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -194,3 +218,50 @@ const schemas = [
     </section>
   )}
 </BaseLayout>
+
+<script>
+  // ─── Badge collection: render unlocked badges from localStorage
+  // Format: localStorage 'quizdee:badges' = '{"big-five":"creative-sage","mbti":"intj",...}'
+  const STORAGE = 'quizdee:badges'
+  const slugMap: Record<string, { emoji: string; title: string }> = {
+    'mbti': { emoji: '🌙', title: 'MBTI 16' },
+    'big-five': { emoji: '🧠', title: 'Big Five' },
+    'enneagram': { emoji: '🔮', title: 'Enneagram' },
+    'cat-mbti': { emoji: '🐈‍⬛', title: 'Cat MBTI' },
+    'love-language': { emoji: '💌', title: 'Love Lang' },
+    'attachment-style': { emoji: '💙', title: 'Attachment' },
+    'office-mbti': { emoji: '💼', title: 'Office' },
+    'burnout-risk': { emoji: '🔥', title: 'Burnout' },
+    'career-identity': { emoji: '🚀', title: 'Career' },
+    'coping-style': { emoji: '🌧️', title: 'Coping' },
+    'kdrama-mbti': { emoji: '🎬', title: 'K-drama' },
+    'kpop-bias-role': { emoji: '🎤', title: 'K-pop' },
+    'ai-friend': { emoji: '🤖', title: 'AI Friend' },
+    'doomscroll-persona': { emoji: '📱', title: 'Doom Scroll' },
+    'spending-style': { emoji: '💸', title: 'Spending' },
+    'aesthetic-style': { emoji: '🌸', title: 'Aesthetic' },
+    'mootelu-style': { emoji: '✨', title: 'Mootelu' },
+  }
+
+  try {
+    const raw = localStorage.getItem(STORAGE)
+    const badges: Record<string, string> = raw ? JSON.parse(raw) : {}
+    const keys = Object.keys(badges)
+    const container = document.getElementById('badge-collection')
+    const countEl = document.querySelector('[data-badge-count]')
+    if (countEl) countEl.textContent = String(keys.length)
+    if (container && keys.length > 0) {
+      container.innerHTML = ''
+      keys.forEach((slug) => {
+        const meta = slugMap[slug] || { emoji: '✨', title: slug }
+        const badge = badges[slug]
+        const a = document.createElement('a')
+        a.href = `/quiz/${slug}/result/${badge.toLowerCase().replace(/_/g, '-')}/`
+        a.className = 'inline-flex items-center gap-1 bg-butter-100 border-2 border-sumi-900 rounded-full px-2.5 py-1 text-small font-semibold text-sumi-900 hover:bg-butter-300 transition-all'
+        a.title = `${meta.title}: ${badge}`
+        a.innerHTML = `<span>${meta.emoji}</span><span class="font-mono text-caption">${badge}</span>`
+        container.appendChild(a)
+      })
+    }
+  } catch {}
+</script>

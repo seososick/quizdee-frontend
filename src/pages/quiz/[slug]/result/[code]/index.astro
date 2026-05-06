@@ -219,7 +219,16 @@ const otherArchetypes = allArchetypes.filter((a: any) => archetypeCode(a) !== co
   </section>
 </BaseLayout>
 
-<script define:vars={{ shareText, pageUrl, archName }}>
+<script define:vars={{ shareText, pageUrl, archName, slug: entry.slug, code }}>
+  // ─── A.5 Badge unlock: persist {slug: code} to localStorage so homepage badge collection updates
+  try {
+    const STORAGE = 'quizdee:badges'
+    const raw = localStorage.getItem(STORAGE)
+    const badges = raw ? JSON.parse(raw) : {}
+    badges[slug] = code
+    localStorage.setItem(STORAGE, JSON.stringify(badges))
+  } catch {}
+
   const btn = document.getElementById('share-btn')
   if (btn) {
     btn.addEventListener('click', async () => {

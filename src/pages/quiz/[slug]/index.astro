@@ -142,7 +142,7 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
 
       <!-- PRIMARY CTA — direct to quiz, no ready-check gate -->
       <div class="mt-6 flex flex-wrap items-center gap-3">
-        <button id="primary-start" class="inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-7 py-4 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 active:scale-[0.98] transition-all min-h-[52px]">
+        <button id="primary-start" class="cta-pulse inline-flex items-center gap-2 bg-sumi-900 text-butter-300 px-7 py-4 rounded-full font-semibold text-body border-2 border-sumi-900 shadow-[4px_4px_0_0_rgb(255,138,107)] hover:shadow-[6px_6px_0_0_rgb(255,138,107)] hover:-translate-y-0.5 hover:-translate-x-0.5 active:scale-[0.98] transition-all min-h-[52px]">
           <span>{ctaText}</span>
           <span aria-hidden="true">→</span>
         </button>
@@ -267,7 +267,11 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
         }
       }
 
-      startBtn.addEventListener('click', () => start(false))
+      startBtn.addEventListener('click', () => {
+        document.body.classList.add('quiz-active')
+        startBtn.classList.remove('cta-pulse')
+        start(false)
+      })
 
       const resumeBtn = resumeBanner?.querySelector('[data-action="resume"]') as HTMLButtonElement | null
       const restartBtn = resumeBanner?.querySelector('[data-action="restart"]') as HTMLButtonElement | null
