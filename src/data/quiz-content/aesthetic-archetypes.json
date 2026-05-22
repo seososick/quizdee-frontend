@@ -7,9 +7,31 @@
     "vibe_th": "ตื่น 6 โมง dry brush + gua sha + matcha ก่อนเปิด IG",
     "icons_th": ["Hailey Bieber", "Sofia Richie", "Matilda Djerf"],
     "tagline_th": "สะอาด ไม่ล้น ไม่พยายาม (แต่จริง ๆ พยายามมาก)",
-    "description_th": "คุณคือสายมินิมอลที่เชื่อในพลังของผิวฉ่ำ ๆ ผมเรียบกริบ และเครื่องประดับทองชิ้นเดียวจบ ตู้เสื้อผ้าเป็น capsule wardrobe สีเอิร์ธโทน เน้น quality over quantity ชอบคาเฟ่ที่มี matcha ดี ๆ และคลาส Pilates ตอนเช้า ความสวยของคุณคือความ effortless ที่ผ่านการคิดมาอย่างดี",
+    "description_th": "คุณคือสายมินิมอลที่เชื่อในพลังของผิวฉ่ำ ๆ ผมเรียบกริบ และเครื่องประดับทองชิ้นเดียวจบ Pinterest board คุณชื่อ 'effortless morning' มี 200 รูปของ Hailey Bieber เดิน LA และ @sofiarichie งานแต่ง ตู้เสื้อผ้าเป็น capsule wardrobe สีเอิร์ธโทน — Uniqlo linen, Muji T-shirt, COS กางเกงทรงสวย เน้น quality over quantity ตื่น 6 โมงทุกเช้า dry brush + gua sha + matcha latte ที่บ้าน ก่อนไป Pilates Absolute You ตอน 7 โมง เลิกงานเดิน EmQuartier นั่ง %Arabica จิบ matcha ขนมสดราคาแก้วละ 180 บาท ความสวยของคุณคือความ effortless ที่ผ่านการคิดมาอย่างดี — ทุกขั้นตอน skincare 9 อย่าง ทุกการออกกำลังกาย 5 ครั้ง/อาทิตย์ ทุกการเลือกเสื้อต้องดูรับกับสร้อยทอง 18k ที่ใส่มา 5 ปี คุณรู้สึกแย่ถ้าวันไหนตื่นสายแล้วไม่มี smoothie",
     "watchout_th": "ระวังจะกลายเป็น clone กันทั้งฟีด — เพิ่ม personality ลงไปนิดนึงก่อนหายไปกับ algorithm",
-    "compatible_with": ["OLD_MONEY"]
+    "compatible_with": ["OLD_MONEY", "DARK_ACADEMIA"],
+    "strengths_th": [
+      "วินัยสุขภาพและ skincare ระดับ pro — Pilates 5 ครั้ง/อาทิตย์ไม่ขาด",
+      "มี taste filter ที่ละเอียด เลือกของได้ตรงเป๊ะ",
+      "ทำให้ทุกอย่างดู effortless ทั้งที่ทำเยอะมาก",
+      "เป็น go-to friend เรื่อง skincare/wellness recommendation"
+    ],
+    "weaknesses_th": [
+      "Pinterest pressure — กลัวออกจากบ้านถ้าผิวไม่ฉ่ำ ผมไม่เรียบ",
+      "ใช้เงินกับ skincare/wellness เกินงบทุกเดือน La Mer + Pilates package",
+      "ดูเหมือน clone Sofia Richie คนที่ 8,000,000 ใน IG",
+      "อยู่กับ inner critic ตลอด — รู้สึกดีต่อตัวเองได้แค่ตอนผิวสวย"
+    ],
+    "famous_examples_th": ["Hailey Bieber", "Sofia Richie", "Matilda Djerf", "ใหม่ ดาวิกา (off-duty)", "ลิซ่า BLACKPINK สาย workout"],
+    "growth_tips_th": [
+      "ลองออกจากบ้านโดยไม่แต่งหน้า + ผมยุ่งสักครั้งต่อสัปดาห์",
+      "เพิ่มสีจัด/ลายกราฟิก 1 ชิ้นในตู้เสื้อผ้า — break the algorithm",
+      "ลด skincare ให้เหลือ 5 step ดูว่าผิวดีขึ้นจริงไหม (มักจะดีขึ้น)",
+      "หา hobby ที่ไม่ post ลง IG เช่น เรียนภาษา/วาดรูป",
+      "ฝึก self-worth ที่ไม่ผูกกับ 'ผิวฉ่ำวันนี้ไหม'"
+    ],
+    "shareable_quote_th": "Effortless ที่คุณเห็น = 6 โมงเช้า + Pilates 5 วัน + matcha 180 บาท — มันคืองานเต็มเวลา",
+    "color_accent": "#E8DCC4"
   },
   {
     "code": "COQUETTE",
@@ -19,9 +41,31 @@
     "vibe_th": "ฟัง Lana del Rey กินสตรอว์เบอร์รี เขียนไดอารี่ในคาเฟ่สีชมพู",
     "icons_th": ["Lana del Rey", "Sofia Coppola", "Sabrina Carpenter"],
     "tagline_th": "หวาน เปราะบาง แต่รู้ตัวว่ากำลังทำอะไรอยู่",
-    "description_th": "คุณคือสาวที่เกิดมาในชุดผ้าลูกไม้และโบวซาติน หลงใหลในความโรแมนติกแบบ girlhood ดูหนัง Marie Antoinette ซ้ำ ๆ และคิดว่าทุกอย่างควรมีโบวติดได้ ห้องนอนเต็มไปด้วยตุ๊กตาหมี เทียนหอม และดอกไม้แห้ง คุณเชื่อในพลังของ feminine energy และไม่อายที่จะ embrace ความหวาน",
+    "description_th": "คุณคือสาวที่เกิดมาในชุดผ้าลูกไม้และโบวซาติน หลงใหลในความโรแมนติกแบบ girlhood ดูหนัง Marie Antoinette ของ Sofia Coppola ซ้ำ ๆ ทุก 3 เดือน และคิดว่าทุกอย่างควรมีโบวติดได้ — กระเป๋า เสื้อ แก้วน้ำ Stanley ห้องนอนเต็มไปด้วยตุ๊กตาหมี เทียนหอมกลิ่นวานิลลา ดอกพีโอนีในแจกัน Diptyque และหนังสือ Lana del Rey เปิดอยู่ที่หน้า Norman Fucking Rockwell คุณนัดเพื่อนที่ Cafe Lalisa สีชมพูล้วนใน Thonglor สั่ง strawberry latte แล้วถ่ายรูปลง IG Story พร้อม song 'Brooklyn Baby' ใช้เวลาเลือก lipgloss สีชมพูใสนานกว่าเลือกที่จะเรียนต่อ ป.โท คุณเชื่อในพลังของ feminine energy และไม่อายที่จะ embrace ความหวาน คน gen ก่อนเรียกคุณว่า 'ดูเป็นเด็ก' แต่คุณรู้ว่ามันคือ rebellion อย่างหนึ่ง — ในโลกที่บอกผู้หญิงต้อง strong คุณเลือกที่จะ soft",
     "watchout_th": "ความ hyper-feminine ไม่ใช่ความอ่อนแอ — อย่าให้ใครเอาไปใช้ลด value ของคุณ",
-    "compatible_with": ["DARK_ACADEMIA", "Y2K_REVIVAL"]
+    "compatible_with": ["DARK_ACADEMIA", "Y2K_REVIVAL"],
+    "strengths_th": [
+      "embrace ความ feminine โดยไม่อายในโลกที่บูชา 'girl boss'",
+      "มี aesthetic ที่ชัดเจน ไม่ตามเทรนด์ใคร",
+      "อ่อนโยนกับคนรอบข้าง ทำให้คนรู้สึกปลอดภัย",
+      "creative สูง — เขียน journal, จัด Pinterest, ทำ playlist เก่ง"
+    ],
+    "weaknesses_th": [
+      "romanticize ทุกอย่างจนหลุดจาก reality เช่นความสัมพันธ์ toxic",
+      "ใช้ 'soft girl era' เป็นข้ออ้างไม่จัดการเรื่องการเงิน/อาชีพ",
+      "rely on เพื่อนชาย/แฟนเรื่องตัดสินใจสำคัญ",
+      "ถูก men ที่ผิดประเภทมองว่า 'easy to manipulate'"
+    ],
+    "famous_examples_th": ["Lana del Rey", "Sofia Coppola", "Sabrina Carpenter", "ใบเฟิร์น พิมพ์ชนก", "มิ้น ชาลิดา"],
+    "growth_tips_th": [
+      "soft + smart ไม่ขัดกัน — เปิดบัญชีลงทุน DCA ในชุดลูกไม้ก็ได้",
+      "set boundary กับคนที่ใช้ความหวานของคุณเป็นเครื่องมือ",
+      "ลอง embrace 'rage era' บ้าง — Lana ก็มีเพลงโกรธนะ",
+      "เรียน skill 1 อย่างที่ไม่เกี่ยว aesthetic เลย เช่น Excel/SQL",
+      "หา therapist ดีๆ ถ้ารู้สึก romanticize sadness เกินไป"
+    ],
+    "shareable_quote_th": "หวานไม่ใช่อ่อนแอ — ฉันเลือกที่จะ soft ในโลกที่บอกให้ผู้หญิง strong ตลอดเวลา",
+    "color_accent": "#F5C6D6"
   },
   {
     "code": "DARK_ACADEMIA",
@@ -31,9 +75,31 @@
     "vibe_th": "นั่งห้องสมุดเก่า อ่าน The Secret History จิบกาแฟดำ ฟัง Chopin",
     "icons_th": ["Timothée Chalamet", "ตัวละครจาก Dead Poets Society", "Donna Tartt"],
     "tagline_th": "ความรู้คือ aesthetic, ความ brooding คือ personality",
-    "description_th": "คุณคือคนที่หลงใหลในวรรณกรรมคลาสสิก ปรัชญา และฤดูใบไม้ร่วงที่ไม่มีจริงในไทย ตู้เสื้อผ้าเต็มไปด้วยโทนน้ำตาล เขียวเข้ม และเบอร์กันดี ชอบคาเฟ่เก่า ๆ ที่มีหนังสือเยอะ ๆ และเทียนสีเหลืองนวล คุณ romanticize การเรียนรู้ และมองว่าการคิดลึกคือ luxury",
+    "description_th": "คุณคือคนที่หลงใหลในวรรณกรรมคลาสสิก ปรัชญา และฤดูใบไม้ร่วงที่ไม่มีจริงในไทย (อากาศ 35 องศาแต่ใจอยู่ Oxford) ตู้เสื้อผ้าเต็มไปด้วยโทนน้ำตาล เขียวเข้ม เบอร์กันดี และ tweed blazer 3 ตัวที่ใส่ออกบ้านได้แค่ตอนเย็น Pinterest board คุณชื่อ 'autumn in New England' แม้คุณจะอยู่ลาดพร้าว ชอบคาเฟ่เก่า ๆ ที่มีหนังสือเยอะ ๆ — Open House CentralWorld, Bookmoby, ร้านหนังสือเก่าจุฬา นั่งจิบ Americano ดำสนิท อ่าน The Secret History ของ Donna Tartt รอบที่ 4 ฟัง Nocturnes ของ Chopin ทาง Spotify Stories คุณคืออารมณ์ละครเวที — 'midterm หนัก, autumn rain, espresso double shot' ทั้งที่จริงคือ deadline ลูกค้าตี 2 คุณ romanticize การเรียนรู้ และมองว่าการคิดลึกคือ luxury ที่สังคม TikTok ไม่เข้าใจ คุณเซ็งเวลาคนถามว่า 'อ่านหนังสือพวกนี้แล้วได้อะไร' — คำตอบคือ ทุกอย่าง",
     "watchout_th": "อย่าหมกมุ่นกับ aesthetic จนลืมไปว่าชีวิตจริงต้องมีแสงแดดด้วย",
-    "compatible_with": ["COQUETTE", "OLD_MONEY"]
+    "compatible_with": ["COQUETTE", "OLD_MONEY"],
+    "strengths_th": [
+      "อ่านหนังสือจริง ไม่ใช่แค่ใส่ tweed ถ่ายรูป",
+      "คิดลึก analytical สูง เก่งงาน strategy/research",
+      "วัฒนธรรมและความรู้แน่น คุยได้หลายเรื่อง",
+      "มี aesthetic ที่ aging well — ไม่ตกเทรนด์เร็ว"
+    ],
+    "weaknesses_th": [
+      "romanticize ความเศร้า/ปัญหาสุขภาพจิตจนไม่ไป therapist",
+      "ดูถูก pop culture / TikTok ในใจ — เป็น snob ทางความรู้",
+      "perfectionist เลย ship งานไม่ได้ — แก้ paragraph เดิม 5 รอบ",
+      "ใส่ tweed ในไทย 35 องศา เพราะ aesthetic > comfort"
+    ],
+    "famous_examples_th": ["Timothée Chalamet", "Donna Tartt", "ตัวละคร Dead Poets Society", "ก้อง สหรัถ (สาย book)", "Saoirse Ronan"],
+    "growth_tips_th": [
+      "ออกไปเจอแสงแดดจริงๆ อย่างน้อย 30 นาที/วัน vitamin D ต่ำเลี้ยง depression",
+      "ลอง pop culture บ้าง — ดู TikTok 1 ชั่วโมง/อาทิตย์ ไม่ตาย",
+      "ship งานที่ 80% ไม่ต้อง 100% — perfectionism คือ procrastination",
+      "ปรึกษาผู้เชี่ยวชาญถ้ารู้สึก romanticize sadness บ่อย",
+      "ลองใส่สีอื่นนอกจาก burgundy/brown สักครั้ง โลกไม่แตก"
+    ],
+    "shareable_quote_th": "ฉันใส่ tweed ในกรุงเทพ 35 องศา เพราะ aesthetic ไม่เคยขึ้นกับสภาพอากาศ",
+    "color_accent": "#6B4423"
   },
   {
     "code": "Y2K_REVIVAL",
@@ -43,9 +109,31 @@
     "vibe_th": "เปิด iPod nano ฟัง Britney แก้มมีกลิตเตอร์เดินห้าง",
     "icons_th": ["Bella Hadid", "Paris Hilton 2003", "Dua Lipa", "Charli XCX"],
     "tagline_th": "Cyber baby girl reporting for chaos",
-    "description_th": "คุณคือสายปาร์ตี้ที่เกิดผิดยุค หลงใหลใน early 2000s ทุกอย่าง — ตั้งแต่ Motorola Razr ไปจนถึง velour tracksuit คุณกล้าใส่สีชนกัน ใส่ rhinestone ทั้งตัว และไม่กลัวที่จะดู extra ความสนุกของคุณคือ chaos ที่ตั้งใจ และคุณเชื่อว่า maximalism = serotonin",
+    "description_th": "คุณคือสายปาร์ตี้ที่เกิดผิดยุค หลงใหลใน early 2000s ทุกอย่าง — ตั้งแต่ Motorola Razr ไปจนถึง velour tracksuit Juicy Couture คุณกล้าใส่สีชนกัน lime green + hot pink + chrome silver และไม่กลัวที่จะดู extra ตู้เสื้อผ้าคือ low rise jeans 10 ตัว, baby tee crop 20 ตัว, rhinestone belt 8 เส้น Pinterest moodboard คุณเต็มไปด้วย Paris Hilton ปี 2003 และ Jennie BLACKPINK สาย Y2K ('Solo' MV เปิดวนทุกวัน) คุณเดิน Siam Square Soi 2 ที่ขายของวินเทจ เจอ Von Dutch cap ของแท้ปี 2002 ราคา 2,500 ก็ไม่กระพริบตา ไป Mustache Bar ทุกวันศุกร์ใส่ butterfly clip 5 อันบนหัว แก้มมีกลิตเตอร์ ฟัง Charli XCX 'Brat' summer playlist ความสนุกของคุณคือ chaos ที่ตั้งใจ และคุณเชื่อว่า maximalism = serotonin คนที่ใส่ minimal beige คุณว่ามัน boring ชีวิตสั้นเกินไปสำหรับ Sofia Richie clone",
     "watchout_th": "low rise มาแล้วมาอีก แต่ self-esteem อย่าให้มันต่ำตามกางเกง",
-    "compatible_with": ["COQUETTE"]
+    "compatible_with": ["COQUETTE", "CLEAN_GIRL"],
+    "strengths_th": [
+      "กล้าแสดงออก ไม่กลัวเป็นจุดสนใจ",
+      "ผสมสี/texture เก่ง — eye for fashion สูง",
+      "energy บวกเต็มที่ทำให้คนรอบข้างสนุก",
+      "rebellious spirit — ไม่ยอม conform กับ beige minimalism"
+    ],
+    "weaknesses_th": [
+      "ใช้เงินเยอะกับ trend ที่หายเร็ว — Y2K ปี 2027 อาจ out",
+      "ผูก self-esteem กับ external validation จากการแต่งตัว",
+      "ใส่ low rise + crop top ในมีตติ้ง — ผิด context บ่อย",
+      "FOMO event/festival รุนแรง กลัวพลาดทุก party"
+    ],
+    "famous_examples_th": ["Jennie BLACKPINK ('Solo' era)", "Bella Hadid", "Paris Hilton 2003", "Charli XCX", "ลิซ่า BLACKPINK ('Money' era)"],
+    "growth_tips_th": [
+      "balance Y2K กับ classic piece — investment piece 1-2 ตัวต่อปี",
+      "ลอง offline 1 วัน/อาทิตย์ — chaos ที่บ้านบ้าง ไม่ต้อง post หมด",
+      "หา self-esteem ที่ไม่ผูกกับ outfit — skill, hobby, ความสัมพันธ์",
+      "อ่าน context ก่อนแต่ง — มีตติ้งลูกค้าญี่ปุ่นไม่ใช่ที่ของ rhinestone belt",
+      "เก็บเงิน 20% ก่อนซื้อ Von Dutch ตัวต่อไป"
+    ],
+    "shareable_quote_th": "Beige ไม่ใช่ personality — ฉันใส่ rhinestone ทั้งตัวเพราะชีวิตมันสั้นเกินจะใส่สีเทา",
+    "color_accent": "#FF4FA1"
   },
   {
     "code": "OLD_MONEY",
@@ -55,8 +143,30 @@
     "vibe_th": "ไป Hua Hin ขี่ม้า จิบชายามบ่าย ใส่กางเกงลินินไม่รีดยับ",
     "icons_th": ["Carolyn Bessette-Kennedy", "Sofia Richie งานแต่ง", "ตัวละคร Succession"],
     "tagline_th": "ถ้าต้องบอกว่ารวย แสดงว่าไม่รวย",
-    "description_th": "คุณคือสายที่เชื่อใน quiet luxury — ผ้าดี ตัดเนี้ยบ ไม่มีโลโก้ใหญ่ ๆ ตู้เสื้อผ้าเป็นสีเบจ นาวี ขาว และน้ำตาล ชอบกีฬาที่มีคำว่า club ต่อท้าย เช่น tennis club, equestrian club, yacht club คุณ value heritage, craftsmanship และความ understated มากกว่ากระแส",
+    "description_th": "คุณคือสายที่เชื่อใน quiet luxury — ผ้าดี ตัดเนี้ยบ ไม่มีโลโก้ใหญ่ ๆ ตู้เสื้อผ้าเป็นสีเบจ นาวี ขาว และน้ำตาล Loro Piana sweater 1 ตัว Tod's loafer 2 คู่ ไข่มุกแท้ Mikimoto ที่ได้จากแม่ Pinterest moodboard คุณเต็มไปด้วย Carolyn Bessette-Kennedy ปี 1996 และ @sofiarichie งานแต่งที่ South of France วันเสาร์อาทิตย์ขับรถไป Hua Hin ขี่ม้าที่ Black Mountain Polo Club จิบชายามบ่ายที่ Centara Grand Hua Hin เสื้อ polo Ralph Lauren ขาวกับกางเกงลินินสีเขียวซีด — ไม่รีดเพราะ wrinkle = old money real ชอบกีฬาที่มีคำว่า club ต่อท้าย เช่น tennis club, equestrian club, yacht club, Royal Bangkok Sports Club คุณ value heritage, craftsmanship และความ understated มากกว่ากระแส คุณรับไม่ได้กับ Gucci belt monogram และไม่เข้าใจคนใส่ Dior Saddle Bag ของแท้สำหรับคุณคือกระเป๋าหนังสีน้ำตาลที่คุณยายส่งต่อมา 40 ปี คุณคิดว่าการ flex คือการ vulgar — ถ้ารวยจริงไม่ต้องบอกใคร",
     "watchout_th": "old money ของจริงไม่ต้องพยายาม — ถ้ายังต้องค้นว่า 'ใส่อะไรแล้วดู old money' ก็ใช้ใจรักก็พอ",
-    "compatible_with": ["CLEAN_GIRL", "DARK_ACADEMIA"]
+    "compatible_with": ["CLEAN_GIRL", "DARK_ACADEMIA"],
+    "strengths_th": [
+      "taste classic ไม่ตกเทรนด์ — ใส่ได้ 20 ปี",
+      "value craftsmanship และ heritage มากกว่า hype",
+      "มารยาทดี etiquette แน่น — ถูกชวนงาน formal บ่อย",
+      "บริหารเงินดี ไม่ใช้แบบ aspirational"
+    ],
+    "weaknesses_th": [
+      "snobby แบบไม่รู้ตัว — ดูถูก nouveau riche ในใจ",
+      "gatekeep aesthetic — 'ของแท้ต้องสืบทอด' = exclusionary",
+      "fake old money โดย pretend privilege ที่ไม่มี",
+      "boring บางครั้ง — outfit ทุกวันเหมือนกันหมด"
+    ],
+    "famous_examples_th": ["Carolyn Bessette-Kennedy", "Sofia Richie งานแต่ง", "ตัวละคร Succession (Shiv Roy)", "หม่อมราชวงศ์ในงาน gala", "Gwyneth Paltrow"],
+    "growth_tips_th": [
+      "เลิก gatekeep — taste ไม่ได้ผูกกับเงินเก่า ใครก็เรียนรู้ได้",
+      "ลองใส่สี/แบรนด์ที่ไม่ classic บ้าง โลกไม่แตก",
+      "ถ้าไม่ได้เป็น old money จริง อย่า fake it จน in debt",
+      "ผูกมิตรกับคนสาย Y2K/LOUD_BUDGET ดูบ้าง — diversity คือ luxury",
+      "value ของขวัญจากแฟนแม้ไม่ใช่ Hermès — ใจเขา > heritage"
+    ],
+    "shareable_quote_th": "กระเป๋าหนังคุณยายส่งต่อมา 40 ปี vs Hermès ใหม่เอี่ยม — old money เลือกอันแรก",
+    "color_accent": "#1F3A5F"
   }
 ]

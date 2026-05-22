@@ -107,7 +107,7 @@ export const CATALOG: CatalogEntry[] = [
   },
   {
     slug: 'career-identity', title_th: 'ตัวตนสายอาชีพไหน?',
-    subtitle_th: 'Corporate / Side Hustle / Nomad / Creator',
+    subtitle_th: 'Corporate / Side / Nomad / Creator',
     category: 'WORK', category_label_th: 'งาน',
     emoji: '💼', duration_min: 4, question_count: 14,
     bg: 'bg-kincha-100', rotate: 0,

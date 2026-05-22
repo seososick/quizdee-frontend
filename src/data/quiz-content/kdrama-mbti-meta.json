@@ -3,18 +3,31 @@
   "version": "1.0.0",
   "title_th": "MBTI × ซีรีส์เกาหลี: คุณคือนางเอกแบบไหนในจักรวาล K-Drama?",
   "subtitle_th": "ถ้าวันหนึ่งคุณหลุดเข้าไปในซีรีส์เกาหลี... คุณจะเป็นตัวละครแบบไหน? ทำแบบทดสอบ 12 ข้อรู้ทันที 🎬",
-  "description_th": "รวม 16 อาร์คีไทป์นางเอก/พระเอกซีรีส์เกาหลีฮิต 2023-2025 ตั้งแต่ Queen of Tears, Lovely Runner, Crash Landing on You, Vincenzo, Goblin, Hospital Playlist และอีกเพียบ มาดูว่า MBTI ของคุณตรงกับใคร แล้วได้ซีรีส์แนะนำให้ดูต่อ 3 เรื่อง!",
+  "description_th": "16 อาร์คีไทป์ตัวเอกซีรีส์เกาหลีฮิต Queen of Tears / Lovely Runner / Crash Landing — ตอบ 12 ข้อ รู้ว่าคุณเป็นใครในซีรีส์ใจฟู",
   "target_audience_th": "ผู้หญิงไทย 25-40 ปี ที่ติดซีรีส์เกาหลี",
   "language": "th",
   "country": "TH",
   "category": "personality / entertainment",
-  "tags": ["MBTI", "K-Drama", "ซีรีส์เกาหลี", "Quiz", "Personality", "Queen of Tears", "Lovely Runner"],
+  "tags": [
+    "MBTI",
+    "K-Drama",
+    "ซีรีส์เกาหลี",
+    "Quiz",
+    "Personality",
+    "Queen of Tears",
+    "Lovely Runner"
+  ],
   "question_count": 12,
   "result_count": 16,
   "estimated_time_seconds": 90,
   "scoring": {
     "method": "mbti_axis",
-    "axes": ["EI", "SN", "TF", "JP"],
+    "axes": [
+      "EI",
+      "SN",
+      "TF",
+      "JP"
+    ],
     "questions_per_axis": 3
   },
   "cta": {
@@ -35,7 +48,14 @@
   },
   "result_template": {
     "headline_th": "คุณคือ {mbti} — {kdrama_role_th} {emoji}",
-    "show_fields": ["kdrama_role_th", "tagline_th", "signature_scene_th", "reference_chars_th", "recommended_drama_th", "genre_th"],
+    "show_fields": [
+      "kdrama_role_th",
+      "tagline_th",
+      "signature_scene_th",
+      "reference_chars_th",
+      "recommended_drama_th",
+      "genre_th"
+    ],
     "recommended_drama_label_th": "🎬 ซีรีส์แนะนำให้คุณดูต่อ:",
     "reference_chars_label_th": "✨ ตัวละครที่คล้ายคุณ:",
     "signature_scene_label_th": "🎞️ ฉาก signature ของคุณ:"

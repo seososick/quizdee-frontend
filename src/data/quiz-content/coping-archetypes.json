@@ -4,7 +4,7 @@
     "name_th": "นักแก้ปัญหา — มีปัญหาต้องแก้",
     "emoji": "🛠️",
     "approach_th": "problem-focused coping",
-    "description_th": "เจอปัญหาปุ๊บ คุณ shift เข้าโหมด action plan ทันที — เปิด Notion ขึ้น list, แตก task, หา solution เป็นขั้นตอน คุณเชื่อว่าความเครียดเกิดจากปัญหา ดังนั้นแก้ปัญหา = แก้ความเครียด",
+    "description_th": "เจอปัญหาปุ๊บ — สมองคุณ shift เข้าโหมด action plan ทันที เปิด Notion ขึ้น list แตก task ใส่ priority P0/P1/P2 หา solution เป็นขั้นตอน อกหัก? เปิด spreadsheet วิเคราะห์ว่าผิดที่ไหน ตกงาน? อัปเดต LinkedIn ภายใน 24 ชม. แม่ป่วย? Google ชื่อโรง พบหมอที่ไหนดีที่สุด เปรียบเทียบ 5 รพ. คุณเชื่อว่าความเครียด = ปัญหาที่ยังไม่มี solution ดังนั้นแก้ปัญหา = แก้ความเครียด เพื่อนเข้ามาบ่นเรื่องแฟน คุณตอบทันทีว่า ‘เธอลอง 1, 2, 3 หรือยัง?’ ทั้งที่เพื่อนแค่อยากระบาย คุณอ่าน Atomic Habits, 7 Habits, Getting Things Done จบหมดแล้ว มี framework ในหัวสำหรับแทบทุกสถานการณ์ คนรอบตัวพึ่งคุณได้ — เพราะคุณตัดสินใจเร็ว ไม่จม drama แต่ลึกๆ มีอย่างหนึ่งที่คุณยังไม่ค่อยเก่ง: การยอมรับว่าบางปัญหา ‘แก้ไม่ได้’ คนตาย โรคเรื้อรัง ความรักที่จบ — สิ่งเหล่านี้ไม่ใช่ bug ที่ patch ได้ มันต้องประมวลด้วยใจก่อน ไม่ใช่ Excel",
     "strength_th": "มีประสิทธิภาพสูงเมื่อเจอสถานการณ์ที่ควบคุมได้ คนรอบข้างพึ่งพาได้ ตัดสินใจเร็ว ไม่จมกับ drama",
     "watchout_th": "บางทีปัญหาแก้ไม่ได้ (เช่น คนตาย โรคเรื้อรัง อกหัก) ต้องยอมรับและประมวลอารมณ์ก่อน ไม่ใช่ทุกอย่างจะ optimize ได้ และการ over-control อาจทำให้ burnout",
     "healthy_practice_th": [
@@ -19,16 +19,45 @@
       "ใช้การทำงานเป็นที่หนีอารมณ์ (productivity as avoidance)",
       "โกรธเมื่อปัญหาไม่ resolve ตามแผน"
     ],
+    "strengths_th": [
+      "ตัดสินใจเร็วและ execute ได้จริง — ไม่จมใน rumination",
+      "เป็นที่พึ่งของเพื่อน-ครอบครัวเวลาวิกฤต",
+      "มี toolkit ของ framework ที่ใช้งานได้หลายสถานการณ์",
+      "ทนต่อความไม่สบายใจระยะสั้นเพื่อแก้ปัญหาระยะยาวได้",
+      "ไม่ romanticize ปัญหา"
+    ],
+    "weaknesses_th": [
+      "ใช้งานเป็นที่หลบจากอารมณ์ตัวเอง — productivity as avoidance",
+      "พยายามแก้ปัญหาให้คนอื่นที่แค่อยากระบาย — ทำให้คนใกล้รู้สึกไม่ได้รับฟัง",
+      "หงุดหงิดเมื่อเจอปัญหาที่ ‘แก้ไม่ได้’ เช่น คนตาย, ความรู้สึก",
+      "อาจ over-control จน burnout เพราะคิดว่าทุกอย่างต้อง optimize"
+    ],
     "compatible_with": ["FEELING_PROCESSOR", "SOCIAL_SEEKER"],
     "avoid_pattern": ["AVOIDER"],
-    "cope_items_th": ["I make a plan of action", "I take direct action", "I think about steps to take"]
+    "cope_items_th": ["I make a plan of action", "I take direct action", "I think about steps to take"],
+    "famous_examples_th": [
+      "หมอ ER",
+      "Project Manager สาย agile",
+      "Sheryl Sandberg",
+      "ตัวละคร INTJ ในซีรีส์",
+      "พี่ๆ engineer ที่บ้านพัง = แก้เอง"
+    ],
+    "growth_tips_th": [
+      "ก่อนจะแก้ ลองถามเพื่อน 1 ประโยค: ‘เธออยากให้ฟัง หรืออยากให้ช่วยคิด?’",
+      "ลองพิจารณา journaling 10 นาที/วัน — ฝึก emotional literacy",
+      "ตั้ง ‘feeling timer’ — อนุญาตตัวเองรู้สึก 20 นาทีก่อนเข้าโหมด solve",
+      "อ่าน Stoic dichotomy of control — บางอย่างต้องปล่อย ไม่ใช่ patch",
+      "ลองพิจารณาคุยกับ therapist — ไม่ใช่เพราะป่วย แต่เพื่อ upgrade emotional toolkit"
+    ],
+    "shareable_quote_th": "ไม่ใช่ทุกปัญหามี solution — บางอย่างต้องรู้สึกก่อนแก้ 🛠️",
+    "color_accent": "#5BB8A8"
   },
   {
     "code": "FEELING_PROCESSOR",
     "name_th": "นักประมวลอารมณ์ — รู้สึกก่อนค่อยคิด",
     "emoji": "💭",
     "approach_th": "emotion-focused coping",
-    "description_th": "ก่อนจะทำอะไร คุณต้องเคลียร์ใจตัวเองก่อน — เขียนไดอารี ฟังเพลงเศร้าให้สุด นั่งสมาธิ ทำสมุด journal เพราะคุณเชื่อว่าอารมณ์ที่ไม่ถูกประมวล = ระเบิดเวลา",
+    "description_th": "ก่อนจะทำอะไร คุณต้องเคลียร์ใจตัวเองก่อน — เปิด Spotify เพลย์ลิสต์ ‘sad girl autumn’ ฟังเพลง Phoebe Bridgers/IU/Billie Eilish วน 3 รอบ จุดเทียน Bath & Body Works หรือ Aesop เปิดสมุด journal Muji เขียนความรู้สึกแบบไม่กรอง น้ำตาไหลก็ไหลไป คุณเชื่อว่าอารมณ์ที่ไม่ได้ประมวล = ระเบิดเวลา ดังนั้นต้อง ‘รู้สึกให้สุด’ ก่อนค่อยขยับ คุณดู ‘Past Lives’, ‘Aftersun’, ‘Reply 1988’ แล้วร้องไห้แบบสบายใจ ไม่อายตัวเอง อ่าน The Body Keeps the Score, Atlas of the Heart ของ Brené Brown แล้วขีดเส้นใต้เกือบทุกหน้า ใช้ Insight Timer/Calm นั่งสมาธิเช้า 10 นาที ทุกบ่ายเดินเล่นในสวนเบญจกิติ เพื่อนเล่าปัญหา — คุณฟังจริง ไม่รีบให้ solution คุณเข้าใจคนอื่นเก่งเพราะเข้าใจตัวเองก่อน self-aware สูงและฟื้นจาก trauma ได้เพราะกล้าเผชิญหน้ากับความรู้สึก แต่บางทีคุณก็ติดอยู่กับ rumination — คิดวนเรื่องเดิม 5 วันติด เขียน journal เรื่องเดียวกัน 3 รอบ แต่ไม่ขยับไปไหน บางสถานการณ์ต้อง action ก่อน feel ทีหลัง",
     "strength_th": "self-aware สูง รู้จักตัวเองดี เข้าใจคนอื่นเก่ง ฟื้นจาก trauma ได้เพราะกล้าเผชิญหน้ากับความรู้สึก ไม่กดทับ",
     "watchout_th": "บางทีหมกมุ่นกับอารมณ์มากเกินไปจนไม่ลงมือทำ (rumination) — รู้สึกซ้ำๆ แต่ไม่ขยับไปไหน บางสถานการณ์ต้อง action ก่อน feel ทีหลัง",
     "healthy_practice_th": [
@@ -43,16 +72,45 @@
       "ใช้อารมณ์เป็นข้ออ้างไม่ทำงาน",
       "Emotional dumping ใส่คนอื่นโดยไม่ขออนุญาต"
     ],
+    "strengths_th": [
+      "self-awareness สูง — รู้ทันอารมณ์ตัวเองก่อนระเบิด",
+      "empathy ดี เพื่อนๆ มาปรึกษาเพราะรู้ว่าจะถูกฟัง",
+      "ฟื้นจาก trauma ได้เพราะไม่กดทับ",
+      "เขียน/พูดถึงความรู้สึกได้ชัด — สื่อสารดี",
+      "เข้าใจ nuance ของความสัมพันธ์"
+    ],
+    "weaknesses_th": [
+      "Rumination — คิดวนเรื่องเดียว 5 วันยังไม่ขยับ",
+      "Romanticize ความเศร้าจนกลายเป็น identity (sad girl aesthetic)",
+      "ใช้ ‘ฉันยังไม่พร้อม’ เป็นข้ออ้างไม่ลงมือทำ",
+      "Emotional dump ใส่เพื่อนโดยไม่ขออนุญาต — เพื่อนเหนื่อย"
+    ],
     "compatible_with": ["PROBLEM_SOLVER", "SOCIAL_SEEKER"],
     "avoid_pattern": ["AVOIDER"],
-    "cope_items_th": ["I focus on and vent emotions", "I accept that this happened", "I look for the silver lining", "I try to see it in a different light"]
+    "cope_items_th": ["I focus on and vent emotions", "I accept that this happened", "I look for the silver lining", "I try to see it in a different light"],
+    "famous_examples_th": [
+      "ตัวละคร INFP ในซีรีส์เกาหลี",
+      "ลิซ่า BLACKPINK (ในบท journal IG)",
+      "Phoebe Bridgers",
+      "พี่ๆ สาย art therapy",
+      "ตัวละครใน ‘My Liberation Notes’"
+    ],
+    "growth_tips_th": [
+      "ตั้ง ‘rumination timer’ — อนุญาตคิดวน 30 นาที แล้วต้องลุกไปทำอะไร 1 อย่าง",
+      "ขออนุญาตเพื่อนก่อน vent: ‘ขอ vent หน่อยได้มั้ย เธอพร้อมฟังมั้ย?’",
+      "ลองพิจารณาออกกำลังกายเพื่อระบายอารมณ์ทางกาย — ไม่ใช่แค่ทางใจ",
+      "ฝึก action ก่อน feel ในเรื่องเล็ก — เช่น reply email ก่อน journal",
+      "ลองพิจารณาพบ therapist ถ้า rumination เกิน 2 สัปดาห์ — จะช่วย break loop"
+    ],
+    "shareable_quote_th": "รู้สึกให้สุดก่อนเดินต่อ — แต่อย่าตั้งแคมป์อยู่ที่ความรู้สึก 💭",
+    "color_accent": "#B89BD9"
   },
   {
     "code": "SOCIAL_SEEKER",
     "name_th": "นักหาเพื่อน — เครียดต้องมีคนฟัง",
     "emoji": "🤝",
     "approach_th": "social-support coping",
-    "description_th": "ปุ่มแรกที่คุณกดเวลาเครียดคือ 'โทรหาเพื่อน' หรือเปิด group chat บ่นระบาย คุณเชื่อว่าปัญหาที่แชร์ = ปัญหาที่เบาลงครึ่งหนึ่ง connection คือ medicine",
+    "description_th": "ปุ่มแรกที่คุณกดเวลาเครียดคือชื่อเพื่อนสนิทใน LINE — พิมพ์ ‘แก ว่างมั้ย โทรได้ป่ะ’ แล้วโทรเลย 30 นาที หรือเปิด group chat ‘แก๊งตัวแม่’ พิมพ์ยาว 5 ย่อหน้าเล่าสิ่งที่หัวหน้าทำวันนี้ เพื่อน reply ‘ปัดโถว เครียดแทนเลย’ ก็เบาเลย เสาร์เย็นต้องนัดหมูกระทะ/ชาบู Sukiya/After You ที่ EmQuartier กับเพื่อนอย่างน้อย 2 ครั้ง/เดือน ไม่งั้นใจเหี่ยว คุณเชื่อว่า ‘ปัญหาที่แชร์ = ปัญหาที่เบาลงครึ่งหนึ่ง’ และ connection คือ medicine ที่ดีที่สุด คุณมี circle หลายชั้น — เพื่อนสมัย ม.ปลาย, เพื่อนมหา’ลัย, เพื่อนงานเก่า, แก๊งคอนโด, แก๊งเกาหลี — ทุกคนรู้ว่าคุณเป็นคนที่จำวันเกิดได้ ส่งดอกไม้ตอนเพื่อนเลิกแฟน support network คุณแข็งแรงมาก ฟื้นจาก crisis เร็วเพราะมีคนช่วย reflect ทั้ง emotional และ practical advice แต่บางทีคุณ outsource emotional regulation มากเกินไป — เพื่อนไม่รับสายคืนเดียว = พังทันที และอาจ over-share จนเพื่อนเริ่ม compassion fatigue ลึกๆ คุณต้องเรียนรู้ว่าตัวเองคือคนแรกที่ต้องอยู่กับตัวเอง",
     "strength_th": "มี support network แข็งแรง ไม่โดดเดี่ยว recovery เร็ว เพราะมีคนช่วย reflect ได้ทั้ง emotional และ practical advice",
     "watchout_th": "บางทีพึ่งคนอื่นมากเกินไปจน outsource emotional regulation — ไม่มีเพื่อนรับสาย = พังทันที และอาจ over-share จนเพื่อนเหนื่อย (compassion fatigue)",
     "healthy_practice_th": [
@@ -68,16 +126,45 @@
       "ตามหา validation จนพึ่งคนอื่นทั้งหมด",
       "Co-rumination — บ่นซ้ำกับคนเดิมโดยไม่แก้"
     ],
+    "strengths_th": [
+      "support network กว้างและลึก — ไม่โดดเดี่ยว",
+      "recovery เร็วเพราะมีคนช่วย reflect",
+      "เป็นกาวของกลุ่ม — จัดอีเวนต์ จำวันเกิด",
+      "อ่านอารมณ์คนอื่นเก่ง",
+      "สื่อสารและ vulnerable ได้โดยไม่อาย"
+    ],
+    "weaknesses_th": [
+      "Outsource emotional regulation — เพื่อนไม่รับสาย = พังทันที",
+      "Over-share จนเพื่อน compassion fatigue",
+      "Co-rumination — บ่นเรื่องเดิมกับคนเดิมโดยไม่ขยับ",
+      "หา validation จนตัดสินใจเองไม่ได้"
+    ],
     "compatible_with": ["PROBLEM_SOLVER", "FEELING_PROCESSOR"],
     "avoid_pattern": ["AVOIDER"],
-    "cope_items_th": ["I get emotional support from friends", "I get advice from someone", "I talk to someone about how I feel"]
+    "cope_items_th": ["I get emotional support from friends", "I get advice from someone", "I talk to someone about how I feel"],
+    "famous_examples_th": [
+      "ตัวละคร ESFJ ในซีรีส์",
+      "หนุ่ม กรรชัย (สาย empathy)",
+      "พิธีกร talk show ที่เปิดใจง่าย",
+      "Brené Brown",
+      "เพื่อนสนิทที่จัดงานแต่งให้ทุกคนในแก๊ง"
+    ],
+    "growth_tips_th": [
+      "ฝึก self-soothing 10 นาที/วัน — ลองนั่งเฉย ไม่ต้องโทรหาใคร",
+      "ขออนุญาตก่อน vent: ‘ขอบ่นได้มั้ย’ — respect เพื่อน",
+      "หมุน support — อย่าโทรหาคนเดิมทุกครั้ง กระจายภาระ",
+      "ลองพิจารณาพบ therapist เพื่อให้เพื่อนได้พัก",
+      "ถาม reciprocate — เพื่อนเล่าบ้างมั้ย? ไม่ใช่ชั่วโมงเราคนเดียว"
+    ],
+    "shareable_quote_th": "ปัญหาที่แชร์ = เบาลงครึ่งหนึ่ง — แต่อย่าให้เพื่อนแบกทั้งหมด 🤝",
+    "color_accent": "#FF8A6B"
   },
   {
     "code": "AVOIDER",
     "name_th": "นักหลบหนี — ทำเป็นไม่เห็น",
     "emoji": "🙈",
     "approach_th": "avoidance / suppression coping",
-    "description_th": "เครียดทีคุณเปิด TikTok 4 ชม. ดู Netflix ทั้งคืน หรือเล่นเกมจน 4 โมงเช้า คุณบอกตัวเองว่า 'ค่อยคิดทีหลัง' บางทีก็ work — แต่บางที 'ทีหลัง' ก็ไม่เคยมา",
+    "description_th": "เครียดทีคุณเปิด TikTok ไถยาว 4 ชั่วโมง จาก ‘แค่ดูแป๊บเดียว’ กลายเป็นตี 2 หรือเปิด Netflix ดู ‘Single’s Inferno’ rerun ทั้งคืน เล่น ROV/Genshin จน 4 โมงเช้า บิลบัตรเครดิตที่ยังไม่เปิดซองวางบนโต๊ะ 3 สัปดาห์ — เห็นแล้วใจหวิว เลื่อนต่อ message จากแม่ที่ถามว่า ‘ลูกกินข้าวยัง’ — ตอบว่า ‘เดี๋ยวค่ะ’ ผ่านไป 5 วันยังไม่ตอบ คุณบอกตัวเองว่า ‘ค่อยคิดทีหลัง’ บางทีก็ work — เป็น tactical break ที่ดีในสถานการณ์ที่ทำอะไรไม่ได้แล้ว เช่น รอผลตรวจ รอ feedback brand แต่บ่อยครั้ง ‘ทีหลัง’ ก็ไม่เคยมา ปัญหาดอกเบี้ยทบต้น — บิลที่ไม่เปิดยังต้องจ่าย ความสัมพันธ์ที่ไม่คุยยังพัง deadline งานยังมา คุณเริ่มดื่มไวน์คนเดียวคืนละ 2 แก้วเพื่อ ‘ผ่อนคลาย’ Shopee สั่งของไม่ได้ใช้ทุกอาทิตย์ ตู้เย็นมีเค้ก After You ที่ตั้งใจกินแล้วลืม กินทั้งกล่องตอนตี 1 แทน นี่ไม่ใช่เพราะคุณ ‘ขี้เกียจ’ — ระบบประสาทคุณกำลังบอกว่า capacity ไม่พอ แต่การหลบเรื้อรังคือทาง anxiety, depression, addiction การยอมรับว่า ‘ฉันกำลังหลบ’ คือ step แรก",
     "strength_th": "Short-term relief จริง — ใช้เป็น tactical break ได้ดี เหมาะกับสถานการณ์ที่ทำอะไรไม่ได้แล้ว (เช่น รอผลตรวจ) ช่วยให้ระบบประสาท reset",
     "watchout_th": "ปัญหาไม่หาย แค่ดอง — และดอกเบี้ยทบต้น บิลที่ไม่เปิดยังต้องจ่าย ความสัมพันธ์ที่ไม่คุยยังพัง พฤติกรรมหลบหนีเรื้อรัง = anxiety, depression, addiction risk",
     "healthy_practice_th": [
@@ -94,8 +181,36 @@
       "Procrastinate จนกลายเป็นวิกฤต",
       "Binge-eat / shopping เพื่อกลบอารมณ์"
     ],
-    "compatible_with": [],
+    "strengths_th": [
+      "รู้จักให้ระบบประสาท reset เมื่อ overload จริง",
+      "ใช้เป็น tactical break ในสถานการณ์ที่แก้ไม่ได้ทันที",
+      "ไม่ panic — ‘เย็นไว้ก่อน’ บางทีเป็นจุดแข็ง",
+      "เห็น absurdity ของชีวิต — humor ดี"
+    ],
+    "weaknesses_th": [
+      "Procrastinate จนปัญหาเล็กกลายเป็นวิกฤต — บัตรเครดิตค้างจ่าย, deadline หลุด",
+      "Doom-scroll/Netflix/เกม จนกระทบสุขภาพและความสัมพันธ์",
+      "Ghost คนสำคัญ — แฟน เพื่อน ครอบครัว — เมื่อมีปัญหา",
+      "ใช้แอลกอฮอล์/ของหวาน/ช้อปปิ้ง กลบอารมณ์เรื้อรัง"
+    ],
+    "compatible_with": ["PROBLEM_SOLVER", "SOCIAL_SEEKER"],
     "avoid_pattern": ["AVOIDER"],
-    "cope_items_th": ["I distract myself", "I refuse to believe it has happened", "I use alcohol/drugs to feel better", "I give up trying to deal with it"]
+    "cope_items_th": ["I distract myself", "I refuse to believe it has happened", "I use alcohol/drugs to feel better", "I give up trying to deal with it"],
+    "famous_examples_th": [
+      "ตัวละครที่ใช้ humor กลบ trauma ใน sitcom",
+      "หลายคนที่เปิดใจเรื่อง procrastination ใน podcast",
+      "BoJack Horseman (extreme version)",
+      "เพื่อนที่หายไป 2 อาทิตย์เวลามีปัญหา",
+      "ผู้ใช้ TikTok ที่ ‘doomscroll until 4am’ club"
+    ],
+    "growth_tips_th": [
+      "ลองวิธี 5 นาที — เปิดบิลแค่ 5 นาที reply email 1 ฉบับก็พอ momentum สำคัญกว่าความสมบูรณ์",
+      "ตั้ง ‘avoidance budget’ — ดู TikTok ได้ 1 ชม. แล้วต้องทำงาน 30 นาที",
+      "หา accountability buddy — ส่งสถานะรายวันให้เพื่อน 1 คน",
+      "ลองพิจารณาพบนักจิตวิทยาถ้าหลบเรื้อรังเกิน 1 เดือน — อาจมี anxiety/depression แฝง",
+      "ถ้าใช้แอลกอฮอล์/สารเป็นทางหนีบ่อยขึ้น ลองปรึกษาผู้เชี่ยวชาญ — สายด่วน 1323 ฟรี"
+    ],
+    "shareable_quote_th": "หลบไม่ใช่พัก — ปัญหาที่ดองไว้ ดอกเบี้ยทบต้น 🙈",
+    "color_accent": "#9AA0A6"
   }
 ]

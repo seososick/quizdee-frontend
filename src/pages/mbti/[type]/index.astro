@@ -92,7 +92,7 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + ar
 
 <BaseLayout
   title={`${archEmoji} ${archName} (${code}) — MBTI ฉบับคนไทย | quizdee`}
-  description={archTagline || `บุคลิกภาพ ${code} ฉบับคนไทยวัยทำงาน — จุดแข็ง จุดที่ควรรู้ คู่เข้ากัน อาชีพที่เหมาะ`}
+  description={archTagline ? `${archTagline} — บุคลิกภาพ ${code} ฉบับคนไทยวัยทำงาน รู้จุดแข็ง จุดอ่อน คู่เข้ากัน อาชีพที่เหมาะ และเทคนิคพัฒนาตัวเอง` : `บุคลิกภาพ ${code} ฉบับคนไทยวัยทำงาน — รู้จุดแข็ง จุดที่ควรรู้ คู่เข้ากัน อาชีพที่เหมาะ และเทคนิคพัฒนาตัวเอง`}
   canonical={pageUrl}
   ogImage={ogImage}
   schemas={schemas}

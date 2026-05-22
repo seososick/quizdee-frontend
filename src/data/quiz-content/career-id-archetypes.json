@@ -7,9 +7,38 @@
     "weekend_th": "พักผ่อน จิบกาแฟวันจันทร์ อ่าน HBR/Bloomberg เตรียมประชุม",
     "5yr_goal_th": "ขึ้น Director / VP บริษัทใหญ่ หรือไป MBA top school",
     "tagline_th": "ยิ่ง senior ยิ่งรวย ยิ่งสนุก",
-    "description_th": "คุณเชื่อในระบบ ladder ของบริษัทใหญ่ — ทำงานหนัก สร้าง track record รับ promotion เป็น step ๆ ชอบ structure ชอบ mentor เก่ง ๆ และเชื่อว่าการได้ตำแหน่งใหญ่ในองค์กรคือทางที่มั่นคงและมีความหมายที่สุด เงินเดือน 6-7 หลักไม่ใช่ความฝัน แต่เป็น roadmap",
+    "description_th": "คุณคือคนที่เชื่อในระบบ — เข้าทำงานที่ SCB, PTT, AIS หรือ unilever ตั้งแต่จบใหม่ ไต่จาก analyst เป็น senior เป็น manager เป็น director ตามขั้นบันได ทุกเช้าจันทร์เปิด Bloomberg อ่าน earnings report ขณะดื่ม flat white จาก % Arabica พร้อม blazer Theory ที่รีดแล้ว KPI ไตรมาสนี้ต้อง green ทุกตัว OKR ปลายปีต้อง exceed ไม่ใช่ meet มี mentor เป็น VP รุ่นพี่ที่จบ Wharton แอบฝัน MBA ที่ INSEAD หรือ Kellogg ปีหน้าก็ลองสอบ GMAT ดู เงินเดือน 6-7 หลักไม่ใช่ความฝันแต่เป็น roadmap ที่คำนวณไว้แล้วว่าอายุ 35 ต้องถึงไหน คุณรู้สึกปลอดภัยกับ structure รัก mentor ดีๆ และเชื่อว่าการได้ตำแหน่ง C-level คือทางที่มีความหมายและมั่นคงที่สุด คนรอบตัวมองคุณเป็น ‘คนเก่ง’ — และคุณก็พิสูจน์ได้ทุกปี",
     "watchout_th": "ระวัง burnout และยึดติดกับ title มากไป — บางทีบริษัทเปลี่ยน policy หรือ layoff ก็พังได้ ลองมี side income หรือ network นอกบริษัทไว้บ้าง",
-    "compatible_with": ["SIDE_HUSTLER", "ANTI_HUSTLE"]
+    "strengths_th": [
+      "execution เก่ง — รับ KPI หนักแค่ไหนก็ส่งทันก่อน deadline",
+      "เก่งเรื่อง office politics และ stakeholder management",
+      "มี discipline สูง อ่านหนังสือธุรกิจสม่ำเสมอ",
+      "network แน่นใน industry — ใครย้ายไปไหนก็รู้",
+      "ตัดสินใจเรื่องเงินเก่ง คิดเรื่อง retirement ตั้งแต่อายุ 28"
+    ],
+    "weaknesses_th": [
+      "identity ผูกกับ title — ถ้าโดน layoff คือพังทั้งระบบ",
+      "ทำงานวันหยุดจน partner บ่นว่า ‘เธอแต่งงานกับ Excel แล้ว’",
+      "judgemental กับเพื่อนสาย freelance/creator แอบมองว่า ‘ไม่จริงจัง’",
+      "comfort zone อยู่กับ corporate มากจนไม่กล้า bet ตัวเอง"
+    ],
+    "compatible_with": ["SIDE_HUSTLER", "ANTI_HUSTLE"],
+    "famous_examples_th": [
+      "ทศ จิราธิวัฒน์ (Central)",
+      "ฐาปน สิริวัฒนภักดี",
+      "Sheryl Sandberg",
+      "Satya Nadella",
+      "ผู้บริหาร SCB / KBank รุ่นใหม่"
+    ],
+    "growth_tips_th": [
+      "เปิดบัญชี side income เล็กๆ (หุ้น, ETF, condo ปล่อยเช่า) — diversify ไม่ให้ผูกกับเงินเดือนเดียว",
+      "ออกไป networking นอก industry บ้าง — ไปงาน startup หรือ creator meetup",
+      "ตั้ง 1 วัน/สัปดาห์เป็น ‘no work day’ จริงๆ — ไม่เปิด Outlook",
+      "หา mentor ที่ไม่ใช่สายเดียวกับตัวเอง — มุมมองใหม่จะเปิดทาง",
+      "อ่านหนังสือ non-business บ้าง: นิยาย ปรัชญา ประวัติศาสตร์ — กันสมองตีบ"
+    ],
+    "shareable_quote_th": "ladder ไม่ได้สูงเพราะโชค — สูงเพราะ KPI ไม่เคย miss 🏢",
+    "color_accent": "#1F1A14"
   },
   {
     "code": "SIDE_HUSTLER",
@@ -19,9 +48,38 @@
     "weekend_th": "แพ็คของส่งลูกค้า อัพ stock IG รับงาน freelance ตอบ DM",
     "5yr_goal_th": "ให้ side hustle โตจนเงินเท่าหรือเกินเงินเดือน แล้วค่อยตัดสินใจ",
     "tagline_th": "ทำไมต้องเลือก ในเมื่อทำได้ทั้งคู่",
-    "description_th": "คุณคือสายไม่ยอมหยุดที่ทางเดียว — กลางวันเป็นพนักงาน กลางคืน/เสาร์อาทิตย์เป็นเจ้าของกิจการเล็ก ๆ ไม่ว่าจะขายเสื้อใน IG รับงาน design freelance หรือสอนพิเศษ คุณรักความรู้สึกว่าเงินไม่ได้มาจากที่เดียว และมีอิสระทางการเงินมากกว่าเพื่อนรุ่นเดียวกัน",
+    "description_th": "9 โมงเช้าคุณนั่งหน้าจอ Excel ทำ report ให้บริษัท 6 โมงเย็นปิดคอม เปิด Shopee Seller Center ตอบลูกค้าที่ถามว่า ‘เสื้อตัวนี้มีไซส์ M มั้ยคะ’ 3 ทุ่มขึ้น Reels ใหม่ของร้าน เสาร์-อาทิตย์ขับรถไปประตูน้ำ/สำเพ็ง รับของแล้วกลับมาแพ็คที่คอนโดจนตี 1 บางเดือนรับงาน design freelance ผ่าน Fastwork อีก 3 job บางคืนเป็นอาจารย์พิเศษสอน Excel/Canva ออนไลน์ ในกระเป๋ามี Air Card สามใบ — บริษัท, ร้าน, freelance — แยกบัญชีเป็นระเบียบ KBank Mymo คุณรักความรู้สึกที่เงินไม่ได้มาจากที่เดียว เห็นยอด Shopee แจ้งโอน 6,000 บาทตอนเที่ยงคืนแล้วยิ้มกริ่ม รู้สึกว่าตัวเองมีอิสระทางการเงินมากกว่าเพื่อนรุ่นเดียวกันที่รอแต่โบนัส คุณคือคนที่ ‘หลังเลิกงาน’ ไม่ได้แปลว่าเลิก",
     "watchout_th": "ระวังเหนื่อยจนพังทั้งสองงาน — ต้องจัดเวลาดี ๆ และอย่าลืมพักร้อน เพราะวันหยุดคุณก็ยังทำงานอยู่",
-    "compatible_with": ["CORPORATE_CLIMBER", "CREATOR"]
+    "strengths_th": [
+      "บริหารเวลาเก่ง — ทำสองงานพร้อมกันยังส่งทัน",
+      "มี multiple income streams = ปลอดภัยกว่าคนเงินเดือนล้วน",
+      "เรียนรู้เร็ว เพราะต้องสวมหลายหมวก (marketing, finance, ops, customer service)",
+      "ทนต่อความไม่แน่นอนได้สูง",
+      "เข้าใจมุมลูกค้าและมุมเจ้าของกิจการพร้อมกัน"
+    ],
+    "weaknesses_th": [
+      "ไม่มีวันหยุดจริงๆ — สงกรานต์ก็ยังตอบลูกค้า",
+      "ความสัมพันธ์เริ่มมีปัญหาเพราะ ‘เธอติดของ’",
+      "performance งานประจำเริ่มแผ่ว แต่ไม่กล้าลาออกเพราะกลัว side ไม่พอ",
+      "นอนไม่พอเรื้อรัง — ใช้กาแฟ Amazon 3 แก้ว/วัน"
+    ],
+    "compatible_with": ["CORPORATE_CLIMBER", "CREATOR"],
+    "famous_examples_th": [
+      "พี่จุน Wongnai (เริ่มเป็น side project)",
+      "เจ้าของแบรนด์ที่เริ่มขายใน IG ตอนทำงานประจำ",
+      "Gary Vaynerchuk",
+      "อาจารย์ที่รับงาน consulting นอกเวลา",
+      "พี่ๆ ขายของ live TikTok ดึกๆ"
+    ],
+    "growth_tips_th": [
+      "ตั้ง deadline กับตัวเอง: side income ถึง X บาท/เดือน ติดต่อกัน 6 เดือน = ลาออก",
+      "outsource งาน low-value (แพ็คของ, ตอบ DM ทั่วไป) ตั้งแต่เร็ว",
+      "ตั้ง ‘1 วัน/สัปดาห์ ห้ามทำงานทั้งสองที่’ — บังคับตัวเอง",
+      "แยกบัญชีและทำบัญชีจริงจัง — side hustle ที่ไม่รู้กำไรจริงคือ hobby ราคาแพง",
+      "ลงทุนเรียน skill ที่ scale ได้ (digital product, automation) แทนของที่ต้องแพ็คเอง"
+    ],
+    "shareable_quote_th": "หลังเลิกงาน = เริ่มงานใหม่ — เพราะเงินทางเดียวคือความเสี่ยง 💸",
+    "color_accent": "#F4C95D"
   },
   {
     "code": "DIGITAL_NOMAD",
@@ -31,9 +89,38 @@
     "weekend_th": "ขับมอไซค์เที่ยวเกาะ ดำน้ำ co-working cafe เจอเพื่อนต่างชาติ",
     "5yr_goal_th": "อยู่ได้ 5-6 ประเทศต่อปี รายได้ USD เก็บเงินเร็วกว่าทำงานไทย",
     "tagline_th": "office คือที่ไหนก็ตามที่มี wifi",
-    "description_th": "คุณกล้าหลุดจาก script ปกติ — ลาออกงานประจำ (หรือไม่เคยมี) ไปอยู่เชียงใหม่ บาหลี ลิสบอน รับงาน remote เป็น dollar/euro รักความอิสระ การเดินทาง และ community นักเดินทางเหมือนกัน คุณรู้ว่าชีวิตดี ๆ ไม่ต้องผูกกับ office ตึก 30 ชั้น",
+    "description_th": "เช้านี้คุณนั่งใน CAMP เชียงใหม่ ดื่ม oat latte กับ avocado toast แล้วเปิด Slack คุยกับทีมที่ Berlin ตอนบ่ายขับมอไซค์ขึ้นดอยสุเทพไปอ่าน contract ในร้านกาแฟวิวเขา เดือนหน้าจองตั๋ว AirAsia ไป Canggu Bali อยู่ 6 สัปดาห์ co-working ที่ Tropical Nomad เก็บภาพดำน้ำ Nusa Penida ลง IG รายได้รับเป็น USD เข้า Wise แล้วโอน KBank แค่เดือนเดียวเท่ากับเพื่อนเดือนเงินเดือนสามเดือน คุณไม่มี office ไม่มี HR ไม่มีหัวหน้านั่งจ้อง — แต่มีลูกค้า EU/US ที่ส่ง brief ตอนตี 2 ตามเวลาไทย คุณเลือกประเทศตาม visa, internet, อาหาร, community ลิสบอน เม็กซิโกซิตี้ บาหลี เชียงใหม่ คือ rotation ประจำ คุณกล้าหลุดจาก script ที่พ่อแม่วางไว้ — รู้ดีว่าชีวิตดีไม่ต้องผูกกับตึก 30 ชั้นที่อโศก เพื่อนเก่าบางคนอิจฉา บางคนหาว่า ‘หนีปัญหา’ แต่คุณรู้ตัวเองดีว่ากำลังสร้างชีวิตที่ออกแบบเอง",
     "watchout_th": "ระวังเหงา visa วุ่น และไม่มีสวัสดิการ — ต้องวางแผนประกันสุขภาพและเงินเก็บฉุกเฉินเอง",
-    "compatible_with": ["CREATOR", "ANTI_HUSTLE"]
+    "strengths_th": [
+      "self-discipline สูงมาก — ทำงานได้โดยไม่มีคนคุม",
+      "ปรับตัวกับวัฒนธรรมและ time zone ใหม่ๆ ได้เร็ว",
+      "network international แน่นกว่าพนักงานออฟฟิศไทยทั่วไป",
+      "ตัดสินใจเร็ว เก็บกระเป๋าได้ใน 2 ชม.",
+      "รู้เรื่อง tax, visa, banking ระดับ international"
+    ],
+    "weaknesses_th": [
+      "เหงาเป็นช่วงๆ — มี friends แต่ไม่มี roots",
+      "ไม่มี safety net: ป่วยทีเดียวอาจสะเทือนเงินเก็บ",
+      "ความสัมพันธ์ระยะยาวยาก เพราะย้ายตลอด",
+      "ครอบครัวที่ไทยเริ่มน้อยใจ — งานแต่งญาติก็ไม่ค่อยกลับ"
+    ],
+    "compatible_with": ["CREATOR", "ANTI_HUSTLE"],
+    "famous_examples_th": [
+      "Nas Daily",
+      "หลายคนใน community Nomad List",
+      "Pieter Levels (founder Nomad List)",
+      "พี่ๆ Thai dev ที่ทำงาน remote ให้บริษัท US",
+      "YouTuber สายท่องเที่ยว/พัฒนาตนเอง"
+    ],
+    "growth_tips_th": [
+      "ทำประกันสุขภาพ international (SafetyWing/Cigna) อย่าประหยัดตรงนี้",
+      "เก็บ emergency fund 6-12 เดือนใน USD — ไม่ใช่ 3 เดือนแบบมนุษย์เงินเดือน",
+      "ตั้ง home base 1 เมือง อยู่อย่างน้อย 3 เดือน/ปี — ป้องกัน burnout จากการย้าย",
+      "ลงทุนใน community: meetup, retreat, mastermind — เพื่อแก้เหงา",
+      "วางแผนภาษีกับ accountant ที่เข้าใจ nomad — อย่าทำเองมั่ว"
+    ],
+    "shareable_quote_th": "office ที่ดีที่สุด คือที่ที่คุณอยากตื่นมาเปิด laptop 🌴",
+    "color_accent": "#5BB8A8"
   },
   {
     "code": "CREATOR",
@@ -43,9 +130,39 @@
     "weekend_th": "ถ่าย batch content ตัดคลิป reply comment คิด script week หน้า",
     "5yr_goal_th": "สร้าง personal brand จน audience 100k+ มีธุรกิจของตัวเอง",
     "tagline_th": "ฉันไม่ทำงานให้บริษัท ฉันสร้างบริษัทของฉันเอง",
-    "description_th": "คุณคือนักเล่าเรื่องตัวจริง — YouTube TikTok IG Podcast เป็น playground ของคุณ ไม่ใช่แค่งานอดิเรกแต่คืออาชีพหลัก คุณเข้าใจ algorithm เข้าใจ audience และเชื่อว่ายุคนี้ใครมี attention คนนั้นมีอำนาจ รายได้อาจไม่สม่ำเสมอแต่ ceiling สูงมาก",
+    "description_th": "ตื่นมา 8 โมงเช้าเปิด TikTok ดู analytics คลิปเมื่อคืน — view ทะลุ 200k งาน brand deal จาก Shopee/LINE MAN/L’Oréal เด้งใน DM 3 brief คุณตอบเอง ไม่มี manager (หรือมี KOL agency เช่น Tellscore, Revu คอยส่งงานมา) บ่ายถ่าย batch content 5 คลิปในชุดเดียว เปลี่ยนเสื้อ 5 ตัวบนโซฟา ห้องคอนโดเป็นทั้ง studio และ office ขาตั้งกล้อง ring light softbox วางเรียงเหมือน production จริง ตอนเย็นนั่ง Final Cut Pro ตัดคลิปไปกินข้าวกล่องไป กลางดึกเปิด Notion วางแผน script week หน้า + ดู trending sound ใหม่ของ TikTok คุณเข้าใจ algorithm ระดับที่รู้ว่าโพสต์เวลาไหน hook 3 วินาทีแรกต้องเป็นยังไง รายได้เดือนนี้ 80k เดือนหน้าอาจ 250k หรือ 30k — ไม่แน่นอน แต่ ceiling ไม่มี audience ของคุณคือ asset ที่บริษัทไหนก็เอาไปไม่ได้ คุณคือนักเล่าเรื่องที่เชื่อว่า ‘ใครมี attention คนนั้นมีอำนาจ’ และยุคนี้คือยุคของคุณ",
     "watchout_th": "ระวังเหนื่อยจน burnout เพราะต้อง on ตลอด — และ algorithm เปลี่ยนได้ทุกเมื่อ ต้อง diversify platform และมี product ของตัวเอง",
-    "compatible_with": ["SIDE_HUSTLER", "DIGITAL_NOMAD"]
+    "strengths_th": [
+      "เข้าใจ audience และ algorithm ระดับลึก",
+      "self-brand แข็งแรง — คนจำได้ใน 3 วินาที",
+      "ปรับตัวกับ trend เร็วมาก",
+      "monetize ได้หลายทาง: ads, brand, product, course",
+      "ทำหลาย hat ได้: writer, director, editor, marketer"
+    ],
+    "weaknesses_th": [
+      "self-worth ผูกกับ engagement — view ตกแล้วซึม",
+      "เปรียบเทียบตัวเองกับ creator อื่นจน toxic",
+      "burnout เพราะ ‘ต้อง on’ ตลอดแม้กระทั่งวันแม่ป่วย",
+      "ความสัมพันธ์จริงน้อย เพราะเพื่อนคือ followers",
+      "ไม่มีสวัสดิการ ไม่มี SSO ต้องวางแผนเองหมด"
+    ],
+    "compatible_with": ["SIDE_HUSTLER", "DIGITAL_NOMAD"],
+    "famous_examples_th": [
+      "บี้ เดอะสกา / กอล์ฟ ฟักกลิ้งฮีโร่",
+      "ลูกกอล์ฟ คณาธิป (พิธีกร podcast)",
+      "พี่ Bear Hug",
+      "Suhay Salim",
+      "MrBeast, Emma Chamberlain"
+    ],
+    "growth_tips_th": [
+      "diversify platform: TikTok + IG + YouTube Shorts + email list — อย่าฝากชีวิตไว้กับ algorithm เดียว",
+      "เริ่มสร้าง product ของตัวเอง (course, merch, membership) — brand deal ขึ้นๆ ลงๆ",
+      "ตั้ง ‘off day’ จริงจังสัปดาห์ละ 1 วัน — ไม่เช็ค comment, ไม่เปิด analytics",
+      "outsource editing/admin ตั้งแต่เร็ว — คุณคือ creative ไม่ใช่ editor",
+      "หา therapist/coach — ชีวิต creator มี loneliness ที่คนนอกไม่เข้าใจ"
+    ],
+    "shareable_quote_th": "ฉันไม่ได้ทำงานให้บริษัท — ฉันสร้างบริษัทของฉันเอง 🎬",
+    "color_accent": "#FF8A6B"
   },
   {
     "code": "ANTI_HUSTLE",
@@ -55,8 +172,38 @@
     "weekend_th": "ดูซีรี่ส์ ทำอาหาร ปลูกต้นไม้ เจอครอบครัว ไม่เปิด LINE งาน",
     "5yr_goal_th": "ใช้ชีวิตให้มีความสุข มีเวลาให้ตัวเองและคนรัก ไม่ต้องรวยมาก",
     "tagline_th": "เงินซื้อเวลาคืนไม่ได้ — quiet quitting คือ self-care",
-    "description_th": "คุณผ่านยุค hustle culture มาแล้วและรู้ว่ามันไม่ใช่ทาง — งานคือเครื่องมือ ไม่ใช่ตัวตน 5 โมงเย็นปิดคอม วันเสาร์ไม่ตอบ chat คุณให้ความสำคัญกับสุขภาพจิต ครอบครัว และงานอดิเรก คุณเชื่อว่าชีวิตดีไม่ต้องวัดด้วยเงินเดือนหรือ title",
+    "description_th": "5 โมงเย็นตรง คุณปิด laptop เก็บใส่กระเป๋า เดิน BTS กลับบ้านโดยไม่รู้สึกผิด LINE งานเด้ง? — เห็นแล้วเลื่อนลง พรุ่งนี้ค่อยตอบ คุณทำงานบริษัทกลางๆ ที่ไม่ได้ glamorous แต่สวัสดิการดี OT ไม่บังคับ หัวหน้าเข้าใจ Gen Z energy ตอนเย็นทำกับข้าวกินกับแฟน ดู ‘Reply 1988’ รอบ 4 ปลูก monstera 3 ต้น มีกระบองเพชรใน balcony วันเสาร์ตื่นสาย เดินตลาดนัด อตก. ซื้อดอกไม้สด แวะร้าน Library cafe อ่านหนังสือกับชาเย็น ไม่มีใครส่ง email มาตามเรื่อง deck งาน คุณผ่านยุค hustle culture ตอนอายุ 25 แล้ว — เคยทำงาน 12 ชม./วัน เคยร้องไห้ในห้องน้ำออฟฟิศ ตอนนี้คุณรู้แล้วว่ามันไม่คุ้ม งานคือเครื่องมือ ไม่ใช่ตัวตน เพื่อนสาย hustle อาจมองว่าคุณ ‘ไม่ทะเยอทะยาน’ แต่คุณเฉยๆ เงินเดือน 50k ที่ใช้ชีวิตได้จริง > 150k ที่ไม่มีเวลาเจอแม่ คุณคือตัวแทน Gen Z/Millennial ที่บอกโลกว่า ‘พอแล้ว’ คือสุขภาวะ ไม่ใช่ความล้มเหลว",
     "watchout_th": "ระวังเงินเก็บไม่พอตอนแก่ — work-life balance ดี แต่ก็ต้องวางแผนเกษียณ มี passive income บ้าง",
-    "compatible_with": ["CORPORATE_CLIMBER", "DIGITAL_NOMAD"]
+    "strengths_th": [
+      "boundary แข็งแรงที่สุดในบรรดา archetype ทั้งหมด",
+      "สุขภาพจิตและร่างกายดีกว่าคนทั่วไป",
+      "ความสัมพันธ์ลึก — ครอบครัว เพื่อนสนิท แฟน",
+      "รู้จักคุณค่าของเวลาว่างมากกว่าคนอื่น",
+      "เป็น emotional anchor ให้เพื่อนสาย burnout"
+    ],
+    "weaknesses_th": [
+      "เงินเก็บอาจไม่พอตอนเกษียณ ถ้าไม่วางแผนลงทุน",
+      "career growth ช้าเมื่อเทียบกับเพื่อน — บางทีก็แอบเสียดาย",
+      "ถูก judge จากครอบครัว/สังคมไทยที่ยังเชื่อ ‘ขยัน = ดี’",
+      "ถ้าโดน layoff อาจไม่มี skill ใหม่ๆ ต่อยอด",
+      "บางทีใช้ ‘chill’ เป็นข้ออ้างไม่ลองสิ่งใหม่เลย"
+    ],
+    "compatible_with": ["CORPORATE_CLIMBER", "DIGITAL_NOMAD"],
+    "famous_examples_th": [
+      "Gen Z ที่เริ่มงานปี 2022+ ไม่รับ OT",
+      "พี่ๆ ราชการที่ใช้ชีวิตเป็นจังหวะ",
+      "ตัวละครใน ‘My Liberation Notes’",
+      "หลายคนในชุมชน FIRE Thailand สาย Lean",
+      "Marie Kondo (post-quit)"
+    ],
+    "growth_tips_th": [
+      "เปิดบัญชีลงทุน DCA กองทุน index เดือนละ 5-10k — chill ได้แต่ต้องลงทุน",
+      "เรียน skill ใหม่ปีละ 1 อย่าง — ไม่ต้องเร่ง แต่อย่าหยุด",
+      "วางแผน FIRE / passive income — เพื่อให้ ‘chill’ ได้ตลอดชีวิต",
+      "อย่าให้ใครมาทำให้รู้สึกผิดที่เลือกชีวิตแบบนี้ — boundary คือ skill",
+      "สำรวจตัวเองทุก 2 ปีว่า ‘chill’ จริงหรือกำลังหลบสิ่งที่กลัว"
+    ],
+    "shareable_quote_th": "งานคืองาน ชีวิตคือชีวิต — เงินซื้อเวลาคืนไม่ได้ 🌿",
+    "color_accent": "#7BC47F"
   }
 ]

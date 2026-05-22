@@ -6,22 +6,67 @@
     "signature_brand_th": ["The Row", "Lemaire", "Loewe (no logo line)", "Jacquemus subtle", "New Balance 990"],
     "shopping_pattern_th": "ซื้อน้อย ชิ้นละแพง ใช้นาน เน้นเนื้อผ้า cashmere/silk/leather คุณภาพ",
     "tagline_th": "If you know, you know — ไม่ต้องโชว์โลโก้ก็รู้ว่าแพง",
-    "description_th": "คุณเชื่อในความหรูหราที่ไม่ต้องตะโกน เสื้อยืดสีเทา 8,000 บาทใส่กับกางเกงทรงสวยกับ New Balance 990 สีจึมๆ คือ uniform คุณ ตู้เสื้อผ้ามีสีเบจ ดำ ขาว เทา ครีม ไม่มีอะไรฉูดฉาดแต่ทุกชิ้น invest ดี ใช้ยาวเป็น 10 ปี คุณรู้ดีว่าคุณภาพอยู่ในรายละเอียด — ตะเข็บ เนื้อผ้า ทรง ไม่ใช่โลโก้",
+    "description_th": "คุณเชื่อในความหรูหราที่ไม่ต้องตะโกน เสื้อยืดสีเทา 8,000 บาทใส่กับกางเกงทรงสวยกับ New Balance 990 สีจึมๆ คือ uniform ประจำวัน ตู้เสื้อผ้ามีแต่สีเบจ ดำ ขาว เทา ครีม ไม่มีอะไรฉูดฉาดแต่ทุกชิ้น invest มาดี ใช้ยาว 10 ปีไม่เบื่อ ช้อปที่ Siam Discovery ชั้น Lemaire pop-up มากกว่าสยามพารากอนชั้น 1 ที่มีโลโก้แวววาว เสาร์-อาทิตย์เดิน Muji EmQuartier กับ Uniqlo U collection แล้วก็ไป Roast Thonglor นั่งจิบ filter coffee เงียบๆ คุณรู้ดีว่าคุณภาพอยู่ในรายละเอียด — ตะเข็บ เนื้อผ้า ทรง ไม่ใช่โลโก้ บัตรเครดิตคุณคือ KBank Wisdom สะสม Reward เน้น lounge access ไม่ใช่ส่วนลดห้าง คุณเซ็งคนที่ใส่ Gucci ทั้งตัวแล้วคิดว่าตัวเองดูแพง ในใจคุณ taste มันต้อง learn ไม่ใช่ซื้อ",
     "watchout_th": "ระวังการ flex แบบ inverted snob — ดูถูกคนใส่ของมีโลโก้ก็เป็นการ flex อีกแบบหนึ่งนะ และของ minimal ราคา 30,000 ก็คือใช้เงินจริงๆ อย่าหลอกตัวเองว่าประหยัดกว่าคนอื่น",
     "compatible_with": ["SAVER", "EXPERIENCE_RICH"],
-    "famous_th": "ไอหยิง ลลิษา / Min Aera / Sofia Richie สายไทย"
+    "famous_th": "ไอหยิง ลลิษา / Min Aera / Sofia Richie สายไทย",
+    "strengths_th": [
+      "มีรสนิยมที่ผ่านการ research มาดี รู้จักแบรนด์ก่อนคนอื่น 5 ปี",
+      "ใช้เงินคุ้มค่าระยะยาว — เสื้อโค้ทตัวละ 40,000 ใส่ 10 ปี = 4,000/ปี",
+      "ทำให้คนอื่นเชื่อใจในคำแนะนำเรื่องช้อปปิ้งและไลฟ์สไตล์",
+      "ไม่หวั่นไหวกับเทรนด์ TikTok 2 อาทิตย์หาย"
+    ],
+    "weaknesses_th": [
+      "ดูถูกคนใส่ของมีโลโก้แบบไม่รู้ตัว — inverted snob ก็คือ snob",
+      "หลอกตัวเองว่า minimal = ประหยัด ทั้งที่ใช้เงินจริงเยอะกว่าเพื่อน",
+      "ตัดสินคนจากเสื้อผ้าเร็วเกินไป มักเหวี่ยงในใจในมีตติ้ง",
+      "กลัวใส่สีจัด/ลายจัด จนชีวิตดูจืดในรูปครอบครัว"
+    ],
+    "compatible_with_note_th": "เข้ากับ SAVER ที่เข้าใจ value of money และ EXPERIENCE_RICH ที่ไม่หลงโลโก้เหมือนกัน",
+    "famous_examples_th": ["ลิซ่า BLACKPINK (off-duty)", "มิน อายระ", "Sofia Richie", "ใหม่ ดาวิกา (สาย off-duty)", "Phoebe Philo"],
+    "growth_tips_th": [
+      "ลองใส่สีหรือลายบ้างเดือนละครั้ง ให้ตัวเองหลุดจาก uniform เบจ-ดำ-ขาว",
+      "เลิกตัดสินคนจากแบรนด์ที่ใส่ ลองชวนเพื่อนสาย LOUD_BUDGET ไปเดิน Chatuchak ดูบ้าง",
+      "ก่อนซื้อชิ้นใหม่ลอง cost-per-wear จริงๆ ไม่ใช่แค่อ้างกับตัวเอง",
+      "แชร์ความรู้เรื่อง quality กับน้องในออฟฟิศแทนที่จะแอบจี้ในใจ",
+      "ลองสะสม emergency fund 6 เดือนก่อนซื้อ The Row ตัวต่อไป"
+    ],
+    "shareable_quote_th": "ตู้เสื้อผ้าฉันมีแค่ 30 ชิ้น แต่ใส่ได้ 10 ปี — quiet luxury ไม่ใช่ราคา มันคือ mindset",
+    "color_accent": "#D9CFC1"
   },
   {
     "code": "LOUD_BUDGET",
     "name_th": "สาย Loud Budget — ของถูกแต่ครบ ไลฟ์สไตล์ดี",
     "emoji": "🛍️",
-    "signature_brand_th": ["Shopee 9.9/11.11", "Lazada flash sale", "Mistine", "Cathy Doll", "K-beauty dupes", "AliExpress"],
+    "signature_brand_th": ["Shopee 9.9/11.11", "Lazada 12.12 flash sale", "Mistine", "Cathy Doll", "K-beauty dupes", "AliExpress", "Don Donki ของลด"],
     "shopping_pattern_th": "ซื้อบ่อย ชิ้นละไม่แพง สะสมเยอะ ตามเทรนด์ TikTok",
     "tagline_th": "ทำไมต้องแพง ในเมื่อ dupe ก็สวยพอกัน 💅",
-    "description_th": "คุณคือ queen/king ของ Shopee 11.11 ตะกร้าคุณมีของ 30 ชิ้นแต่จ่ายไม่ถึง 3,000 บาท คุณภูมิใจใน hack — รู้ว่าครีมตัวไหนเป็น dupe ของ La Mer, รู้ว่ากระเป๋า Shopee ทรง Goyard ราคา 350 อยู่ตรงไหน คุณคือ smart consumer ยุคใหม่ที่ไม่ยอมจ่ายแพงเพื่อโลโก้ ไลฟ์สไตล์ครบทุกอย่างในงบประหยัด — เครื่องสำอาง 20 ชิ้น เสื้อ 50 ตัว",
+    "description_th": "คุณคือ queen/king ของ Shopee 11.11 — ตั้งนาฬิกาปลุกตี 5 รอเปิด flash sale และตะกร้าคุณมี 30 ชิ้นแต่จ่ายไม่ถึง 3,000 บาท คุณภูมิใจมากกับ hack — รู้ว่าครีมตัวไหนเป็น dupe ของ La Mer, รู้ว่ากระเป๋าทรง Goyard ราคา 350 อยู่ตรงไหน ตอน Shopee LIVE มีแม่ค้าคนโปรดลดเพิ่ม 50 บาทคุณกดเร็วกว่าใคร เพื่อนทุกคนทักมาถามว่าเสื้อตัวนี้ซื้อที่ไหน คุณส่งลิงก์ Lazada พร้อมโค้ดส่วนลด 100 บาท ไลฟ์สไตล์คุณครบทุกอย่างในงบเงินเดือน 25,000 — เครื่องสำอาง 20 ชิ้น เสื้อ 50 ตัว สกินแคร์ 7 ขั้นตอน บัตรเครดิต KTC X เพราะ cashback Lazada 5% ทุกเดือน คนรอบข้างมองว่าคุณช้อปบ้า แต่จริงๆ คุณคือ smart consumer ยุคใหม่ที่ research ทุกชิ้นก่อนกด — รีวิว Pantip + ดู YouTube + เทียบ 3 ร้าน",
     "watchout_th": "ระวังกับดัก fast fashion / fast beauty — ของถูกซื้อบ่อยรวมแล้วแพงกว่าซื้อของดีชิ้นเดียว และ dupe เครื่องสำอางบางตัวมีสารห้ามใช้ อ่านฉลากให้ดี ไม่งั้นประหยัดเงินแต่เสียผิว",
     "compatible_with": ["EXPERIENCE_RICH", "ASPIRATIONAL"],
-    "famous_th": "TikToker สาย haul / Bella Ranee สมัย budget / สายรีวิวประหยัด"
+    "famous_th": "TikToker สาย haul / Bella Ranee สมัย budget / สายรีวิวประหยัด",
+    "strengths_th": [
+      "research เก่งระดับ Sherlock — เทียบราคา 3 platform ก่อนกดเสมอ",
+      "ไม่หวั่นไหวเรื่องโลโก้ มั่นใจในตัวเองโดยไม่ต้อง flex",
+      "เป็นเพื่อนช้อปที่ดีที่สุด ใครๆ ก็มาขอ recommendation",
+      "ใช้ชีวิตได้ครบ feel rich ในงบเงินเดือนสตาร์ทเตอร์"
+    ],
+    "weaknesses_th": [
+      "ตู้เสื้อผ้าล้น แต่บ่นว่าไม่มีอะไรใส่ทุกเช้า",
+      "ติดผ่อบ Shopee Pay Later จนลืมว่าผ่อนกี่ตัวอยู่",
+      "dopamine จากการกด Buy Now > ความสุขจริงตอนของถึงบ้าน",
+      "ของพังบ่อย ซื้อใหม่ตลอด รวมแล้วแพงกว่าซื้อ Uniqlo ดีๆ ตัวเดียว"
+    ],
+    "famous_examples_th": ["TikToker สาย Shopee haul", "Bella Ranee สมัย early career", "ครูเงาะ Mood Cloud", "แม่ค้าออนไลน์ตลาดนัด", "Emma Chamberlain สาย budget"],
+    "growth_tips_th": [
+      "ลองทำ no-buy month ปีละ 2 ครั้ง ดูว่าตู้เสื้อผ้าตัวเองมีอะไรบ้าง",
+      "แทนที่จะซื้อ 10 ตัวๆ ละ 200 ลอง upgrade เป็น Uniqlo 1 ตัว 800 ดูสักครั้ง",
+      "ตั้ง Shopee Pay Later limit ต่ำๆ ไว้ก่อน ป้องกันลืมตัว",
+      "อ่าน ingredient list ของ dupe เครื่องสำอาง — บางตัวมีสารต้องห้าม",
+      "ลองโอนเงินเข้ากองทุน 1,000 บาทก่อนเปิดแอป Shopee 12.12"
+    ],
+    "shareable_quote_th": "ของถูกที่สวยคือศิลปะ — ฉันใช้ 500 ลุคได้เท่าคนใช้ 5,000 มาดู Shopee cart ฉันก่อน",
+    "color_accent": "#FF8A6B"
   },
   {
     "code": "ASPIRATIONAL",
@@ -30,10 +75,32 @@
     "signature_brand_th": ["Goyard Saint Louis", "Saint Laurent LouLou", "Cartier Love", "Rolex (มือสอง)", "Chanel Classic"],
     "shopping_pattern_th": "เก็บเงิน + ผ่อน 0% ตลอดปีเพื่อซื้อ designer 1 ชิ้น แล้วใช้ทุกวัน",
     "tagline_th": "ของชิ้นเดียวที่เปลี่ยนชีวิต — ผ่อนคุ้ม",
-    "description_th": "คุณเชื่อว่า investment piece ทำงานหนักกว่าเสื้อผ้า fast fashion 100 ชิ้น คุณยอมกินข้าวกล่อง 7-Eleven 6 เดือนเพื่อจ่ายงวด Goyard บัตรเครดิตคุณคือเพื่อนซี้ — ผ่อน 0% 10 เดือน UOB / KTC สบายมาก คุณรู้ราคา resale ของ Saint Laurent ทุก collection และคิดเสมอว่า 'ถ้าเบื่อก็ขายต่อได้' (ซึ่งจริงๆ ไม่ค่อยขาย) คนรอบข้างมองว่าคุณ flex แต่คุณรู้สึกว่ามันคือรางวัลที่ work hard มาทั้งปี",
+    "description_th": "คุณเชื่อว่า investment piece ทำงานหนักกว่าเสื้อผ้า fast fashion 100 ชิ้น คุณยอมกินข้าวกล่อง 7-Eleven 6 เดือนเพื่อจ่ายงวด Goyard Saint Louis บัตรเครดิตคุณคือเพื่อนซี้ — Krungsri 0% 10 เดือน, KTC X ผ่อน Central, UOB ผ่อน Siam Paragon คล่องระดับ pro คุณรู้ราคา resale ของ Saint Laurent LouLou ทุก collection จาก Vestiaire Collective และคิดเสมอว่า 'ถ้าเบื่อก็ขายต่อได้' (ซึ่งจริงๆ ไม่ค่อยขาย) วันเงินเดือนออกคุณวิ่งไป Chanel ICONSIAM ก่อนเลย เพราะกลัว waiting list แม่บ้านเขาบอกว่าต้องสะสมยอดถึงจะได้ Classic Flap คนรอบข้างมองว่าคุณ flex แต่คุณรู้สึกว่ามันคือรางวัลที่ work hard มาทั้งปี — KPI 120%, OT จันทร์-ศุกร์, manager toxic แต่ฝัน Cartier Love วงเดียวพาผ่านทุกวัน",
     "watchout_th": "ระวังกับดัก lifestyle inflation — ผ่อนชิ้นใหม่ก่อนผ่อนชิ้นเก่าหมด สุดท้ายเป็นหนี้บัตร 25% ต่อปี และอย่าให้ของหรูเป็นตัวกำหนด self-worth ของคุณ คุณคือคุณ ไม่ใช่กระเป๋า",
     "compatible_with": ["QUIET_LUXURY", "EXPERIENCE_RICH"],
-    "famous_th": "พิ้งกี้ สาวิกา / สายผ่อน 0% IG flex / นักช้อปสาย Siam Paragon"
+    "famous_th": "พิ้งกี้ สาวิกา / สายผ่อน 0% IG flex / นักช้อปสาย Siam Paragon",
+    "strengths_th": [
+      "ทุ่มเทกับเป้าหมาย — ตั้งใจอะไรเก็บเงินถึงเป้าได้จริง",
+      "เข้าใจ value of investment piece — เลือกของที่ resale ดี",
+      "ทำให้ตัวเองดูดี boost confidence ในมีตติ้งกับลูกค้า",
+      "research แบรนด์ลึกกว่า sales ในห้างซะอีก"
+    ],
+    "weaknesses_th": [
+      "ผูกค่าตัวเองกับกระเป๋า — วันที่ไม่มี Chanel จะรู้สึก nothing",
+      "หนี้บัตรเครดิตหมุนตลอด ผ่อน 0% เก่าไม่หมดผ่อนใหม่ทับ",
+      "เปรียบเทียบตัวเองกับ IG ของเพื่อนตลอด ไม่มีความสุขจริง",
+      "ไม่มี emergency fund — วันที่ตกงานคือวันที่ขายกระเป๋าทิ้ง"
+    ],
+    "famous_examples_th": ["พิ้งกี้ สาวิกา", "ชมพู่ อารยา (สาย Hermès)", "พลอย เฌอมาลย์", "Park Seo-joon (off-duty Cartier)", "อั้ม พัชราภา"],
+    "growth_tips_th": [
+      "ก่อนผ่อนชิ้นใหม่ตรวจให้แน่ใจว่าผ่อนชิ้นเก่าหมดแล้ว — ห้ามทับซ้อน",
+      "ตั้ง emergency fund 3 เดือนค่าใช้จ่าย ก่อนซื้อ designer ชิ้นต่อไป",
+      "ลอง unfollow IG flex 1 เดือน ดูว่าตัวเองยังอยากของชิ้นนั้นจริงไหม",
+      "หา self-worth จากเรื่องอื่น เช่น hobby, สุขภาพ, ความสัมพันธ์",
+      "พิจารณาซื้อมือสอง pre-loved จาก Vestiaire — ของเดียวกันถูกกว่า 30%"
+    ],
+    "shareable_quote_th": "ผ่อน 10 เดือนเพื่อกระเป๋าใบเดียวที่ใช้ 10 ปี — math มันเข้า อย่ามาตัดสิน",
+    "color_accent": "#C9A961"
   },
   {
     "code": "EXPERIENCE_RICH",
@@ -42,10 +109,32 @@
     "signature_brand_th": ["Agoda 4-5 ดาว", "Omakase Sushi Masato", "Coachella/Summer Sonic", "Klook activity", "JR Pass"],
     "shopping_pattern_th": "ใช้เงินกับ travel, fine dining, concert, event — ไม่ค่อยซื้อของจับต้องได้",
     "tagline_th": "ตู้เสื้อผ้าว่างได้ แต่ passport ต้องมีตราเยอะ",
-    "description_th": "คุณคือคนที่บอกว่า 'ของซื้อมาก็เก่า แต่ทริปญี่ปุ่นจะอยู่ในใจตลอดไป' เงินเดือนออกคุณกด Agoda จองโรงแรมก่อนเลย Omakase 6,000 / มื้อ คุณจ่ายไม่กระพริบตา แต่เสื้อ 2,000 บาทคุณคิดหนัก คอนเสิร์ต BTS / Bruno Mars / Coldplay คุณไปครบ Stories IG คุณเต็มไปด้วยอาหาร วิว ทริป ไม่ค่อยมีรูป unboxing ของแพง คุณเชื่อว่าประสบการณ์สร้างคุณ ของเก่งแค่ไหนก็เก็บฝุ่น",
+    "description_th": "คุณคือคนที่บอกว่า 'ของซื้อมาก็เก่า แต่ทริปญี่ปุ่นจะอยู่ในใจตลอดไป' เงินเดือนออกคุณกด Agoda จองโรงแรม Hoshinoya ก่อนเลย Omakase Sushi Masato 6,000/มื้อ คุณจ่ายไม่กระพริบตา แต่เสื้อ Uniqlo 2,000 บาทคุณคิดหนัก คอนเสิร์ต BLACKPINK ราชมังฯ / Bruno Mars / Coldplay BKK / Summer Sonic Tokyo คุณไปครบ Stories IG คุณเต็มไปด้วยอาหาร omakase, view ภูเขาไฟฟูจิ, ทริป Hokkaido หน้าหิมะ, hostel ที่ Lisbon ไม่ค่อยมีรูป unboxing ของแพง คุณใช้ KBank Reward แลกตั๋วการบินไทยทุกปี Krungsri Boarding ก็มี วางแผน 6 เดือนล่วงหน้าทุกทริปเพราะ Agoda Promo + Klook activity ลดเยอะ คุณเชื่อว่าประสบการณ์สร้างคุณ — ของเก่งแค่ไหนก็เก็บฝุ่น แต่กลิ่นโซบะร้านเล็กในเกียวโตจะอยู่ในใจตลอดไป",
     "watchout_th": "ระวัง YOLO trap — กินอร่อย เที่ยวเก่ง แต่ไม่มี emergency fund เลย วันที่ตกงานหรือป่วยจะลำบาก ลองแบ่ง 20% ของรายได้เก็บก่อน แล้ว enjoy ส่วนที่เหลือ",
     "compatible_with": ["SAVER", "QUIET_LUXURY"],
-    "famous_th": "Anthony Bourdain สายไทย / Pen-Ek Ratanaruang / สาย food blogger"
+    "famous_th": "Anthony Bourdain สายไทย / Pen-Ek Ratanaruang / สาย food blogger",
+    "strengths_th": [
+      "มี story เล่าได้เยอะในมีตติ้ง ลูกค้าญี่ปุ่นถูกใจ",
+      "ใช้เงินกับสิ่งที่สร้าง memory ระยะยาวมากกว่า dopamine 5 นาที",
+      "เข้าใจวัฒนธรรมหลากหลาย เปิดใจกว้าง",
+      "วางแผนทริปได้แบบ travel agent ระดับ pro"
+    ],
+    "weaknesses_th": [
+      "เงินเดือน 60,000 แต่ savings 20,000 — ไม่มี emergency fund เลย",
+      "FOMO concert/festival รุนแรง เห็นเพื่อนไป Coachella แล้วอด",
+      "ใช้ travel เป็น escape จาก burn out งานประจำ ไม่แก้ root cause",
+      "ตู้เย็นว่าง บ้านดูเหมือนคนเช่ารายเดือน เพราะลงทุนกับ trip หมด"
+    ],
+    "famous_examples_th": ["Anthony Bourdain", "เอ็ดดี้ เป็นเอก รัตนเรือง", "พลอย ภัทรา (food blogger)", "หอมปาก หอมคอ", "Bobby Chinn"],
+    "growth_tips_th": [
+      "ตั้ง auto-transfer 20% ของเงินเดือนเข้ากองทุนก่อนวางแผนทริป",
+      "ลอง stay-cation ที่ Hua Hin / Khao Yai แทน Tokyo บ้าง ประหยัดได้เยอะ",
+      "มี emergency fund 6 เดือนก่อนใช้ Klook ครั้งต่อไป",
+      "ลองทำ side income จาก travel content — เปลี่ยน hobby เป็น asset",
+      "อย่าใช้ travel หนีปัญหา ลองคุยกับ HR เรื่อง burn out ก่อน"
+    ],
+    "shareable_quote_th": "ตู้เสื้อผ้าฉันมี 20 ตัว แต่ passport มี 30 ตรา — ฉันรวยด้วยความทรงจำ",
+    "color_accent": "#5B8DBF"
   },
   {
     "code": "SAVER",
@@ -54,9 +143,31 @@
     "signature_brand_th": ["SET50 ETF", "K-WPBALANCED", "S&P 500 Index", "Bitkub DCA", "พันธบัตรรัฐบาล"],
     "shopping_pattern_th": "ใช้น้อย เก็บเยอะ ลงทุนอัตโนมัติ DCA ทุกเดือน เน้น compound interest",
     "tagline_th": "ทุก 100 บาทที่ไม่ใช้ = 1,000 บาทตอนเกษียณ",
-    "description_th": "คุณคือเทพแห่ง spreadsheet — Excel ติดตามค่าใช้จ่ายรายเดือนทุกบาท คุณรู้ว่า expense ratio กองทุน TMBGQG เท่าไหร่ และเปรียบเทียบกับ K-USXNDQ-A แล้วเลือกตัวถูกกว่า เงินเดือนออกปุ๊บ auto transfer เข้า SSF/RMF/กองทุนต่างประเทศทันที 30-40% ของรายได้ คุณอ่าน Mr. Money Mustache / The Money Coach / FIRE community ในใจคุณคิดเลขทุกครั้งที่จะซื้อของ '500 บาทนี้ = 5,000 บาทใน 20 ปี' แล้วก็เก็บโทรศัพท์",
+    "description_th": "คุณคือเทพแห่ง spreadsheet — Excel ติดตามค่าใช้จ่ายรายเดือนทุกบาท แยก category 15 ช่อง คุณรู้ว่า expense ratio กองทุน TMBGQG เท่าไหร่ และเปรียบเทียบกับ K-USXNDQ-A แล้วเลือกตัวถูกกว่า 0.05% ต่อปี เงินเดือนออกปุ๊บ auto transfer เข้า SSF/RMF/กองทุนต่างประเทศทันที 30-40% ของรายได้ คุณกด ATM Krungthai ครั้งหนึ่งดูยอด savings แล้วยิ้มในใจ คุณอ่าน Mr. Money Mustache / The Money Coach / FIRE Thailand community ในใจคุณคิดเลขทุกครั้งที่จะซื้อของ '500 บาทนี้ = 5,000 บาทใน 20 ปี' แล้วก็เก็บโทรศัพท์ คุณกินข้าว Cafe Amazon แทน Starbucks เพราะถูกกว่าวันละ 50 = 18,000/ปี = หุ้น 1 ตัว คุณคือคนที่ใช้บัตรเครดิต KBank Reward ขูดทุก point ตั๋วเครื่องบินใช้ไมล์ล้วนๆ เพื่อน aspirational เรียกคุณงก แต่คุณรู้ว่าคุณคือคนเดียวที่จะเกษียณตอน 45",
     "watchout_th": "ระวัง scarcity mindset — ขี้เหนียวเกินไปจนคุณภาพชีวิตแย่ก็ไม่ได้ ของบางอย่างซื้อเลยตอนนี้ดีกว่าเก็บไว้ตอนแก่ใช้ไม่ทันแล้ว และเพื่อนอาจจะคิดว่าคุณงก ลองออกไปกินข้าวบ้าง ความสัมพันธ์ก็คือ asset",
     "compatible_with": ["QUIET_LUXURY", "EXPERIENCE_RICH"],
-    "famous_th": "หนุ่ม จักรพงษ์ (The Money Coach) / โค้ชหนุ่ม Mr.Messenger / สาย FIRE Thailand"
+    "famous_th": "หนุ่ม จักรพงษ์ (The Money Coach) / โค้ชหนุ่ม Mr.Messenger / สาย FIRE Thailand",
+    "strengths_th": [
+      "วินัยทางการเงินระดับเทพ — DCA ไม่หยุดแม้ตลาดร่วง",
+      "research เก่ง อ่าน fund fact sheet เป็นอาหารเช้า",
+      "ไม่ตามเทรนด์ ไม่ FOMO หุ้นมีม / คริปโตเหรียญใหม่",
+      "วางแผนระยะยาวเก่ง — มี timeline 30 ปีในหัว"
+    ],
+    "weaknesses_th": [
+      "ขี้เหนียวกับตัวเองและคนรอบข้าง วันเกิดแฟนยังคิดว่าซื้ออะไรคุ้มที่สุด",
+      "ใช้ scarcity mindset จนพลาดประสบการณ์ดีๆ ในวัย 30",
+      "เพื่อนชวนกินหมูกระทะแล้วคิดว่า 500 = หุ้น = ปฏิเสธบ่อย จนถูกตัดออกจากแก๊ง",
+      "เครียดเรื่องเลขจน sleep quality แย่ ตื่นมาเช็ค SET ตี 5"
+    ],
+    "famous_examples_th": ["หนุ่ม จักรพงษ์ The Money Coach", "โค้ชหนุ่ม Mr.Messenger", "ดร.นิเวศน์ เหมวชิรวรากร", "Warren Buffett", "Mr. Money Mustache"],
+    "growth_tips_th": [
+      "ตั้งงบ 'fun money' 10% ของรายได้ — บังคับใช้เพื่อความสุข ห้ามเก็บ",
+      "ออกไปกินข้าวกับเพื่อนเดือนละครั้ง ความสัมพันธ์คือ asset ที่ compound เหมือนกัน",
+      "ลองซื้อของขวัญให้พ่อแม่/แฟนโดยไม่คิดเลข — แค่ครั้งเดียวต่อปี",
+      "ปิดแอป Bitkub/Streaming ราคา ETF ตอนเย็น ให้สมองพัก",
+      "สุขภาพคือ asset ใหญ่สุด ลงทุน fitness/PT แบบไม่ต่อรอง"
+    ],
+    "shareable_quote_th": "เพื่อนกินสตาร์บัคส์ทุกเช้า ฉันกินคาเฟ่อะเมซอน — เจอกันตอนฉันเกษียณก่อน 15 ปี",
+    "color_accent": "#3F7D5C"
   }
 ]

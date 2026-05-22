@@ -4,17 +4,44 @@
     "name_th": "สายนักปรัชญา — ดูคลิป 30 วินาทีได้ปริญญาชีวิต",
     "emoji": "🧠",
     "FYP_content_th": [
-      "podcast cuts จอร์แดน ปีเตอร์สัน / Mel Robbins",
+      "podcast cuts จอร์แดน ปีเตอร์สัน / Mel Robbins / Andrew Huberman",
       "motivational quotes สั้นๆ พื้นดำตัวขาว",
-      "รีวิวหนังสือ self-help 1 นาที",
+      "รีวิวหนังสือ self-help 1 นาที (Atomic Habits, 4000 Weeks)",
       "Stoicism / Marcus Aurelius edits",
-      "คลิป Steve Jobs / Naval Ravikant"
+      "คลิป Steve Jobs / Naval Ravikant / Ray Dalio"
     ],
     "daily_screen_time_th": "3-4 ชม. (แต่บอกตัวเองว่ามัน educational)",
     "signature_phrase_th": "จริงๆ มันก็มีประเด็นนะ ฟังให้จบก่อน",
     "tagline_th": "เล่น social ไม่เสียเวลาไปเปล่าๆ — มาหาสาระ",
-    "description_th": "คุณคือสายที่เปิด TikTok แล้วบอกตัวเองว่า 'นี่คือ self-development' FYP คุณเต็มไปด้วย podcast cuts, motivational speakers, และคลิปสอนชีวิต save คลิปไว้เพียบในโฟลเดอร์ 'wisdom' ที่ไม่เคยกลับไปดูซ้ำ ชอบ screenshot quote ส่งให้เพื่อนพร้อมคำว่า 'อ่านเลย deep มาก' บางทีก็ใช้ความรู้ 30 วินาทีจาก TikTok ไป debate กับเพื่อนเหมือนเป็นผู้เชี่ยวชาญ",
-    "compatible_with": ["HEALER", "HUSTLER"],
+    "description_th": "คุณคือคนที่เปิด TikTok หลังเลิกงาน 6 โมงเย็นแล้วบอกตัวเองว่า 'นี่คือ self-development ไม่ใช่ doomscroll' FYP คุณ algorithm จัดให้เต็มไปด้วย Jordan Peterson cut 47 วินาทีเรื่อง 'why young men suffer', Mel Robbins '5 second rule', Huberman อธิบาย dopamine ตอน 6 โมงเช้า, Stoicism edit พร้อมเพลง epic, Naval thread แปลไทย คุณ save คลิปไว้เพียบในโฟลเดอร์ 'wisdom' ที่ไม่เคยกลับไปดูซ้ำ จำนวนเกิน 400 คลิป screenshot quote ส่งให้เพื่อนใน LINE พร้อมคำว่า 'อ่านเลย deep มาก' ตอนตี 1 บางทีก็เอาความรู้ 30 วินาทีจาก TikTok ไป debate กับเพื่อนวงเหล้าเหมือนเป็นผู้เชี่ยวชาญด้าน neuroscience คุณซื้อหนังสือ Atomic Habits, Sapiens, Thinking Fast and Slow ที่ Kinokuniya — อ่านบทแรกแล้ววางทิ้งไว้ข้างเตียง อ่าน Threads ของ @poolsidefm @naval ตามชีวิตคน Silicon Valley พลังงานเยอะ แต่บางทีก็เหนื่อยกับการหา 'wisdom' ตลอดเวลา",
+    "strengths_th": [
+      "อยากรู้อยากเห็นจริง — เปิดมุมมองใหม่ตลอด",
+      "เป็นคนที่เพื่อนมาคุยเรื่องลึก ๆ ในวงเหล้า",
+      "vocabulary แน่น พูดเรื่องนามธรรมรู้เรื่อง",
+      "หา reference เก่งเวลาทำงานต้องการ insight"
+    ],
+    "weaknesses_th": [
+      "over-share quote จนเพื่อนเริ่ม mute สตอรี่",
+      "มั่นใจในความรู้ 30 วินาทีเกินไป — debate ผิดบ่อย",
+      "ซื้อหนังสือเยอะแต่อ่านไม่จบเล่ม",
+      "หลีกเลี่ยงการลงมือทำจริง เพราะ 'ยังศึกษาอยู่'"
+    ],
+    "compatible_with": ["HEALER", "GOSSIP"],
+    "famous_examples_th": [
+      "เพื่อนสายอ่าน Naval ที่ส่ง thread ลง LINE ทุกเช้า",
+      "พี่ในออฟฟิศที่ quote Stoicism ใน meeting",
+      "วิทย์ สิทธิเวคิน — สายความรู้",
+      "เอ๋ มยุรา (รายการคุยลึก)",
+      "คนทำเพจ Mission to the Moon"
+    ],
+    "growth_tips_th": [
+      "อ่านหนังสือเล่มเดียวจบ ดีกว่า podcast cut 50 คลิป",
+      "เลือก quote ที่ save ไว้ 5 อัน อ่านซ้ำเดือนละครั้ง",
+      "ลงมือทำ 1 idea ที่เคยฟัง — ไม่ใช่แค่ฟัง",
+      "ตั้ง screen time limit TikTok 1 ชม./วัน บังคับตัวเอง"
+    ],
+    "shareable_quote_th": "save คลิป wisdom 400 คลิป — เปิดดูซ้ำ 0 ครั้ง 🧠",
+    "color_accent": "#7C3AED",
     "red_flag_th": "บางทีก็ over-share quote จนเพื่อนรำคาญ + มั่นใจในความรู้ 30 วินาทีเกินไป",
     "life_advice_th": "อ่านหนังสือจริงๆ บ้างเถอะ — podcast cut 1 นาทีไม่เท่ากับฟังเต็ม 2 ชม. และ screenshot quote ที่ save ไว้ ลองอ่านซ้ำสัก 5 อันก็พอ"
   },
@@ -23,17 +50,44 @@
     "name_th": "สายกินเล่นจอ — ASMR อาหาร รีวิวร้าน save ลิสต์มาราธอน",
     "emoji": "🍜",
     "FYP_content_th": [
-      "รีวิวคาเฟ่กรุงเทพ / เชียงใหม่",
-      "ASMR กินบุฟเฟ่ต์ / มาม่าเกาหลี",
+      "รีวิวคาเฟ่กรุงเทพ / เชียงใหม่ / อารีย์ / เอกมัย",
+      "ASMR กินบุฟเฟ่ต์ / มาม่าเกาหลี / หม่าล่าหวง",
       "เชฟทำพาสต้า slow-mo",
       "ลิสต์ 'ร้านเด็ดย่าน...' ทุกย่าน",
-      "หม่าล่า / ชาบู / ปิ้งย่าง pov"
+      "หม่าล่า / ชาบู / ปิ้งย่าง pov / หมูกระทะตี 1"
     ],
     "daily_screen_time_th": "4-5 ชม. (ส่วนใหญ่ก่อนนอน หิวยับ)",
     "signature_phrase_th": "เซฟไว้ก่อน เดี๋ยวไปกิน",
     "tagline_th": "FYP คือ Google Maps ฉบับน้ำลายไหล",
-    "description_th": "คุณคือคนที่ Save คลิปอาหารวันละ 20 คลิป โฟลเดอร์ 'ที่กิน' มี 800 คลิป แต่ไปกินจริง 5 ร้าน เปิด TikTok ตอน 5 ทุ่มทั้งที่กินข้าวเย็นแล้ว ผลคือต้องสั่งหม่าล่ามากิน รีวิว 'ร้านเด็ดย่านอารีย์' ดูจบ 50 คลิปแต่จำชื่อร้านไม่ได้สักที่ ส่งคลิปคาเฟ่ให้แฟน/เพื่อนพร้อมข้อความ 'เสาร์นี้ไป' ทุกอาทิตย์",
-    "compatible_with": ["AESTHETIC", "GOSSIP"],
+    "description_th": "คุณคือคนที่เปิด TikTok ตอน 5 ทุ่มทั้ง ๆ ที่กินข้าวเย็นแล้ว 2 ชม. — ผลคือสั่ง grab หม่าล่าหวงร้าน Mala Hot Pot มากินตอน 5 ทุ่มครึ่ง โฟลเดอร์ 'ที่กิน' ใน save ของ TikTok มี 800 คลิป ไปจริง 5 ร้าน ส่วนใหญ่อยู่ย่านอารีย์ทองหล่อเอกมัย ที่เหลือลืม ดูคลิป 'ร้านเด็ดย่านอารีย์' จบ 50 คลิปแต่จำชื่อร้านไม่ได้สักที่ ส่งคลิปคาเฟ่ให้แฟน/เพื่อนใน LINE พร้อมข้อความ 'เสาร์นี้ไป' ทุกอาทิตย์ — เสาร์มาจริงก็ไป Starbucks เหมือนเดิม IG saved มี collection 'cafe Bangkok' / 'Chiang Mai trip' / 'Tokyo wishlist' / 'หม่าล่าต้องลอง' tab ไหนก็เกิน 200 รูป ดู Mark Wiens กินอาหารริมทาง, ดู Nas Daily รีวิวประเทศไทย, ดู Khao Tom Pla พี่หมึก Workpoint, ดู mod review หมูกระทะ Threads ของคุณ repost รีวิวร้านเด็ดทุกวัน เงินเดือนหายไปกับ Grab Food หม่าล่าตี 1 น้ำหนักขึ้น 3 กก. ใน 2 เดือน — แต่ FYP สวย",
+    "strengths_th": [
+      "รู้จักร้านเด็ดทุกย่าน — เพื่อนถามว่าไปกินไหน คุณตอบได้",
+      "support local SME — รีวิวร้านเล็ก ๆ ที่ค้นเจอ",
+      "social currency ในกลุ่ม — เป็นคนนัดกินเก่ง",
+      "รู้ trend อาหารก่อนทุกคน (โกดังหม่าล่า, ขนมเกาหลีใหม่)"
+    ],
+    "weaknesses_th": [
+      "save คลิปเยอะแต่ไม่เคยไปจริง — โฟลเดอร์เป็นพิพิธภัณฑ์ความฝัน",
+      "กินกลางดึกตามคลิป น้ำหนักขึ้น 3 กก./2 เดือน",
+      "เงินเดือนหายไปกับ Grab Food — เก็บเงินไม่ได้",
+      "เปรียบเทียบมื้ออาหารตัวเองกับ FYP จนกินที่บ้านไม่อร่อย"
+    ],
+    "compatible_with": ["GOSSIP", "THIRSTY"],
+    "famous_examples_th": [
+      "Mark Wiens — สายอาหารริมทางไทย",
+      "พี่หมึก The Reviewer Khao Tom Pla",
+      "เพจ Starvingtime เรื่องกินก่อนตาย",
+      "Foodie ในกรุ๊ป LINE ที่นัดกินทุกศุกร์",
+      "พี่ที่ส่ง 'เซฟไว้นะ' ในแชทกลุ่มทุกวัน"
+    ],
+    "growth_tips_th": [
+      "ตั้งกฎ — save 1 ร้าน ต้องไปจริง 1 ร้าน/เดือน",
+      "ปิด Grab Food หลัง 4 ทุ่ม — ตั้ง screen time IG/TikTok",
+      "ทำ list 'ไปแล้ว' แทน 'จะไป' — เห็น progress จริง",
+      "ทำอาหารเองสัปดาห์ละ 2 มื้อ — ประหยัด + ดูแลสุขภาพ"
+    ],
+    "shareable_quote_th": "save 800 คลิป ไปจริง 5 ร้าน — โฟลเดอร์ 'ที่กิน' คือพิพิธภัณฑ์ความฝัน 🍜",
+    "color_accent": "#FF8A6B",
     "red_flag_th": "Save คลิปร้านเยอะแต่ไม่เคยไปจริง + กินกลางดึกตามคลิป น้ำหนักขึ้น 3 กก.",
     "life_advice_th": "ลองตั้งกฎ — ดูคลิปร้าน 1 ร้าน ต้องไปจริง 1 ร้านในเดือนนั้น ไม่งั้นโฟลเดอร์ 'ที่กิน' จะกลายเป็นพิพิธภัณฑ์ความฝัน"
   },
@@ -42,17 +96,44 @@
     "name_th": "สายซุบซิบ — ดราม่าซิง ข่าวดารา ไทม์ไลน์ครบทุกประเด็น",
     "emoji": "👀",
     "FYP_content_th": [
-      "Threads ดราม่าคู่รักดารา",
-      "timeline สรุปประเด็นร้อน",
-      "TikTok pantip ฉบับสั้น",
+      "Threads ดราม่าคู่รักดารา / สามีนอกใจ",
+      "timeline สรุปประเด็นร้อน X",
+      "TikTok pantip ฉบับสั้น (พันทิพย์ฟอร์แมต)",
       "ข่าวดารา / influencer หลุด",
-      "spilling tea บัญชีนิรนาม"
+      "spilling tea บัญชีนิรนาม / Reddit r/Thailand"
     ],
     "daily_screen_time_th": "5-6 ชม. (ส่วนใหญ่อยู่บน Threads + X)",
     "signature_phrase_th": "เห้ย รู้ยัง... อันนี้เพิ่งเกิด",
     "tagline_th": "ฉันคือ CNN ของแก๊งเพื่อน",
-    "description_th": "คุณคือคนที่รู้ดราม่าก่อนข่าว Workpoint จะลง screenshot timeline ไว้ในแชทเพื่อน 30 รูป ส่งพร้อม voice 'ฟังเรื่องนี้ก่อน 5 นาที' มี Threads 3 บัญชีไว้ stalk แต่ละ circle ดราม่า เปิด FYP เจอเรื่อง bts/blackpink/ดาราไทย คือต้องไถจนจบ timeline แม้จะไม่รู้จักใคร เป็นคนแรกในแก๊งที่รู้ว่าใครเลิกกับใคร แม้ไม่ใช่เพื่อนตัวเอง",
+    "description_th": "คุณคือคนที่รู้ดราม่าก่อนข่าว Workpoint จะลง — รู้ก่อน Sanook, ก่อน khaosod, ก่อนแม่บ้าน Thai LINE OA จะแชร์ มี Threads 3 บัญชี (หลัก/ stalk เพื่อน/ stalk ดารา) ไว้ติดตามแต่ละ circle ดราม่า X feed คุณคือ chronological list เหตุการณ์ 24 ชม. ที่ผ่านมาในไทย screenshot timeline ส่งกลุ่มเพื่อน 30 รูป พร้อม voice 5 นาทีว่า 'ฟังเรื่องนี้ก่อน' เปิด FYP เจอเรื่อง BTS, BLACKPINK, ดาราไทยเลิกกัน คือต้องไถจนจบ timeline แม้ไม่รู้จักใคร อ่านพันทิพย์ห้องสีลม ห้องชายคา ห้องชวนชม จนตี 2 ตามดราม่า influencer หลุด คุณคือคนแรกในแก๊งที่รู้ว่าใครเลิกกับใคร แม้ไม่ใช่เพื่อนตัวเอง ในออฟฟิศ คุณคือ informal HR — รู้ว่าใครจะลาออก ใครชอบใคร ใครเอาเปรียบ มีบัญชีนิรนามเอาไว้ comment ในประเด็นที่ไม่กล้าใช้ชื่อจริง ทุกเช้า 8 โมง ไถ Threads 30 นาทีก่อนเริ่มงาน — 'อัพเดทโลก' ตามคำคุณ พลังงานคุณคือ social intelligence แต่บางทีก็เผลอเชื่อข่าวลือก่อนตรวจสอบ พูดเสร็จต้องลบ Story",
+    "strengths_th": [
+      "social intelligence สูง — อ่านคนเก่ง รู้ dynamic ทีม",
+      "เป็น informal news hub ของแก๊ง — เพื่อนพึ่ง",
+      "หาข้อมูลคน/บริษัทเก่ง สาย background check",
+      "เข้าใจ pop culture ไทย/เกาหลีลึกระดับ niche"
+    ],
+    "weaknesses_th": [
+      "เผลอเล่าดราม่าคนอื่นจนแฟนเหนื่อย — กระทบ relationship",
+      "เชื่อข่าวลือ Threads ก่อนตรวจสอบ — แชร์ผิดบ่อย",
+      "พลังงานหายไปกับเรื่องคนแปลกหน้า ไม่ได้ลงทุนชีวิตตัวเอง",
+      "นอนตี 2-3 เพราะตามดราม่า"
+    ],
     "compatible_with": ["FOODIE", "THIRSTY"],
+    "famous_examples_th": [
+      "Drama-addict — เพจดราม่าอันดับ 1",
+      "หนุ่ม กรรชัย — สาย gossip official",
+      "พี่ที่ตามข่าว BLACKPINK ตลอด 24/7",
+      "นักข่าวบันเทิง Daily News",
+      "เจ้าของ Threads ดราม่านิรนาม"
+    ],
+    "growth_tips_th": [
+      "ใช้พลังงาน gossip กับชีวิตตัวเองครึ่งหนึ่ง — review goal/finance",
+      "fact-check ก่อนแชร์ — Threads 80% ไม่จริง",
+      "ตั้ง screen time Threads/X 1 ชม./วัน",
+      "เปลี่ยน 'อยากรู้เรื่องคนอื่น' เป็น 'อยากเข้าใจคนรอบตัว' — คุยกับครอบครัว"
+    ],
+    "shareable_quote_th": "ฉันรู้ดราม่าก่อน Workpoint — แต่ลืมว่าวันนี้แม่โทรหา 👀",
+    "color_accent": "#EC4899",
     "red_flag_th": "เผลอเล่าดราม่าคนอื่นจนแฟนเหนื่อย + บางทีก็เชื่อข่าวลือก่อนตรวจสอบ",
     "life_advice_th": "พลังงานที่ใช้ไถดราม่าคนแปลกหน้า ลองเอามาดูแลชีวิตตัวเองสักครึ่งหนึ่งก็พอ — และข่าวลือใน Threads 80% ไม่จริง"
   },
@@ -61,17 +142,44 @@
     "name_th": "สายเยียวยาใจ — หมาขี้เซา affirmations hot girl walk",
     "emoji": "🌷",
     "FYP_content_th": [
-      "คลิปหมา/แมวขี้เซา",
+      "คลิปหมา/แมวขี้เซา / corgi butt",
       "affirmation Reel เสียงนุ่มๆ",
-      "hot girl walk / morning routine",
-      "นักจิตวิทยาสอน emotional regulation",
-      "matcha latte aesthetic / journaling"
+      "hot girl walk / morning routine 5 AM",
+      "นักจิตวิทยาสอน emotional regulation / attachment style",
+      "matcha latte aesthetic / journaling / candle lit reading"
     ],
     "daily_screen_time_th": "3-4 ชม. (กระจายทั้งวัน เป็น micro-doses)",
     "signature_phrase_th": "It's giving healing vibes ✨",
     "tagline_th": "FYP คือ therapy ฟรี (ที่จริงไม่ฟรี เสียเวลา)",
-    "description_th": "คุณคือคนที่เปิด TikTok เพื่อ 'reset ใจ' FYP เต็มไปด้วยคลิปหมาขี้เซา, affirmation, นักจิตวิทยาสอนรับมืออารมณ์ Save คลิป 'how to glow up' ไว้ 200 คลิป ทำจริง 2 อย่าง (ดื่มน้ำเปล่า + เดิน) ชอบ repost Reel quote ลง Story พร้อม emoji 🌷✨ มี playlist 'self-care Sunday' ที่จริงๆ คือนั่งไถ TikTok บนเตียง 4 ชั่วโมง",
-    "compatible_with": ["PHILOSOPHER", "AESTHETIC"],
+    "description_th": "คุณคือคนที่เปิด TikTok เพื่อ 'reset ใจ' หลัง manager toxic ส่ง LINE 'เข้ามาคุยหน่อย' ตอน 6 โมงครึ่ง FYP คุณ algorithm trained มาให้เต็มไปด้วยคลิป corgi ขี้เซานอนหงาย, affirmation 'you are exactly where you need to be' เสียงผู้หญิงนุ่ม ๆ พื้นหลังเปียโน, นักจิตวิทยาเกาหลีอธิบาย anxious attachment, hot girl walk Brooklyn สาว aesthetic ใส่ Lululemon, matcha latte slow-mo, journaling ใน Muji notebook คุณ save คลิป 'how to glow up in 30 days' ไว้ 200 คลิป ทำจริง 2 อย่าง (ดื่มน้ำเปล่า + เดิน BTS แทนนั่งวิน) repost Reel quote ลง IG Story พร้อม emoji 🌷✨ ทุกเช้า เปิด playlist Spotify 'self-care Sunday' ที่จริงๆ คือนั่งไถ TikTok บนเตียง 4 ชั่วโมง ใส่ขุน Sulwhasoo sheet mask ดู NewJeans MV เพื่อ 'reset' มี habit tracker Notion ที่ตามไม่ทันจาก week 2 ดื่ม matcha จาก No Name, % Arabica, Blue Bottle ที่ One Bangkok ในแต่ละสัปดาห์ ตามดู Lisa Olivera, Glennon Doyle, Brené Brown reposts แต่ไม่เคยซื้อหนังสือ คุณ romanticize ทุกอย่าง — ฝนตกคือ aesthetic, รถติดคือเวลาทำ inner work บางทีก็จริง ๆ healing ได้ บางทีก็ใช้ TikTok แทน therapy ที่ควรไปจริง",
+    "strengths_th": [
+      "self-awareness สูง — รู้จักภาษา emotional regulation",
+      "สร้างพื้นที่ปลอดภัยในกลุ่มเพื่อน เป็น emotional support",
+      "มี aesthetic life ที่คนชื่นชม — IG ดูสวย",
+      "introduce เพื่อนให้รู้จัก therapy/journaling เป็น"
+    ],
+    "weaknesses_th": [
+      "ใช้ TikTok แทน therapy จริง — ปัญหาลึกไม่ถูกแก้",
+      "romanticize ทุกอย่างจนละเลยปัญหาที่ต้องแก้ (เงิน/งาน)",
+      "ใช้เงินกับ wellness/skincare เกินงบ — La Mer, Gua Sha, candle Diptyque",
+      "scroll affirmation 2 ชม. แทนเดินจริง 20 นาที"
+    ],
+    "compatible_with": ["PHILOSOPHER", "THIRSTY"],
+    "famous_examples_th": [
+      "เพื่อนสาย wellness ที่ส่ง affirmation ทุกเช้า",
+      "อิงฟ้า วราหะ — สาย positive vibe",
+      "ครีเอเตอร์ aesthetic Bangkok",
+      "พี่ที่ทำเพจ journaling ภาษาไทย",
+      "นักจิตวิทยาเพจ 'อย่าฝืนรู้สึก'"
+    ],
+    "growth_tips_th": [
+      "ลองคุยกับนักจิตวิทยาจริง ๆ — TikTok ไม่ใช่ therapy",
+      "ปิดมือถือไปนอนคือ self-care ที่ดีที่สุด",
+      "ทำ affirmation 1 อันจริง ๆ ไม่ใช่ save 200 คลิป",
+      "ตั้งงบ wellness ไม่เกิน 10% ของรายได้/เดือน"
+    ],
+    "shareable_quote_th": "save 200 คลิป glow up — ทำจริง 2 อย่าง: ดื่มน้ำ + เดิน 🌷",
+    "color_accent": "#F4C95D",
     "red_flag_th": "ใช้ TikTok แทน therapy จริงๆ + romanticize ทุกอย่างจนละเลยปัญหาที่ต้องแก้",
     "life_advice_th": "การ scroll affirmation 2 ชม. ไม่เท่ากับเดินจริง 20 นาที — และบางที 'self-care' ที่ดีที่สุดคือปิดมือถือไปนอน"
   },
@@ -80,17 +188,44 @@
     "name_th": "สายติ่งหิว — ครัชไอดอล K-pop dance fan cam ลูปไม่หยุด",
     "emoji": "💜",
     "FYP_content_th": [
-      "fan cam K-pop dance practice",
-      "edits ไอดอล slow-mo + เพลงเศร้า",
-      "behind the scenes คอนเสิร์ต",
-      "lookalike ครัช / หนุ่มหล่อ POV",
-      "thirst trap TikTok"
+      "fan cam K-pop dance practice (Lisa, Karina, Wonyoung)",
+      "edits ไอดอล slow-mo + เพลงเศร้า / sped-up ออดี้โอ",
+      "behind the scenes คอนเสิร์ต / fan meeting",
+      "lookalike ครัช / หนุ่มหล่อ POV Korean drama",
+      "thirst trap TikTok / IG reels ดารา"
     ],
     "daily_screen_time_th": "5-6 ชม. (ส่วนใหญ่ลูป 10 วินาทีเดิม 50 รอบ)",
     "signature_phrase_th": "ตายแล้วจ้า อยู่ไม่ได้",
     "tagline_th": "FYP เป็น mood board ของครัชชั้น",
-    "description_th": "คุณคือคนที่ดู fan cam คนเดิมท่อนเดิม 47 รอบจนจำองศาทุกข้อต่อได้ มี private folder 'ผัวฉัน' มีคลิป 600 คลิปจาก idol 4 คน แชทเพื่อนแก๊งติ่งวันละ 200 ข้อความ พร้อม 'ดูเลยอันนี้ ฉันตายแล้ว' เปิด TikTok ก่อนนอนแล้วยังตื่นอยู่ตอนตี 3 ดู edit คนเดิมในเพลงเศร้าคนละเวอร์ชัน Story เต็มไปด้วย repost fan cam + 💜🥹",
-    "compatible_with": ["GOSSIP", "AESTHETIC"],
+    "description_th": "คุณคือคนที่ดู fan cam Lisa Money Manila ท่อนเดิม 47 รอบจนจำองศาทุกข้อต่อได้ มี private folder ใน Photos ชื่อ 'ผัวฉัน' มีคลิป 600 คลิปจาก idol 4 คน (Jungkook, Cha Eunwoo, Karina, Felix) แชทเพื่อนแก๊งติ่ง LINE ชื่อ 'หนูตายเเล้ว' วันละ 200 ข้อความ พร้อม 'ดูเลยอันนี้ ฉันตายแล้วจ้า' เปิด TikTok ก่อนนอน 5 ทุ่ม ตื่นมาอีกที ตี 3 ดู edit คนเดิมในเพลง 'Sweater Weather sped up' กับ '505 Arctic Monkeys slow' หมุนเวียน Story เต็มไปด้วย repost fan cam + 💜🥹 ทุกอาทิตย์ใช้เงิน 800-1,500 บาทกับ photocard Mercari, Carousell, Twitter/X ติ่งไทย รอ pre-order album ที่ Inter Media ผ่อน Citi ค่าตั๋วคอนเสิร์ต BTS, BLACKPINK, BUS รอบ Impact Arena แชร์ Threads สาย stan ทำ powerpoint สรุป timeline ครัชใหม่ของ Karina ส่งให้เพื่อน เปิด YouTube ดู vlog Hyein NewJeans หลัง wfh ใช้ NewJeans ทุก playlist Spotify จุดอ่อน — นอนตี 3 ทุกคืนเพราะเปิด FYP ตื่นมาประชุม 9 โมงด้วยตา panda ใช้เงินกับ photocard จน emergency fund หาย แต่ความสุขคือความสุข — relationship parasocial กับ idol ก็คือ relationship",
+    "strengths_th": [
+      "passion สูงมาก — ทุ่มเต็มที่กับสิ่งที่รัก",
+      "community strong — เพื่อนติ่งคือ ride or die",
+      "creative skill จากการทำ edit/fan account/translation",
+      "pop culture literacy แน่น โดยเฉพาะ K-pop, T-pop"
+    ],
+    "weaknesses_th": [
+      "นอนตี 3 ทุกคืน — กระทบสุขภาพ + งาน",
+      "ใช้เงินกับ photocard/concert จน emergency fund หาย",
+      "parasocial relationship จนกระทบ dating ชีวิตจริง",
+      "compare ตัวเองกับ idol จน self-esteem ลด"
+    ],
+    "compatible_with": ["GOSSIP", "HEALER"],
+    "famous_examples_th": [
+      "ติ่ง BTS ARMY ไทยที่ไปทุก fan meet",
+      "BLINK ที่ตามคอน BLACKPINK ทุกประเทศ",
+      "MIDZY ที่ทำ fan account แปลภาษาไทย",
+      "ติ่ง T-pop BUS / 4EVE / PiXXiE สายแคมป์",
+      "เพื่อนที่ผ่อนตั๋วคอน 6 เดือนกับ Citi"
+    ],
+    "growth_tips_th": [
+      "ตั้ง screen time TikTok หลัง 5 ทุ่ม — ไอดอลก็นอนตอนนี้",
+      "ตั้งงบ K-pop รายเดือน — ไม่เกิน 10% รายได้",
+      "หา hobby ที่ active เพิ่ม — dance class จริง ดีกว่าดู fan cam",
+      "ปรึกษาผู้เชี่ยวชาญถ้ารู้สึกว่า parasocial relationship กระทบชีวิตจริง"
+    ],
+    "shareable_quote_th": "ลูป fan cam 47 รอบ นอนตี 3 ตื่นไปประชุม 9 โมง — รักไอดอลคือ full-time job 💜",
+    "color_accent": "#A78BFA",
     "red_flag_th": "นอนตี 3 ทุกคืนเพราะเปิด FYP + เผลอใช้เงินไปกับ photocard / ติดเตี่ยม concert",
     "life_advice_th": "ครัช idol ไม่ผิด แต่ลองตั้ง screen time limit หลัง 5 ทุ่มก็พอ — ไอดอลก็นอนตอนนั้น คุณก็ควรนอน"
   }

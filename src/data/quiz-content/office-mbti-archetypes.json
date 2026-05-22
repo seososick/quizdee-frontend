@@ -8,7 +8,31 @@
     "in_line_chat_th": "ตอบสั้นมาก 'รับทราบครับ' แต่หลังบ้านทำ deck 30 หน้ารออยู่แล้ว",
     "strength_at_work_th": "วางแผนระยะยาวเก่ง มองเห็น OKR ปีหน้าตั้งแต่ Q1",
     "weakness_at_work_th": "หงุดหงิดกับมีตติ้งที่ไม่มี agenda และเพื่อนที่ถามคำถามซ้ำ",
-    "thai_company_archetype": "Senior Strategy Consultant, Head of Product, Corporate Planning"
+    "thai_company_archetype": "Senior Strategy Consultant, Head of Product, Corporate Planning",
+    "description_th": "พี่ INTJ ตึก SCB Park สาทร เข้าออฟฟิศ 8:45 ทุกเช้า เปิด Notion วาง roadmap ก่อนใคร town hall ของ CEO ยังไม่จบพี่ก็ส่ง deck วิเคราะห์ผลให้ทีมแล้ว ไม่ค่อยคุย small talk หน้าตู้กดน้ำ ไม่ไปกินหมูกระทะ after work เพราะ 'ใช้พลังงานเยอะ' รถติดพระราม 9 ก็ฟัง podcast ของ Tim Ferriss แทนเพลง 1:1 with HR พี่จะเตรียม bullet point มา 8 ข้อ ส่วน OKR review พี่อ่านจบก่อนคนอื่น 2 รอบแล้ว เวลาประชุมเสนอ campaign ใหม่กับ Lazada พี่ตั้งคำถามเดียวที่ทำให้ agency ต้องกลับไปทำการบ้านใหม่ทั้ง deck โหดแต่แฟร์ ทีมที่ทำงานด้วยนานๆ จะรู้ว่าพี่ใจดีในแบบของพี่ คือไม่พูดเปล่าๆ แต่ push ให้ทุกคนเก่งขึ้นจริง",
+    "strengths_th": [
+      "วาง strategy 3 ปีได้ในขณะที่คนอื่นยังคิดแค่ Q ถัดไป",
+      "อ่านข้อมูลเยอะแล้วสรุปเป็น insight ที่ใช้ตัดสินใจได้จริง",
+      "ไม่กลัว push back กับ C-level ถ้ามีหลักฐาน",
+      "ทำงาน deep work คนเดียวได้นาน ไม่ต้องประคอง"
+    ],
+    "weaknesses_th": [
+      "ไม่อดทนกับคนที่ unprepared ในมีตติ้ง สีหน้าฟ้องชัด",
+      "ขี้เกียจ socialize กับทีมจน manager มองว่า 'ไม่เป็น team player'",
+      "ติด perfectionist เลยช้าในการ ship MVP",
+      "อธิบายไอเดียซับซ้อนแล้วลืมว่าคนฟังตามไม่ทัน"
+    ],
+    "compatible_with": ["ENTP", "INFJ", "ENFJ"],
+    "famous_examples_th": ["ฐิติ ปัญญาภิรมย์ (ผู้ก่อตั้ง LINE MAN Wongnai)", "Elon Musk", "Mark Zuckerberg", "พี่หนุ่ย พงศ์สุข", "Michelle Obama"],
+    "growth_tips_th": [
+      "ลองใช้เวลา 15 นาทีต่อวันเดินคุยกับน้องในทีม ไม่ต้องเรื่องงาน",
+      "ฝึก ship งานที่ 80% เสร็จแทนรอ 100% ไป iterate ทีหลัง",
+      "ก่อน push back ในมีตติ้งให้ลองถามคำถามก่อนวิจารณ์",
+      "หาที่ปรึกษาสาย F (Feeling) ไว้ช่วย sense check ตอนสื่อสารเรื่อง sensitive",
+      "อย่าลืมพักจริงๆ วันเสาร์ ไม่ใช่อ่าน whitepaper เรียก 'พัก'"
+    ],
+    "shareable_quote_th": "พูดน้อยต่อยหนัก ก่อน meeting จบ deck Q ถัดไปเสร็จแล้ว",
+    "color_accent": "#1F1A14"
   },
   {
     "mbti": "INTP",
@@ -19,7 +43,31 @@
     "in_line_chat_th": "ส่งลิงก์ paper/บทความยาว ๆ ตอนตี 1 พร้อมคำว่า 'น่าสนใจมาก'",
     "strength_at_work_th": "วิเคราะห์ปัญหาซับซ้อนเก่ง หา edge case ที่คนอื่นไม่เห็น",
     "weakness_at_work_th": "เริ่มงานหลายอย่างพร้อมกัน แต่ปิด deadline ไม่ค่อยทัน",
-    "thai_company_archetype": "Data Scientist, R&D Engineer, Tech Lead สาย back-end"
+    "thai_company_archetype": "Data Scientist, R&D Engineer, Tech Lead สาย back-end",
+    "description_th": "INTP คือคนที่นั่งโต๊ะมุมห้อง ตึก True Digital Park ใส่หูฟัง Sony noise-cancelling ตลอดวัน เปิด VS Code 4 หน้าจอ พร้อม Stack Overflow อีก 12 tab เข้างานสาย 10:30 เพราะเมื่อคืนเพิ่งอ่าน paper เรื่อง LLM จบตี 3 standup ตอนเช้าจะพูดคำเดียวว่า 'still investigating' แต่จริงๆ refactor codebase ไปครึ่งหนึ่งแล้ว ไม่กิน lunch กับทีม เลือกซื้อข้าวกล่อง 7-11 ขึ้นมากินที่โต๊ะพร้อมเปิด YouTube ดู Veritasium พี่ INTP ไม่อิน OKR review เท่าไหร่ มองว่าเป็น performative theater แต่พอเจอบั๊กโหดที่ทีมแก้ไม่ออก 3 อาทิตย์ พี่จะหายเงียบไป 2 วันแล้วโผล่มาพร้อม PR ที่ฟิกซ์ทุกอย่าง LINE chat กับแฟนคือบ่นว่า standup ไร้สาระ แต่พอเจอ technical problem ที่น่าสนใจคือลืมกินข้าว",
+    "strengths_th": [
+      "หา root cause ของบั๊กที่คนอื่นยอมแพ้ไปแล้ว",
+      "เรียนรู้ technology ใหม่เร็วโดยไม่ต้องมีคนสอน",
+      "ไม่กลัวตั้งคำถามโง่ๆ ที่จริงคือคำถามฉลาด",
+      "วิเคราะห์ trade-off ของ architecture ได้ลึก"
+    ],
+    "weaknesses_th": [
+      "ผัดวันประกันพรุ่งจนใกล้ deadline ถึงจะเริ่มเร่ง",
+      "เบื่อ documentation ขี้เกียจเขียน handover",
+      "ติดวงจรวิเคราะห์ไม่จบ analysis paralysis",
+      "ลืม update status ใน Jira จน PM งง"
+    ],
+    "compatible_with": ["ENTJ", "ENFP", "INTJ"],
+    "famous_examples_th": ["Bill Gates", "หมอเอ้ก ชลน่าน", "Albert Einstein", "พี่เก่ง สิทธิพร (Skooldio)", "Marie Curie"],
+    "growth_tips_th": [
+      "ตั้ง timer 25 นาทีบังคับตัวเองให้ ship แทนรอความสมบูรณ์",
+      "เขียน decision log ทุกอาทิตย์ จะได้ไม่ลืมว่าทำอะไรไป",
+      "ฝึกพูดสรุป 1 นาทีก่อนเข้ามีตติ้ง ไม่ต้อง deep dive ทุกครั้ง",
+      "หา accountability partner ช่วย nudge เรื่อง deadline",
+      "ลองสอนน้องใหม่ดู เพราะทำให้เราคิดเป็นระเบียบขึ้น"
+    ],
+    "shareable_quote_th": "ตอบ standup สั้นๆ ว่า 'still investigating' แต่หลังบ้าน refactor ไปครึ่ง repo แล้ว",
+    "color_accent": "#6B5B95"
   },
   {
     "mbti": "ENTJ",
@@ -30,7 +78,32 @@
     "in_line_chat_th": "ส่ง to-do list มี bullet 1-2-3 ชัดเจน พร้อมเดดไลน์เป็นวันที่",
     "strength_at_work_th": "ตัดสินใจเร็ว push ทีมให้ส่งงาน ไม่กลัวเสนอไอเดียกับ C-level",
     "weakness_at_work_th": "บางทีรีบจนลืมฟังคนอื่น ทำให้น้องในทีมรู้สึกถูก steamroll",
-    "thai_company_archetype": "Country Manager, COO, Founder สตาร์ทอัพ"
+    "thai_company_archetype": "Country Manager, COO, Founder สตาร์ทอัพ",
+    "description_th": "พี่ ENTJ ออฟฟิศ KBank ตึกพหลโยธิน นัด breakfast meeting 7:30 กับ vendor ก่อนคนอื่นเข้างาน บินไปสิงคโปร์เดือนละ 2 รอบ flight 7 โมงเช้ากลับ flight 10 โมงคืน ตารางใน Outlook สีฟ้าทึบทั้งวัน ไม่มีช่องว่างให้แม้แต่กินข้าว ลูกน้องกลัวก็ใช่ ชื่นชมก็ใช่ เพราะพี่ push คนเก่ง แต่ถ้าทำไม่ได้ก็ replace ไม่ลังเล สั่ง Starbucks ผ่าน LINE MAN ระหว่างนั่ง Grab ข้ามเมือง คุยกับลูกค้าระดับ EVP ปตท. ได้สบาย เพราะเตรียม 3 scenarios มาเสมอ Slack DM ถึงทีมตอน 22:30 ว่า 'พรุ่งนี้ 9 โมง standup เร่ง' ไม่ใช่เพราะใจร้ายแต่พี่อยู่ในโหมด 'ขับเคลื่อนตลอดเวลา' พี่ ENTJ มอง career เป็นเกมยาว 10 ปี ไม่ใช่ KPI รายไตรมาส",
+    "strengths_th": [
+      "ตัดสินใจในข้อมูลไม่ครบได้โดยไม่ panic",
+      "นำการประชุมที่มี stakeholder 5 ฝ่ายให้จบใน 30 นาที",
+      "เห็นภาพใหญ่ระดับ business model ไม่ใช่แค่ feature",
+      "negotiate กับ vendor/partner ได้ดีลที่ดีที่สุดเสมอ",
+      "build ทีมให้ scale ได้จริงไม่ใช่แค่ on paper"
+    ],
+    "weaknesses_th": [
+      "พูดตรงเกินจนน้องใหม่หัวใจสลายในวันแรก",
+      "ไม่อดทนกับ process ช้าๆ ของ enterprise",
+      "เผลอ micromanage ตอนงานสำคัญถ้าไม่ trust ทีม",
+      "ลืมขอบคุณคนช่วยงาน เพราะมองว่ามันคือหน้าที่"
+    ],
+    "compatible_with": ["INTP", "ENFJ", "ISTJ"],
+    "famous_examples_th": ["ธนินท์ เจียรวนนท์ (CP)", "Steve Jobs", "ศุภชัย เจียรวนนท์", "Sheryl Sandberg", "พี่ตัน อิชิตัน"],
+    "growth_tips_th": [
+      "ตั้งกฎ 'ฟัง 2 นาทีก่อนพูด' ในมีตติ้งกับทีม junior",
+      "เขียน thank you note ให้คนช่วยงานอาทิตย์ละครั้ง",
+      "ลอง delegate งานที่ตัวเองทำได้ดีให้คนอื่นทำ แม้จะช้ากว่า",
+      "บล็อก Friday afternoon เป็น no-meeting zone บังคับตัวเองพัก",
+      "ปรึกษา coach หรือ mentor เรื่อง emotional intelligence"
+    ],
+    "shareable_quote_th": "Slack ตอนสี่ทุ่ม 'พรุ่งนี้เก้าโมง standup เร่ง' — ไม่ใช่ใจร้าย แค่ขับเคลื่อน",
+    "color_accent": "#C0392B"
   },
   {
     "mbti": "ENTP",
@@ -41,7 +114,31 @@
     "in_line_chat_th": "ตั้งกลุ่มใหม่อยู่เรื่อย 'กลุ่มลับ ๆ ปั่นโปรเจกต์ X' แล้วลืมไปเอง",
     "strength_at_work_th": "brainstorm เก่งมาก โต้ debate ได้ทุกหัวข้อ pitch ลูกค้าได้น่าฟัง",
     "weakness_at_work_th": "เบื่อง่าย งาน routine ทำได้ 2 อาทิตย์เริ่มหายาก motivation",
-    "thai_company_archetype": "Creative Director, Growth Hacker, BD สตาร์ทอัพ"
+    "thai_company_archetype": "Creative Director, Growth Hacker, BD สตาร์ทอัพ",
+    "description_th": "ENTP ออฟฟิศ Shopee TH ตึกสามย่านมิตรทาวน์ นั่ง hot desk วันละโต๊ะเปลี่ยนตามอารมณ์ เปิด Figjam มี sticky note 200 ใบ แต่ละใบคือไอเดียที่ยังไม่ได้เริ่ม วันจันทร์ pitch growth experiment 4 อัน วันศุกร์ลืมไปแล้ว 3 ชอบ debate กับ Head of Product จนคนรอบข้างไม่แน่ใจว่าทะเลาะหรือ brainstorm ไป gym ตึกข้างกันวันละชั่วโมงแต่ไม่เคยลด weight เพราะกิน Boost Juice หลังออก หลัง OKR review จะเดินไปคุยกับ designer ทีมอื่นเรื่องไอเดียใหม่ทันที PM ต้องคอย babysit ให้กลับมาทำงานเดิมให้เสร็จ พี่ ENTP รัก Twitter (X) มากกว่า LinkedIn เพราะได้เถียงคน thread อาหารเที่ยงคือ Cafe Amazon ใต้ตึก แต่ใช้เวลาคุยมากกว่ากิน",
+    "strengths_th": [
+      "pitch ไอเดียให้ stakeholder buy-in ได้ในสไลด์เดียว",
+      "เห็น opportunity ใน gap ที่คนอื่นไม่มอง",
+      "debate constructive ทำให้ทีมคิดรอบด้านขึ้น",
+      "เรียนรู้ domain ใหม่ได้ใน 2 อาทิตย์"
+    ],
+    "weaknesses_th": [
+      "เริ่มโปรเจกต์เยอะ ปิดไม่ครบ ทีม follow up เหนื่อย",
+      "เบื่อ execution phase ที่ต้องทำซ้ำ",
+      "พูดแย้งใน meeting จน senior รู้สึกถูก challenge ตลอด",
+      "ไม่ค่อย document กระบวนการ ทำให้ knowledge ไม่อยู่ในทีม"
+    ],
+    "compatible_with": ["INTJ", "INFJ", "ISTJ"],
+    "famous_examples_th": ["Richard Branson", "ต๊อบ เถ้าแก่น้อย", "Jack Ma", "พี่หนุ่ม กรรชัย", "ธรรศพลฐ์ แบเลเว็ลด์ (Thai AirAsia)"],
+    "growth_tips_th": [
+      "เลือก 1 idea ต่อ Q แล้วบังคับตัวเอง ship ก่อนเริ่มอันใหม่",
+      "หา operator (ISTJ/ESTJ) เป็น co-founder/co-pilot ช่วย execute",
+      "ใช้ Notion เก็บ idea backlog แทนตั้งกลุ่ม LINE ใหม่",
+      "ฝึกฟัง 'ทำไมไม่' ก่อน 'ทำไงให้ทำได้' จาก finance/legal",
+      "review สิ้นเดือนว่าอันไหน ship อันไหนยัง รับผิดชอบกับตัวเลข"
+    ],
+    "shareable_quote_th": "ไอเดียวันละ 50 อัน ใช้จริง 2 ก็คุ้มแล้วพี่",
+    "color_accent": "#FF8A6B"
   },
   {
     "mbti": "INFJ",
@@ -52,7 +149,31 @@
     "in_line_chat_th": "ทักหลังไมค์ 'พี่โอเคมั้ย เห็นเงียบ ๆ' ทั้งที่ตัวเองก็เพิ่งโดน feedback หนัก",
     "strength_at_work_th": "เข้าใจ user/ลูกค้าลึก เขียน copy/วาง UX ที่โดนใจคน",
     "weakness_at_work_th": "เก็บอารมณ์เยอะเกินไป burnout เงียบ ๆ ก่อนใครรู้",
-    "thai_company_archetype": "UX Researcher, HRBP, Brand Strategist"
+    "thai_company_archetype": "UX Researcher, HRBP, Brand Strategist",
+    "description_th": "INFJ ออฟฟิศ AIS ตึกพหลโยธิน เป็น UX researcher ที่ถูกน้องในทีม ping ขอคำปรึกษาเรื่องส่วนตัวมากกว่าเรื่องงาน เพราะพี่ฟังโดยไม่ตัดสิน เข้างานเงียบๆ 9 โมงตรง สั่ง Americano ร้อนจาก Cafe Amazon ใต้ตึกแล้วขึ้นโต๊ะ เปิด Spotify ฟัง Lo-fi กับ podcast พี่ตูนทุกเช้า ทำ user interview กับลูกค้า 60+ ได้แบบที่คนอื่นทำไม่ได้ เพราะ empathize เก่งจริง พี่ INFJ ดูสงบแต่ในใจ overthink ทุกอย่าง LINE seen ของ manager ตอนเที่ยงทำให้คิดทั้งบ่ายว่าทำอะไรผิด หลังเลิกงานนั่ง BTS กลับบ้านเขียน journal บน iPad ทุกคืน บางอาทิตย์รับฟัง drama ของน้องในทีมเยอะจน burnout เงียบๆ เสาร์อาทิตย์ขังตัวเองอยู่บ้าน reset ดูซีรีส์เกาหลีกับแมว ไม่รับสายใคร 2 วัน",
+    "strengths_th": [
+      "อ่านคนแม่น รู้ว่าใครจะลาออกก่อน HR exit interview",
+      "เขียน copy/strategy ที่กระทบ emotion ของ target จริง",
+      "build trust กับลูกค้า/ทีมในระยะยาวได้ลึก",
+      "เห็น pattern จาก user research ที่ data engineer มองข้าม"
+    ],
+    "weaknesses_th": [
+      "เก็บความเครียดของคนอื่นมาแบกจน burnout",
+      "ปฏิเสธไม่เป็น รับงานเกินจน deadline ชน",
+      "ติด overthink LINE seen ของหัวหน้า 3 ชั่วโมง",
+      "หลีก confrontation ปล่อยให้ปัญหาบ่มจนใหญ่"
+    ],
+    "compatible_with": ["ENTP", "ENFP", "INTJ"],
+    "famous_examples_th": ["พี่ตูน บอดี้สแลม", "Lady Gaga", "ปู ไปรยา", "Martin Luther King Jr.", "พี่เอ๋ ปารีณา (นักเขียน)"],
+    "growth_tips_th": [
+      "ตั้ง office hours ชัดเจน นอกเวลานั้นปิด LINE จริงจัง",
+      "ลองพูด 'ขอกลับไปคิดก่อนค่ะ' แทนรับทุกงานทันที",
+      "หา therapist หรือ coach คุยทุก 2 อาทิตย์ ปรึกษาผู้เชี่ยวชาญถ้ารู้สึกหนัก",
+      "เขียน boundary list สำหรับ drama ของเพื่อนร่วมงาน",
+      "build hobby ที่ไม่เกี่ยวกับ helping others — วาดรูป ปลูกต้นไม้"
+    ],
+    "shareable_quote_th": "ฟังน้องร้องไห้ได้ทั้งบ่าย แล้วเอามาเครียดต่อเองทั้งคืน",
+    "color_accent": "#5D4E8C"
   },
   {
     "mbti": "INFP",
@@ -63,7 +184,31 @@
     "in_line_chat_th": "ส่งสติกเกอร์เยอะ ใช้ '5555' ลงท้ายเพื่อให้ดูไม่ซีเรียส ทั้งที่ในใจซีเรียสมาก",
     "strength_at_work_th": "เขียน/ดีไซน์มีคาแรกเตอร์ เข้าใจ emotion ของ audience",
     "weakness_at_work_th": "รับ feedback ตรง ๆ แล้วเก็บมาคิดทั้งคืน เลื่อนงานเพราะรอ 'อารมณ์มา'",
-    "thai_company_archetype": "Copywriter, Content Creator, Graphic Designer"
+    "thai_company_archetype": "Copywriter, Content Creator, Graphic Designer",
+    "description_th": "INFP เป็น content creator ที่ agency ย่านอารีย์ เข้างาน 10 โมงครึ่งแบบ flexi hours สั่ง Matcha latte ที่ Roots Ari แล้วขึ้นไปโต๊ะที่จัดแต่งเป็นโลกของตัวเอง — มีต้นกระบองเพชร โพลารอยด์รูปแมว สมุด muji กระดาษ tomoe river พี่เปิด Pinterest หา mood board 45 นาทีก่อนเริ่มเขียน caption เพราะถ้าไม่อิน เขียนไม่ออกจริงๆ ชอบ brief ที่ลูกค้าให้ freedom เกลียด brief ที่บอก 'เอาแบบ Apple แต่ budget Lazada' พอ feedback round 3 จาก client มาแบบ 'ขอแบบ feel-good แต่ urgent กว่านี้' พี่ INFP ปิด laptop ไปนั่ง Phil's Coffee ร้องไห้เงียบๆ 20 นาทีแล้วกลับมาเขียนต่อ หลังเลิกงานเขียน fanfic ของวง NewJeans ลง AO3 ทำเป็น hobby ลับ ไม่บอกเพื่อนร่วมงาน เงินเดือน 35K แต่รู้สึกว่าถ้างานมีความหมายก็โอเค",
+    "strengths_th": [
+      "เขียน/ออกแบบที่ touch emotion จนคนแชร์ต่อจริง",
+      "เห็นมุม underdog ของเรื่อง ทำให้ campaign มีมิติ",
+      "มี taste ดี curate visual/tone ได้ consistent",
+      "ทำงานคนเดียวลึกๆ ได้นานโดยไม่เบื่อ"
+    ],
+    "weaknesses_th": [
+      "รอ 'mood' ก่อนเริ่มงาน ทำให้ deadline ลำบาก",
+      "รับ feedback ตรงๆ แล้วเก็บมาคิดถึงตี 2",
+      "หลีก confrontation กับ client toxic จน scope creep",
+      "ไม่ชอบ negotiate เงินเดือน เลยถูก underpay"
+    ],
+    "compatible_with": ["ENFJ", "ENTJ", "ESFJ"],
+    "famous_examples_th": ["มาริโอ้ เมาเร่อ", "J.K. Rowling", "พี่หนูนา หนึ่งธิดา", "Tim Burton", "บัวขาว บัญชาเมฆ"],
+    "growth_tips_th": [
+      "ตั้ง pomodoro 25 นาที start เขียน แม้ไม่มี mood — mood มาเองตอนทำ",
+      "แยก feedback กับ self-worth ออกจากกัน เขียน journal หลังโดน comment",
+      "ฝึก negotiate rate ก่อนรับ project — list value ที่จะให้ client",
+      "หา community นักเขียน/designer ที่เข้าใจ ลองเข้าร่วม Meetup เดือนละครั้ง",
+      "ตั้ง 'no work after 8pm' rule ปกป้อง emotional energy"
+    ],
+    "shareable_quote_th": "งานต้องมีความหมาย ไม่งั้น mood ไม่มา เขียนไม่ออกจริงๆ ค่ะ",
+    "color_accent": "#E8A8B8"
   },
   {
     "mbti": "ENFJ",
@@ -74,7 +219,32 @@
     "in_line_chat_th": "เป็นคนเริ่ม 'อรุณสวัสดิ์ค่าาา' ทุกเช้าจนกลายเป็นวัฒนธรรมทีม",
     "strength_at_work_th": "นำทีมแบบ inclusive รักษาคนเก่ง ๆ ไว้ได้ ลูกค้ารัก",
     "weakness_at_work_th": "แบกอารมณ์ทีมจนลืมงานตัวเอง ปฏิเสธไม่เป็นจนล้นมือ",
-    "thai_company_archetype": "Team Lead, People Manager, Account Director"
+    "thai_company_archetype": "Team Lead, People Manager, Account Director",
+    "description_th": "ENFJ เป็น Account Director ที่ agency ย่านสีลม จำได้ว่าน้องในทีม 12 คนใครชอบกาแฟแบบไหน ใครแพ้ถั่ว ใครเพิ่งเลิกแฟน เข้างาน 8:45 ทุกวัน ซื้อ Au Bon Pain มาฝากทีม 3 ชิ้นพอดีคนกลุ่ม introvert ที่ยังไม่ลงมา จัดงานวันเกิดน้องใน Slack thread พร้อม GIF เก๋ๆ จนน้องร้องไห้ มีตติ้งกับลูกค้า ปตท. พี่ ENFJ จะ pre-call ทีมก่อน 15 นาทีให้ทุกคนพร้อม แล้วใน meeting จะ defend ทีมเต็มที่ถ้าลูกค้าโยน scope แปลกๆ มา หลัง work พี่ชวนทีมไปกินหมูกระทะร้านประจำปากซอย จ่ายเองครึ่งหนึ่งโดยไม่ให้ใครรู้ แต่กลับบ้านดึก เพราะรับฟัง drama ของลูกน้องเพิ่มอีก 1 ชั่วโมง พี่ ENFJ มีปัญหาคือลืมตัวเอง — ตัวเลข KPI ตัวเองอาจไม่สวยเพราะใช้พลังงาน 70% ไป coach คนในทีม",
+    "strengths_th": [
+      "build culture ทีมที่คน retention ยาว 3+ ปี",
+      "อ่านอารมณ์ลูกค้าเก่ง รู้ว่าเมื่อไหร่ควร push เมื่อไหร่ควรถอย",
+      "coach น้องให้เก่งขึ้นได้จริง ไม่ใช่แค่สั่งงาน",
+      "present ในที่ประชุมใหญ่ได้น่าเชื่อถือและอบอุ่น",
+      "smooth conflict ระหว่างแผนกได้โดยไม่ทำให้ใครเสียหน้า"
+    ],
+    "weaknesses_th": [
+      "แบกปัญหาทีมจนสุขภาพจิตตัวเองพัง",
+      "ปฏิเสธ scope creep จากลูกค้าไม่เป็น",
+      "เครียดเรื่อง 'ใครจะคิดยังไงกับเรา' มากเกินจำเป็น",
+      "ละเลย deep work ของตัวเองเพราะใช้เวลาช่วยคนอื่น"
+    ],
+    "compatible_with": ["INFP", "ISFP", "INTJ"],
+    "famous_examples_th": ["โอปอล์ ปาณิสรา", "Oprah Winfrey", "พี่บอย ถกลเกียรติ", "Barack Obama", "เจนนี่ ปาหนัน"],
+    "growth_tips_th": [
+      "บล็อก 2 ชั่วโมงต่อวันเป็น 'me time' ห้ามใครรบกวน",
+      "ฝึกพูด 'ขอเวลาคิดก่อนนะคะ' ไม่ต้องตอบรับทันที",
+      "list KPI ของตัวเองทุก Q ไม่ใช่แค่ของทีม",
+      "หา peer mentor ระดับเดียวกันคุยปัญหา leadership",
+      "ลองทำ hobby ที่ไม่ต้อง serve ใคร — yoga, ปั่นจักรยาน, เรียนทำขนม"
+    ],
+    "shareable_quote_th": "จำวันเกิดทีม 12 คนได้ แต่ลืมว่าตัวเองยังไม่ได้กินข้าวเที่ยง",
+    "color_accent": "#F4C95D"
   },
   {
     "mbti": "ENFP",
@@ -85,7 +255,31 @@
     "in_line_chat_th": "ส่ง meme ในกลุ่มงานบ่อยจน HR ต้องเตือนแอบ ๆ แต่ทุกคนชอบ",
     "strength_at_work_th": "energy สูง ขายไอเดียเก่ง สร้าง connection ข้ามแผนกได้ไว",
     "weakness_at_work_th": "โฟกัสยาว ๆ ลำบาก งาน detail-heavy ต้องมีคนช่วยเช็ก",
-    "thai_company_archetype": "PR, Event Marketing, Sales/BD, Influencer Manager"
+    "thai_company_archetype": "PR, Event Marketing, Sales/BD, Influencer Manager",
+    "description_th": "ENFP เป็น Influencer Manager ที่ True Digital Park เข้างานสาย 10 โมง 20 ทุกวันด้วย caramel macchiato เย็นจาก Starbucks ตึก G แต่งตัวสีจัดที่ทุกคนเห็นแล้วยิ้ม วันนึงคุยกับ KOL 8 คน นัด lunch กับ BD บริษัทอื่น 1 รอบ และยังมีเวลาไปทักน้อง intern ว่า 'น้องเอเป็นยังไงบ้างคะ' มีกลุ่ม LINE ส่วนตัว 47 กลุ่ม ตั้งเองเกินครึ่ง แต่ละกลุ่มชื่อแปลกๆ เช่น 'ก๊วนไปกิน MK วันศุกร์' หรือ 'แก๊งดูคอนเสิร์ต BamBam' Town hall ของ CEO พี่นั่งแถวหน้าสุด ตั้งใจฟัง 20 นาทีแรก แล้วแอบเล่น Instagram reels ที่เหลือ Q4 review พี่จะ panic หนักเพราะลืมอัพเดต tracker มา 6 อาทิตย์ ต้องมี ISTJ ช่วยถึงปิดปี ได้ แต่ KPI sales lead ของพี่ทะลุเป้าตลอดเพราะ network ใหญ่จริง — รู้จักทุก agency ทุก KOL ทุก editor ในเมือง",
+    "strengths_th": [
+      "build network ที่ kpi-trackable: เปิดดีลใหม่จาก connection เดือนละ 5+",
+      "energy ในห้องประชุมเปลี่ยนได้ภายใน 30 วินาที",
+      "เรียนรู้ trend ใหม่เร็ว เห็น culture shift ก่อนเพื่อน",
+      "pitch ลูกค้าให้รู้สึกว่า 'อยากทำงานกับคนนี้'"
+    ],
+    "weaknesses_th": [
+      "ลืม follow up — เปิดดีลเก่ง ปิดดีลต้องมีคนช่วย",
+      "เบื่อ admin work, expense report ค้าง 2 เดือน",
+      "เริ่ม 4 โปรเจกต์ ปิดได้ 1.5",
+      "เครียดเงียบๆ เวลาคน reject ไอเดีย แต่หน้ายังยิ้ม"
+    ],
+    "compatible_with": ["INTJ", "INFJ", "ISTJ"],
+    "famous_examples_th": ["ลิซ่า BLACKPINK", "พี่ป๋อง กพล", "Robin Williams", "ใหม่ ดาวิกา", "Chris Pratt"],
+    "growth_tips_th": [
+      "ใช้ HubSpot/Notion CRM บังคับตัวเอง log ทุก lead",
+      "หา ISTJ buddy ช่วย follow up admin ทุกอาทิตย์",
+      "ตั้ง weekly review 30 นาทีศุกร์เย็น clear tracker",
+      "บล็อก 'no meeting Wednesday morning' ทำ deep work",
+      "แยก hype ตอนเปิดดีลกับการ commit กับลูกค้าให้ชัด"
+    ],
+    "shareable_quote_th": "เปิดดีลเก่งจริง ปิดดีลขอน้อง ISTJ ช่วยหน่อยนะคะ 5555",
+    "color_accent": "#FF8A6B"
   },
   {
     "mbti": "ISTJ",
@@ -96,7 +290,31 @@
     "in_line_chat_th": "ตอบเป็นทางการ 'รับทราบค่ะ ดำเนินการภายในวันศุกร์' พิมพ์ครบรูปประโยค",
     "strength_at_work_th": "ละเอียด เชื่อถือได้ 100% ส่งงานตรงเวลาเสมอ ไม่มีพลาด",
     "weakness_at_work_th": "ไม่ชอบการเปลี่ยนแปลงกลางทาง ระบบใหม่ ๆ ต้องใช้เวลาปรับตัวนาน",
-    "thai_company_archetype": "Accountant, Compliance, Operations Manager, QA"
+    "thai_company_archetype": "Accountant, Compliance, Operations Manager, QA",
+    "description_th": "ISTJ ออฟฟิศ ปตท. ตึกพระราม 9 เข้างาน 8:25 ทุกวันมา 11 ปีแล้ว เปิด Excel template ที่ตัวเองสร้างเองเมื่อ 2018 ใช้สีเดิม font Calibri 10 เท่านั้น ห้ามคนอื่นมาแก้ format กล่องข้าวกลางวันคือข้าวกล่องที่แม่ทำมาให้ ไม่กิน food court ตึกเพราะ 'แพงและไม่สะอาด' พี่ ISTJ จะ reconcile ตัวเลข vendor 200 รายภายในวันที่ 5 ของเดือนเสมอ ไม่เคยเลื่อน ถ้าใครส่งใบเบิกผิด field พี่จะตีกลับด้วย LINE ที่สุภาพมาก แต่ทุกคนรู้ว่าต้องแก้ก่อนบ่ายวันนั้น ไม่ชอบ town hall ที่ CEO เปลี่ยน OKR กลางปี เพราะ 'งบทำมาแล้ว' ไม่อิน Slack reaction ใช้แค่ thumbs up เพราะ 'มันเพียงพอ' หลังเลิกงานกลับบ้านดูข่าวช่อง 3 กับครอบครัว เสาร์อาทิตย์ดูแลพ่อแม่ที่บ้านนนทบุรี วางแผน retirement เรียบร้อยแล้วตั้งแต่อายุ 32",
+    "strengths_th": [
+      "ส่งงานตรงเวลา 100% มา 5 ปีติด ไม่เคยพลาด",
+      "หา error ใน contract/financial doc ที่คนอื่นข้าม",
+      "build process/SOP ที่ scale ได้จริงไม่ break",
+      "เป็น single source of truth ของทีม"
+    ],
+    "weaknesses_th": [
+      "ต่อต้านการเปลี่ยน tool ใหม่ — ใช้ Excel แทน Looker ตลอด",
+      "ขาด empathy ตอน junior ทำผิดซ้ำ มองว่า 'ก็มันต้องทำได้สิ'",
+      "ไม่ชอบ ambiguity ของ project early stage",
+      "มอง creative idea ที่ไม่มี data backup เป็น 'ฝัน'"
+    ],
+    "compatible_with": ["ESFP", "ENFP", "ESTP"],
+    "famous_examples_th": ["Warren Buffett", "บัญชา ชุมชัยเวทย์", "Angela Merkel", "พี่ชูวิทย์ กมลวิศิษฎ์", "Jeff Bezos"],
+    "growth_tips_th": [
+      "ลองเปิดใจกับ tool ใหม่ 1 อย่างต่อ Q ไม่ต้องเปลี่ยนทั้งหมด",
+      "ฝึก '+1, -1, ?' กับ creative idea แทน reject ตรงๆ",
+      "นัด lunch กับ ENFP/ENTP ในออฟฟิศเดือนละครั้ง",
+      "ก่อน feedback น้อง ใส่ความรู้สึก 1 ประโยค 'พี่เข้าใจว่ามันยาก'",
+      "ลอง book trip surprise ไม่ plan ทุก hour ดูบ้าง"
+    ],
+    "shareable_quote_th": "ส่งใบเบิกผิด field เดียว ตีกลับด้วยรอยยิ้ม ภายในบ่ายวันนั้น",
+    "color_accent": "#3D5A80"
   },
   {
     "mbti": "ISFJ",
@@ -107,7 +325,31 @@
     "in_line_chat_th": "เห็นน้องในทีมโพสต์เศร้า ทักไปถาม 'ไหวมั้ยคะ พี่อยู่นะ' แม้ไม่สนิท",
     "strength_at_work_th": "ดูแลคนเก่ง รักษามาตรฐานงาน เป็นกาวใจของทีม",
     "weakness_at_work_th": "ไม่ค่อยกล้าขอ promote ทั้งที่ทำเยอะกว่าใคร โดนเอาเปรียบบ่อย",
-    "thai_company_archetype": "HR Operations, Admin, Customer Success, Office Manager"
+    "thai_company_archetype": "HR Operations, Admin, Customer Success, Office Manager",
+    "description_th": "ISFJ เป็น Office Manager ที่ฝั่งสตาร์ทอัพย่านอโศก ตึก G เข้างาน 8:30 ก่อนใครเพื่อเช็กว่า pantry มีกาแฟ ผงโกโก้ และโอวัลตินครบ — แม่ค้าในตึกรู้จักพี่ดี ซื้อขนมเปี๊ยะมาฝากทีมทุกศุกร์ จำได้ว่าน้องเอแพ้นม น้องบีถือ keto น้อง ฟ้าเป็น vegan จัด onboarding น้องใหม่จน HR ของบริษัทอื่นมาขอ template เดือน Jan ตอน CEO เปลี่ยน OKR กระทันหัน ทุกคน panic แต่พี่ ISFJ เงียบๆ จัด schedule ใหม่ให้ทุกคนภายในเย็นวันเดียว Slack DM พี่ตอบทุกคน ทุกข้อความ ภายในชั่วโมง ไม่ว่าจะเรื่อง 'พี่ค่ะ ปริ๊นเตอร์ชั้น 4 เสีย' หรือ 'พี่ค่ะ หนูเลิกกับแฟน' พี่ ISFJ ทำเงินเดือน 38K มา 4 ปี ไม่กล้าขอขึ้น เพราะกลัว 'ดูเป็นคนเรียกร้อง' ทั้งที่ทำงานเทียบเท่า manager ช่วงสงกรานต์กลับบ้านอุดรไปดูแลพ่อแม่ทุกปี ไม่เคยขาด",
+    "strengths_th": [
+      "เป็นกาวใจของทีม คนลาออกน้อยลงเพราะมีพี่",
+      "จำ detail เล็กๆ ที่ทำให้ผู้ร่วมงานรู้สึก seen",
+      "execution flawless บน routine task ที่คนอื่นพลาด",
+      "build trust กับ vendor/partner ระยะยาวจริง"
+    ],
+    "weaknesses_th": [
+      "ขอ promote/raise ไม่เป็น โดน underpay เรื้อรัง",
+      "รับงานเกิน scope จนงานตัวเองช้า",
+      "หลีก confrontation จนปัญหาบ่ม",
+      "เก็บความน้อยใจไว้ในใจ ระเบิดทีหลังหนัก"
+    ],
+    "compatible_with": ["ESTP", "ESFP", "ENTJ"],
+    "famous_examples_th": ["Mother Teresa", "พี่บี้ สุกฤษฎิ์", "Kate Middleton", "ป้าแอ๊ด คาราบาว", "เป้ย ปานวาด"],
+    "growth_tips_th": [
+      "เขียน 'brag doc' ทุกศุกร์ list งานที่ทำเกิน scope",
+      "ขอ 1:1 กับหัวหน้า Q ละครั้งคุยเรื่อง career path",
+      "ฝึกปฏิเสธ 1 ครั้งต่ออาทิตย์ — เริ่มจากเรื่องเล็ก",
+      "หา mentor ผู้หญิงสาย senior คุย salary negotiation",
+      "ลองทำ side project ที่เป็นของตัวเอง 100% ไม่ serve ใคร"
+    ],
+    "shareable_quote_th": "ทุกคนรู้ว่าพี่ทำเยอะที่สุด แต่พี่ขอ promote ไม่เป็นเลยจริงๆ",
+    "color_accent": "#F4C95D"
   },
   {
     "mbti": "ESTJ",
@@ -118,7 +360,31 @@
     "in_line_chat_th": "ส่ง template รายงานให้ทีมกรอก พร้อมเดดไลน์เป๊ะถึงนาที",
     "strength_at_work_th": "บริหารทีมให้ส่งงานครบ คุม budget/timeline เก่ง",
     "weakness_at_work_th": "ติดกรอบ SOP จนบางทีพลาดโอกาส innovate",
-    "thai_company_archetype": "Operations Director, Branch Manager, Sales Manager"
+    "thai_company_archetype": "Operations Director, Branch Manager, Sales Manager",
+    "description_th": "ESTJ เป็น Branch Manager ของ KBank สาขาสีลม เข้างาน 7:45 เปิดตึกก่อน security จัด morning brief ตอน 8:30 ตรงทุกวัน ไม่เคยเลื่อน ใส่สูทเทาทุกจันทร์-อังคาร แม้สาขาจะให้แต่งตัวสบายๆ วันศุกร์ พี่จะ track KPI เป็นรายวันใน Excel sheet สีเขียว-เหลือง-แดง น้องใหม่ทำผิดเรื่อง compliance พี่จะเรียกเข้าห้องคุยตรงๆ 15 นาที ไม่ดราม่า — ผิดยังไง แก้ยังไง ครั้งหน้าทำยังไง จบ ไม่ค่อยอินกับ 'culture' แต่จัด team building ปีละ 2 ครั้งตามที่บริษัทกำหนด พี่มอง remote work ว่า 'productivity ลดลง' จริง — มี data backing ไม่ใช่ความเชื่อ ลูกค้า VIP ที่มาเปิดบัญชี 50 ล้านขึ้นไป พี่จะรับเองทุก case จัดการครบใน 1 ชั่วโมง หลังเลิกงาน 18:01 พี่ตรงไปยิม Fitness First บนตึกเดียวกัน ออกกำลัง 1 ชั่วโมง เสาร์ตีกอล์ฟกับลูกค้า อาทิตย์อยู่บ้านกับลูก",
+    "strengths_th": [
+      "execution เป๊ะ deliver KPI ทุก Q ไม่พลาด",
+      "build process scale ทีมจาก 5 → 50 คนได้",
+      "ตัดสินใจ HR ยากๆ ได้ — ไล่ออก, restructure, freeze hire",
+      "negotiate กับ vendor/lawyer ได้ราคาดีและ term ชัด"
+    ],
+    "weaknesses_th": [
+      "ยึด SOP จน reject creative ที่อาจ unlock โอกาส",
+      "communicate กับ creative team แบบ 'ตัวเลขๆ' จนเขา demotivate",
+      "ไม่ค่อย explore tech/trend ใหม่ที่ยังไม่ proven",
+      "judge คนตามผลงานเท่านั้น ขาดมิติ context"
+    ],
+    "compatible_with": ["ISFP", "INFP", "ISTP"],
+    "famous_examples_th": ["บัณฑูร ล่ำซำ", "Indra Nooyi", "ประยุทธ์ จันทร์โอชา", "Judge Judy", "ก่อศักดิ์ ไชยรัศมีศักดิ์ (CP All)"],
+    "growth_tips_th": [
+      "บล็อก 1 ชั่วโมงต่อสัปดาห์ฟัง pitch จาก creative team แบบไม่ขัด",
+      "อ่าน case study ของบริษัทที่ disrupt ตัวเอง — Netflix, Adobe",
+      "ฝึกถาม 'ทำไม' 3 ครั้งก่อน reject idea ใหม่",
+      "หา reverse mentor อายุน้อยกว่า 10 ปีสอนเรื่อง Gen Z workplace",
+      "ลองให้ทีม own กระบวนการ ไม่ control ทุก step"
+    ],
+    "shareable_quote_th": "เข้างาน 8:59 ออก 18:01 — KPI ครบ แต่ใจน้องอาจไม่ครบนะพี่",
+    "color_accent": "#2C3E50"
   },
   {
     "mbti": "ESFJ",
@@ -129,7 +395,31 @@
     "in_line_chat_th": "ตั้งกลุ่ม 'ปาร์ตี้วันเกิดพี่...' ทุกเดือน เก็บเงินเป๊ะ จัดของเก่ง",
     "strength_at_work_th": "สร้าง culture ทีม ดูแลลูกค้าเก่ง คนชอบทำงานด้วย",
     "weakness_at_work_th": "แคร์เสียงคนรอบข้างเยอะ ตัดสินใจยากเวลาต้องเลือกข้าง",
-    "thai_company_archetype": "HR, Account Manager, CS Lead, Internal Comms"
+    "thai_company_archetype": "HR, Account Manager, CS Lead, Internal Comms",
+    "description_th": "ESFJ เป็น HR Business Partner ของบริษัท True ตึกพระราม 4 เข้างาน 8:50 พร้อม Greyhound Cafe latte ในมือ รู้จักทุกคนใน 4 ชั้นของตึก รวมถึงป้าแม่บ้านชั้น 8 ที่หลานเพิ่งเข้ามหาลัย พี่ ESFJ เป็นคนแรกที่รู้ว่า PM ทีม payments จะลาออกก่อน manager ของเขาเอง เพราะเขาบ่นให้ฟังตอน lunch ที่ Eathai สยาม Town hall พี่จะนั่งเป็นคนเริ่ม clap ก่อนเสมอ จัดงาน Halloween office party ที่ทุกคนแห่กันแต่ง คอสเพลย์ พี่ ESFJ ไม่ค่อยอินกับ data analysis แต่ instinct เรื่อง people เก่งมาก — บอกได้ว่า manager คนไหน toxic แค่จาก signal เล็กๆ ใน 1:1 ปัญหาของพี่คือ — ตัดสินใจยากเวลา CEO ขอ feedback เรื่อง layoff เพราะแคร์ทุกคน บางครั้ง gossip ที่พี่รู้เยอะเกินไปกลายเป็น burden ต้องเก็บความลับ 5 เรื่องพร้อมกัน",
+    "strengths_th": [
+      "อ่าน signal ของ team morale ก่อน data จะออกมา",
+      "build ออฟฟิศ culture ที่คนอยากมาทำงาน",
+      "smooth conflict ระหว่างแผนกได้แบบ win-win",
+      "onboard น้องใหม่ให้ feel belonging ภายในอาทิตย์แรก"
+    ],
+    "weaknesses_th": [
+      "แคร์เสียงคนรอบข้างจน decision paralysis",
+      "เก็บ gossip จนกลายเป็น emotional burden",
+      "หลีกการให้ feedback แรงๆ ที่จำเป็น",
+      "judge คนเร็วจาก first impression แล้วเปลี่ยนยาก"
+    ],
+    "compatible_with": ["ISFP", "INFP", "ISTP"],
+    "famous_examples_th": ["พี่ติ๊นา ศุภนาฏ", "Taylor Swift", "อั้ม พัชราภา", "พี่บี้ The Star", "Ellen DeGeneres"],
+    "growth_tips_th": [
+      "ฝึก 'pause 24 ชั่วโมง' ก่อนตอบเรื่องที่ต้องเลือกข้าง",
+      "เขียน decision matrix ใช้ data + feeling ครึ่งๆ",
+      "ตั้ง boundary ชัดเรื่อง gossip — ฟังได้ ไม่ต่อ",
+      "ฝึกให้ feedback แบบ SBI (situation-behavior-impact)",
+      "หา peer ใน HR ต่างบริษัทคุย กันแชร์ technique"
+    ],
+    "shareable_quote_th": "รู้ก่อน HR ว่าใครจะลาออก เพราะเขาเล่าให้ฟังที่ Eathai เมื่อวาน",
+    "color_accent": "#F4C95D"
   },
   {
     "mbti": "ISTP",
@@ -140,7 +430,31 @@
     "in_line_chat_th": "ตอบสั้น 'โอเค' 'ทำให้' 'เสร็จแล้ว' ไม่อู้ไม่บ่น",
     "strength_at_work_th": "แก้ปัญหาเฉพาะหน้าเก่ง ทำงานคนเดียวได้สบาย ไม่ดราม่า",
     "weakness_at_work_th": "ไม่ค่อยอยากเข้ามีตติ้งยาว ๆ ไม่ชอบเขียน report เป็นเล่ม",
-    "thai_company_archetype": "DevOps, IT Support, Engineer, Mechanic Lead"
+    "thai_company_archetype": "DevOps, IT Support, Engineer, Mechanic Lead",
+    "description_th": "ISTP เป็น DevOps engineer ที่ Lazada ตึก Singha Complex เข้างาน 10 โมง ออก 19:00 ใส่ hoodie สีดำกับยีนส์ทุกวัน ไม่เคยใส่สูทแม้ตอน annual party หูฟัง Sony WH-1000XM5 ทั้งวัน เปิด Spotify รวม metal กับ lo-fi เปิด terminal 6 หน้าจอ ssh ไป production server พร้อมๆ กัน server down ตอนตี 2 พี่ ISTP โผล่ใน Slack ภายใน 4 นาที แก้ภายใน 18 นาที โดยไม่บ่นแม้แต่คำเดียว ไม่ชอบ standup เพราะ 'พูดเรื่องเดิมทุกวัน' ไม่ชอบ retro เพราะ 'feels ไม่ใช่งาน' พี่ ISTP จะเลี่ยง all-hands ทุกครั้งที่ไม่บังคับ ตอน lunch กิน MK สาขาตึกข้างๆ คนเดียวพร้อมเปิด YouTube ดู Linus Tech Tips หลังเลิกงานพี่ขับ Honda CB650R ไปคาเฟ่ riders ที่ปทุมธานี งานอดิเรกคือซ่อม mechanical keyboard ขายใน Facebook group เพื่อนร่วมงานชอบพี่ตรงไม่ทำตัวยุ่งกับใคร แต่พึ่งได้ทุกครั้งที่มีปัญหา",
+    "strengths_th": [
+      "fix production bug ใต้ pressure โดยไม่ panic",
+      "เรียนรู้ tech ใหม่ hands-on ภายในวันเดียว",
+      "ทำงานคนเดียวได้ deep โดยไม่ต้องประคอง",
+      "หา root cause ของปัญหา hardware/system แม่น"
+    ],
+    "weaknesses_th": [
+      "เลี่ยง process meeting จนทีมไม่ sync",
+      "เขียน documentation น้อย handover ลำบาก",
+      "พูดสั้นจน junior ไม่กล้าถามต่อ",
+      "ไม่ proactive update stakeholder แม้งานเสร็จ"
+    ],
+    "compatible_with": ["ESFJ", "ESTJ", "ENFJ"],
+    "famous_examples_th": ["Clint Eastwood", "พี่บอล เชิญยิ้ม", "Tom Cruise", "พี่หม่ำ จ๊กมก", "Bear Grylls"],
+    "growth_tips_th": [
+      "เขียน runbook สั้นๆ หลัง fix incident ทุกครั้ง 5 นาที",
+      "ลอง pair-programming กับ junior อาทิตย์ละ 1 ครั้ง",
+      "อัพเดต Slack channel เมื่อ task complete ไม่รอให้ถาม",
+      "ฝึกพูดในมีตติ้ง 1 ครั้ง ไม่ต้องยาว — 'ผมเห็นว่า X เพราะ Y'",
+      "หา mentor สาย principal engineer คุย career path ไม่ใช่แค่ tech"
+    ],
+    "shareable_quote_th": "Server down ตี 2 ผมแก้ภายใน 18 นาที standup ตอนเช้าผมขอ skip นะครับ",
+    "color_accent": "#34495E"
   },
   {
     "mbti": "ISFP",
@@ -151,7 +465,31 @@
     "in_line_chat_th": "อ่านแต่ไม่ตอบ จนคนต้อง tag ตรง ๆ ถึงจะโผล่มาด้วย 'รับทราบค่ะ ✨'",
     "strength_at_work_th": "sense ด้าน aesthetic ดี อ่อนไหวกับ detail เล็ก ๆ ที่สำคัญ",
     "weakness_at_work_th": "หลีก conflict ไม่ชอบเถียงในมีตติ้ง บางทีถูก override ไอเดียโดยไม่ค้าน",
-    "thai_company_archetype": "Designer, Stylist, Photographer, Product Designer"
+    "thai_company_archetype": "Designer, Stylist, Photographer, Product Designer",
+    "description_th": "ISFP เป็น Product Designer ที่สตาร์ทอัพย่านทองหล่อ ตึก The Commons เข้างาน 10:30 ใส่ Uniqlo สีพาสเทล เกาะ iPad Pro พร้อม Apple Pencil ทั้งวัน เปิด Figma 4 file พร้อม Spotify playlist 'soft indie' พี่ ISFP จะเดินไปคาเฟ่ Roots ใต้ตึกสั่ง flat white แล้วนั่งสเก็ตช์ใส่กระดาษ tomoe river 30 นาทีก่อนกลับขึ้นมาทำใน Figma — ขั้นตอนนี้ไม่มีใน Notion timeline แต่จำเป็นต่อ output ที่ดี ไม่ค่อยพูดในมีตติ้ง แต่พอถึงคิว present screen design ทุกคนหยุดดู เพราะ detail ของ micro-interaction กับ typography ที่คนอื่นไม่คิดถึง พี่ ISFP เกลียด PM ที่ขอ 'แก้นิดเดียว' โดยไม่อธิบาย — มันไม่ใช่นิดเดียว เวลาโดน senior override ไอเดียพี่จะไม่เถียง แค่กลับมาที่โต๊ะแล้วเครียดในใจ บางครั้งร้องไห้ใน toilet หลังเลิกงานพี่ไป photography meetup ที่ลาดพร้าว ถ่าย film camera Pentax ของพ่อ Instagram ส่วนตัวมี follower 8K แต่ไม่บอกใครในที่ทำงาน",
+    "strengths_th": [
+      "taste ด้าน aesthetic ที่ทำให้ product รู้สึก premium",
+      "อ่อนไหวกับ user emotion ใน UX flow",
+      "ทำงาน iterative คุณภาพสูงโดยไม่บ่น",
+      "build mood/style guide ที่ทีมใช้ได้จริง"
+    ],
+    "weaknesses_th": [
+      "หลีก conflict จน idea ดีๆ ถูก kill เงียบๆ",
+      "รับ critique ตรงๆ แล้วเก็บมาคิดทั้งคืน",
+      "ไม่ค่อยขาย/อธิบายงานตัวเอง — ปล่อยให้คนตีความเอง",
+      "หา mood ก่อนเริ่มงาน ทำให้ deadline ลำบาก"
+    ],
+    "compatible_with": ["ENFJ", "ESFJ", "ESTJ"],
+    "famous_examples_th": ["BamBam GOT7", "Frida Kahlo", "พี่อ้น ศรีพรรณ", "ใหม่ เจริญปุระ", "Lana Del Rey"],
+    "growth_tips_th": [
+      "ฝึกพูด 'ขอเวลาคิดและตอบใน 1 ชั่วโมงนะคะ' แทนเงียบ",
+      "เขียน design rationale 3 บรรทัดทุกครั้งที่ ship — กัน override",
+      "หา design buddy ระดับใกล้กันเช็กไอเดียก่อนเข้ามีตติ้ง",
+      "post case study ใน LinkedIn เดือนละครั้ง — build personal brand",
+      "ลอง pitch ตัวเองสำหรับ project ใหม่ แม้กลัวโดน reject"
+    ],
+    "shareable_quote_th": "PM บอก 'แก้นิดเดียว' — มันไม่ใช่นิดเดียว แต่หนูจะเงียบแล้วทำให้สวยกว่าเดิม",
+    "color_accent": "#E8A8B8"
   },
   {
     "mbti": "ESTP",
@@ -162,7 +500,31 @@
     "in_line_chat_th": "โทรเลยดีกว่า พิมพ์ยาว ๆ ไม่ใช่สไตล์ มีตติ้งตอนกินข้าวเที่ยงก็ได้",
     "strength_at_work_th": "กล้าเสี่ยง ลุยงานหน้างานเก่ง รับมือลูกค้ายาก ๆ ได้",
     "weakness_at_work_th": "เอกสาร/รายงานหลังบ้านมักล่าช้า ไม่ค่อยชอบ planning ละเอียด",
-    "thai_company_archetype": "Sales, BD, Trader, Event Producer"
+    "thai_company_archetype": "Sales, BD, Trader, Event Producer",
+    "description_th": "ESTP เป็น Senior Sales ของ AIS Business ขายลูกค้า enterprise ที่ตึก Ploenchit เข้างาน 9 โมงครึ่ง ใส่ Polo Ralph Lauren กางเกงสแล็คส์ เกือบทุกวันออกข้างนอก เจอลูกค้า EVP บริษัท SET 100 อาทิตย์ละ 4-5 คน ขับ BMW มือสองที่ผ่อนเอง ปิดดีล 12 ล้านในวงเหล้าร้านอาหารญี่ปุ่นย่าน Sukhumvit 39 บางทีดีลปิดก่อน contract ออกซะอีก พี่ ESTP เกลียด Salesforce admin work — มี VA ฟรีแลนซ์ช่วยกรอกให้ Q1 ทำยอด 130% ของ target พอ Q2 manager เพิ่ม target อีก 20% พี่บ่นใน LINE กลุ่มเพื่อน sales ต่างบริษัทแต่ก็ทำได้อยู่ดี Town hall พี่นั่งหลังสุดเล่นเกมในมือถือ แต่ตอนถามเรื่อง pipeline พี่ตอบได้ทุกตัวเลข พี่ ESTP เสี่ยงในตลาดหุ้นเก่ง ลงทุน crypto ตั้งแต่ 2017 หลังเลิกงานไปยิม Virgin Active กับ trainer ส่วนตัว เสาร์ขับรถไปหัวหิน อาทิตย์ตีปาดเทนนิส",
+    "strengths_th": [
+      "ปิดดีลใหญ่ภายใต้ pressure โดยไม่กดดัน",
+      "อ่านลูกค้าเร็วใน 5 นาที — รู้ว่าจะ pitch แบบไหน",
+      "กล้าเสี่ยง explore deal ที่คนอื่นมองว่ายาก",
+      "energy ในห้องลูกค้าทำให้บรรยากาศ shift"
+    ],
+    "weaknesses_th": [
+      "documentation ค้าง — Salesforce update ครั้งสุดท้าย 3 อาทิตย์ก่อน",
+      "ขี้เบื่อกับลูกค้า small account ที่ revenue ต่ำ",
+      "ตัดสินใจ impulsive แล้วค่อยมา fix later",
+      "ไม่ค่อย mentor junior — มองว่าต้องเรียนรู้เอง"
+    ],
+    "compatible_with": ["ISFJ", "ISTJ", "INFJ"],
+    "famous_examples_th": ["Donald Trump", "พี่เก่ง ลายพราง", "Conor McGregor", "ตู่ ภพธร", "Madonna"],
+    "growth_tips_th": [
+      "บล็อก 30 นาทีศุกร์เย็นอัพเดต CRM — ไม่ผ่านงดเข้า after work",
+      "หา detail-oriented partner ช่วย deal closing paperwork",
+      "ลอง mentor junior 1 คน — ได้เห็นมุมที่ตัวเองไม่มี",
+      "อ่าน financial statement ของลูกค้าก่อน meeting จริงจัง",
+      "เก็บ commission ส่วนหนึ่งเข้า index fund ไม่ใช่แค่ crypto"
+    ],
+    "shareable_quote_th": "ปิดดีล 12 ล้านในวงเหล้า แต่ Salesforce อัพเดตครั้งสุดท้าย 3 อาทิตย์แล้ว",
+    "color_accent": "#FF8A6B"
   },
   {
     "mbti": "ESFP",
@@ -173,6 +535,30 @@
     "in_line_chat_th": "ส่งรูปอาหาร รูปแมว รูปปาร์ตี้เสาร์อาทิตย์ จนกลายเป็น vlog ของกลุ่ม",
     "strength_at_work_th": "พลังสูงมาก สร้าง engagement กับลูกค้า/ทีมได้เร็ว",
     "weakness_at_work_th": "งาน detail ยาว ๆ ทำให้เบื่อ ขาดสมาธิเวลาต้องนั่งเงียบ ๆ",
-    "thai_company_archetype": "Event MC, Sales หน้าร้าน, Influencer, Trainer, KOL Manager"
+    "thai_company_archetype": "Event MC, Sales หน้าร้าน, Influencer, Trainer, KOL Manager",
+    "description_th": "ESFP เป็น KOL Manager ที่ agency ย่าน EmQuartier เข้างาน 10:45 พร้อม iced coffee จาก % Arabica พี่แต่งตัวสีจัดทุกวัน — เสื้อ Vans กับกระโปรง pleated สีเหลือง เพื่อนร่วมงานบอกว่าวันไหนพี่ไม่มา ออฟฟิศเงียบเหมือนวันสอบ พี่ ESFP จัด briefing กับ KOL 6 คนในคาเฟ่ Lhong Tou ที่เยาวราช ถ่าย Reels behind-the-scene 8 อันใน 1 วัน Followers ส่วนตัว 24K ใน Instagram เพื่อน manager แอบอิจฉา Town hall พี่นั่งแถว 2 ชู GIF reaction ทุก 30 วินาทีใน Slack ทำให้ CEO รู้จักชื่อ ตอน annual party พี่เป็น MC ตัวจริง ร้องเพลง 'อยากร้องดังๆ' ปิดงานทุกปี พี่ ESFP มีปัญหาคือ — admin work, expense report ค้าง 6 อาทิตย์ HR ต้องเดินมาทวงเอง quarterly review พี่ panic จัดการ tracker ก่อน meeting 2 ชั่วโมง แต่ผลงาน engagement KPI ของพี่ดีที่สุดในทีม เพราะ instinct เรื่อง content & culture แม่นจริง",
+    "strengths_th": [
+      "build engagement กับ KOL/audience ที่ data ลำพังทำไม่ได้",
+      "energy เปลี่ยนบรรยากาศห้องประชุมใน 30 วินาที",
+      "instinct เรื่อง trend & culture ก่อน data ออกมา",
+      "execute event/shoot live ได้ flawless ภายใต้ pressure"
+    ],
+    "weaknesses_th": [
+      "admin work ค้างยาว expense report ลืม submit เป็นเรื่องปกติ",
+      "เบื่อ planning ระยะยาวเกิน 1 เดือน",
+      "ตัดสินใจ impulsive — รับ collab ก่อนเช็ก contract",
+      "ฟัง critique แล้วน้อยใจชั่วคราว แม้พยายามไม่แสดงออก"
+    ],
+    "compatible_with": ["ISTJ", "INTJ", "ISFJ"],
+    "famous_examples_th": ["พี่ใหม่ ดาวิกา", "Jennifer Lawrence", "หม่ำ จ๊กมก", "BamBam GOT7", "Marilyn Monroe"],
+    "growth_tips_th": [
+      "ตั้ง auto-reminder ทุกศุกร์ 16:00 'expense report deadline'",
+      "หา ISTJ buddy ช่วยเช็ก contract ก่อนเซ็น",
+      "บล็อก 1 ชั่วโมงต่อวันเป็น 'no notification' ทำ deep work",
+      "เขียน weekly recap สั้นๆ ส่งหัวหน้า — visibility มันสำคัญ",
+      "เก็บเงินเดือนอย่างน้อย 20% เข้ากองทุน ก่อน lifestyle inflation"
+    ],
+    "shareable_quote_th": "MC งานปีใหม่ตัวจริง expense report ค้าง 6 อาทิตย์ตัวจริงเช่นกัน",
+    "color_accent": "#FF6B9D"
   }
 ]

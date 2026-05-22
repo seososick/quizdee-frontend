@@ -1,7 +1,7 @@
 {
   "slug": "burnout-risk",
   "title_th": "หมดไฟแล้วหรือยัง? Burnout Risk Test ฉบับคนไทยทำงาน",
-  "description_th": "เช็กระดับ ‘หมดไฟ’ ของคุณใน 4 นาที ด้วยแบบทดสอบที่อิงจาก Maslach Burnout Inventory (MBI-GS) — เครื่องมือมาตรฐานที่นักจิตวิทยาทั่วโลกใช้วัด burnout จริงๆ วัด 3 มิติ: ความเหนื่อยล้าทางอารมณ์ (Emotional Exhaustion), ความเหินห่างจากงาน (Depersonalization/Cynicism) และความรู้สึกว่าตัวเองยังเก่งและมีคุณค่า (Personal Accomplishment) จะได้รู้ว่าคุณยัง 🌱 เขียวสด หรือกำลัง 🔥 ไหม้คาโต๊ะทำงาน — พร้อมคำแนะนำว่าควรพักร้อน คุยกับ HR หรือไปพบผู้เชี่ยวชาญ",
+  "description_th": "เช็กระดับ 'หมดไฟ' ของคุณใน 4 นาที ด้วยแบบทดสอบอิง Maslach Burnout Inventory (MBI-GS) — รู้สัญญาณก่อน burnout จัด พร้อมแผนฟื้นฟูและสาย hotline 1323",
   "category": "WORK",
   "category_label_th": "งาน",
   "emoji": "🔥",
@@ -10,6 +10,15 @@
   "share_hook_th": "ทำแบบทดสอบแล้วได้ 🔥 RED BURNOUT… เพื่อนๆ ลองเช็กตัวเองดูสิว่าหมดไฟแค่ไหน (ใช้เวลาแค่ 4 นาที)",
   "psychology_basis_th": "Maslach Burnout Inventory (MBI-GS) โดย Maslach & Jackson 1981 — เครื่องมือมาตรฐานทอง (gold standard) ในการวัด burnout มากว่า 40 ปี และ WHO ได้ขึ้นทะเบียน Burnout เป็นปรากฏการณ์ด้านอาชีพอย่างเป็นทางการใน ICD-11 เมื่อปี 2019",
   "trend_reference_th": "กระแส quiet quitting และ burnout ปี 2024-2025 — รายงาน Gallup State of the Global Workplace ระบุว่า worker ไทยกว่า 60% รู้สึก burnt out หรืออยากลาออกจากงาน ติดอันดับสูงในเอเชียแปซิฟิก สอดคล้องกับเทรนด์ #หมดไฟ #ลาออกแล้วไง บน TikTok / Threads",
-  "keywords_th": ["burnout", "หมดไฟ", "quiet quitting", "รับมือความเครียด", "MBI", "หมดไฟในการทำงาน", "เครียดงาน", "work life balance"],
+  "keywords_th": [
+    "burnout",
+    "หมดไฟ",
+    "quiet quitting",
+    "รับมือความเครียด",
+    "MBI",
+    "หมดไฟในการทำงาน",
+    "เครียดงาน",
+    "work life balance"
+  ],
   "disclaimer_th": "แบบทดสอบนี้เป็นเครื่องมือคัดกรองเชิงสถิติเพื่อให้คุณรู้จักตัวเองมากขึ้น ไม่ใช่การวินิจฉัยทางการแพทย์ หากผลออกมาในระดับเสี่ยงสูง (RED / CRITICAL) แนะนำให้ปรึกษาจิตแพทย์ นักจิตวิทยา หรือสายด่วนสุขภาพจิต 1323"
 }

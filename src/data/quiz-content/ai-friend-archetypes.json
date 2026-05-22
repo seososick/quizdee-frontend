@@ -4,13 +4,41 @@
     "name_th": "ซีเนียร AI — พรอมพ์เต prompt 200 บรรทัด",
     "emoji": "⚡",
     "daily_use_count_th": "50+ ครั้ง/วัน",
-    "favorite_tools_th": ["ChatGPT Plus", "Claude Pro", "Cursor", "v0", "Midjourney", "Perplexity Pro"],
+    "favorite_tools_th": ["ChatGPT Plus", "Claude Pro", "Cursor", "v0", "Midjourney", "Perplexity Pro", "ComfyUI", "ElevenLabs"],
     "signature_move_th": "มี custom GPT ของตัวเอง / API integrate เข้า workflow / เขียน system prompt 200 บรรทัด",
     "tagline_th": "ไม่มี AI ชีวิตตาย",
-    "description_th": "คุณคือสาย innovator ตัวจริง — ตื่นมาเช็ค Twitter/X ว่ามีโมเดลใหม่ออกมั้ย, ลอง Cursor กับ Claude Code ทุกอัพเดท, มี prompt library ส่วนตัวแชร์กับเพื่อน power user คนอื่น เวลาเจองานใหม่ไม่ได้คิดว่า 'จะเริ่มยังไง' แต่คิดว่า 'จะ chain prompt แบบไหน' ความเร็วในการ output งานคือ super power",
+    "description_th": "คุณคือสาย innovator ตัวจริง — ตื่นมา 7 โมงเช็ค X feed ของ @sama, @AnthropicAI, @karpathy ก่อนแปรงฟัน เห็น Claude 4 ออกใหม่ปุ๊บ subscribe Pro ทันทีไม่ต้องคิด มี Cursor + Claude Code เปิดอยู่บน MacBook พร้อมกันทุกวัน เขียน system prompt 200 บรรทัดเก็บไว้ใน Notion ส่วนตัว มี custom GPT 5-6 ตัวสำหรับ workflow ที่ทำซ้ำ — 'แปลง brief เป็น user story', 'รีวิว PR แบบ tone ใจดี', 'สรุปประชุม Zoom เป็น action items' ใช้ ComfyUI gen รูป, Suno แต่งเพลง pitch ลูกค้า, ElevenLabs ทำ voiceover พรีเซนต์ภาษาอังกฤษ workflow คุณคือ chain — Perplexity หา source → Claude วิเคราะห์ → ChatGPT เขียน final → Midjourney ทำภาพประกอบ → ทั้งหมดใน 20 นาที เพื่อนเอเจนซี่ทักมาขอ prompt library, dev ในกลุ่ม Discord ขอให้คุณ pair coding ผ่าน screen share คุณ ship SaaS เดี่ยวขายได้ใน 1 เดือน เพราะ AI กับคุณคือ co-founder จริง ๆ ความเร็วในการ output คือ super power แต่บางทีก็เร็วเกินจนทีมตามไม่ทัน",
+    "strengths_th": [
+      "output 3-5x ของคน normal ด้วย workflow chain ที่ออกแบบเอง",
+      "เห็น use case ใหม่ก่อนคนอื่น — เพื่อน ๆ มาถามว่า 'อันนี้ทำยังไง'",
+      "ปรับ tool ใหม่ภายใน 1 ชม. ไม่กลัวเรียนรู้ใหม่",
+      "ประหยัดงบ agency เพราะทำเองได้เกือบหมด",
+      "build personal brand ใน X/Threads ผ่าน thread แชร์ prompt"
+    ],
+    "weaknesses_th": [
+      "ขี้เกียจ verify จน ship งานที่มี hallucination ออกไปจริง",
+      "scope งานขยายเร็วกว่าทีมตามทัน — เพื่อนร่วมทีม burn out ตามไม่ไหว",
+      "พึ่ง AI จนทักษะ first-principle thinking เริ่มหด",
+      "ใช้เงิน subscribe tool เดือนละ 5,000+ บาทไม่รู้สึกผิด"
+    ],
+    "compatible_with": ["DAILY_HELPER", "CASUAL"],
+    "famous_examples_th": [
+      "เพื่อนเอเจนซี่ที่ตอบ brief ใน 10 นาที",
+      "dev ที่เขียน SaaS เดี่ยวขายได้ใน 1 เดือน",
+      "Pieter Levels — solo founder Twitter",
+      "ครีเอเตอร์ไทยที่ใช้ ComfyUI ทำ MV",
+      "อ.วรเชษฐ์ Skooldio (สาย AI educator)"
+    ],
+    "growth_tips_th": [
+      "ตั้ง 'verify checklist' ก่อน ship — ตัวเลขทุกตัวต้องมี source",
+      "เขียน doc ให้ทีม catch up workflow ของคุณได้ ไม่ใช่ทำคนเดียว",
+      "บล็อก 1 วัน/สัปดาห์ ทำงานแบบ no-AI เพื่อ keep มุดสมอง sharp",
+      "audit subscription ทุก 3 เดือน — บางตัวไม่ได้ใช้แล้ว"
+    ],
+    "shareable_quote_th": "ตื่นมาเช็ค X ก่อนแปรงฟัน — Claude ใหม่ออก subscribe ก่อนคิด ⚡",
+    "color_accent": "#7C3AED",
     "work_impact_th": "ผลิตได้ 3x ของปกติ — แต่ต้องระวังจะขี้เกียจ verify จนพลาดข้อมูลผิด หรือ context จบเร็วเกินกว่าจะทบทวน",
     "watchout_th": "ระวังติดกับดัก 'AI สวยกว่าจริง' — รีบส่งงานโดยไม่อ่านซ้ำ, และระวัง burnout เพราะ scope งานขยายเร็วกว่าที่ทีมตามทัน",
-    "compatible_with": ["DAILY_HELPER", "POWER_USER"],
     "famous_th": "เพื่อนเอเจนซี่ที่ตอบ brief ใน 10 นาที / dev ที่เขียน SaaS เดี่ยวขายได้ใน 1 เดือน"
   },
   {
@@ -18,13 +46,40 @@
     "name_th": "เพื่อนคู่ใจ AI — ใช้ทุกวันแต่ไม่อวด",
     "emoji": "🤝",
     "daily_use_count_th": "10-20 ครั้ง/วัน",
-    "favorite_tools_th": ["ChatGPT", "Gemini", "Notion AI", "Otter.ai", "Grammarly"],
+    "favorite_tools_th": ["ChatGPT", "Gemini", "Notion AI", "Otter.ai", "Grammarly", "Copilot ใน Excel"],
     "signature_move_th": "ขอช่วยสรุปประชุม, draft อีเมล, ทำ slide outline, แปลงานเป็นภาษาอังกฤษ",
     "tagline_th": "ไม่ใช่ฮีโร่ แต่ขาด AI ก็ทำงานช้าลงเยอะ",
-    "description_th": "คุณคือสาย early majority ที่ใช้ AI เป็นเครื่องมือทำงานปกติ — เปิด ChatGPT tab ทิ้งไว้ทั้งวันเหมือน Slack, ใช้ตั้งแต่ตอบลูกค้ายันคิดหัวข้ออาหารเย็น ไม่ได้สนใจรุ่นใหม่ๆ มากเท่าไหร่ ขอแค่ใช้แล้วงานเสร็จ คุณรู้ขอบเขต AI ดี — เรื่องไหนเชื่อได้, เรื่องไหนต้องเช็ค",
+    "description_th": "คุณคือสาย early majority ของออฟฟิศ — เปิด ChatGPT tab ทิ้งไว้ทั้งวันเหมือน Slack กับ LINE OA ใช้ตั้งแต่ตอบลูกค้าแบบสุภาพยันคิดเมนูข้าวเย็นว่าจะสั่ง grab อะไรดี เช้านี้ขอให้ ChatGPT 'ช่วยเขียนสลัดพรีเซนต์เรื่อง Q4 roadmap ให้หน่อย tone สุภาพแต่ไม่ขายของ' บ่ายขอ Gemini สรุปประชุม 1 ชม. เป็น bullet 5 ข้อ Notion AI ช่วย rewrite OKR ให้ดูโปรขึ้น Grammarly ตรวจอีเมลภาษาอังกฤษถึงลูกค้าสิงคโปร์ คุณไม่ได้สนใจรุ่นใหม่ ๆ มากเท่าไหร่ — ขอแค่ใช้แล้วงานเสร็จก่อน 6 โมงจะได้กลับบ้านดู F4 Thailand คุณรู้ขอบเขต AI ดี — เรื่องตัวเลขบริษัทต้องเช็ค, เรื่องกฎหมายต้องถามทนาย, เรื่อง brainstorm/draft ใช้ได้เลย พี่ ๆ ในออฟฟิศมาถามคุณว่า 'อันนี้ AI ช่วยทำมั้ย' เพราะคุณคือคนที่ใช้แบบ practical ไม่ขี้อวด ไม่ลึกลับ — แค่ทำงานเร็วขึ้นเงียบ ๆ",
+    "strengths_th": [
+      "บาลานซ์ AI กับ judgement คนได้ดี — รู้ว่าเรื่องไหนเชื่อได้",
+      "เป็น 'ครู AI' ของออฟฟิศแบบไม่ตั้งใจ — สอนพี่ ๆ ใช้",
+      "ทำงานเร็วขึ้น 30-50% โดยไม่กระทบ quality",
+      "ประยุกต์ใช้ในชีวิตประจำวัน — สั่งของ, plan ทริป, คิดเมนู"
+    ],
+    "weaknesses_th": [
+      "พึ่งเรื่องเล็ก ๆ จน skill เขียน/คิดเริ่มหด",
+      "ใช้ default tone ของ ChatGPT จนงานทุกชิ้นเริ่มเสียง 'AI'",
+      "ไม่ค่อย explore tool ใหม่ — ตกขบวน feature ใหม่ที่ช่วยได้เยอะ",
+      "ลืมว่าเคยทำเองได้ก่อนมี AI"
+    ],
+    "compatible_with": ["POWER_USER", "CASUAL", "SKEPTIC"],
+    "famous_examples_th": [
+      "พี่ในออฟฟิศที่ทุกคนถามว่า 'อันนี้ AI ช่วยทำมั้ย'",
+      "HR ที่ใช้ ChatGPT ร่าง JD",
+      "marketing manager ที่ใช้ Notion AI สรุปสัปดาห์",
+      "บัญชีที่ใช้ Copilot ใน Excel",
+      "อาจารย์มหา'ลัยที่ใช้ ChatGPT ร่าง syllabus"
+    ],
+    "growth_tips_th": [
+      "เขียนเอง 1 งาน/สัปดาห์ ไม่ใช้ AI เลย เพื่อ keep skill",
+      "ลอง tool ใหม่เดือนละ 1 ตัว — ไม่ต้อง subscribe ก็ได้",
+      "ปรับ system prompt ของตัวเองให้ tone ไม่ใช่ default ChatGPT",
+      "สอนคนอื่นในออฟฟิศใช้ — จะ deepen ความเข้าใจตัวเอง"
+    ],
+    "shareable_quote_th": "เปิด ChatGPT tab ทั้งวันเหมือน LINE — ใช้ ChatGPT เขียนสลัดพรีเซนต์ก็ไม่อาย 🤝",
+    "color_accent": "#10B981",
     "work_impact_th": "ทำงานเร็วขึ้น 30-50% โดยไม่รู้ตัว — meeting note สวยขึ้น, อีเมลดูโปรขึ้น, brief ลูกน้องชัดขึ้น",
     "watchout_th": "ระวังพึ่งพาเรื่องเล็กๆ เกิน จนทักษะเขียน/คิดเริ่มหด — ลองเขียนเองบ้างเดือนละครั้งกัน atrophy",
-    "compatible_with": ["POWER_USER", "CASUAL"],
     "famous_th": "พี่ในออฟฟิศที่ทุกคนถามว่า 'อันนี้ AI ช่วยทำมั้ย' / HR ที่ใช้ ChatGPT ร่าง JD"
   },
   {
@@ -32,13 +87,40 @@
     "name_th": "นักสืบ AI — ไม่ผ่านก็ไม่เซ็น",
     "emoji": "🔍",
     "daily_use_count_th": "3-5 ครั้ง/วัน (พร้อม Google เปิดข้างๆ)",
-    "favorite_tools_th": ["Perplexity", "ChatGPT (เช็คซ้ำ)", "Google Scholar", "Wikipedia"],
+    "favorite_tools_th": ["Perplexity", "ChatGPT (เช็คซ้ำ)", "Google Scholar", "Wikipedia", "Semantic Scholar"],
     "signature_move_th": "ถาม AI แล้วเอาคำตอบไปเทียบกับ source จริงทุกครั้ง / ตามเช็ค hallucination",
     "tagline_th": "AI พูดได้ทุกอย่าง แต่ไม่ใช่ทุกอย่างจริง",
-    "description_th": "คุณคือสายระแวงที่ใจกว้าง — เห็น value ของ AI แต่เคยโดน hallucination หลอกแล้วเข็ดเลย ตอนนี้ใช้แบบไม่ไว้ใจ ทุกตัวเลข ทุก citation ต้องไปหา source ก่อนใช้ คุณคือคนที่เพื่อนๆ ส่งคำตอบ AI มาให้เช็คให้ก่อนเชื่อ — เป็น quality gate ของกลุ่ม",
+    "description_th": "คุณคือสายระแวงที่ใจกว้าง — เห็น value ของ AI แต่เคยโดน ChatGPT 3.5 มั่ว citation paper ปลอมตอนทำ thesis แล้วโดนอาจารย์ที่ปรึกษาด่ายับ ตั้งแต่นั้นมาคุณใช้ AI แบบ 'ไว้ใจแต่ตรวจสอบ' ทุกตัวเลข ทุก citation ทุกชื่อบุคคล ต้องไปหา primary source ก่อนใช้ — เปิด Perplexity คู่ ChatGPT เสมอ เช็ค footnote ทุกอันใน Google Scholar คุณคือคนที่เพื่อน ๆ ส่ง screenshot คำตอบ AI มาให้เช็คก่อนเชื่อ — เป็น quality gate ของแก๊ง LINE 'อันนี้จริงมั้ยพี่' คุณตอบใน 5 นาทีพร้อมลิงก์ Wikipedia ในงาน คุณเป็นคนที่ manager วางใจให้ทำ research-heavy งาน เพราะรู้ว่าจะไม่มี factual error ส่งไปลูกค้า อ่าน paper จริง ๆ บน arXiv ก่อนเชื่อ headline X อ่านพันทิพย์เพื่อ cross-check ความเห็นจริงของคนไทย ไม่ใช่แค่ ChatGPT บอก คุณรู้ดีว่าโมเดลปัจจุบัน confident บอกผิดได้แบบเนียน — เป็นเหตุผลที่คุณยังต้องเป็น human in the loop จุดอ่อนคือบางทีเช็คเรื่องเล็กที่ไม่จำเป็นจนงานช้า",
+    "strengths_th": [
+      "factual accuracy สูงสุดในทีม — งานคุณน่าเชื่อถือที่สุด",
+      "เป็น quality gate ของกลุ่ม — ทุกคนพึ่งคุณ",
+      "อ่าน source จริงเป็น ไม่หลงเชื่อ headline",
+      "สอนน้องใหม่ในออฟฟิศให้รู้จัก fact-check"
+    ],
+    "weaknesses_th": [
+      "เสียเวลาเช็คเรื่องเล็กที่ไม่จำเป็น — งานช้ากว่าทีม 20-30%",
+      "บางทีระแวงจนพลาดโอกาสใช้ AI ในเรื่องที่ low risk",
+      "พูด 'แต่ source ไหน' บ่อยจนเพื่อนเริ่มไม่อยากแชร์",
+      "มาตรฐานสูงจนตัวเอง burnout"
+    ],
+    "compatible_with": ["DAILY_HELPER", "RESISTANT"],
+    "famous_examples_th": [
+      "นักข่าวที่ fact-check ทุก quote",
+      "นักวิจัยที่ขอ DOI ทุก paper",
+      "บก.ข่าวไทยรัฐสาย investigative",
+      "อ.อนุสรณ์ ธรรมใจ — สาย verify ข้อมูล",
+      "หมอแพมเพจสุขภาพ — ตรวจ source ก่อนแชร์"
+    ],
+    "growth_tips_th": [
+      "แยก task เป็น 'high-stakes' กับ 'draft' — draft ไม่ต้องเช็ค 100%",
+      "ใช้ Perplexity Pro มี citation built-in ประหยัดเวลาเช็ค",
+      "ตั้งกฎ '80/20' — เช็คแค่ 20% ที่สำคัญ ไม่ต้องทุกบรรทัด",
+      "ลอง trust AI กับงาน low-risk เช่นแปลภาษา เพื่อปลด anxiety"
+    ],
+    "shareable_quote_th": "ChatGPT เคยมั่ว citation จนโดนอาจารย์ด่า — ตั้งแต่นั้นไม่ไว้ใจอะไรไม่มี source 🔍",
+    "color_accent": "#0EA5E9",
     "work_impact_th": "ช้ากว่าเพื่อน power user แต่ผิดน้อยกว่ามาก — งานคุณน่าเชื่อถือสุดในทีม",
     "watchout_th": "ระวังเสียเวลาเช็คเรื่องเล็กที่ไม่จำเป็น — บางงานแค่ draft 80% ก็พอแล้ว ไม่ต้อง 100% ทุกครั้ง",
-    "compatible_with": ["DAILY_HELPER", "RESISTANT"],
     "famous_th": "นักข่าวที่ fact-check ทุก quote / นักวิจัยที่ขอ DOI ทุก paper"
   },
   {
@@ -46,13 +128,40 @@
     "name_th": "สาย AI สนุก — ขอรูปสวย ขอคำปรึกษาความรัก",
     "emoji": "🎨",
     "daily_use_count_th": "2-5 ครั้ง/สัปดาห์",
-    "favorite_tools_th": ["ChatGPT (free)", "Midjourney", "Suno", "Character.AI", "Pika"],
+    "favorite_tools_th": ["ChatGPT (free)", "Midjourney", "Suno", "Character.AI", "Pika", "Remini"],
     "signature_move_th": "ขอรูป profile แนวอนิเมะ / ปรึกษาเรื่องแฟน / รีวิวหนังก่อนดู",
     "tagline_th": "AI ไม่ใช่งาน AI คือเพื่อนเล่น",
-    "description_th": "คุณใช้ AI เพื่อความสนุกเป็นหลัก — gen รูปแมวเป็นซามูไร, ถามว่าหนังเรื่องนี้ควรดูมั้ย, ปรึกษาเรื่อง outfit งาน wedding, แต่งเพลงเล่นใน Suno เรื่องงานก็พึ่งบ้าง แต่ไม่ใช่ daily driver คุณไม่สนใจ prompt engineering — ขอแค่พิมพ์ภาษาคนแล้วได้คำตอบดูโอเค",
+    "description_th": "คุณใช้ AI เพื่อความสนุกเป็นหลัก — gen รูปแมวตัวเองเป็นซามูไรในชุด haori ส่งกลุ่มเพื่อนวันเสาร์ ถาม ChatGPT ว่า 'หนัง F4 Thailand ตอน 8 ควรดูมั้ย no spoiler' ปรึกษาว่าใส่ outfit อะไรไปงาน wedding น้องเอกที่ Anantara แต่งเพลง Suno เพื่อไปเล่นวันเกิดแฟนมีท่อนฮุค 'รักนะที่รัก' กึ่งจริงจังกึ่งฮา ใช้ Character.AI คุยกับ Levi Attack on Titan ตอนเหงาวันอาทิตย์ Remini แต่งรูปเก่าตอนเด็กให้แม่ส่งให้ยาย เรื่องงานใช้ ChatGPT free version เป็นครั้งคราว — เขียน LINE คุยลูกค้าให้สุภาพขึ้น แต่ไม่ใช่ daily driver คุณไม่สนใจ prompt engineering — พิมพ์ภาษาคนแบบที่คุยกับเพื่อน ได้คำตอบดูโอเคก็พอ ความสุขคือเปิด Midjourney เสาร์เย็น gen 50 รูป mood board สำหรับเที่ยวเชียงใหม่ครั้งหน้า แล้วจริง ๆ ก็ไม่ได้ไปด้วย ชีวิตคุณ AI ไม่ได้ทำให้รวยขึ้น แต่ทำให้สนุกขึ้น feed IG สวยขึ้น caption ฮากว่าเดิมก็พอ",
+    "strengths_th": [
+      "ใช้ AI เพื่อเพิ่มความสุขในชีวิต ไม่ใช่แค่งาน",
+      "creative use cases เยอะ — เพื่อนชอบมาขอไอเดีย",
+      "ไม่กดดันตัวเอง — relationship กับ AI healthy",
+      "feed IG/TikTok ดูดี ไม่ขึ้นกับงบ photographer"
+    ],
+    "weaknesses_th": [
+      "over-share ข้อมูลส่วนตัวกับ chatbot ฟรี — สุขภาพ/การเงิน/ความรัก",
+      "ตกขบวนใช้ AI ในงาน เพราะไม่เคยลองจริงจัง",
+      "คาดหวังกับ Character.AI จนกระทบ relationship จริง",
+      "ใช้เงินกับ subscription ครั้งเดียวแล้วลืมยกเลิก"
+    ],
+    "compatible_with": ["DAILY_HELPER", "POWER_USER"],
+    "famous_examples_th": [
+      "เพื่อนที่ส่งรูป Midjourney มาในกรุ๊ปแชทตอนเย็น",
+      "สายเล่น Character.AI ตอนเหงา",
+      "ครีเอเตอร์ TikTok สาย AI art",
+      "พี่ที่ทำเพลง Suno เซอร์ไพรส์วันเกิดแฟน",
+      "เพื่อนที่ใช้ Remini แต่งรูปเก่าให้พ่อแม่"
+    ],
+    "growth_tips_th": [
+      "ระวังข้อมูลส่วนตัวใน chatbot ฟรี — อย่าใส่ชื่อจริง/เลขบัตร",
+      "ลองใช้กับงานจริงเดือนละ 1 ครั้ง อาจจะเปลี่ยนชีวิต",
+      "set ลิมิตเวลา Character.AI — ไม่เกิน 30 นาที/วัน",
+      "ยกเลิก subscription ที่ลืมยกเลิก — ตรวจ KBank statement"
+    ],
+    "shareable_quote_th": "AI ไม่ทำให้รวยขึ้น แต่ทำให้แมวฉันเป็นซามูไรได้ — พอแล้ว 🎨",
+    "color_accent": "#FF8A6B",
     "work_impact_th": "งานหลักไม่ค่อยเปลี่ยน แต่ชีวิตส่วนตัวสนุกขึ้นเยอะ — feed IG สวยขึ้น, caption ฮากว่าเดิม",
     "watchout_th": "ระวัง over-share ข้อมูลส่วนตัวกับ chatbot ฟรี — โดยเฉพาะเรื่องสุขภาพ/การเงิน/ความรัก ที่อาจถูกใช้ train โมเดล",
-    "compatible_with": ["DAILY_HELPER", "CASUAL"],
     "famous_th": "เพื่อนที่ส่งรูป Midjourney มาในกรุ๊ปแชทตอนเย็น / สายเล่น Character.AI ตอนเหงา"
   },
   {
@@ -60,13 +169,40 @@
     "name_th": "ทีมมนุษย์ — AI ไว้ใจไม่ได้",
     "emoji": "🛡️",
     "daily_use_count_th": "0-1 ครั้ง/เดือน",
-    "favorite_tools_th": ["Google", "พจนานุกรม", "เพื่อนร่วมงาน", "หนังสือ"],
+    "favorite_tools_th": ["Google", "พจนานุกรม", "เพื่อนร่วมงาน", "หนังสือ", "พันทิพย์"],
     "signature_move_th": "ปฏิเสธไม่ใช้ AI สรุปประชุม / เขียนอีเมลเอง / ไม่อยาก gen รูปด้วย AI",
     "tagline_th": "ทักษะที่ฝึกมา 10 ปี ไม่ปล่อยให้ AI มาแย่ง",
-    "description_th": "คุณคือสาย late majority/laggard ที่ระวังตัวกับ AI — กังวลเรื่อง copyright, deepfake, AI แทนงาน, และ data privacy คุณเชื่อว่างานคนยังมีคุณค่าอยู่ และไม่อยากเป็นคนที่ทักษะหายเพราะพึ่ง AI มากเกิน คุณอาจจะเคยลอง ChatGPT 1-2 ครั้งแล้วรู้สึกว่า 'ไม่ใช่ของกู'",
+    "description_th": "คุณคือสาย late majority/laggard ที่ระวังตัวกับ AI อย่างมีเหตุผล — กังวลเรื่อง copyright (ดู deepfake ดารา ส.ว.ในไทยที่หลุดออกมา), data privacy (ใส่ข้อมูลลูกค้าใน ChatGPT อาจถูก train ต่อ), AI แทนงานเพื่อนน้อง designer, นักเขียน, นักแปลที่ตกงาน คุณเชื่อว่า craft คนยังมีคุณค่า — copy ที่เขียนเองอ่านแล้วรู้สึก 'มีเลือดเนื้อ' ต่างจาก ChatGPT ที่อ่านปุ๊บรู้ว่า AI คุณเคยลอง ChatGPT 1-2 ครั้งตอนเปิดตัว ลองให้เขียนอีเมลภาษาอังกฤษถึงลูกค้า แล้วรู้สึกว่า 'ไม่ใช่ของกู' — tone ดูปลอม ไม่ใช่สำเนียงตัวเอง คุณเลยกลับมาเขียนเองด้วย Grammarly ช่วยเช็คไวยากรณ์เท่านั้น เพื่อนชวนใช้ Cursor บอกว่าจะเร็วขึ้น คุณตอบ 'แล้วฉันจะเก่งขึ้นยังไง' ในที่ทำงาน คุณคือคนที่ลูกค้า request ตัวเพราะ 'อยากได้งานที่คนทำ' ไม่ใช่งานสำเร็จรูป craft ของคุณคือ moat คุณยังเขียน journal ด้วยปากกา Lamy ในสมุด Muji ทุกเช้า ชอบไปร้านหนังสือ Kinokuniya, ร้านกาแฟตึกเก่า Old Town เจริญกรุงมากกว่าคาเฟ่ aesthetic IG จุดอ่อนคือคุณอาจตกขบวนถาวรในเชิงเศรษฐกิจ ถ้าไม่ปรับตัวเลย",
+    "strengths_th": [
+      "craft แข็ง — งานคุณมี soul ที่ AI ลอกยาก",
+      "data privacy/ethics awareness สูง ไม่เผลอเอา client data ใส่ AI",
+      "ทักษะ deep work ยังอยู่ — มีสมาธิยาวกว่าทีม",
+      "ลูกค้าเฉพาะกลุ่มที่อยากได้งาน 'human-made' จะ pay premium"
+    ],
+    "weaknesses_th": [
+      "ทำงานช้ากว่าทีม 20-30% ในงาน routine — ไม่ scalable",
+      "ตกขบวน trend ของอุตสาหกรรม ฟังประชุมแล้วงงเรื่อง LLM, RAG, agent",
+      "judge เพื่อนที่ใช้ AI — relationship ที่ทำงานแย่ลง",
+      "อาจสูญเสียงานในระยะยาวถ้าไม่ปรับ"
+    ],
+    "compatible_with": ["SKEPTIC", "CASUAL"],
+    "famous_examples_th": [
+      "อาจารย์ที่ห้ามนักเรียนใช้ ChatGPT",
+      "นักเขียนที่ยังเขียนด้วยปากกา",
+      "วินทร์ เลียววาริณ — สายปากกาจริง",
+      "ช่างภาพฟิล์มที่ refuse Lightroom AI",
+      "designer สายมือวาดที่ไม่ใช้ Midjourney"
+    ],
+    "growth_tips_th": [
+      "ลอง 1 tool 1 use case ที่ไม่กระทบ identity — เช่น summary email",
+      "เรียนรู้ vocabulary AI พื้นฐาน (LLM, prompt, hallucination) แค่จะคุยกับทีมรู้เรื่อง",
+      "หา niche ที่ AI ไม่กระทบ — งาน physical, hand-craft, mentor 1-on-1",
+      "ปรึกษาผู้เชี่ยวชาญถ้ารู้สึกว่ากำลังตกขบวนเรื่องอาชีพ"
+    ],
+    "shareable_quote_th": "ทักษะที่ฝึกมา 10 ปี ไม่ปล่อยให้ AI มาแย่ง — เขียนเองด้วยปากกา Lamy ก็พอ 🛡️",
+    "color_accent": "#1F1A14",
     "work_impact_th": "อาจทำงานช้ากว่าทีม 20-30% ในบางงาน — แต่งานคุณมี craft ที่ AI เลียนแบบยาก",
     "watchout_th": "ระวังตกขบวนถาวร — ไม่ต้อง all-in แต่ลอง 1 tool 1 use case ที่ไม่กระทบ identity ก่อน เช่น summary email หรือ translation",
-    "compatible_with": ["SKEPTIC", "RESISTANT"],
     "famous_th": "อาจารย์ที่ห้ามนักเรียนใช้ ChatGPT / นักเขียนที่ยังเขียนด้วยปากกา"
   }
 ]

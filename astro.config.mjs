@@ -17,7 +17,10 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/admin') && !page.includes('/api/'),
+      filter: (page) =>
+        !page.includes('/admin') &&
+        !page.includes('/api/') &&
+        !/\/quiz\/[^/]+\/result\//.test(page),
       serialize(item) {
         // Custom priority per URL pattern
         if (item.url === SITE + '/') item.priority = 1.0

@@ -71,10 +71,11 @@ const otherArchetypes = allArchetypes.filter((a: any) => archetypeCode(a) !== co
 
 <BaseLayout
   title={`${archEmoji} ${archName} | ${entry.title_th} — quizdee`}
-  description={archTagline || archDesc.slice(0, 150) || `ผลแบบทดสอบ ${entry.title_th}`}
+  description={archDesc ? archDesc.slice(0, 155).replace(/\s+\S*$/, '…') : (archTagline ? `${archTagline} — ผลจากแบบทดสอบ ${entry.title_th} อ่านจุดแข็ง จุดอ่อน คู่ที่เข้ากัน และเทคนิคพัฒนาตัวเอง` : `ผลแบบทดสอบ ${entry.title_th} — ${archName} ${archTagline}`)}
   canonical={pageUrl}
   ogImage={ogImage}
   schemas={schemas}
+  noindex={true}
 >
   <section class="relative bg-butter-50 overflow-hidden">
     <StickerDecor />
@@ -160,6 +161,46 @@ const otherArchetypes = allArchetypes.filter((a: any) => archetypeCode(a) !== co
               <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {archetype.shareable_quote_th && (
+        <div class="bg-coral-100 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <p class="text-caption font-mono uppercase tracking-widest text-coral-700 mb-2">💬 quote ของคุณ</p>
+          <blockquote class="font-display text-h3 text-sumi-900 leading-snug text-balance italic">"{archetype.shareable_quote_th}"</blockquote>
+        </div>
+      )}
+
+      {Array.isArray(archetype.weaknesses_th) && archetype.weaknesses_th.length > 0 && (
+        <div class="bg-ume-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">🪞 จุดที่ควรระวัง</h3>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {archetype.weaknesses_th.map((s: string) => (
+              <li class="flex gap-2"><span class="text-coral-500 flex-shrink-0">▸</span><span>{s}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {Array.isArray(archetype.growth_tips_th) && archetype.growth_tips_th.length > 0 && (
+        <div class="bg-matcha-100 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">🌱 พัฒนาตัวเองยังไงต่อ</h3>
+          <ul class="space-y-2 text-body text-sumi-800">
+            {archetype.growth_tips_th.map((s: string) => (
+              <li class="flex gap-2"><span class="text-matcha-700 flex-shrink-0">✦</span><span>{s}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {Array.isArray(archetype.famous_examples_th) && archetype.famous_examples_th.length > 0 && (
+        <div>
+          <h3 class="font-display text-h3 font-semibold text-sumi-900 mb-3">⭐ คนดังคล้ายคุณ</h3>
+          <div class="flex flex-wrap gap-2">
+            {archetype.famous_examples_th.map((s: string) => (
+              <span class="bg-washi-50 border border-sumi-300 rounded-full px-3 py-1.5 text-small text-sumi-800">{s}</span>
+            ))}
+          </div>
         </div>
       )}
 
