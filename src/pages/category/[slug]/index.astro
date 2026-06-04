@@ -1,24 +1,41 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { getQuizzes, getBlogPosts } from '@/lib/payload'
+import { CATALOG, type QuizCategory } from '@/lib/catalog'
+import { getBlogPosts } from '@/lib/payload'
+
+// Each category landing maps to ONE OR MORE catalog category codes.
+// Covers all 9 catalog codes across the 4 public category slugs.
+const CATEGORY_MAP: Record<string, { label: string; th: string; codes: QuizCategory[] }> = {
+  personality: { label: 'Personality', th: 'บุคลิกภาพ', codes: ['PERSONALITY', 'PSYCHOLOGY'] },
+  love:        { label: 'Love',        th: 'ความรัก',   codes: ['LOVE'] },
+  career:      { label: 'Career',      th: 'อาชีพ',     codes: ['WORK', 'WELLBEING'] },
+  fun:         { label: 'Fun',         th: 'สนุกๆ',     codes: ['POP_CULTURE', 'TREND', 'LIFESTYLE', 'CULTURE'] },
+}
 
 export async function getStaticPaths() {
   return [
-    { params: { slug: 'personality' }, props: { label: 'Personality', th: 'บุคลิกภาพ' } },
-    { params: { slug: 'love' }, props: { label: 'Love', th: 'ความรัก' } },
-    { params: { slug: 'career' }, props: { label: 'Career', th: 'อาชีพ' } },
-    { params: { slug: 'fun' }, props: { label: 'Fun', th: 'สนุกๆ' } },
+    { params: { slug: 'personality' } },
+    { params: { slug: 'love' } },
+    { params: { slug: 'career' } },
+    { params: { slug: 'fun' } },
   ]
 }
 
 const { slug } = Astro.params
-const { label, th } = Astro.props
+const conf = CATEGORY_MAP[slug as string]
+const { label, th, codes } = conf
 
-const allQuizzes = await getQuizzes()
+// Quizzes from the static CATALOG (always available at build) — NOT from Payload,
+// which isn't running during static build and returns empty.
+const quizzes = CATALOG.filter((q) => codes.includes(q.category))
+
+// Blog posts still come from CMS (graceful-empty until seeded). Match by category
+// code (case-insensitive) OR the public slug, so future seeded posts surface here.
 const allPosts = await getBlogPosts()
-
-const quizzes = allQuizzes.filter((q) => q.category === slug)
-const posts = allPosts.filter((p) => p.category === slug)
+const codeSet = new Set(codes.map((c) => c.toLowerCase()))
+const posts = allPosts.filter(
+  (p) => codeSet.has((p.category || '').toLowerCase()) || (p.category || '').toLowerCase() === slug,
+)
 ---
 
 <BaseLayout
@@ -35,9 +52,10 @@ const posts = allPosts.filter((p) => p.category === slug)
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {quizzes.map((quiz) => (
             <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-md transition-shadow">
-              <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title}</h3>
-              <p class="text-small text-ink-700 mb-4">{quiz.description}</p>
-              <p class="text-caption text-ink-500">{quiz.estimatedMinutes} นาที</p>
+              <div class="text-3xl mb-2 leading-none" aria-hidden="true">{quiz.emoji}</div>
+              <h3 class="font-display text-h3 font-semibold mb-2">{quiz.title_th}</h3>
+              <p class="text-small text-sumi-700 mb-4">{quiz.subtitle_th}</p>
+              <p class="text-caption text-sumi-500">{quiz.duration_min} นาที · {quiz.question_count} ข้อ</p>
             </a>
           ))}
         </div>
@@ -53,7 +71,7 @@ const posts = allPosts.filter((p) => p.category === slug)
               <h3 class="font-display text-h3 font-semibold mb-2 group-hover:text-coral-400">
                 {post.title}
               </h3>
-              <p class="text-small text-ink-700">{post.metaDescription}</p>
+              <p class="text-small text-sumi-700">{post.metaDescription}</p>
             </a>
           ))}
         </div>
@@ -63,7 +81,7 @@ const posts = allPosts.filter((p) => p.category === slug)
     {quizzes.length === 0 && posts.length === 0 && (
       <div class="card text-center py-16">
         <p class="eyebrow mb-3">EMPTY</p>
-        <p class="text-ink-700">ยังไม่มีเนื้อหาในหมวดนี้</p>
+        <p class="text-sumi-700">ยังไม่มีเนื้อหาในหมวดนี้</p>
       </div>
     )}
   </section>
