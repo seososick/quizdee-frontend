@@ -10,6 +10,7 @@ import Mascot from '@/components/Mascot.astro'
 import { CATALOG } from '@/lib/catalog'
 import { loadArchetypes, archetypeName, archetypeUrlSlug } from '@/lib/quiz-content'
 import { getMbtiTypes, getResultByTypeCode } from '@/lib/payload'
+import deepContent from '@/data/quiz-content/mbti-type-deep.json'
 
 // 16 MBTI codes
 const MBTI_CODES = ['INTJ','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP']
@@ -75,6 +76,9 @@ const colors = colorMap[code] || { bg: 'bg-butter-50', accent: 'bg-coral-500' }
 const bestMatchCode = bestMatch.split(/[\s\(]/)[0]?.toUpperCase()
 const worstMatchCode = worstMatch.split(/[\s—\(]/)[0]?.toUpperCase()
 
+// Phase 2 deep content (career, love, workplace, money, extended FAQ) — optional per type
+const deep: any = (deepContent as any)[code] || null
+
 // FAQ — keyword-rich questions real Thai users search for this MBTI type
 const faqItems: { q: string; a: string }[] = []
 if (archDescription) {
@@ -92,6 +96,13 @@ if (growthTips.length > 0) {
 }
 if (famousExamples.length > 0) {
   faqItems.push({ q: `คนดังคนไหนเป็น ${code} บ้าง?`, a: `ตัวอย่างคนดังที่เป็น ${code} เช่น ${famousExamples.join(', ')}` })
+}
+// Phase 2: merge extended FAQ from deep content (career/rarity/comparison questions) — dedupe by question
+if (deep?.faq_extended_th?.length) {
+  const seen = new Set(faqItems.map((f) => f.q))
+  for (const f of deep.faq_extended_th) {
+    if (!seen.has(f.q)) { faqItems.push(f); seen.add(f.q) }
+  }
 }
 
 const schemas = [
@@ -251,6 +262,57 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(archEmoji + ' ' + ar
                 <span class="text-sumi-500">·</span>
                 <span class="text-sumi-700">{worstMatch.replace(worstMatchCode, '').replace('—', '').trim()}</span>
               </a>
+            </div>
+          )}
+        </div>
+      )}
+
+      {deep && (deep.career_intro_th || deep.love_intro_th) && (
+        <div class="space-y-8">
+          {deep.career_intro_th && (
+            <div class="bg-istj-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+              <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">💼 อาชีพที่เหมาะกับ {code}</h2>
+              <p class="text-body text-sumi-800 leading-relaxed mb-4">{deep.career_intro_th}</p>
+              {deep.career_jobs_th?.length > 0 && (
+                <>
+                  <h3 class="font-semibold text-body text-sumi-900 mb-2">อาชีพแนะนำสำหรับ {code}</h3>
+                  <ul class="space-y-2 text-body text-sumi-800 mb-4">
+                    {deep.career_jobs_th.map((j: string) => (
+                      <li class="flex gap-2"><span class="text-asagi-500 flex-shrink-0">▸</span><span>{j}</span></li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {deep.career_industries_th && (
+                <p class="text-body text-sumi-700 leading-relaxed">{deep.career_industries_th}</p>
+              )}
+            </div>
+          )}
+
+          {deep.workplace_th && (
+            <div class="bg-washi-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+              <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">🏢 {code} ในที่ทำงาน</h2>
+              <p class="text-body text-sumi-800 leading-relaxed">{deep.workplace_th}</p>
+            </div>
+          )}
+
+          {deep.love_intro_th && (
+            <div class="bg-infp-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+              <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">❤️ {code} กับความรัก</h2>
+              <p class="text-body text-sumi-800 leading-relaxed mb-3">{deep.love_intro_th}</p>
+              {deep.love_dynamics_th && (
+                <p class="text-body text-sumi-800 leading-relaxed mb-3">{deep.love_dynamics_th}</p>
+              )}
+              {deep.love_match_th && (
+                <p class="text-body text-sumi-700 leading-relaxed bg-washi-50 border-2 border-sumi-900 rounded-xl p-4">{deep.love_match_th}</p>
+              )}
+            </div>
+          )}
+
+          {deep.money_th && (
+            <div class="bg-matcha-50 border-2 border-sumi-900 rounded-2xl p-6 shadow-[4px_4px_0_0_rgba(31,26,20,0.95)]">
+              <h2 class="font-display text-h2 font-semibold text-sumi-900 mb-4">💰 {code} กับการเงิน</h2>
+              <p class="text-body text-sumi-800 leading-relaxed">{deep.money_th}</p>
             </div>
           )}
         </div>
