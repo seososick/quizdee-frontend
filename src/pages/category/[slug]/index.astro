@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import { CATALOG, type QuizCategory } from '@/lib/catalog'
 import { getBlogPosts } from '@/lib/payload'
+import categoryContent from '@/data/category-content.json'
 
 // Each category landing maps to ONE OR MORE catalog category codes.
 // Covers all 9 catalog codes across the 4 public category slugs.
@@ -25,6 +26,13 @@ const { slug } = Astro.params
 const conf = CATEGORY_MAP[slug as string]
 const { label, th, codes } = conf
 
+// SEO content (intro + FAQ + meta) per category
+const content: any = (categoryContent as any)[slug as string] || {}
+const h1 = content.h1 || th
+const introLead: string = content.intro_lead_th || ''
+const introBody: string = content.intro_body_th || ''
+const faqs: { q: string; a: string }[] = content.faq_th || []
+
 // Quizzes from the static CATALOG (always available at build) — NOT from Payload,
 // which isn't running during static build and returns empty.
 const quizzes = CATALOG.filter((q) => codes.includes(q.category))
@@ -36,19 +44,72 @@ const codeSet = new Set(codes.map((c) => c.toLowerCase()))
 const posts = allPosts.filter(
   (p) => codeSet.has((p.category || '').toLowerCase()) || (p.category || '').toLowerCase() === slug,
 )
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const pageUrl = `${siteUrl}/category/${slug}/`
+
+// Schema: BreadcrumbList + ItemList (quizzes) + FAQPage
+const schemas: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'แบบทดสอบ', item: siteUrl + '/quiz/' },
+      { '@type': 'ListItem', position: 3, name: th, item: pageUrl },
+    ],
+  },
+]
+if (quizzes.length > 0) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: h1,
+    numberOfItems: quizzes.length,
+    itemListElement: quizzes.map((q, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: q.title_th,
+      url: `${siteUrl}/quiz/${q.slug}/`,
+    })),
+  })
+}
+if (faqs.length > 0) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  })
+}
+
+const metaTitle = `${h1} ฟรี รู้ผลทันที — quizdee`
+const metaDescription = introLead || `รวมแบบทดสอบและบทความหมวด ${th} ทั้งหมดบน quizdee`
 ---
 
 <BaseLayout
-  title={`${th} — แบบทดสอบและบทความ — quizdee`}
-  description={`รวมแบบทดสอบและบทความหมวด ${th} ทั้งหมดบน quizdee`}
+  title={metaTitle}
+  description={metaDescription}
+  canonical={pageUrl}
+  schemas={schemas}
 >
-  <section class="container-wide py-16">
+  <section class="container-wide py-12 sm:py-16">
     <p class="eyebrow mb-4">CATEGORY · {label.toUpperCase()}</p>
-    <h1 class="text-h1 font-semibold mb-12">{th}</h1>
+    <h1 class="text-h1 font-semibold mb-4">{h1}</h1>
+
+    {introLead && (
+      <p class="text-body text-sumi-800 max-w-2xl mb-3 leading-relaxed">{introLead}</p>
+    )}
+    {introBody && (
+      <p class="text-body text-sumi-700 max-w-2xl mb-10 leading-relaxed">{introBody}</p>
+    )}
 
     {quizzes.length > 0 && (
       <div class="mb-12">
-        <h2 class="text-h2 font-semibold mb-6">แบบทดสอบ</h2>
+        <h2 class="text-h2 font-semibold mb-6">แบบทดสอบหมวด{th}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {quizzes.map((quiz) => (
             <a href={`/quiz/${quiz.slug}/`} class="card hover:shadow-md transition-shadow">
@@ -63,8 +124,8 @@ const posts = allPosts.filter(
     )}
 
     {posts.length > 0 && (
-      <div>
-        <h2 class="text-h2 font-semibold mb-6">บทความ</h2>
+      <div class="mb-12">
+        <h2 class="text-h2 font-semibold mb-6">บทความหมวด{th}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {posts.map((post) => (
             <a href={`/blog/${post.slug}/`} class="group">
@@ -73,6 +134,20 @@ const posts = allPosts.filter(
               </h3>
               <p class="text-small text-sumi-700">{post.metaDescription}</p>
             </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {faqs.length > 0 && (
+      <div class="max-w-2xl">
+        <h2 class="text-h2 font-semibold mb-6">คำถามที่พบบ่อย</h2>
+        <div class="space-y-5">
+          {faqs.map((f) => (
+            <div>
+              <h3 class="font-semibold text-body text-sumi-900 mb-1">{f.q}</h3>
+              <p class="text-body text-sumi-700 leading-relaxed">{f.a}</p>
+            </div>
           ))}
         </div>
       </div>
