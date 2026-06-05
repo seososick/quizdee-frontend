@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { getBlogPosts, getBlogPostBySlug } from '@/lib/payload'
+import blogData from '@/data/blog-posts.json'
 
 export async function getStaticPaths() {
-  const posts = await getBlogPosts()
-  return posts.map((post) => ({
+  const posts = (blogData as any).posts || []
+  return posts.map((post: any) => ({
     params: { slug: post.slug },
     props: { post },
   }))
@@ -12,22 +12,46 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props
 
-const schemas = [
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const pageUrl = `${siteUrl}/blog/${post.slug}/`
+const categoryLabels: Record<string, string> = {
+  PERSONALITY: 'บุคลิกภาพ', PSYCHOLOGY: 'จิตวิทยา', LOVE: 'ความรัก',
+  WORK: 'อาชีพ', WELLBEING: 'สุขภาพใจ', POP_CULTURE: 'ป๊อปคัลเจอร์',
+}
+
+const schemas: object[] = [
   {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    inLanguage: 'th',
+    mainEntityOfPage: pageUrl,
     author: post.author?.name
       ? { '@type': 'Person', name: post.author.name }
       : { '@type': 'Organization', name: 'Quizdee' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Quizdee',
+      url: siteUrl + '/',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: siteUrl + '/' },
+      { '@type': 'ListItem', position: 2, name: 'บทความ', item: siteUrl + '/blog/' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: pageUrl },
+    ],
   },
   ...(post.faq && post.faq.length > 0
     ? [{
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: post.faq.map((q) => ({
+        mainEntity: post.faq.map((q: any) => ({
           '@type': 'Question',
           name: q.question,
           acceptedAnswer: { '@type': 'Answer', text: q.answer },
@@ -40,41 +64,31 @@ const schemas = [
 <BaseLayout
   title={`${post.title} — quizdee`}
   description={post.metaDescription}
+  canonical={pageUrl}
+  ogType="article"
   schemas={schemas}
 >
   <article class="container-prose py-16">
-    <p class="eyebrow mb-4">{post.category}{post.publishedAt && ` · ${new Date(post.publishedAt).toLocaleDateString('th-TH')}`}</p>
+    <p class="eyebrow mb-4">{categoryLabels[post.category] || post.category}{post.publishedAt && ` · ${new Date(post.publishedAt).toLocaleDateString('th-TH')}`}</p>
     <h1 class="text-h1 font-semibold mb-6 leading-tight">{post.title}</h1>
 
-    <p class="answer-block">{post.answerBlock}</p>
+    {post.answerBlock && <p class="answer-block">{post.answerBlock}</p>}
 
-    <!-- BANNER SLOT 4: article-mid -->
-    <div class="hidden ph-img my-8" style="height: 250px; max-width: 336px; margin: 2rem auto;">
-      banner-article-mid
-    </div>
-
-    <div class="prose-content drop-cap my-8 text-body">
-      <!-- Lexical content rendering — placeholder for now -->
-      {post.content ? (
-        <div class="text-ink-700">
-          [Rich text content จะ render เมื่อ implement Lexical renderer]
-        </div>
-      ) : (
-        <p class="text-ink-500 italic">รอเนื้อหา</p>
-      )}
-    </div>
+    {post.content_html && (
+      <div class="prose-content my-8 text-body" set:html={post.content_html} />
+    )}
 
     {post.faq && post.faq.length > 0 && (
       <section class="my-12">
         <h2 class="text-h2 font-semibold mb-6">คำถามที่พบบ่อย</h2>
         <div class="space-y-3">
-          {post.faq.map((q) => (
+          {post.faq.map((q: any) => (
             <details class="card cursor-pointer group">
               <summary class="font-display font-semibold text-h3 list-none flex justify-between items-start gap-4">
                 <span>{q.question}</span>
                 <span class="text-coral-400 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p class="mt-4 text-ink-700">{q.answer}</p>
+              <p class="mt-4 text-sumi-700">{q.answer}</p>
             </details>
           ))}
         </div>
@@ -83,12 +97,12 @@ const schemas = [
 
     {(post.relatedQuiz?.length || post.relatedResults?.length) && (
       <section class="card my-12">
-        <p class="eyebrow mb-3">RELATED</p>
+        <p class="eyebrow mb-3">อ่านต่อ / ทำแบบทดสอบ</p>
         <div class="flex flex-wrap gap-3">
-          {post.relatedQuiz?.map((q) => (
+          {post.relatedQuiz?.map((q: any) => (
             <a href={`/quiz/${q.slug}/`} class="btn-secondary text-small">→ ทำ {q.title}</a>
           ))}
-          {post.relatedResults?.map((r) => (
+          {post.relatedResults?.map((r: any) => (
             <a href={`/mbti/${r.typeCode.toLowerCase()}/`} class="btn-secondary text-small">→ {r.title}</a>
           ))}
         </div>

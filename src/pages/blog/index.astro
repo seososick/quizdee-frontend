@@ -1,13 +1,20 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { getBlogPosts } from '@/lib/payload'
+import blogData from '@/data/blog-posts.json'
 
-const posts = await getBlogPosts()
+const posts = (blogData as any).posts || []
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
+const categoryLabels: Record<string, string> = {
+  PERSONALITY: 'บุคลิกภาพ', PSYCHOLOGY: 'จิตวิทยา', LOVE: 'ความรัก',
+  WORK: 'อาชีพ', WELLBEING: 'สุขภาพใจ', POP_CULTURE: 'ป๊อปคัลเจอร์',
+}
 ---
 
 <BaseLayout
-  title="บทความ — quizdee"
-  description="บทความเกี่ยวกับบุคลิกภาพ MBTI, Love Language, อาชีพ ฉบับเข้าใจคนไทยวัยทำงาน"
+  title="บทความ MBTI และบุคลิกภาพ — quizdee"
+  description="บทความเกี่ยวกับบุคลิกภาพ MBTI, Love Language, อาชีพ และจิตวิทยา ฉบับเข้าใจคนไทยวัยทำงาน อ่านฟรี"
+  canonical={`${siteUrl}/blog/`}
 >
   <section class="container-wide py-16">
     <p class="eyebrow mb-4">BLOG</p>
@@ -16,17 +23,17 @@ const posts = await getBlogPosts()
     {posts.length === 0 ? (
       <div class="card text-center py-16">
         <p class="eyebrow mb-3">COMING SOON</p>
-        <p class="text-ink-700">บทความกำลังเตรียม ติดตามได้เร็วๆ นี้</p>
+        <p class="text-sumi-700">บทความกำลังเตรียม ติดตามได้เร็วๆ นี้</p>
       </div>
     ) : (
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <a href={`/blog/${post.slug}/`} class="group">
-            <p class="eyebrow mb-2">{post.category}</p>
+            <p class="eyebrow mb-2">{categoryLabels[post.category] || post.category}</p>
             <h2 class="font-display text-h2 font-semibold mb-3 group-hover:text-coral-400 transition-colors">
               {post.title}
             </h2>
-            <p class="text-body text-ink-700">{post.metaDescription}</p>
+            <p class="text-body text-sumi-700">{post.metaDescription}</p>
           </a>
         ))}
       </div>
