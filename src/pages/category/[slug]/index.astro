@@ -32,6 +32,7 @@ const h1 = content.h1 || th
 const introLead: string = content.intro_lead_th || ''
 const introBody: string = content.intro_body_th || ''
 const faqs: { q: string; a: string }[] = content.faq_th || []
+const relatedArticles: { slug: string; title: string }[] = content.related_articles || []
 
 // Quizzes from the static CATALOG (always available at build) — NOT from Payload,
 // which isn't running during static build and returns empty.
@@ -133,6 +134,20 @@ const metaDescription = introLead || `รวมแบบทดสอบและ
                 {post.title}
               </h3>
               <p class="text-small text-sumi-700">{post.metaDescription}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {relatedArticles.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-h2 font-semibold mb-6">บทความน่าอ่านหมวด{th}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {relatedArticles.map((a) => (
+            <a href={`/blog/${a.slug}/`} class="card hover:shadow-md transition-shadow flex items-center gap-3">
+              <span class="text-coral-500 flex-shrink-0">→</span>
+              <h3 class="font-display text-h3 font-semibold">{a.title}</h3>
             </a>
           ))}
         </div>
