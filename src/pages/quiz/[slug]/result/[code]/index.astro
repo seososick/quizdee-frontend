@@ -70,7 +70,7 @@ const otherArchetypes = allArchetypes.filter((a: any) => archetypeCode(a) !== co
 ---
 
 <BaseLayout
-  title={`${archEmoji} ${archName} | ${entry.title_th} — quizdee`}
+  title={`${archName} | ${entry.title_th} — quizdee`}
   description={archDesc ? archDesc.slice(0, 155).replace(/\s+\S*$/, '…') : (archTagline ? `${archTagline} — ผลจากแบบทดสอบ ${entry.title_th} อ่านจุดแข็ง จุดอ่อน คู่ที่เข้ากัน และเทคนิคพัฒนาตัวเอง` : `ผลแบบทดสอบ ${entry.title_th} — ${archName} ${archTagline}`)}
   canonical={pageUrl}
   ogImage={ogImage}

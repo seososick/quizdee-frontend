@@ -37,6 +37,21 @@ const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://quizdee.com'
 const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString()
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).toString()
 
+// Strip emojis/pictographs from SEO meta (title/description) — they add no SEO value,
+// Google strips them in SERPs, and they can read spammy. Body content & OG images keep emojis.
+function stripEmoji(s: string): string {
+  if (!s) return s
+  return s
+    .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{1F1E6}-\u{1F1FF}\u{2190}-\u{21FF}\u{2300}-\u{23FF}\u{FE00}-\u{FE0F}\u{200D}]/gu, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/\s+([|—·])/g, ' $1')
+    .replace(/([|—·])\s{2,}/g, '$1 ')
+    .replace(/^[\s|—·]+/, '')
+    .trim()
+}
+const metaTitle = stripEmoji(title)
+const metaDescription = stripEmoji(description)
+
 // Always include base WebSite + Organization schema
 const baseSchemas = schemas.length === 0
   ? [{
@@ -88,8 +103,8 @@ const baseSchemas = schemas.length === 0
     </noscript>
 
     <!-- Title + description -->
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
     {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} /> }
 
     <!-- Robots -->
@@ -112,8 +127,8 @@ const baseSchemas = schemas.length === 0
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -127,8 +142,8 @@ const baseSchemas = schemas.length === 0
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:site" content="@quizdee_th" />
 
