@@ -54,8 +54,8 @@ export const CATALOG: CatalogEntry[] = [
     source_files: { meta: 'bigfive-meta.json', archetypes: 'bigfive-archetypes.json', questions: 'bigfive-questions.json' },
   },
   {
-    slug: 'enneagram', title_th: 'Enneagram 9 ประเภท',
-    subtitle_th: 'รู้ลึกถึงแรงขับใจในตัวคุณ',
+    slug: 'enneagram', title_th: 'นพลักษณ์ (Enneagram) 9 ประเภท',
+    subtitle_th: 'แบบทดสอบนพลักษณ์ รู้ลึกถึงแรงขับใจในตัวคุณ',
     category: 'PERSONALITY', category_label_th: 'บุคลิกภาพ',
     emoji: '🔮', duration_min: 4, question_count: 14,
     bg: 'bg-infj-50', rotate: 1,

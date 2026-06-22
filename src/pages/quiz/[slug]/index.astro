@@ -44,6 +44,23 @@ const engineData = {
   })),
 }
 
+// Rich archetype list for the on-page explainer section (SEO content — surfaces
+// the well-written data that otherwise only lives on noindex'd result pages).
+const archetypeCards = archetypes.map((a: any) => ({
+  name_th: archetypeName(a),
+  emoji: a.emoji || '✨',
+  tagline_th: a.tagline_th || a.core_motivation_th || '',
+  description_th: a.description_th || '',
+  url: `/quiz/${entry.slug}/result/${archetypeUrlSlug(a)}/`,
+}))
+
+// Per-quiz intro prose (lead paragraph под H1) — keyword-rich, indexable.
+// Falls back to subtitle when a quiz has no bespoke intro yet.
+const introProse: Record<string, string> = {
+  'enneagram': 'แบบทดสอบนพลักษณ์ (Enneagram) ฉบับภาษาไทย จัดประเภทบุคลิกภาพออกเป็น 9 ประเภท โดยเจาะลึกถึง "แรงขับเคลื่อนภายใน" และ "ความกลัวที่ซ่อนอยู่" ของแต่ละคน ต่างจาก MBTI ที่ดูพฤติกรรม นพลักษณ์มองลึกถึงแรงจูงใจว่าทำไมเราถึงทำสิ่งต่าง ๆ ทำแบบทดสอบนพลักษณ์ 14 ข้อ ใช้เวลาประมาณ 4 นาที รู้ว่าคุณเป็น Type ไหนใน 9 ประเภท พร้อมรู้ปีก (wing) จุดแข็ง จุดที่ควรระวัง และคนที่เข้ากับคุณ',
+}
+const leadProse = introProse[entry.slug] || ''
+
 // Personalized CTA microcopy per quiz
 const ctaMap: Record<string, string> = {
   'mbti': 'ค้นหา MBTI ของฉัน',
@@ -65,6 +82,19 @@ const ctaMap: Record<string, string> = {
   'mootelu-style': 'ฉันสายมูแบบไหน?',
 }
 const ctaText = ctaMap[entry.slug] || 'เริ่มเล่น'
+
+// Per-quiz FAQ (surfaced on-page + fed into FAQPage schema). Keyword-rich Q&A.
+const faqMap: Record<string, { q: string; a: string }[]> = {
+  'enneagram': [
+    { q: 'นพลักษณ์ (Enneagram) คืออะไร?', a: 'นพลักษณ์ หรือ Enneagram คือระบบจัดประเภทบุคลิกภาพออกเป็น 9 ประเภท โดยอิงจาก "แรงขับเคลื่อนภายใน" และ "ความกลัวหลัก" ของแต่ละคน แตกต่างจาก MBTI ที่เน้นรูปแบบความคิดและพฤติกรรม นพลักษณ์เจาะลึกถึงแรงจูงใจว่าทำไมเราถึงทำสิ่งต่าง ๆ' },
+    { q: 'นพลักษณ์มีกี่ประเภท?', a: 'นพลักษณ์มี 9 ประเภทหลัก (Type 1 ถึง Type 9) แต่ละประเภทยังมี "ปีก" (wing) ที่เป็นประเภทข้างเคียงซึ่งทำให้บุคลิกละเอียดขึ้น เช่น 4w5 หรือ 9w1' },
+    { q: 'แบบทดสอบนพลักษณ์ของ quizdee แม่นยำไหม?', a: 'แบบทดสอบอ้างอิงแนวทาง Riso-Hudson Enneagram Type Indicator (RHETI) และ Helen Palmer ฉบับปรับเป็นภาษาไทย ใช้เพื่อรู้จักตัวเองและความสนุก ไม่ใช่เครื่องมือวินิจฉัยทางการแพทย์' },
+    { q: 'นพลักษณ์ต่างจาก MBTI อย่างไร?', a: 'MBTI ดูว่าคุณคิดและตัดสินใจอย่างไร (16 แบบ) ส่วนนพลักษณ์ดูว่าอะไรเป็นแรงขับและความกลัวที่อยู่เบื้องหลังพฤติกรรม (9 ประเภท) หลายคนใช้ทั้งคู่ควบคู่กันเพื่อเข้าใจตัวเองรอบด้าน' },
+  ],
+}
+
+// FAQ entries surfaced on-page (also feed the FAQPage schema)
+const pageFaqs = (faqMap[entry.slug] || []) as { q: string; a: string }[]
 
 // Result preview emojis (first 6 archetypes)
 const previewArch = engineData.archetypes.slice(0, 6)
@@ -90,11 +120,13 @@ const schemas = [
   },
   {
     '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: `${entry.title_th} ใช้เวลาเท่าไหร่?`, acceptedAnswer: { '@type': 'Answer', text: `ประมาณ ${entry.duration_min} นาที จำนวน ${entry.question_count} ข้อ` } },
-      { '@type': 'Question', name: 'ฟรีไหม ต้องสมัครสมาชิกหรือเปล่า?', acceptedAnswer: { '@type': 'Answer', text: 'ฟรี 100% ไม่ต้องสมัครสมาชิก ไม่ต้องใส่อีเมล' } },
-      { '@type': 'Question', name: 'ผลแม่นยำแค่ไหน?', acceptedAnswer: { '@type': 'Answer', text: meta.psychology_basis_th || 'ออกแบบโดยอ้างอิงทฤษฎีจิตวิทยา + เนื้อหาฉบับคนไทย ไม่ใช่การวินิจฉัยทางการแพทย์' } },
-    ],
+    mainEntity: (pageFaqs.length > 0
+      ? pageFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+      : [
+        { '@type': 'Question', name: `${entry.title_th} ใช้เวลาเท่าไหร่?`, acceptedAnswer: { '@type': 'Answer', text: `ประมาณ ${entry.duration_min} นาที จำนวน ${entry.question_count} ข้อ` } },
+        { '@type': 'Question', name: 'ฟรีไหม ต้องสมัครสมาชิกหรือเปล่า?', acceptedAnswer: { '@type': 'Answer', text: 'ฟรี 100% ไม่ต้องสมัครสมาชิก ไม่ต้องใส่อีเมล' } },
+        { '@type': 'Question', name: 'ผลแม่นยำแค่ไหน?', acceptedAnswer: { '@type': 'Answer', text: meta.psychology_basis_th || 'ออกแบบโดยอ้างอิงทฤษฎีจิตวิทยา + เนื้อหาฉบับคนไทย ไม่ใช่การวินิจฉัยทางการแพทย์' } },
+      ]),
   },
 ]
 
@@ -121,6 +153,10 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
         {entry.title_th}
       </h1>
       <p class="mt-3 max-w-2xl text-body text-sumi-700">{entry.subtitle_th}</p>
+
+      {leadProse && (
+        <p class="mt-3 max-w-2xl text-small text-sumi-600 leading-relaxed">{leadProse}</p>
+      )}
 
       <div class="mt-4 flex flex-wrap items-center gap-2 text-small font-mono text-sumi-700">
         <span class="inline-flex items-center gap-1 bg-sumi-900 text-butter-300 px-3 py-1 rounded-full">⏱ {entry.duration_min} นาที</span>
@@ -219,6 +255,45 @@ const ogImage = `/og-default.svg?title=${encodeURIComponent(entry.title_th)}&sub
       </details>
     )}
   </section>
+
+  {/* ─── On-page SEO content: archetype explainer (surfaces rich data) ─── */}
+  {archetypeCards.length > 0 && (
+    <section class="container-wide pb-12 sm:pb-16">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display text-h2 font-medium text-sumi-900 mb-2">{entry.title_th} มีกี่แบบ? รู้จักทั้ง {archetypeCards.length} ประเภท</h2>
+        <p class="text-small text-sumi-600 mb-6">ทำแบบทดสอบเสร็จ คุณจะได้ผลลัพธ์ 1 ใน {archetypeCards.length} ประเภทนี้ — แตะเพื่ออ่านแต่ละแบบแบบเต็ม</p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {archetypeCards.map((a) => (
+            <a href={a.url} class="block bg-washi-50 border-2 border-sumi-900 rounded-2xl p-5 shadow-[3px_3px_0_0_rgba(31,26,20,0.95)] hover:-translate-y-0.5 hover:-translate-x-0.5 transition-transform">
+              <h3 class="font-display text-h3 font-semibold text-sumi-900 flex items-center gap-2">
+                <span class="text-2xl">{a.emoji}</span>{a.name_th}
+              </h3>
+              {a.tagline_th && <p class="mt-1 text-small text-coral-700 italic">{a.tagline_th}</p>}
+              {a.description_th && <p class="mt-2 text-small text-sumi-700 leading-relaxed line-clamp-4">{a.description_th}</p>}
+              <span class="mt-3 inline-block text-caption font-mono text-sumi-500 underline underline-offset-2">อ่านแบบเต็ม →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* ─── On-page FAQ (also in FAQPage schema) ─── */}
+  {pageFaqs.length > 0 && (
+    <section class="container-wide pb-14 sm:pb-20">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="font-display text-h2 font-medium text-sumi-900 mb-5">คำถามที่พบบ่อย</h2>
+        <div class="space-y-3">
+          {pageFaqs.map((f) => (
+            <details class="bg-washi-50 border border-sumi-300 rounded-xl p-4">
+              <summary class="cursor-pointer font-semibold text-sumi-900">{f.q}</summary>
+              <p class="mt-2 text-small text-sumi-700 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>
 
 <script>
