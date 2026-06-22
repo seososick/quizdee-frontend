@@ -19,8 +19,7 @@ export default defineConfig({
       lastmod: new Date(),
       filter: (page) =>
         !page.includes('/admin') &&
-        !page.includes('/api/') &&
-        !/\/quiz\/[^/]+\/result\//.test(page),
+        !page.includes('/api/'),
       serialize(item) {
         // Custom priority per URL pattern
         if (item.url === SITE + '/') item.priority = 1.0
